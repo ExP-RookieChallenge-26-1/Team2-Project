@@ -773,6 +773,445 @@
     ]
   },
   {
+    "file_id": "My project/Assets/script/jumBall.cs",
+    "path": "My project/Assets/script/jumBall.cs",
+    "file_name": "jumBall.cs",
+    "content_hash": "6a75cc8ac0d9051096f69d128ae5d63b1384c063",
+    "size": 645,
+    "line_count": 28,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "Ball",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "Ball",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
+      "Vector2",
+      "Update"
+    ],
+    "fields": [
+      {
+        "name": "rb",
+        "type": "Rigidbody2D",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "speed",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "dir",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start",
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 1,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 2,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "Rigidbody2D",
+      "float",
+      "UnityEngine",
+      "Start",
+      "GetComponent",
+      "Vector2",
+      "Update",
+      "Abs"
+    ],
+    "component_access_types": [
+      "Rigidbody2D"
+    ],
+    "created_types": [
+      "Vector2"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      5,
+      1,
+      0.5
+    ],
+    "guessed_roles": [
+      "runtime"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
+    "file_id": "My project/Assets/script/MakeGround.cs",
+    "path": "My project/Assets/script/MakeGround.cs",
+    "file_name": "MakeGround.cs",
+    "content_hash": "6c4a840af1513f266d47391cbeae2dfb5b5308f4",
+    "size": 1369,
+    "line_count": 52,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "MakeGround",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "MakeGround",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
+      "Update",
+      "Vector3"
+    ],
+    "fields": [
+      {
+        "name": "ground",
+        "type": "GameObject",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "monster",
+        "type": "GameObject",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "timer",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "timediff",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "worldX",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start",
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 3,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 3,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "float",
+      "UnityEngine",
+      "Start",
+      "Update",
+      "Instantiate",
+      "Vector3",
+      "Clamp",
+      "Destroy"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "Vector3"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      1,
+      2,
+      3.5,
+      2.8,
+      5.4,
+      0.7,
+      2.5,
+      15
+    ],
+    "guessed_roles": [
+      "runtime"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재"
+    ]
+  },
+  {
+    "file_id": "My project/Assets/script/MoveCloud.cs",
+    "path": "My project/Assets/script/MoveCloud.cs",
+    "file_name": "MoveCloud.cs",
+    "content_hash": "567e663d5c4b1bd6bde9700f2b8dc0e0368d63f3",
+    "size": 616,
+    "line_count": 24,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "MoveCloud",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "MoveCloud",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Update",
+      "Vector3"
+    ],
+    "fields": [
+      {
+        "name": "speed",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "targetX",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 1,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 2,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "float",
+      "UnityEngine",
+      "Update",
+      "Input",
+      "GetMouseButton",
+      "Vector3",
+      "Camera",
+      "ScreenToWorldPoint",
+      "Lerp",
+      "Clamp"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "Vector3"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      10,
+      2.5,
+      0
+    ],
+    "guessed_roles": [
+      "player",
+      "runtime",
+      "ui"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "UI 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "My project/Assets/script/Moveground.cs",
+    "path": "My project/Assets/script/Moveground.cs",
+    "file_name": "Moveground.cs",
+    "content_hash": "34f7298e056a59110491244e944c55221a8d132e",
+    "size": 379,
+    "line_count": 20,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "Moveground",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "Moveground",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
+      "FixedUpdate"
+    ],
+    "fields": [
+      {
+        "name": "speed",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "rb",
+        "type": "Rigidbody2D",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "newPos",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start",
+      "FixedUpdate"
+    ],
+    "has_update": false,
+    "has_fixed_update": true,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 1,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "float",
+      "Rigidbody2D",
+      "Vector2",
+      "UnityEngine",
+      "Start",
+      "GetComponent",
+      "Destroy",
+      "FixedUpdate",
+      "MovePosition"
+    ],
+    "component_access_types": [
+      "Rigidbody2D"
+    ],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      1,
+      15
+    ],
+    "guessed_roles": [
+      "runtime",
+      "player"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "물리 타이밍 처리 가능성",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
     "file_id": "My project/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs",
     "path": "My project/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs",
     "file_name": "ReadmeEditor.cs",
