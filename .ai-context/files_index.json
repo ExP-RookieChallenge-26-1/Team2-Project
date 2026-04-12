@@ -1,5 +1,692 @@
 [
   {
+    "file_id": "ExpDemoA/Assets/Scripts/BackgroundScroller.cs",
+    "path": "ExpDemoA/Assets/Scripts/BackgroundScroller.cs",
+    "file_name": "BackgroundScroller.cs",
+    "content_hash": "528a823d6680955605e16d062dca1ce8b283da5b",
+    "size": 1554,
+    "line_count": 67,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine",
+      "System.Collections.Generic"
+    ],
+    "classes": [
+      {
+        "name": "BackgroundScroller",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "BackgroundScroller",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
+      "MeasureHeight",
+      "SpawnBg",
+      "Vector3",
+      "Update"
+    ],
+    "fields": [
+      {
+        "name": "cameraBottomY",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "cameraTopY",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "bgHeight",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "minY",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "maxY",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "move",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "topY",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "highestTop",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start",
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 3,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "float",
+      "UnityEngine",
+      "System",
+      "Collections",
+      "Generic",
+      "Start",
+      "MeasureHeight",
+      "SpawnBg",
+      "Instantiate",
+      "MaxValue",
+      "MinValue",
+      "GetComponentsInChildren",
+      "Renderer",
+      "Min",
+      "Max",
+      "Destroy",
+      "Vector3",
+      "Add",
+      "Update",
+      "Count"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "List",
+      "Vector3"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      0.8,
+      5,
+      0,
+      1
+    ],
+    "guessed_roles": [
+      "runtime",
+      "player",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "ExpDemoA/Assets/Scripts/BallController.cs",
+    "path": "ExpDemoA/Assets/Scripts/BallController.cs",
+    "file_name": "BallController.cs",
+    "content_hash": "2838a5e75374e0844256ff3eae9c2a4cc68e647e",
+    "size": 488,
+    "line_count": 30,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine",
+      "UnityEngine.SceneManagement"
+    ],
+    "classes": [
+      {
+        "name": "BallController",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "BallController",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Awake",
+      "Start",
+      "Vector2",
+      "Update",
+      "FixedUpdate"
+    ],
+    "fields": [
+      {
+        "name": "rb",
+        "type": "Rigidbody2D",
+        "access": "internal",
+        "serialized": true,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Awake",
+      "Start",
+      "Update",
+      "FixedUpdate"
+    ],
+    "has_update": true,
+    "has_fixed_update": true,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 1,
+    "public_field_count": 0,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "Rigidbody2D",
+      "UnityEngine",
+      "SceneManagement",
+      "Awake",
+      "GetComponent",
+      "Start",
+      "Vector2",
+      "Update",
+      "SceneManager",
+      "LoadScene",
+      "TitleScene",
+      "FixedUpdate"
+    ],
+    "component_access_types": [
+      "Rigidbody2D"
+    ],
+    "created_types": [
+      "Vector2"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [
+      "TitleScene"
+    ],
+    "numeric_literals": [
+      8,
+      1,
+      7
+    ],
+    "guessed_roles": [
+      "runtime",
+      "scene",
+      "save-load",
+      "manager"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "물리 타이밍 처리 가능성",
+      "인스펙터 직렬화 필드 사용",
+      "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
+    "file_id": "ExpDemoA/Assets/Scripts/Enemy.cs",
+    "path": "ExpDemoA/Assets/Scripts/Enemy.cs",
+    "file_name": "Enemy.cs",
+    "content_hash": "93dda06cfeada0a0800f30745e1b4b274ddeb168",
+    "size": 184,
+    "line_count": 11,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "Enemy",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "Enemy",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "OnCollisionEnter2D"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "UnityEngine",
+      "OnCollisionEnter2D",
+      "Collision2D",
+      "CompareTag",
+      "Ball",
+      "Destroy"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [
+      "Ball"
+    ],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "combat",
+      "runtime"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "전투 계열 로직 포함"
+    ]
+  },
+  {
+    "file_id": "ExpDemoA/Assets/Scripts/MapScroller.cs",
+    "path": "ExpDemoA/Assets/Scripts/MapScroller.cs",
+    "file_name": "MapScroller.cs",
+    "content_hash": "29fee402399d9c4a5a6603b057589ae7bdd654fe",
+    "size": 1662,
+    "line_count": 75,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine",
+      "UnityEngine.Tilemaps",
+      "System.Collections.Generic"
+    ],
+    "classes": [
+      {
+        "name": "MapScroller",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "MapScroller",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
+      "MeasureMap",
+      "SpawnMap",
+      "Vector3",
+      "Update",
+      "SpawnNextMap"
+    ],
+    "fields": [
+      {
+        "name": "deathY",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "cameraTopY",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "mapHeight",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "contentBottomOffset",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "move",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "contentTopY",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "highestTop",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start",
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 2,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "float",
+      "UnityEngine",
+      "Tilemaps",
+      "System",
+      "Collections",
+      "Generic",
+      "Start",
+      "MeasureMap",
+      "SpawnMap",
+      "Instantiate",
+      "GetComponentInChildren",
+      "Tilemap",
+      "CompressBounds",
+      "TransformPoint",
+      "Destroy",
+      "Vector3",
+      "Add",
+      "Update",
+      "Count",
+      "RemoveAt",
+      "SpawnNextMap",
+      "Max"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "List",
+      "Vector3"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      2,
+      7,
+      5,
+      0
+    ],
+    "guessed_roles": [
+      "runtime",
+      "player",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "ExpDemoA/Assets/Scripts/PaddleController.cs",
+    "path": "ExpDemoA/Assets/Scripts/PaddleController.cs",
+    "file_name": "PaddleController.cs",
+    "content_hash": "d09c264e5271248b9437dc8c2d3418f276b83314",
+    "size": 465,
+    "line_count": 21,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine",
+      "UnityEngine.InputSystem"
+    ],
+    "classes": [
+      {
+        "name": "PaddleController",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "PaddleController",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Update",
+      "Vector3"
+    ],
+    "fields": [
+      {
+        "name": "mousePos",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "world",
+        "type": "Vector3",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "x",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "Vector2",
+      "Vector3",
+      "float",
+      "UnityEngine",
+      "InputSystem",
+      "Update",
+      "Mouse",
+      "ReadValue",
+      "Camera",
+      "ScreenToWorldPoint",
+      "Clamp"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "Vector3"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      7
+    ],
+    "guessed_roles": [
+      "runtime",
+      "player",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "ExpDemoA/Assets/Scripts/TitleUI.cs",
+    "path": "ExpDemoA/Assets/Scripts/TitleUI.cs",
+    "file_name": "TitleUI.cs",
+    "content_hash": "22ce840911e225fa2c3d2a71ce6f0634e05c0e64",
+    "size": 166,
+    "line_count": 11,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine",
+      "UnityEngine.SceneManagement"
+    ],
+    "classes": [
+      {
+        "name": "TitleUI",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "TitleUI",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "StartGame"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "UnityEngine",
+      "SceneManagement",
+      "StartGame",
+      "SceneManager",
+      "LoadScene",
+      "GameScene"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [
+      "GameScene"
+    ],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "scene",
+      "runtime",
+      "ui",
+      "save-load",
+      "manager"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "UI 관련 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
     "file_id": "My project/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs",
     "path": "My project/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs",
     "file_name": "ReadmeEditor.cs",

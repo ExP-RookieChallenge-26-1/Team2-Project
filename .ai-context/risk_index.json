@@ -1,5 +1,43 @@
 [
   {
+    "file_id": "ExpDemoA/Assets/Scripts/BackgroundScroller.cs",
+    "class_name": "BackgroundScroller",
+    "risk_flags": [
+      "update-heavy",
+      "high-coupling",
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "Unity 업데이트 루프 사용",
+      "참조 타입 또는 관계 수가 많음",
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 58
+  },
+  {
+    "file_id": "ExpDemoA/Assets/Scripts/MapScroller.cs",
+    "class_name": "MapScroller",
+    "risk_flags": [
+      "update-heavy",
+      "high-coupling",
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "Unity 업데이트 루프 사용",
+      "참조 타입 또는 관계 수가 많음",
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 58
+  },
+  {
     "file_id": "My project/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs",
     "class_name": "ReadmeEditor",
     "risk_flags": [
@@ -19,6 +57,53 @@
     "risk_score": 56
   },
   {
+    "file_id": "ExpDemoA/Assets/Scripts/BallController.cs",
+    "class_name": "BallController",
+    "risk_flags": [
+      "update-heavy",
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "Unity 업데이트 루프 사용",
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 40
+  },
+  {
+    "file_id": "ExpDemoA/Assets/Scripts/PaddleController.cs",
+    "class_name": "PaddleController",
+    "risk_flags": [
+      "update-heavy",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "Unity 업데이트 루프 사용",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 30
+  },
+  {
+    "file_id": "ExpDemoA/Assets/Scripts/TitleUI.cs",
+    "class_name": "TitleUI",
+    "risk_flags": [
+      "save-load-sensitive",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "저장/불러오기 관련 로직 포함",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 30
+  },
+  {
     "file_id": "My project/Assets/TutorialInfo/Scripts/Readme.cs",
     "class_name": "Readme",
     "risk_flags": [
@@ -30,5 +115,12 @@
       "저장/불러오기 관련 로직 포함"
     ],
     "risk_score": 22
+  },
+  {
+    "file_id": "ExpDemoA/Assets/Scripts/Enemy.cs",
+    "class_name": "Enemy",
+    "risk_flags": [],
+    "risk_reasons": [],
+    "risk_score": 0
   }
 ]
