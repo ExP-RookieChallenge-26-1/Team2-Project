@@ -1,5 +1,47 @@
 [
   {
+    "from_file": "demo_1/Assets/Scripts/ScrollingBackground.cs",
+    "from_class": "Background",
+    "to_type": "Vector3",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "demo_1/Assets/Scripts/ScrollingBackground.cs",
+    "from_class": "Background",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "demo_1/Assets/Scripts/ScrollingBackground.cs",
+    "from_class": "Background",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "demo_1/Assets/Scripts/ScrollingBackground.cs",
+    "from_class": "Background",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "demo_1/Assets/Scripts/ScrollingBackground.cs",
+    "from_class": "Background",
+    "to_type": "Update",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "demo_1/Assets/Scripts/ScrollingBackground.cs",
+    "from_class": "Background",
+    "to_type": "Vector3",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
     "from_file": "ExpDemoA/Assets/Scripts/BackgroundScroller.cs",
     "from_class": "BackgroundScroller",
     "to_type": "List",
