@@ -1,5 +1,91 @@
 [
   {
+    "file_id": "demo_1/Assets/Scripts/ScrollingBackground.cs",
+    "path": "demo_1/Assets/Scripts/ScrollingBackground.cs",
+    "file_name": "ScrollingBackground.cs",
+    "content_hash": "10d3f7ed77eafcd9acda52e165fa88f5472246c2",
+    "size": 361,
+    "line_count": 19,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "Background",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "Background",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Update",
+      "Vector3"
+    ],
+    "fields": [
+      {
+        "name": "moveSpeed",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "float",
+      "UnityEngine",
+      "Update",
+      "Vector3"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "Vector3"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      3,
+      10,
+      20
+    ],
+    "guessed_roles": [
+      "runtime",
+      "player"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재"
+    ]
+  },
+  {
     "file_id": "ExpDemoA/Assets/Scripts/BackgroundScroller.cs",
     "path": "ExpDemoA/Assets/Scripts/BackgroundScroller.cs",
     "file_name": "BackgroundScroller.cs",
