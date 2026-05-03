@@ -86,6 +86,643 @@
     ]
   },
   {
+    "file_id": "demo_2/Assets/Scripts/CardData.cs",
+    "path": "demo_2/Assets/Scripts/CardData.cs",
+    "file_name": "CardData.cs",
+    "content_hash": "dbb90a4fdd7dacaafebe981dc896cdb6e08850d1",
+    "size": 247,
+    "line_count": 10,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "CardData",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "ScriptableObject"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "CardData",
+    "unity_type": "ScriptableObject",
+    "methods": [],
+    "fields": [
+      {
+        "name": "id",
+        "type": "int",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "cardName",
+        "type": "string",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "icon",
+        "type": "Sprite",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 3,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "int",
+      "string",
+      "Sprite",
+      "UnityEngine",
+      "CreateAssetMenu",
+      "Game",
+      "Card",
+      "Data",
+      "TextArea"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [
+      "CardData",
+      "Game/Card Data"
+    ],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "data"
+    ],
+    "summary_signals": [
+      "데이터 자산 중심 구조"
+    ]
+  },
+  {
+    "file_id": "demo_2/Assets/Scripts/CardDataBase.cs",
+    "path": "demo_2/Assets/Scripts/CardDataBase.cs",
+    "file_name": "CardDataBase.cs",
+    "content_hash": "ffa96628534b428063ba4a4e6c711744c2019837",
+    "size": 1358,
+    "line_count": 49,
+    "namespace": "",
+    "using_list": [
+      "System.Collections.Generic",
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "CardDatabase",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "ScriptableObject"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "CardDatabase",
+    "unity_type": "ScriptableObject",
+    "methods": [
+      "Init",
+      "GetById",
+      "GetByName"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 3,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "System",
+      "Collections",
+      "Generic",
+      "UnityEngine",
+      "CreateAssetMenu",
+      "Game",
+      "Card",
+      "Database",
+      "CardData",
+      "Init",
+      "ContainsKey",
+      "Add",
+      "LogWarning",
+      "IsNullOrEmpty",
+      "GetById",
+      "TryGetValue",
+      "GetByName"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "List",
+      "Dictionary"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [
+      "CardDatabase",
+      "Game/Card Database",
+      "중복 id 발견: {card.id}",
+      "중복 카드명 발견: {card.cardName}"
+    ],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "data"
+    ],
+    "summary_signals": [
+      "데이터 자산 중심 구조"
+    ]
+  },
+  {
+    "file_id": "demo_2/Assets/Scripts/CardSelector.cs",
+    "path": "demo_2/Assets/Scripts/CardSelector.cs",
+    "file_name": "CardSelector.cs",
+    "content_hash": "de7ebc4e1a7b8eb1ad4befb53a23576a1d5a7884",
+    "size": 2679,
+    "line_count": 95,
+    "namespace": "",
+    "using_list": [
+      "System.Collections.Generic",
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "CardSelector",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "CardSelector",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Pick3ByIds",
+      "Pick3ByNames",
+      "PickUnique",
+      "GetWeightedRandomIndex"
+    ],
+    "fields": [
+      {
+        "name": "totalWeight",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "current",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 7,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "float",
+      "System",
+      "Collections",
+      "Generic",
+      "UnityEngine",
+      "CardDatabase",
+      "CardData",
+      "Pick3ByIds",
+      "Length",
+      "LogError",
+      "GetById",
+      "Add",
+      "PickUnique",
+      "Pick3ByNames",
+      "GetByName",
+      "Min",
+      "Count",
+      "GetWeightedRandomIndex",
+      "RemoveAt"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "List"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [
+      "ids와 weights 길이가 다르거나 null입니다.",
+      "names와 weights 길이가 다르거나 null입니다."
+    ],
+    "numeric_literals": [
+      0,
+      3
+    ],
+    "guessed_roles": [
+      "player",
+      "data",
+      "save-load",
+      "runtime"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "demo_2/Assets/Scripts/CardSlotUI.cs",
+    "path": "demo_2/Assets/Scripts/CardSlotUI.cs",
+    "file_name": "CardSlotUI.cs",
+    "content_hash": "357cb266e27e6bbd49407fc9da06ffb832cd4219",
+    "size": 1432,
+    "line_count": 62,
+    "namespace": "",
+    "using_list": [
+      "TMPro",
+      "UnityEngine",
+      "UnityEngine.UI"
+    ],
+    "classes": [
+      {
+        "name": "CardSlotUI",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "CardSlotUI",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Awake",
+      "Setup",
+      "OnClickCard",
+      "SetSelected",
+      "Vector2",
+      "GetCard"
+    ],
+    "fields": [
+      {
+        "name": "currentCard",
+        "type": "CardData",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "parentUI",
+        "type": "EnhanceUI",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "slotIndex",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "originalPos",
+        "type": "Vector2",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Awake"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "CardData",
+      "EnhanceUI",
+      "int",
+      "Vector2",
+      "TMPro",
+      "UnityEngine",
+      "UI",
+      "Image",
+      "TMP_Text",
+      "Button",
+      "RectTransform",
+      "Awake",
+      "Setup",
+      "RemoveAllListeners",
+      "AddListener",
+      "OnClickCard",
+      "SetSelected",
+      "SelectCard",
+      "GetCard"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "Vector2"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      0,
+      20
+    ],
+    "guessed_roles": [
+      "ui",
+      "runtime",
+      "player",
+      "inventory",
+      "data"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "UI 관련 로직 포함",
+      "인벤토리 계열 로직 포함"
+    ]
+  },
+  {
+    "file_id": "demo_2/Assets/Scripts/EnhanceUI.cs",
+    "path": "demo_2/Assets/Scripts/EnhanceUI.cs",
+    "file_name": "EnhanceUI.cs",
+    "content_hash": "74ca3a715f0d77f7d713b61a980e1a659df0d795",
+    "size": 2017,
+    "line_count": 77,
+    "namespace": "",
+    "using_list": [
+      "System.Collections.Generic",
+      "UnityEngine",
+      "UnityEngine.UI"
+    ],
+    "classes": [
+      {
+        "name": "EnhanceUI",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "EnhanceUI",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
+      "ShowCardsByIds",
+      "ShowCardsByNames",
+      "Show",
+      "SelectCard",
+      "OnClickConfirm"
+    ],
+    "fields": [
+      {
+        "name": "selectedIndex",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "selectedCard",
+        "type": "CardData",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "int",
+      "CardData",
+      "System",
+      "Collections",
+      "Generic",
+      "UnityEngine",
+      "UI",
+      "CardSelector",
+      "CardSlotUI",
+      "Button",
+      "Start",
+      "AddListener",
+      "OnClickConfirm",
+      "ShowCardsByIds",
+      "Pick3ByIds",
+      "Show",
+      "ShowCardsByNames",
+      "Pick3ByNames",
+      "Length",
+      "Count",
+      "SetActive",
+      "Setup",
+      "SelectCard",
+      "SetSelected",
+      "Log",
+      "Apply"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "List"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [
+      "선택된 카드: "
+    ],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "ui",
+      "data",
+      "runtime",
+      "inventory",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "UI 관련 로직 포함",
+      "인벤토리 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "demo_2/Assets/Scripts/EnhanceUITest.cs",
+    "path": "demo_2/Assets/Scripts/EnhanceUITest.cs",
+    "file_name": "EnhanceUITest.cs",
+    "content_hash": "e61a2d5d8885f2b2ae2cebf8b39bb1724a6cc966",
+    "size": 297,
+    "line_count": 14,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "EnhanceUITest",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "EnhanceUITest",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "UnityEngine",
+      "EnhanceUI",
+      "Start",
+      "ShowCardsByIds"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      2,
+      3,
+      4,
+      5,
+      30,
+      25,
+      20,
+      15,
+      10
+    ],
+    "guessed_roles": [
+      "runtime",
+      "ui",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "UI 관련 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
     "file_id": "ExpDemoA/Assets/Scripts/BackgroundScroller.cs",
     "path": "ExpDemoA/Assets/Scripts/BackgroundScroller.cs",
     "file_name": "BackgroundScroller.cs",
