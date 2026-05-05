@@ -723,6 +723,2175 @@
     ]
   },
   {
+    "file_id": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "path": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "file_name": "GameManager.cs",
+    "content_hash": "f6d9ddecc0aa342d07bb0478cc2daba947db3417",
+    "size": 807,
+    "line_count": 34,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "GameManager",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "GameManager",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Awake",
+      "InputState",
+      "BallStats",
+      "PaddleStats",
+      "WorldStats",
+      "Update"
+    ],
+    "fields": [],
+    "properties": [
+      {
+        "access": "internal",
+        "type": "GameManager",
+        "name": "Instance"
+      },
+      {
+        "access": "public",
+        "type": "GameStateMachine",
+        "name": "State"
+      },
+      {
+        "access": "public",
+        "type": "InputState",
+        "name": "Input"
+      },
+      {
+        "access": "public",
+        "type": "BallStats",
+        "name": "BallStats"
+      },
+      {
+        "access": "public",
+        "type": "PaddleStats",
+        "name": "PaddleStats"
+      },
+      {
+        "access": "public",
+        "type": "WorldStats",
+        "name": "WorldStats"
+      }
+    ],
+    "events": [],
+    "unity_messages": [
+      "Awake",
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 4,
+    "coroutine_count": 0,
+    "singleton_candidate": true,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "GameStateMachine",
+      "InputState",
+      "BallStats",
+      "PaddleStats",
+      "WorldStats",
+      "UnityEngine",
+      "RequireComponent",
+      "Instance",
+      "State",
+      "Input",
+      "Awake",
+      "Destroy",
+      "GetComponent",
+      "Update",
+      "Tick"
+    ],
+    "component_access_types": [
+      "GameStateMachine"
+    ],
+    "created_types": [
+      "InputState",
+      "BallStats",
+      "PaddleStats",
+      "WorldStats"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "runtime",
+      "manager",
+      "ui",
+      "player"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "싱글톤 후보",
+      "UI 관련 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
+    "file_id": "ExpDemo2/Assets/_Global/States/GameState.cs",
+    "path": "ExpDemo2/Assets/_Global/States/GameState.cs",
+    "file_name": "GameState.cs",
+    "content_hash": "9d9a354df830300c55bfde0c9b49bdf03ab9c9a7",
+    "size": 59,
+    "line_count": 6,
+    "namespace": "",
+    "using_list": [],
+    "classes": [],
+    "main_class_name": "GameState",
+    "unity_type": "None",
+    "methods": [],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "GameState",
+      "Playing",
+      "Enhancement",
+      "GameOver"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [],
+    "guessed_roles": [],
+    "summary_signals": []
+  },
+  {
+    "file_id": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
+    "path": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
+    "file_name": "GameStateMachine.cs",
+    "content_hash": "25cd3188e040929d5ea3a2c6280ba4a21cbf0a58",
+    "size": 492,
+    "line_count": 27,
+    "namespace": "",
+    "using_list": [
+      "System",
+      "UnityEngine",
+      "UnityEngine.SceneManagement"
+    ],
+    "classes": [
+      {
+        "name": "GameStateMachine",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "GameStateMachine",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
+      "Change"
+    ],
+    "fields": [],
+    "properties": [
+      {
+        "access": "public",
+        "type": "GameState",
+        "name": "Current"
+      }
+    ],
+    "events": [],
+    "unity_messages": [
+      "Start"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "GameState",
+      "System",
+      "UnityEngine",
+      "SceneManagement",
+      "Current",
+      "OnChanged",
+      "Start",
+      "Change",
+      "Playing",
+      "Invoke",
+      "GameOver",
+      "SceneManager",
+      "LoadScene",
+      "TitleScene"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [
+      "TitleScene"
+    ],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "scene",
+      "runtime",
+      "save-load",
+      "manager"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "ExpDemo2/Assets/_Global/States/InputState.cs",
+    "path": "ExpDemo2/Assets/_Global/States/InputState.cs",
+    "file_name": "InputState.cs",
+    "content_hash": "a1ba76a4371fe727391d09ae6c2fabd15c74b32f",
+    "size": 1815,
+    "line_count": 72,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine",
+      "UnityEngine.InputSystem",
+      "UnityEngine.InputSystem.Controls"
+    ],
+    "classes": [
+      {
+        "name": "InputState",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "InputState",
+    "unity_type": "None",
+    "methods": [
+      "Tick",
+      "UpdatePointer"
+    ],
+    "fields": [
+      {
+        "name": "lastPointerPosition",
+        "type": "Vector2",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "isDragging",
+        "type": "bool",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "pos",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "pressed",
+        "type": "bool",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "pressedThisFrame",
+        "type": "bool",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "releasedThisFrame",
+        "type": "bool",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "touch",
+        "type": "TouchControl",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [
+      {
+        "access": "public",
+        "type": "Vector2",
+        "name": "PointerPosition"
+      },
+      {
+        "access": "public",
+        "type": "Vector2",
+        "name": "PointerDelta"
+      },
+      {
+        "access": "public",
+        "type": "bool",
+        "name": "PointerPressed"
+      },
+      {
+        "access": "public",
+        "type": "bool",
+        "name": "PointerPressedThisFrame"
+      },
+      {
+        "access": "public",
+        "type": "bool",
+        "name": "PointerReleasedThisFrame"
+      }
+    ],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "Vector2",
+      "bool",
+      "TouchControl",
+      "UnityEngine",
+      "InputSystem",
+      "Controls",
+      "PointerPosition",
+      "PointerDelta",
+      "PointerPressed",
+      "PointerPressedThisFrame",
+      "PointerReleasedThisFrame",
+      "Tick",
+      "UpdatePointer",
+      "Touchscreen",
+      "ReadValue",
+      "Mouse",
+      "LogWarning",
+      "No",
+      "Input",
+      "Device",
+      "GameManager",
+      "Instance",
+      "State",
+      "Change",
+      "GameState",
+      "GameOver"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [
+      "GameManager"
+    ],
+    "string_literals": [
+      "No Input Device."
+    ],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "manager",
+      "player",
+      "runtime",
+      "ui"
+    ],
+    "summary_signals": [
+      "UI 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "ExpDemo2/Assets/Gameplay/Ball/Ball.cs",
+    "path": "ExpDemo2/Assets/Gameplay/Ball/Ball.cs",
+    "file_name": "Ball.cs",
+    "content_hash": "30da44e0d9b74384bf7c1204c24506fa9c893a9c",
+    "size": 710,
+    "line_count": 35,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "Ball",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "Ball",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Awake",
+      "BallPhysics",
+      "Start",
+      "Update",
+      "CheckGameOver"
+    ],
+    "fields": [],
+    "properties": [
+      {
+        "access": "public",
+        "type": "BallStats",
+        "name": "Stats"
+      },
+      {
+        "access": "public",
+        "type": "BallPhysics",
+        "name": "Physics"
+      },
+      {
+        "access": "public",
+        "type": "BallCollision",
+        "name": "Collision"
+      }
+    ],
+    "events": [],
+    "unity_messages": [
+      "Awake",
+      "Start",
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "BallStats",
+      "BallPhysics",
+      "BallCollision",
+      "UnityEngine",
+      "RequireComponent",
+      "Stats",
+      "Physics",
+      "Collision",
+      "Awake",
+      "GetComponent",
+      "Start",
+      "GameManager",
+      "Instance",
+      "Launch",
+      "Update",
+      "Tick",
+      "CheckGameOver",
+      "State",
+      "Change",
+      "GameState",
+      "GameOver"
+    ],
+    "component_access_types": [
+      "BallCollision"
+    ],
+    "created_types": [
+      "BallPhysics"
+    ],
+    "singleton_access_types": [
+      "GameManager"
+    ],
+    "string_literals": [],
+    "numeric_literals": [
+      6
+    ],
+    "guessed_roles": [
+      "runtime",
+      "manager",
+      "ui"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "UI 관련 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
+    "file_id": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "path": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "file_name": "BallCollision.cs",
+    "content_hash": "45892381e371ff981e85640a8717888eddfc5f4d",
+    "size": 2165,
+    "line_count": 95,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine",
+      "UnityEngine.Tilemaps"
+    ],
+    "classes": [
+      {
+        "name": "BallCollision",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "BallCollision",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Awake",
+      "Tick",
+      "CheckCollision",
+      "CheckTerrainCollision",
+      "Vector3Int",
+      "Bounds",
+      "IsTouching"
+    ],
+    "fields": [
+      {
+        "name": "ball",
+        "type": "Ball",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "hits",
+        "type": "Collider2D[]",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "radius",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "tilemaps",
+        "type": "Tilemap[]",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "checkRange",
+        "type": "int",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "centerCell",
+        "type": "Vector3Int",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "radius",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "cellPos",
+        "type": "Vector3Int",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "worldPos",
+        "type": "Vector3",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "tileBounds",
+        "type": "Bounds",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "pos",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "closest",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "dist",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "radius",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Awake"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 2,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "Ball",
+      "Collider2D",
+      "float",
+      "Tilemap",
+      "int",
+      "Vector3Int",
+      "Vector3",
+      "Bounds",
+      "Vector2",
+      "UnityEngine",
+      "Tilemaps",
+      "RequireComponent",
+      "Paddle",
+      "World",
+      "Awake",
+      "GetComponent",
+      "Tick",
+      "CheckCollision",
+      "CheckTerrainCollision",
+      "Stats",
+      "Physics2D",
+      "OverlapCircleAll",
+      "CompareTag",
+      "Wall",
+      "Physics",
+      "ResolveWallCollision",
+      "ResolvePaddleCollision",
+      "Spawner",
+      "GetActiveTilemaps",
+      "CeilToInt",
+      "WorldToCell",
+      "HasTile",
+      "CellToWorld",
+      "IsTouching",
+      "Clamp"
+    ],
+    "component_access_types": [
+      "Ball"
+    ],
+    "created_types": [
+      "Vector3Int",
+      "Bounds"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [
+      "Wall",
+      "Paddle"
+    ],
+    "numeric_literals": [
+      2
+    ],
+    "guessed_roles": [
+      "runtime",
+      "ui",
+      "combat",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "UI 관련 로직 포함",
+      "전투 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
+    "file_id": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
+    "path": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
+    "file_name": "BallPhysics.cs",
+    "content_hash": "b615cf46403d23a9c21b227ced5be1f59dc81eb5",
+    "size": 2181,
+    "line_count": 93,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "BallPhysics",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "BallPhysics",
+    "unity_type": "None",
+    "methods": [
+      "BallPhysics",
+      "Tick",
+      "Launch",
+      "Vector2",
+      "ReflectX",
+      "ReflectY",
+      "ResolveWallCollision",
+      "ResolvePaddleCollision"
+    ],
+    "fields": [
+      {
+        "name": "ball",
+        "type": "Ball",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "velocity",
+        "type": "Vector2",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "speed",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "overlapLeft",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "overlapRight",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "overlapBottom",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "overlapTop",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "minOverlap",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "radius",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "epsilon",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "pos",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "speed",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "pos",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 1,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "Ball",
+      "Vector2",
+      "float",
+      "UnityEngine",
+      "Tick",
+      "Vector3",
+      "Launch",
+      "Stats",
+      "ReflectX",
+      "ReflectY",
+      "ResolveWallCollision",
+      "Bounds",
+      "Min",
+      "Abs",
+      "ResolvePaddleCollision",
+      "Paddle",
+      "Physics",
+      "Velocity",
+      "TODO",
+      "When",
+      "NaN",
+      "Need",
+      "LogWarning",
+      "Sqrt"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "Vector2"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [
+      "ResolvePaddleCollision: newVelocity.x exceeds speed. velocity.y will be NaN"
+    ],
+    "numeric_literals": [
+      0,
+      0.5,
+      0.866,
+      0.001
+    ],
+    "guessed_roles": [],
+    "summary_signals": []
+  },
+  {
+    "file_id": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "path": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "file_name": "BallStats.cs",
+    "content_hash": "fc59d0c0b94d0f77ffde27dbef07359b19fa25c7",
+    "size": 190,
+    "line_count": 8,
+    "namespace": "",
+    "using_list": [],
+    "classes": [
+      {
+        "name": "BallStats",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "BallStats",
+    "unity_type": "None",
+    "methods": [],
+    "fields": [
+      {
+        "name": "speed",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "attackPower",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "criticalChance",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "criticalDamage",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "radius",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 5,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "float"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      5,
+      10,
+      0.05,
+      1.5,
+      0.25
+    ],
+    "guessed_roles": [
+      "combat"
+    ],
+    "summary_signals": [
+      "전투 계열 로직 포함"
+    ]
+  },
+  {
+    "file_id": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
+    "path": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
+    "file_name": "TrajectoryPredictor.cs",
+    "content_hash": "2d3adf4d1738c201c0047da65ccd7117a4ccaa01",
+    "size": 6451,
+    "line_count": 212,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine",
+      "UnityEngine.Tilemaps"
+    ],
+    "classes": [
+      {
+        "name": "TrajectoryPredictor",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "TrajectoryPredictor",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Awake",
+      "Update",
+      "Simulate",
+      "SetupVisual",
+      "Material",
+      "Vector2",
+      "AnimationCurve",
+      "Keyframe",
+      "Gradient",
+      "GradientColorKey",
+      "GradientAlphaKey",
+      "GenerateDashTexture",
+      "Texture2D",
+      "Color",
+      "ResolveCollision",
+      "ResolveWallBounds",
+      "ResolvePaddle",
+      "ResolveTile",
+      "Vector3Int",
+      "Bounds",
+      "IsTouching"
+    ],
+    "fields": [
+      {
+        "name": "line",
+        "type": "LineRenderer",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "simPos",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "simVel",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "radius",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "speed",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "positions",
+        "type": "Vector3[]",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "validCount",
+        "type": "int",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "width",
+        "type": "int",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "eps",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "closest",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "dist",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Awake",
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 2,
+    "find_call_count": 0,
+    "new_keyword_count": 18,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "LineRenderer",
+      "Vector2",
+      "float",
+      "Vector3",
+      "int",
+      "UnityEngine",
+      "Tilemaps",
+      "RequireComponent",
+      "Reference",
+      "Ball",
+      "Paddle",
+      "World",
+      "Simulation",
+      "Visual",
+      "Awake",
+      "GetComponent",
+      "SetupVisual",
+      "Update",
+      "Simulate",
+      "Physics",
+      "Stats",
+      "ResolveCollision",
+      "ResolveTile",
+      "ResolvePaddle",
+      "IsNaN",
+      "SetPosition",
+      "Material",
+      "Sprite",
+      "Shader",
+      "Find",
+      "Sprites",
+      "Default",
+      "GenerateDashTexture",
+      "LineTextureMode",
+      "Tile",
+      "AnimationCurve",
+      "Keyframe",
+      "Gradient",
+      "SetKeys",
+      "GradientColorKey",
+      "Color",
+      "GradientAlphaKey",
+      "Texture2D",
+      "TextureFormat",
+      "RGBA32",
+      "TextureWrapMode",
+      "Repeat",
+      "SetPixel",
+      "Apply",
+      "Collision",
+      "Collider2D",
+      "Physics2D",
+      "OverlapCircleAll",
+      "CompareTag",
+      "Wall",
+      "ResolveWallBounds",
+      "Bounds",
+      "Min",
+      "Abs",
+      "Velocity",
+      "NaN",
+      "Sqrt",
+      "Tilemap",
+      "Spawner",
+      "GetActiveTilemaps",
+      "CeilToInt",
+      "Vector3Int",
+      "WorldToCell",
+      "HasTile",
+      "CellToWorld",
+      "IsTouching",
+      "Clamp"
+    ],
+    "component_access_types": [
+      "LineRenderer",
+      "Collider2D"
+    ],
+    "created_types": [
+      "Material",
+      "Vector2",
+      "AnimationCurve",
+      "Keyframe",
+      "Gradient",
+      "GradientColorKey",
+      "GradientAlphaKey",
+      "Texture2D",
+      "Color",
+      "Vector3Int",
+      "Bounds"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [
+      "Reference",
+      "Simulation",
+      "Visual",
+      "Sprites/Default",
+      "Wall"
+    ],
+    "numeric_literals": [
+      40,
+      0.05,
+      0.01,
+      8,
+      1,
+      0,
+      4,
+      0.4,
+      0.5,
+      64,
+      8,
+      0.001,
+      2
+    ],
+    "guessed_roles": [
+      "runtime",
+      "ui",
+      "combat",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "UI 관련 로직 포함",
+      "전투 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
+    "file_id": "ExpDemo2/Assets/Gameplay/Paddle/Paddle.cs",
+    "path": "ExpDemo2/Assets/Gameplay/Paddle/Paddle.cs",
+    "file_name": "Paddle.cs",
+    "content_hash": "bb9036ff20d12ef7f697a48ee8316c4b82baf975",
+    "size": 375,
+    "line_count": 22,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "Paddle",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "Paddle",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Awake",
+      "PaddlePhysics",
+      "Start",
+      "Update"
+    ],
+    "fields": [],
+    "properties": [
+      {
+        "access": "public",
+        "type": "PaddleStats",
+        "name": "Stats"
+      },
+      {
+        "access": "public",
+        "type": "PaddlePhysics",
+        "name": "Physics"
+      }
+    ],
+    "events": [],
+    "unity_messages": [
+      "Awake",
+      "Start",
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "PaddleStats",
+      "PaddlePhysics",
+      "UnityEngine",
+      "Stats",
+      "Physics",
+      "Awake",
+      "Start",
+      "GameManager",
+      "Instance",
+      "Update",
+      "Tick"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "PaddlePhysics"
+    ],
+    "singleton_access_types": [
+      "GameManager"
+    ],
+    "string_literals": [],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "runtime",
+      "manager"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재"
+    ]
+  },
+  {
+    "file_id": "ExpDemo2/Assets/Gameplay/Paddle/PaddlePhysics.cs",
+    "path": "ExpDemo2/Assets/Gameplay/Paddle/PaddlePhysics.cs",
+    "file_name": "PaddlePhysics.cs",
+    "content_hash": "d931d2462b20ea320c739d2fed19659270be2322",
+    "size": 941,
+    "line_count": 38,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "PaddlePhysics",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "PaddlePhysics",
+    "unity_type": "None",
+    "methods": [
+      "PaddlePhysics",
+      "Tick",
+      "Vector2"
+    ],
+    "fields": [
+      {
+        "name": "paddle",
+        "type": "Paddle",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "pointerDelta",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "moveRange",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "worldDeltaPosX",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "newPosX",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [
+      {
+        "access": "public",
+        "type": "float",
+        "name": "Velocity"
+      }
+    ],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "Paddle",
+      "Vector2",
+      "float",
+      "UnityEngine",
+      "Velocity",
+      "Tick",
+      "GameManager",
+      "Instance",
+      "Input",
+      "PointerDelta",
+      "PointerPressed",
+      "Stats",
+      "Screen",
+      "Clamp"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "Vector2"
+    ],
+    "singleton_access_types": [
+      "GameManager"
+    ],
+    "string_literals": [],
+    "numeric_literals": [
+      0,
+      2
+    ],
+    "guessed_roles": [
+      "manager",
+      "player"
+    ],
+    "summary_signals": []
+  },
+  {
+    "file_id": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "path": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "file_name": "PaddleStats.cs",
+    "content_hash": "5bb83d4fd7a529507ae3c006b646a3d794630193",
+    "size": 165,
+    "line_count": 7,
+    "namespace": "",
+    "using_list": [],
+    "classes": [
+      {
+        "name": "PaddleStats",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "PaddleStats",
+    "unity_type": "None",
+    "methods": [],
+    "fields": [
+      {
+        "name": "maxPaddleSpeed",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "moveRange",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "paddleWidth",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "reflectionWeight",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 4,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "float"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      10,
+      3,
+      0.5
+    ],
+    "guessed_roles": [
+      "player"
+    ],
+    "summary_signals": []
+  },
+  {
+    "file_id": "ExpDemo2/Assets/Gameplay/World/World.cs",
+    "path": "ExpDemo2/Assets/Gameplay/World/World.cs",
+    "file_name": "World.cs",
+    "content_hash": "2a73ea187a835e5a2c6a40139160d561ae44a1cc",
+    "size": 534,
+    "line_count": 23,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "World",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "World",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
+      "WorldSpawner",
+      "WorldScroller",
+      "Update"
+    ],
+    "fields": [],
+    "properties": [
+      {
+        "access": "public",
+        "type": "WorldStats",
+        "name": "Stats"
+      },
+      {
+        "access": "public",
+        "type": "WorldScroller",
+        "name": "Scroller"
+      },
+      {
+        "access": "public",
+        "type": "WorldSpawner",
+        "name": "Spawner"
+      }
+    ],
+    "events": [],
+    "unity_messages": [
+      "Start",
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 2,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "WorldStats",
+      "WorldScroller",
+      "WorldSpawner",
+      "UnityEngine",
+      "Stats",
+      "Scroller",
+      "Spawner",
+      "Start",
+      "GameManager",
+      "Instance",
+      "Init",
+      "Update",
+      "Tick"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "WorldSpawner",
+      "WorldScroller"
+    ],
+    "singleton_access_types": [
+      "GameManager"
+    ],
+    "string_literals": [],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "runtime",
+      "manager",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "ExpDemo2/Assets/Gameplay/World/WorldScroller.cs",
+    "path": "ExpDemo2/Assets/Gameplay/World/WorldScroller.cs",
+    "file_name": "WorldScroller.cs",
+    "content_hash": "5e5a3e18560ddd3eee9ad835cbd75752bcd5bc08",
+    "size": 925,
+    "line_count": 45,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "WorldScroller",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "WorldScroller",
+    "unity_type": "None",
+    "methods": [
+      "WorldScroller",
+      "Tick",
+      "Vector3",
+      "GetHighestChunkY"
+    ],
+    "fields": [
+      {
+        "name": "world",
+        "type": "World",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "chunks",
+        "type": "GameObject[]",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "chunkHeight",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "highestY",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "World",
+      "float",
+      "UnityEngine",
+      "Tick",
+      "Spawner",
+      "Chunks",
+      "Stats",
+      "Length",
+      "Vector3",
+      "ReplaceChunk",
+      "GetHighestChunkY",
+      "MinValue"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "Vector3"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      0
+    ],
+    "guessed_roles": [],
+    "summary_signals": []
+  },
+  {
+    "file_id": "ExpDemo2/Assets/Gameplay/World/WorldSpawner.cs",
+    "path": "ExpDemo2/Assets/Gameplay/World/WorldSpawner.cs",
+    "file_name": "WorldSpawner.cs",
+    "content_hash": "75c8e6604606248b3b03efc1df487829106e2a25",
+    "size": 1239,
+    "line_count": 51,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine",
+      "UnityEngine.Tilemaps"
+    ],
+    "classes": [
+      {
+        "name": "WorldSpawner",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "WorldSpawner",
+    "unity_type": "None",
+    "methods": [
+      "WorldSpawner",
+      "Init",
+      "Vector3",
+      "ReplaceChunk",
+      "SpawnRandomChunk",
+      "GetActiveTilemaps"
+    ],
+    "fields": [
+      {
+        "name": "world",
+        "type": "World",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "chunkPrefabs",
+        "type": "GameObject[]",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "startY",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "randomIndex",
+        "type": "int",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "tilemaps",
+        "type": "Tilemap[]",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [
+      {
+        "access": "public",
+        "type": "GameObject[]",
+        "name": "Chunks"
+      }
+    ],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 3,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "World",
+      "float",
+      "int",
+      "Tilemap",
+      "UnityEngine",
+      "Tilemaps",
+      "Chunks",
+      "Stats",
+      "Init",
+      "Length",
+      "SpawnRandomChunk",
+      "Vector3",
+      "ReplaceChunk",
+      "Destroy",
+      "Instantiate",
+      "Quaternion",
+      "GetActiveTilemaps",
+      "GetComponentInChildren"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "Vector3"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      0
+    ],
+    "guessed_roles": [
+      "runtime"
+    ],
+    "summary_signals": []
+  },
+  {
+    "file_id": "ExpDemo2/Assets/Gameplay/World/WorldStats.cs",
+    "path": "ExpDemo2/Assets/Gameplay/World/WorldStats.cs",
+    "file_name": "WorldStats.cs",
+    "content_hash": "705a38aeee2a489f1ae480880c337e112cc08680",
+    "size": 120,
+    "line_count": 6,
+    "namespace": "",
+    "using_list": [],
+    "classes": [
+      {
+        "name": "WorldStats",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "WorldStats",
+    "unity_type": "None",
+    "methods": [],
+    "fields": [
+      {
+        "name": "scrollSpeed",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "chunkHeight",
+        "type": "float",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "chunkCount",
+        "type": "int",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 3,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "float",
+      "int"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      1,
+      20,
+      2
+    ],
+    "guessed_roles": [],
+    "summary_signals": []
+  },
+  {
+    "file_id": "ExpDemo2/Assets/UI/Title/TitleManager.cs",
+    "path": "ExpDemo2/Assets/UI/Title/TitleManager.cs",
+    "file_name": "TitleManager.cs",
+    "content_hash": "18f67c97f9168c1607b40143cd71ac4bead08ade",
+    "size": 181,
+    "line_count": 10,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine",
+      "UnityEngine.SceneManagement"
+    ],
+    "classes": [
+      {
+        "name": "TitleManager",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "TitleManager",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "OnStartButtonClicked"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "UnityEngine",
+      "SceneManagement",
+      "OnStartButtonClicked",
+      "SceneManager",
+      "LoadScene",
+      "GameScene"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [
+      "GameScene"
+    ],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "scene",
+      "runtime",
+      "ui",
+      "save-load",
+      "manager"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "UI 관련 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
     "file_id": "ExpDemoA/Assets/Scripts/BackgroundScroller.cs",
     "path": "ExpDemoA/Assets/Scripts/BackgroundScroller.cs",
     "file_name": "BackgroundScroller.cs",
