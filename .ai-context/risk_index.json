@@ -160,8 +160,61 @@
     "risk_score": 56
   },
   {
+    "file_id": "ExpDemoA/Assets/Scripts/GameManager.cs",
+    "class_name": "GameManager",
+    "risk_flags": [
+      "high-coupling",
+      "public-field-heavy",
+      "magic-number-heavy",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "public 필드 노출 수가 많음",
+      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 54
+  },
+  {
     "file_id": "demo_2/Assets/Scripts/CardSlotUI.cs",
     "class_name": "CardSlotUI",
+    "risk_flags": [
+      "high-coupling",
+      "init-order-sensitive",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "초기화 순서에 민감할 가능성",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 46
+  },
+  {
+    "file_id": "ExpDemoA/Assets/Scripts/CardSlotUI.cs",
+    "class_name": "CardSlotUI",
+    "risk_flags": [
+      "high-coupling",
+      "init-order-sensitive",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "초기화 순서에 민감할 가능성",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 46
+  },
+  {
+    "file_id": "ExpDemoA/Assets/Scripts/EnhanceUI.cs",
+    "class_name": "EnhanceUI",
     "risk_flags": [
       "high-coupling",
       "init-order-sensitive",
@@ -212,6 +265,21 @@
   },
   {
     "file_id": "demo_2/Assets/Scripts/CardSelector.cs",
+    "class_name": "CardSelector",
+    "risk_flags": [
+      "high-coupling",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 38
+  },
+  {
+    "file_id": "ExpDemoA/Assets/Scripts/CardSelector.cs",
     "class_name": "CardSelector",
     "risk_flags": [
       "high-coupling",
@@ -282,6 +350,21 @@
       "저장/불러오기 관련 로직 포함",
       "UI와 런타임 책임이 한 파일에 섞였을 가능성",
       "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 30
+  },
+  {
+    "file_id": "ExpDemoA/Assets/Scripts/EnhanceUITest.cs",
+    "class_name": "EnhanceUITest",
+    "risk_flags": [
+      "magic-number-heavy",
+      "save-load-sensitive",
+      "ui-runtime-mixed"
+    ],
+    "risk_reasons": [
+      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
+      "저장/불러오기 관련 로직 포함",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성"
     ],
     "risk_score": 30
   },
@@ -387,6 +470,19 @@
     "risk_score": 26
   },
   {
+    "file_id": "ExpDemoA/Assets/Scripts/CardDataBase.cs",
+    "class_name": "CardDatabase",
+    "risk_flags": [
+      "high-coupling",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 26
+  },
+  {
     "file_id": "My project/Assets/TutorialInfo/Scripts/Readme.cs",
     "class_name": "Readme",
     "risk_flags": [
@@ -398,6 +494,19 @@
       "저장/불러오기 관련 로직 포함"
     ],
     "risk_score": 22
+  },
+  {
+    "file_id": "ExpDemoA/Assets/Scripts/CardData.cs",
+    "class_name": "CardData",
+    "risk_flags": [
+      "public-field-heavy",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "public 필드 노출 수가 많음",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 18
   },
   {
     "file_id": "demo_1/Assets/Scripts/ScrollingBackground.cs",
