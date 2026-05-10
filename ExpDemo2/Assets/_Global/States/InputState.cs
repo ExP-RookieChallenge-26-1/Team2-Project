@@ -46,7 +46,6 @@ public class InputState
 		else
 		{
 			Debug.LogWarning("No Input Device.");
-			GameManager.Instance.State.Change(GameState.GameOver);
 			return;
 		}
 

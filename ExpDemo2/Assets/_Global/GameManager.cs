@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
 	public PaddleStats PaddleStats { get; private set; }
 	public WorldStats WorldStats { get; private set; }
 
+	[SerializeField] private BallStats ballStatsAsset;
+	[SerializeField] private PaddleStats paddleStatsAsset;
+	[SerializeField] private WorldStats worldStatsAsset;
+
 	private void Awake()
 	{
 		if (Instance != null && Instance != this)
@@ -21,9 +25,9 @@ public class GameManager : MonoBehaviour
 
 		this.State = GetComponent<GameStateMachine>();
 		this.Input = new InputState();
-		this.BallStats = new BallStats();
-		this.PaddleStats = new PaddleStats();
-		this.WorldStats = new WorldStats();
+		this.BallStats = Instantiate(this.ballStatsAsset);
+		this.PaddleStats = Instantiate(this.paddleStatsAsset);
+		this.WorldStats = Instantiate(this.worldStatsAsset);
 	}
 
 	private void Update()

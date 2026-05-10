@@ -1,6 +1,9 @@
-public class WorldStats
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "WorldStats", menuName = "Stats/WorldStats")]
+public class WorldStats : ScriptableObject
 {
-	public float scrollSpeed = 1f;
-	public float chunkHeight = 20f;
-	public int chunkCount = 2;
+	[field: SerializeField] public float ScrollSpeed { get; private set; }
+	[field: SerializeField] public float ChunkHeight { get; private set; }
+	[field: SerializeField] public int ChunkCount { get; private set; }
 }

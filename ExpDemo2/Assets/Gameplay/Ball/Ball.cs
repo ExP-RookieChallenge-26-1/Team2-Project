@@ -6,10 +6,12 @@ public class Ball : MonoBehaviour
 	public BallStats Stats { get; private set; }
 	public BallPhysics Physics { get; private set; }
 	public BallCollision Collision { get; private set; }
+	public BallTrajectory Trajectory { get; private set; }
 
 	private void Awake()
 	{
 		this.Collision = GetComponent<BallCollision>();
+		this.Trajectory = GetComponent<BallTrajectory>();
 		this.Physics = new BallPhysics(this);
 	}
 
@@ -22,6 +24,7 @@ public class Ball : MonoBehaviour
 	private void Update()
 	{
 		this.Collision.Tick();
+		this.Trajectory.Tick();
 		this.Physics.Tick(Time.deltaTime);
 		CheckGameOver();
 	}

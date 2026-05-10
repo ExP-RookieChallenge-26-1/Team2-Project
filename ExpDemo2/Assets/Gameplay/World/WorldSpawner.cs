@@ -11,7 +11,7 @@ public class WorldSpawner
 	{
 		this.world = world;
 		this.chunkPrefabs = chunkPrefabs;
-		this.Chunks = new GameObject[world.Stats.chunkCount];
+		this.Chunks = new GameObject[world.Stats.ChunkCount];
 	}
 
 	public void Init()
@@ -20,7 +20,7 @@ public class WorldSpawner
 		{
 			float startY;
 
-			startY = i * this.world.Stats.chunkHeight;
+			startY = i * this.world.Stats.ChunkHeight;
 			this.Chunks[i] = SpawnRandomChunk(new Vector3(0f, startY, 0f));
 		}
 	}
@@ -36,16 +36,5 @@ public class WorldSpawner
 		int randomIndex;
 		randomIndex = Random.Range(0, this.chunkPrefabs.Length);
 		return GameObject.Instantiate(this.chunkPrefabs[randomIndex], position, Quaternion.identity);
-	}
-
-	public Tilemap[] GetActiveTilemaps()
-	{
-		Tilemap[] tilemaps;
-		tilemaps = new Tilemap[this.Chunks.Length];
-
-		for (int i = 0; i < this.Chunks.Length; ++i)
-			tilemaps[i] = this.Chunks[i].GetComponentInChildren<Tilemap>();
-		
-		return tilemaps;
 	}
 }

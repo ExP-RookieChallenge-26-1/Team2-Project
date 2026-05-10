@@ -1,8 +1,11 @@
-public class BallStats
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "BallStats", menuName = "Stats/BallStats")]
+public class BallStats : ScriptableObject
 {
-	public float speed = 5f;
-	public float attackPower = 10f;
-	public float criticalChance = 0.05f;
-	public float criticalDamage = 1.5f;
-	public float radius = 0.25f;
+	[field: SerializeField] public float Speed { get; private set; }
+	[field: SerializeField] public float Radius { get; private set; }
+	[field: SerializeField] public float AttackPower { get; private set; }
+	[field: SerializeField] public float CriticalChance { get; private set; }
+	[field: SerializeField] public float CriticalDamage { get; private set; }
 }

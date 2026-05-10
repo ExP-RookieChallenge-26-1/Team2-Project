@@ -28,9 +28,9 @@ public class PaddlePhysics
 			return;
 		}
 
-		moveRange = this.paddle.Stats.moveRange;
+		moveRange = this.paddle.Stats.MoveRange;
 		worldDeltaPosX = pointerDelta.x / Screen.width * moveRange * 2f;
-		this.Velocity = Mathf.Clamp(worldDeltaPosX / deltaTime, -this.paddle.Stats.maxPaddleSpeed, this.paddle.Stats.maxPaddleSpeed);
+		this.Velocity = Mathf.Clamp(worldDeltaPosX / deltaTime, -this.paddle.Stats.MaxPaddleSpeed, this.paddle.Stats.MaxPaddleSpeed);
 
 		newPosX = Mathf.Clamp(this.paddle.transform.position.x + worldDeltaPosX, -moveRange, moveRange);
 		this.paddle.transform.position = new Vector2(newPosX, this.paddle.transform.position.y);

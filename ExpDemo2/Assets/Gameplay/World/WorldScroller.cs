@@ -18,11 +18,11 @@ public class WorldScroller
 			return;
 
 		chunks = this.world.Spawner.Chunks;
-		chunkHeight = this.world.Stats.chunkHeight;
+		chunkHeight = this.world.Stats.ChunkHeight;
 
 		for (int i = 0; i < chunks.Length; ++i)
 		{
-			chunks[i].transform.position += deltaTime * this.world.Stats.scrollSpeed * Vector3.down;
+			chunks[i].transform.position += deltaTime * this.world.Stats.ScrollSpeed * Vector3.down;
 
 			if (chunks[i].transform.position.y < -chunkHeight)
 				this.world.Spawner.ReplaceChunk(i, new Vector3(0f, GetHighestChunkY(chunks) + chunkHeight, 0f));
