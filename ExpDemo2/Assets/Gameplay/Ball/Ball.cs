@@ -32,6 +32,6 @@ public class Ball : MonoBehaviour
 	private void CheckGameOver()
 	{
 		if (transform.position.y < -6f)
-			GameManager.Instance.State.Change(GameState.GameOver);
+			GameManager.Instance.State.Change(GameStateMachine.State.GameOver);
 	}
 }

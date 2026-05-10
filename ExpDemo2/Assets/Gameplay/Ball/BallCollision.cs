@@ -51,7 +51,7 @@ public class BallCollision : MonoBehaviour
 				this.ball.Physics.ApplyWallReflection(collision.bounds);
 				break;
 			case Collision.Type.Paddle:
-				this.ball.Physics.ApplyPaddleReflection(collision.bounds, this.paddle);
+				this.ball.Physics.ApplyPaddleReflectionAlternative(collision.bounds, this.paddle);
 				break;
 		}
 	}

@@ -49,7 +49,7 @@ public class BallTrajectory : MonoBehaviour
 					velocity = BallPhysics.CalculateWallReflection(collision.bounds, position, velocity, this.ball.Stats.Radius);
 					break;
 				case BallCollision.Collision.Type.Paddle:
-					velocity = BallPhysics.CalculatePaddleReflection(collision.bounds, position, velocity, this.ball.Stats.Speed, this.paddle);
+					velocity = BallPhysics.CalculatePaddleReflectionAlternative(collision.bounds, position, velocity, this.ball.Stats.Speed, this.paddle);
 					break;
 			}
 

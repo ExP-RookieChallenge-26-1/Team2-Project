@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(GameStateMachine))]
 public class GameManager : MonoBehaviour
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private BallStats ballStatsAsset;
 	[SerializeField] private PaddleStats paddleStatsAsset;
 	[SerializeField] private WorldStats worldStatsAsset;
+	[SerializeField] private EnhanceUI enhanceUI;
 
 	private void Awake()
 	{
@@ -30,8 +32,42 @@ public class GameManager : MonoBehaviour
 		this.WorldStats = Instantiate(this.worldStatsAsset);
 	}
 
+	private void Start()
+	{
+		this.State.OnChanged += OnGameStateChanged;
+	}
+
 	private void Update()
 	{
 		this.Input.Tick();
+	}
+
+	private void OnDestroy()
+	{
+		this.State.OnChanged -= OnGameStateChanged;
+	}
+
+	private void OnGameStateChanged(GameStateMachine.State newState)
+	{
+		switch (newState)
+		{
+			case GameStateMachine.State.Playing:
+				Time.timeScale = 1f;
+				break;
+			case GameStateMachine.State.Enhancement:
+				Time.timeScale = 0.2f;
+				break;
+			case GameStateMachine.State.GameOver:
+				Time.timeScale = 1f;
+				SceneManager.LoadScene("TitleScene");
+				break;
+		}
+	}
+
+	public void OpenUpgradeUI(int[] ids, float[] weights)
+	{
+		this.State.Change(GameStateMachine.State.Enhancement);
+		this.enhanceUI.gameObject.SetActive(true);
+		this.enhanceUI.ShowCardsByIds(ids, weights);
 	}
 }

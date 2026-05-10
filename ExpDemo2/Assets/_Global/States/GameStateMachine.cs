@@ -1,26 +1,28 @@
 using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameStateMachine : MonoBehaviour
 {
-	public GameState Current { get; private set; }
-	public event Action<GameState> OnChanged;
+	public enum State
+	{
+		Playing,
+		Enhancement,
+		GameOver
+	}
+	public State Current { get; private set; }
+	public event Action<State> OnChanged;
 
 	private void Start()
 	{
-		Change(GameState.Playing);
+		Change(State.Playing);
 	}
 	
-	public void Change(GameState newState)
+	public void Change(State newState)
 	{
 		if (Current == newState)
 			return;
 
 		Current = newState;
 		OnChanged?.Invoke(this.Current);
-
-		if (newState == GameState.GameOver)
-			SceneManager.LoadScene("TitleScene");
 	}
 }
