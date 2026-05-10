@@ -1,5 +1,28 @@
 [
   {
+    "file_id": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "class_name": "GameManager",
+    "risk_flags": [
+      "update-heavy",
+      "singleton-candidate",
+      "high-coupling",
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "Unity 업데이트 루프 사용",
+      "Instance 또는 DontDestroyOnLoad 패턴 감지",
+      "참조 타입 또는 관계 수가 많음",
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 83
+  },
+  {
     "file_id": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
     "class_name": "BallCollision",
     "risk_flags": [
@@ -40,27 +63,6 @@
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
     "risk_score": 66
-  },
-  {
-    "file_id": "ExpDemo2/Assets/_Global/GameManager.cs",
-    "class_name": "GameManager",
-    "risk_flags": [
-      "update-heavy",
-      "singleton-candidate",
-      "init-order-sensitive",
-      "save-load-sensitive",
-      "ui-runtime-mixed",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "Unity 업데이트 루프 사용",
-      "Instance 또는 DontDestroyOnLoad 패턴 감지",
-      "초기화 순서에 민감할 가능성",
-      "저장/불러오기 관련 로직 포함",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 65
   },
   {
     "file_id": "demo_2/Assets/Scripts/EnhanceUI.cs",
@@ -194,6 +196,40 @@
     "risk_score": 46
   },
   {
+    "file_id": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "class_name": "CardSlotUI",
+    "risk_flags": [
+      "high-coupling",
+      "init-order-sensitive",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "초기화 순서에 민감할 가능성",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 46
+  },
+  {
+    "file_id": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "class_name": "EnhanceUI",
+    "risk_flags": [
+      "high-coupling",
+      "init-order-sensitive",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "초기화 순서에 민감할 가능성",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 46
+  },
+  {
     "file_id": "ExpDemoA/Assets/Scripts/CardSlotUI.cs",
     "class_name": "CardSlotUI",
     "risk_flags": [
@@ -277,6 +313,66 @@
     "risk_score": 38
   },
   {
+    "file_id": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "class_name": "BallStats",
+    "risk_flags": [
+      "high-coupling",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 38
+  },
+  {
+    "file_id": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "class_name": "CardDatabase",
+    "risk_flags": [
+      "high-coupling",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 38
+  },
+  {
+    "file_id": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "class_name": "StatUpgradeCardData",
+    "risk_flags": [
+      "high-coupling",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 38
+  },
+  {
+    "file_id": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "class_name": "CardSelector",
+    "risk_flags": [
+      "high-coupling",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 38
+  },
+  {
     "file_id": "ExpDemoA/Assets/Scripts/CardSelector.cs",
     "class_name": "CardSelector",
     "risk_flags": [
@@ -333,21 +429,6 @@
       "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
       "저장/불러오기 관련 로직 포함",
       "UI와 런타임 책임이 한 파일에 섞였을 가능성"
-    ],
-    "risk_score": 30
-  },
-  {
-    "file_id": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
-    "class_name": "GameStateMachine",
-    "risk_flags": [
-      "init-order-sensitive",
-      "save-load-sensitive",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "초기화 순서에 민감할 가능성",
-      "저장/불러오기 관련 로직 포함",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
     "risk_score": 30
   },
@@ -470,6 +551,21 @@
     "risk_score": 26
   },
   {
+    "file_id": "ExpDemo2/Assets/_Global/Demo/EnhanceUITest.cs",
+    "class_name": "EnhanceUITest",
+    "risk_flags": [
+      "magic-number-heavy",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 26
+  },
+  {
     "file_id": "ExpDemoA/Assets/Scripts/CardDataBase.cs",
     "class_name": "CardDatabase",
     "risk_flags": [
@@ -496,6 +592,32 @@
     "risk_score": 22
   },
   {
+    "file_id": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "class_name": "PaddleStats",
+    "risk_flags": [
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 20
+  },
+  {
+    "file_id": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
+    "class_name": "GameStateMachine",
+    "risk_flags": [
+      "init-order-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "초기화 순서에 민감할 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 18
+  },
+  {
     "file_id": "ExpDemoA/Assets/Scripts/CardData.cs",
     "class_name": "CardData",
     "risk_flags": [
@@ -509,19 +631,8 @@
     "risk_score": 18
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
-    "class_name": "BallStats",
-    "risk_flags": [
-      "save-load-sensitive"
-    ],
-    "risk_reasons": [
-      "저장/불러오기 관련 로직 포함"
-    ],
-    "risk_score": 12
-  },
-  {
-    "file_id": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
-    "class_name": "PaddleStats",
+    "file_id": "ExpDemo2/Assets/Gameplay/Card/CardData.cs",
+    "class_name": "CardData",
     "risk_flags": [
       "save-load-sensitive"
     ],
@@ -617,13 +728,6 @@
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
     "risk_score": 8
-  },
-  {
-    "file_id": "ExpDemo2/Assets/_Global/States/GameState.cs",
-    "class_name": "GameState",
-    "risk_flags": [],
-    "risk_reasons": [],
-    "risk_score": 0
   },
   {
     "file_id": "ExpDemoA/Assets/Scripts/Enemy.cs",

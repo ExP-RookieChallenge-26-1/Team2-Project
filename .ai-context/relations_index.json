@@ -777,6 +777,55 @@
     "strength": 1
   },
   {
+    "from_file": "ExpDemo2/Assets/_Global/Demo/EnhanceUITest.cs",
+    "from_class": "EnhanceUITest",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/Demo/EnhanceUITest.cs",
+    "from_class": "EnhanceUITest",
+    "to_type": "GameManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/Demo/EnhanceUITest.cs",
+    "from_class": "EnhanceUITest",
+    "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/Demo/EnhanceUITest.cs",
+    "from_class": "EnhanceUITest",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/Demo/EnhanceUITest.cs",
+    "from_class": "EnhanceUITest",
+    "to_type": "OnClickTest",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/Demo/EnhanceUITest.cs",
+    "from_class": "EnhanceUITest",
+    "to_type": "OpenUpgradeUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/Demo/EnhanceUITest.cs",
+    "from_class": "EnhanceUITest",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
     "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
     "to_type": "GameStateMachine",
@@ -814,7 +863,35 @@
   {
     "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
+    "to_type": "Change",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
     "to_type": "Destroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "Enhancement",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "EnhanceUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "GameOver",
     "relation_type": "uses",
     "strength": 1
   },
@@ -863,6 +940,41 @@
   {
     "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
+    "to_type": "LoadScene",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "OnChanged",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "OnDestroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "OnGameStateChanged",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "OpenUpgradeUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
     "to_type": "PaddleStats",
     "relation_type": "uses",
     "strength": 1
@@ -870,7 +982,49 @@
   {
     "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
+    "to_type": "Playing",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
     "to_type": "RequireComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "SceneManagement",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "SceneManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "SetActive",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "ShowCardsByIds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "Start",
     "relation_type": "uses",
     "strength": 1
   },
@@ -885,6 +1039,13 @@
     "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
     "to_type": "Tick",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "TitleScene",
     "relation_type": "uses",
     "strength": 1
   },
@@ -906,34 +1067,6 @@
     "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
     "to_type": "WorldStats",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/States/GameState.cs",
-    "from_class": "GameState",
-    "to_type": "Enhancement",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/States/GameState.cs",
-    "from_class": "GameState",
-    "to_type": "GameOver",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/States/GameState.cs",
-    "from_class": "GameState",
-    "to_type": "GameState",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/States/GameState.cs",
-    "from_class": "GameState",
-    "to_type": "Playing",
     "relation_type": "uses",
     "strength": 1
   },
@@ -961,6 +1094,13 @@
   {
     "from_file": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
     "from_class": "GameStateMachine",
+    "to_type": "Enhancement",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
+    "from_class": "GameStateMachine",
     "to_type": "GameOver",
     "relation_type": "uses",
     "strength": 1
@@ -968,21 +1108,7 @@
   {
     "from_file": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
     "from_class": "GameStateMachine",
-    "to_type": "GameState",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
-    "from_class": "GameStateMachine",
     "to_type": "Invoke",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
-    "from_class": "GameStateMachine",
-    "to_type": "LoadScene",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1003,20 +1129,6 @@
   {
     "from_file": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
     "from_class": "GameStateMachine",
-    "to_type": "SceneManagement",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
-    "from_class": "GameStateMachine",
-    "to_type": "SceneManager",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
-    "from_class": "GameStateMachine",
     "to_type": "Start",
     "relation_type": "uses",
     "strength": 1
@@ -1024,14 +1136,14 @@
   {
     "from_file": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
     "from_class": "GameStateMachine",
-    "to_type": "System",
+    "to_type": "State",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
     "from_class": "GameStateMachine",
-    "to_type": "TitleScene",
+    "to_type": "System",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1290,7 +1402,7 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
-    "to_type": "GameState",
+    "to_type": "GameStateMachine",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1437,7 +1549,7 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
-    "to_type": "ApplyPaddleReflection",
+    "to_type": "ApplyPaddleReflectionAlternative",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1976,7 +2088,28 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
     "from_class": "BallStats",
+    "to_type": "Chance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Clamp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
     "to_type": "CreateAssetMenu",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Critical",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1997,7 +2130,63 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
     "from_class": "BallStats",
+    "to_type": "Damage",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
     "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "IncreaseAttackPower",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "IncreaseCriticalChance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "IncreaseCriticalDamage",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "IncreaseRadius",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "IncreaseSpeed",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Log",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Max",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2172,7 +2361,7 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
     "from_class": "BallTrajectory",
-    "to_type": "CalculatePaddleReflection",
+    "to_type": "CalculatePaddleReflectionAlternative",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2499,6 +2688,615 @@
     "strength": 1
   },
   {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardData.cs",
+    "from_class": "CardData",
+    "to_type": "ScriptableObject",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardData.cs",
+    "from_class": "CardData",
+    "to_type": "Apply",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardData.cs",
+    "from_class": "CardData",
+    "to_type": "CardName",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardData.cs",
+    "from_class": "CardData",
+    "to_type": "Description",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardData.cs",
+    "from_class": "CardData",
+    "to_type": "Icon",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardData.cs",
+    "from_class": "CardData",
+    "to_type": "Id",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardData.cs",
+    "from_class": "CardData",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardData.cs",
+    "from_class": "CardData",
+    "to_type": "Sprite",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardData.cs",
+    "from_class": "CardData",
+    "to_type": "string",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardData.cs",
+    "from_class": "CardData",
+    "to_type": "TextArea",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardData.cs",
+    "from_class": "CardData",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "Dictionary",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "List",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "ScriptableObject",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "Add",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "BuildMap",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "CardData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "CardName",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "Collections",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "ContainsKey",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "CreateAssetMenu",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "Duplicate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "Game",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "Generic",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "GetById",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "GetByName",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "Id",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "IsNullOrEmpty",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "LogWarning",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "System",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "TryGetValue",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "from_class": "CardDatabase",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "CardData",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "GameManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Apply",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "AttackPower",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "BallSize",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "BallStats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "CardData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "CreateAssetMenu",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "CriticalChance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "CriticalDamage",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "IncreaseAttackPower",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "IncreaseCriticalChance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "IncreaseCriticalDamage",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "IncreasePaddleSizeLevel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "IncreaseRadius",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "IncreaseSpeed",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "PaddleSizeLevel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "PaddleStats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill1CooldownReductionRate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill2CooldownReductionRate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Speed",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "StatUpgrade",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "StatUpgradeCard",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "TODO",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Upgrade",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Value",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "List",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "Add",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "CardData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "CardDatabase",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "Collections",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "Count",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "Generic",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "GetById",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "GetByName",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "GetWeightedRandomIndex",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "Ids",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "Length",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "LogError",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "Min",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "Names",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "Pick3ByIds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "Pick3ByNames",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "PickUnique",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "RemoveAt",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "System",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "from_class": "CardSelector",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
     "from_file": "ExpDemo2/Assets/Gameplay/Paddle/Paddle.cs",
     "from_class": "Paddle",
     "to_type": "PaddlePhysics",
@@ -2732,6 +3530,13 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
     "from_class": "PaddleStats",
+    "to_type": "Clamp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
     "to_type": "CreateAssetMenu",
     "relation_type": "uses",
     "strength": 1
@@ -2740,6 +3545,48 @@
     "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
     "from_class": "PaddleStats",
     "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
+    "to_type": "IncreasePaddleSizeLevel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
+    "to_type": "Level",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
+    "to_type": "Log",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
+    "to_type": "Math",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
+    "to_type": "MaxPaddleSizeLevel",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2760,7 +3607,14 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
     "from_class": "PaddleStats",
-    "to_type": "PaddleWidth",
+    "to_type": "Paddle",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
+    "to_type": "PaddleSizeLevel",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2774,7 +3628,21 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
     "from_class": "PaddleStats",
+    "to_type": "Size",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
     "to_type": "Stats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
+    "to_type": "System",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3194,6 +4062,447 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/World/WorldStats.cs",
     "from_class": "WorldStats",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "Vector2",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "AddListener",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "Button",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "CardData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "CardName",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "Description",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "EnhanceUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "GetCard",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "Icon",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "Image",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "OnClickCard",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "RectTransform",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "RemoveAllListeners",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "SelectCard",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "SetSelected",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "Setup",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "TMP_Text",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "TMPro",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "UI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "Vector2",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "List",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "GameManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "AddListener",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "Apply",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "Button",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "CardData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "CardSelector",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "CardSlotUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "Change",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "Collections",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "Count",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "GameStateMachine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "Generic",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "Length",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "OnChanged",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "OnClickConfirm",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "OnDestroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "OnGameStateChanged",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "Pick3ByIds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "Pick3ByNames",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "Playing",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "RemoveAllListeners",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "SelectCard",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "SetActive",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "SetSelected",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "Setup",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "Show",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "ShowCardsByIds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "ShowCardsByNames",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "State",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "System",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "UI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
     "to_type": "UnityEngine",
     "relation_type": "uses",
     "strength": 1
