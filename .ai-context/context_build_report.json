@@ -1,11 +1,11 @@
 {
   "build_mode_used": "full",
-  "files_total": 49,
-  "files_parsed": 49,
-  "changed_cs_files": 15,
-  "added_cs_files": 7,
-  "deleted_cs_files": 1,
+  "files_total": 23,
+  "files_parsed": 23,
+  "changed_cs_files": 49,
+  "added_cs_files": 0,
+  "deleted_cs_files": 26,
   "rebuild_reasons": [
-    "변경된 C# 파일 수가 임계치 이상 (15)"
+    "변경된 C# 파일 수가 임계치 이상 (49)"
   ]
 }

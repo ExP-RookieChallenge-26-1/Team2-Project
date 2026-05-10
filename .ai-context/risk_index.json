@@ -1,6 +1,6 @@
 [
   {
-    "file_id": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "file_id": "Assets/_Global/GameManager.cs",
     "class_name": "GameManager",
     "risk_flags": [
       "update-heavy",
@@ -23,7 +23,7 @@
     "risk_score": 83
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "file_id": "Assets/Gameplay/Ball/BallCollision.cs",
     "class_name": "BallCollision",
     "risk_flags": [
       "high-coupling",
@@ -44,7 +44,7 @@
     "risk_score": 73
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "file_id": "Assets/Gameplay/Ball/BallTrajectory.cs",
     "class_name": "BallTrajectory",
     "risk_flags": [
       "high-coupling",
@@ -65,64 +65,7 @@
     "risk_score": 66
   },
   {
-    "file_id": "demo_2/Assets/Scripts/EnhanceUI.cs",
-    "class_name": "EnhanceUI",
-    "risk_flags": [
-      "high-coupling",
-      "init-order-sensitive",
-      "save-load-sensitive",
-      "ui-runtime-mixed",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "참조 타입 또는 관계 수가 많음",
-      "초기화 순서에 민감할 가능성",
-      "저장/불러오기 관련 로직 포함",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 58
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/BackgroundScroller.cs",
-    "class_name": "BackgroundScroller",
-    "risk_flags": [
-      "update-heavy",
-      "high-coupling",
-      "init-order-sensitive",
-      "save-load-sensitive",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "Unity 업데이트 루프 사용",
-      "참조 타입 또는 관계 수가 많음",
-      "초기화 순서에 민감할 가능성",
-      "저장/불러오기 관련 로직 포함",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 58
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/MapScroller.cs",
-    "class_name": "MapScroller",
-    "risk_flags": [
-      "update-heavy",
-      "high-coupling",
-      "init-order-sensitive",
-      "save-load-sensitive",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "Unity 업데이트 루프 사용",
-      "참조 타입 또는 관계 수가 많음",
-      "초기화 순서에 민감할 가능성",
-      "저장/불러오기 관련 로직 포함",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 58
-  },
-  {
-    "file_id": "ExpDemo2/Assets/Gameplay/Ball/Ball.cs",
+    "file_id": "Assets/Gameplay/Ball/Ball.cs",
     "class_name": "Ball",
     "risk_flags": [
       "update-heavy",
@@ -141,45 +84,7 @@
     "risk_score": 56
   },
   {
-    "file_id": "My project/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs",
-    "class_name": "ReadmeEditor",
-    "risk_flags": [
-      "high-coupling",
-      "magic-number-heavy",
-      "save-load-sensitive",
-      "ui-runtime-mixed",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "참조 타입 또는 관계 수가 많음",
-      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
-      "저장/불러오기 관련 로직 포함",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 56
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/GameManager.cs",
-    "class_name": "GameManager",
-    "risk_flags": [
-      "high-coupling",
-      "public-field-heavy",
-      "magic-number-heavy",
-      "ui-runtime-mixed",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "참조 타입 또는 관계 수가 많음",
-      "public 필드 노출 수가 많음",
-      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 54
-  },
-  {
-    "file_id": "demo_2/Assets/Scripts/CardSlotUI.cs",
+    "file_id": "Assets/UI/Enhancement/CardSlotUI.cs",
     "class_name": "CardSlotUI",
     "risk_flags": [
       "high-coupling",
@@ -196,24 +101,7 @@
     "risk_score": 46
   },
   {
-    "file_id": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
-    "class_name": "CardSlotUI",
-    "risk_flags": [
-      "high-coupling",
-      "init-order-sensitive",
-      "ui-runtime-mixed",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "참조 타입 또는 관계 수가 많음",
-      "초기화 순서에 민감할 가능성",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 46
-  },
-  {
-    "file_id": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "file_id": "Assets/UI/Enhancement/EnhanceUI.cs",
     "class_name": "EnhanceUI",
     "risk_flags": [
       "high-coupling",
@@ -230,41 +118,7 @@
     "risk_score": 46
   },
   {
-    "file_id": "ExpDemoA/Assets/Scripts/CardSlotUI.cs",
-    "class_name": "CardSlotUI",
-    "risk_flags": [
-      "high-coupling",
-      "init-order-sensitive",
-      "ui-runtime-mixed",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "참조 타입 또는 관계 수가 많음",
-      "초기화 순서에 민감할 가능성",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 46
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/EnhanceUI.cs",
-    "class_name": "EnhanceUI",
-    "risk_flags": [
-      "high-coupling",
-      "init-order-sensitive",
-      "ui-runtime-mixed",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "참조 타입 또는 관계 수가 많음",
-      "초기화 순서에 민감할 가능성",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 46
-  },
-  {
-    "file_id": "ExpDemo2/Assets/Gameplay/World/World.cs",
+    "file_id": "Assets/Gameplay/World/World.cs",
     "class_name": "World",
     "risk_flags": [
       "update-heavy",
@@ -281,39 +135,7 @@
     "risk_score": 40
   },
   {
-    "file_id": "ExpDemoA/Assets/Scripts/BallController.cs",
-    "class_name": "BallController",
-    "risk_flags": [
-      "update-heavy",
-      "init-order-sensitive",
-      "save-load-sensitive",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "Unity 업데이트 루프 사용",
-      "초기화 순서에 민감할 가능성",
-      "저장/불러오기 관련 로직 포함",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 40
-  },
-  {
-    "file_id": "demo_2/Assets/Scripts/CardSelector.cs",
-    "class_name": "CardSelector",
-    "risk_flags": [
-      "high-coupling",
-      "save-load-sensitive",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "참조 타입 또는 관계 수가 많음",
-      "저장/불러오기 관련 로직 포함",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 38
-  },
-  {
-    "file_id": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "file_id": "Assets/Gameplay/Ball/BallStats.cs",
     "class_name": "BallStats",
     "risk_flags": [
       "high-coupling",
@@ -328,7 +150,7 @@
     "risk_score": 38
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "file_id": "Assets/Gameplay/Card/CardDatabase.cs",
     "class_name": "CardDatabase",
     "risk_flags": [
       "high-coupling",
@@ -343,7 +165,7 @@
     "risk_score": 38
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "file_id": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "class_name": "StatUpgradeCardData",
     "risk_flags": [
       "high-coupling",
@@ -358,7 +180,7 @@
     "risk_score": 38
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "file_id": "Assets/Gameplay/Card/CardSelector.cs",
     "class_name": "CardSelector",
     "risk_flags": [
       "high-coupling",
@@ -373,22 +195,7 @@
     "risk_score": 38
   },
   {
-    "file_id": "ExpDemoA/Assets/Scripts/CardSelector.cs",
-    "class_name": "CardSelector",
-    "risk_flags": [
-      "high-coupling",
-      "save-load-sensitive",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "참조 타입 또는 관계 수가 많음",
-      "저장/불러오기 관련 로직 포함",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 38
-  },
-  {
-    "file_id": "ExpDemo2/Assets/_Global/States/InputState.cs",
+    "file_id": "Assets/_Global/States/InputState.cs",
     "class_name": "InputState",
     "risk_flags": [
       "high-coupling",
@@ -403,7 +210,7 @@
     "risk_score": 36
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
+    "file_id": "Assets/Gameplay/Ball/BallPhysics.cs",
     "class_name": "BallPhysics",
     "risk_flags": [
       "high-coupling",
@@ -418,22 +225,7 @@
     "risk_score": 34
   },
   {
-    "file_id": "demo_2/Assets/Scripts/EnhanceUITest.cs",
-    "class_name": "EnhanceUITest",
-    "risk_flags": [
-      "magic-number-heavy",
-      "save-load-sensitive",
-      "ui-runtime-mixed"
-    ],
-    "risk_reasons": [
-      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
-      "저장/불러오기 관련 로직 포함",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성"
-    ],
-    "risk_score": 30
-  },
-  {
-    "file_id": "ExpDemo2/Assets/UI/Title/TitleManager.cs",
+    "file_id": "Assets/UI/Title/TitleManager.cs",
     "class_name": "TitleManager",
     "risk_flags": [
       "save-load-sensitive",
@@ -448,52 +240,7 @@
     "risk_score": 30
   },
   {
-    "file_id": "ExpDemoA/Assets/Scripts/EnhanceUITest.cs",
-    "class_name": "EnhanceUITest",
-    "risk_flags": [
-      "magic-number-heavy",
-      "save-load-sensitive",
-      "ui-runtime-mixed"
-    ],
-    "risk_reasons": [
-      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
-      "저장/불러오기 관련 로직 포함",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성"
-    ],
-    "risk_score": 30
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/PaddleController.cs",
-    "class_name": "PaddleController",
-    "risk_flags": [
-      "update-heavy",
-      "save-load-sensitive",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "Unity 업데이트 루프 사용",
-      "저장/불러오기 관련 로직 포함",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 30
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/TitleUI.cs",
-    "class_name": "TitleUI",
-    "risk_flags": [
-      "save-load-sensitive",
-      "ui-runtime-mixed",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "저장/불러오기 관련 로직 포함",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 30
-  },
-  {
-    "file_id": "ExpDemo2/Assets/Gameplay/Paddle/Paddle.cs",
+    "file_id": "Assets/Gameplay/Paddle/Paddle.cs",
     "class_name": "Paddle",
     "risk_flags": [
       "update-heavy",
@@ -508,50 +255,7 @@
     "risk_score": 28
   },
   {
-    "file_id": "My project/Assets/script/MakeGround.cs",
-    "class_name": "MakeGround",
-    "risk_flags": [
-      "update-heavy",
-      "public-field-heavy",
-      "magic-number-heavy"
-    ],
-    "risk_reasons": [
-      "Unity 업데이트 루프 사용",
-      "public 필드 노출 수가 많음",
-      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음"
-    ],
-    "risk_score": 28
-  },
-  {
-    "file_id": "My project/Assets/script/MoveCloud.cs",
-    "class_name": "MoveCloud",
-    "risk_flags": [
-      "update-heavy",
-      "ui-runtime-mixed",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "Unity 업데이트 루프 사용",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 28
-  },
-  {
-    "file_id": "demo_2/Assets/Scripts/CardDataBase.cs",
-    "class_name": "CardDatabase",
-    "risk_flags": [
-      "high-coupling",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "참조 타입 또는 관계 수가 많음",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 26
-  },
-  {
-    "file_id": "ExpDemo2/Assets/_Global/Demo/EnhanceUITest.cs",
+    "file_id": "Assets/_Global/Demo/EnhanceUITest.cs",
     "class_name": "EnhanceUITest",
     "risk_flags": [
       "magic-number-heavy",
@@ -566,33 +270,7 @@
     "risk_score": 26
   },
   {
-    "file_id": "ExpDemoA/Assets/Scripts/CardDataBase.cs",
-    "class_name": "CardDatabase",
-    "risk_flags": [
-      "high-coupling",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "참조 타입 또는 관계 수가 많음",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 26
-  },
-  {
-    "file_id": "My project/Assets/TutorialInfo/Scripts/Readme.cs",
-    "class_name": "Readme",
-    "risk_flags": [
-      "public-field-heavy",
-      "save-load-sensitive"
-    ],
-    "risk_reasons": [
-      "public 필드 노출 수가 많음",
-      "저장/불러오기 관련 로직 포함"
-    ],
-    "risk_score": 22
-  },
-  {
-    "file_id": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "file_id": "Assets/Gameplay/Paddle/PaddleStats.cs",
     "class_name": "PaddleStats",
     "risk_flags": [
       "save-load-sensitive",
@@ -605,7 +283,7 @@
     "risk_score": 20
   },
   {
-    "file_id": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
+    "file_id": "Assets/_Global/States/GameStateMachine.cs",
     "class_name": "GameStateMachine",
     "risk_flags": [
       "init-order-sensitive",
@@ -618,20 +296,7 @@
     "risk_score": 18
   },
   {
-    "file_id": "ExpDemoA/Assets/Scripts/CardData.cs",
-    "class_name": "CardData",
-    "risk_flags": [
-      "public-field-heavy",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "public 필드 노출 수가 많음",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 18
-  },
-  {
-    "file_id": "ExpDemo2/Assets/Gameplay/Card/CardData.cs",
+    "file_id": "Assets/Gameplay/Card/CardData.cs",
     "class_name": "CardData",
     "risk_flags": [
       "save-load-sensitive"
@@ -642,7 +307,7 @@
     "risk_score": 12
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/World/WorldStats.cs",
+    "file_id": "Assets/Gameplay/World/WorldStats.cs",
     "class_name": "WorldStats",
     "risk_flags": [
       "save-load-sensitive"
@@ -653,51 +318,7 @@
     "risk_score": 12
   },
   {
-    "file_id": "demo_1/Assets/Scripts/ScrollingBackground.cs",
-    "class_name": "Background",
-    "risk_flags": [
-      "update-heavy"
-    ],
-    "risk_reasons": [
-      "Unity 업데이트 루프 사용"
-    ],
-    "risk_score": 10
-  },
-  {
-    "file_id": "demo_2/Assets/Scripts/CardData.cs",
-    "class_name": "CardData",
-    "risk_flags": [
-      "public-field-heavy"
-    ],
-    "risk_reasons": [
-      "public 필드 노출 수가 많음"
-    ],
-    "risk_score": 10
-  },
-  {
-    "file_id": "My project/Assets/script/jumBall.cs",
-    "class_name": "Ball",
-    "risk_flags": [
-      "update-heavy"
-    ],
-    "risk_reasons": [
-      "Unity 업데이트 루프 사용"
-    ],
-    "risk_score": 10
-  },
-  {
-    "file_id": "My project/Assets/script/Moveground.cs",
-    "class_name": "Moveground",
-    "risk_flags": [
-      "update-heavy"
-    ],
-    "risk_reasons": [
-      "Unity 업데이트 루프 사용"
-    ],
-    "risk_score": 10
-  },
-  {
-    "file_id": "ExpDemo2/Assets/Gameplay/Paddle/PaddlePhysics.cs",
+    "file_id": "Assets/Gameplay/Paddle/PaddlePhysics.cs",
     "class_name": "PaddlePhysics",
     "risk_flags": [
       "state-owner"
@@ -708,7 +329,7 @@
     "risk_score": 8
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/World/WorldScroller.cs",
+    "file_id": "Assets/Gameplay/World/WorldScroller.cs",
     "class_name": "WorldScroller",
     "risk_flags": [
       "state-owner"
@@ -719,7 +340,7 @@
     "risk_score": 8
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/World/WorldSpawner.cs",
+    "file_id": "Assets/Gameplay/World/WorldSpawner.cs",
     "class_name": "WorldSpawner",
     "risk_flags": [
       "state-owner"
@@ -728,12 +349,5 @@
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
     "risk_score": 8
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/Enemy.cs",
-    "class_name": "Enemy",
-    "risk_flags": [],
-    "risk_reasons": [],
-    "risk_score": 0
   }
 ]
