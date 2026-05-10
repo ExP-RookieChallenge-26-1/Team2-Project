@@ -786,28 +786,7 @@
   {
     "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "BallStats",
-    "relation_type": "creates",
-    "strength": 2
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
-    "from_class": "GameManager",
     "to_type": "InputState",
-    "relation_type": "creates",
-    "strength": 2
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
-    "from_class": "GameManager",
-    "to_type": "PaddleStats",
-    "relation_type": "creates",
-    "strength": 2
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
-    "from_class": "GameManager",
-    "to_type": "WorldStats",
     "relation_type": "creates",
     "strength": 2
   },
@@ -871,6 +850,13 @@
     "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
     "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "Instantiate",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1059,21 +1045,7 @@
   {
     "from_file": "ExpDemo2/Assets/_Global/States/InputState.cs",
     "from_class": "InputState",
-    "to_type": "GameManager",
-    "relation_type": "singleton-access",
-    "strength": 4
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/States/InputState.cs",
-    "from_class": "InputState",
     "to_type": "bool",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/States/InputState.cs",
-    "from_class": "InputState",
-    "to_type": "Change",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1094,27 +1066,6 @@
   {
     "from_file": "ExpDemo2/Assets/_Global/States/InputState.cs",
     "from_class": "InputState",
-    "to_type": "GameManager",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/States/InputState.cs",
-    "from_class": "InputState",
-    "to_type": "GameOver",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/States/InputState.cs",
-    "from_class": "InputState",
-    "to_type": "GameState",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/States/InputState.cs",
-    "from_class": "InputState",
     "to_type": "Input",
     "relation_type": "uses",
     "strength": 1
@@ -1123,13 +1074,6 @@
     "from_file": "ExpDemo2/Assets/_Global/States/InputState.cs",
     "from_class": "InputState",
     "to_type": "InputSystem",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/States/InputState.cs",
-    "from_class": "InputState",
-    "to_type": "Instance",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1199,13 +1143,6 @@
   {
     "from_file": "ExpDemo2/Assets/_Global/States/InputState.cs",
     "from_class": "InputState",
-    "to_type": "State",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/_Global/States/InputState.cs",
-    "from_class": "InputState",
     "to_type": "Tick",
     "relation_type": "uses",
     "strength": 1
@@ -1255,6 +1192,13 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
+    "to_type": "BallTrajectory",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
     "to_type": "BallPhysics",
     "relation_type": "creates",
     "strength": 2
@@ -1298,6 +1242,13 @@
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
     "to_type": "BallStats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "BallTrajectory",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1409,6 +1360,13 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
+    "to_type": "Trajectory",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
     "to_type": "UnityEngine",
     "relation_type": "uses",
     "strength": 1
@@ -1430,7 +1388,28 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
+    "to_type": "Tilemap",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
     "to_type": "Bounds",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "Collision",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "List",
     "relation_type": "creates",
     "strength": 2
   },
@@ -1447,6 +1426,27 @@
     "to_type": "MonoBehaviour",
     "relation_type": "inherits",
     "strength": 4
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "ApplyCollision",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "ApplyPaddleReflection",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "ApplyWallReflection",
+    "relation_type": "uses",
+    "strength": 1
   },
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
@@ -1486,21 +1486,21 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
-    "to_type": "CheckCollision",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
-    "from_class": "BallCollision",
-    "to_type": "CheckTerrainCollision",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
-    "from_class": "BallCollision",
     "to_type": "Clamp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "Clear",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "Collections",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1521,6 +1521,27 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
+    "to_type": "ContactFilter2D",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "DetectClosestCollision",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "DetectClosestTileBounds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
     "to_type": "float",
     "relation_type": "uses",
     "strength": 1
@@ -1528,7 +1549,7 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
-    "to_type": "GetActiveTilemaps",
+    "to_type": "Generic",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1536,6 +1557,13 @@
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
     "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "GetMinOverlap",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1563,7 +1591,28 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
-    "to_type": "OverlapCircleAll",
+    "to_type": "MaxValue",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "Min",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "None",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "OverlapCircle",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1591,6 +1640,13 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
+    "to_type": "Radius",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
     "to_type": "RequireComponent",
     "relation_type": "uses",
     "strength": 1
@@ -1598,28 +1654,21 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
-    "to_type": "ResolvePaddleCollision",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
-    "from_class": "BallCollision",
-    "to_type": "ResolveWallCollision",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
-    "from_class": "BallCollision",
-    "to_type": "Spawner",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
-    "from_class": "BallCollision",
     "to_type": "Stats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "System",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "Terrain",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1641,6 +1690,13 @@
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
     "to_type": "Tilemaps",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "Type",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1682,13 +1738,6 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
-    "to_type": "World",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
-    "from_class": "BallCollision",
     "to_type": "WorldToCell",
     "relation_type": "uses",
     "strength": 1
@@ -1710,6 +1759,27 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
     "from_class": "BallPhysics",
+    "to_type": "ApplyPaddleReflection",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
+    "from_class": "BallPhysics",
+    "to_type": "ApplyPaddleReflectionAlternative",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
+    "from_class": "BallPhysics",
+    "to_type": "ApplyWallReflection",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
+    "from_class": "BallPhysics",
     "to_type": "Ball",
     "relation_type": "uses",
     "strength": 1
@@ -1718,6 +1788,48 @@
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
     "from_class": "BallPhysics",
     "to_type": "Bounds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
+    "from_class": "BallPhysics",
+    "to_type": "CalculatePaddleReflection",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
+    "from_class": "BallPhysics",
+    "to_type": "CalculatePaddleReflectionAlternative",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
+    "from_class": "BallPhysics",
+    "to_type": "CalculateWallReflection",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
+    "from_class": "BallPhysics",
+    "to_type": "Clamp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
+    "from_class": "BallPhysics",
+    "to_type": "Cos",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
+    "from_class": "BallPhysics",
+    "to_type": "Deg2Rad",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1738,7 +1850,7 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
     "from_class": "BallPhysics",
-    "to_type": "LogWarning",
+    "to_type": "Lerp",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1746,20 +1858,6 @@
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
     "from_class": "BallPhysics",
     "to_type": "Min",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
-    "from_class": "BallPhysics",
-    "to_type": "NaN",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
-    "from_class": "BallPhysics",
-    "to_type": "Need",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1780,28 +1878,35 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
     "from_class": "BallPhysics",
-    "to_type": "ReflectX",
+    "to_type": "Radius",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
     "from_class": "BallPhysics",
-    "to_type": "ReflectY",
+    "to_type": "ReflectionWeight",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
     "from_class": "BallPhysics",
-    "to_type": "ResolvePaddleCollision",
+    "to_type": "Sign",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
     "from_class": "BallPhysics",
-    "to_type": "ResolveWallCollision",
+    "to_type": "Sin",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
+    "from_class": "BallPhysics",
+    "to_type": "Speed",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1829,13 +1934,6 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
     "from_class": "BallPhysics",
-    "to_type": "TODO",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
-    "from_class": "BallPhysics",
     "to_type": "UnityEngine",
     "relation_type": "uses",
     "strength": 1
@@ -1862,9 +1960,37 @@
     "strength": 1
   },
   {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
-    "from_class": "BallPhysics",
-    "to_type": "When",
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "ScriptableObject",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "AttackPower",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "CreateAssetMenu",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "CriticalChance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "CriticalDamage",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1876,604 +2002,499 @@
     "strength": 1
   },
   {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Collider2D",
-    "relation_type": "component-access",
-    "strength": 3
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "LineRenderer",
-    "relation_type": "component-access",
-    "strength": 3
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "AnimationCurve",
-    "relation_type": "creates",
-    "strength": 2
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Bounds",
-    "relation_type": "creates",
-    "strength": 2
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Color",
-    "relation_type": "creates",
-    "strength": 2
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Gradient",
-    "relation_type": "creates",
-    "strength": 2
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "GradientAlphaKey",
-    "relation_type": "creates",
-    "strength": 2
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "GradientColorKey",
-    "relation_type": "creates",
-    "strength": 2
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Keyframe",
-    "relation_type": "creates",
-    "strength": 2
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Material",
-    "relation_type": "creates",
-    "strength": 2
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Texture2D",
-    "relation_type": "creates",
-    "strength": 2
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Vector2",
-    "relation_type": "creates",
-    "strength": 2
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Vector3Int",
-    "relation_type": "creates",
-    "strength": 2
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "MonoBehaviour",
-    "relation_type": "inherits",
-    "strength": 4
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Abs",
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Radius",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "AnimationCurve",
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Speed",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Apply",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Awake",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Ball",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Bounds",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "CeilToInt",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "CellToWorld",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Clamp",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Collider2D",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Collision",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Color",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "CompareTag",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Default",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Find",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "float",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "GenerateDashTexture",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "GetActiveTilemaps",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "GetComponent",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Gradient",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "GradientAlphaKey",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "GradientColorKey",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "HasTile",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "int",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "IsNaN",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "IsTouching",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Keyframe",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "LineRenderer",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "LineTextureMode",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Material",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Min",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "NaN",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "OverlapCircleAll",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Paddle",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Physics",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Physics2D",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Reference",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Repeat",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "RequireComponent",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "ResolveCollision",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "ResolvePaddle",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "ResolveTile",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "ResolveWallBounds",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "RGBA32",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "SetKeys",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "SetPixel",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "SetPosition",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "SetupVisual",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Shader",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Simulate",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Simulation",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Spawner",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Sprite",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Sprites",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Sqrt",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
     "to_type": "Stats",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Texture2D",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "TextureFormat",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "TextureWrapMode",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Tile",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Tilemap",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Tilemaps",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
     "to_type": "UnityEngine",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Update",
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Ball",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "LineRenderer",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "AnimationCurve",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Color",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Gradient",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "GradientAlphaKey",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "GradientColorKey",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Keyframe",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Material",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Texture2D",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Vector2",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "AnimationCurve",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Apply",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Ball",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "BallCollision",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "BallCollision.Collision",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "BallPhysics",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "bool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "CalculatePaddleReflection",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "CalculateWallReflection",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Collision",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Color",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Default",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "DetectClosestCollision",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Find",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "GenerateDashTexture",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Gradient",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "GradientAlphaKey",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "GradientColorKey",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "InitializeLineRenderer",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "InputSystem",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "IsNaN",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Keyframe",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "LineRenderer",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "LineTextureMode",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Material",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Paddle",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Physics",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Radius",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Repeat",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "RequireComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "RGBA32",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "SetKeys",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "SetPixel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "SetPositions",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Shader",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Simulate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Speed",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Sprites",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Stats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Terrain",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Texture2D",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "TextureFormat",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "TextureWrapMode",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Tick",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Tile",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "Type",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "UI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
     "to_type": "Vector2",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
     "to_type": "Vector3",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Vector3Int",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
     "to_type": "Velocity",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "Visual",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
+    "from_file": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "from_class": "BallTrajectory",
     "to_type": "Wall",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "World",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/Ball/TrajectoryPredictor.cs",
-    "from_class": "TrajectoryPredictor",
-    "to_type": "WorldToCell",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2627,6 +2648,20 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddlePhysics.cs",
     "from_class": "PaddlePhysics",
+    "to_type": "MaxPaddleSpeed",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddlePhysics.cs",
+    "from_class": "PaddlePhysics",
+    "to_type": "MoveRange",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddlePhysics.cs",
+    "from_class": "PaddlePhysics",
     "to_type": "Paddle",
     "relation_type": "uses",
     "strength": 1
@@ -2690,7 +2725,63 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
     "from_class": "PaddleStats",
+    "to_type": "ScriptableObject",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
+    "to_type": "CreateAssetMenu",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
     "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
+    "to_type": "MaxPaddleSpeed",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
+    "to_type": "MoveRange",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
+    "to_type": "PaddleWidth",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
+    "to_type": "ReflectionWeight",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
+    "to_type": "Stats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "from_class": "PaddleStats",
+    "to_type": "UnityEngine",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2823,6 +2914,13 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/World/WorldScroller.cs",
     "from_class": "WorldScroller",
+    "to_type": "ChunkHeight",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/World/WorldScroller.cs",
+    "from_class": "WorldScroller",
     "to_type": "Chunks",
     "relation_type": "uses",
     "strength": 1
@@ -2859,6 +2957,13 @@
     "from_file": "ExpDemo2/Assets/Gameplay/World/WorldScroller.cs",
     "from_class": "WorldScroller",
     "to_type": "ReplaceChunk",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/World/WorldScroller.cs",
+    "from_class": "WorldScroller",
+    "to_type": "ScrollSpeed",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2914,6 +3019,20 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/World/WorldSpawner.cs",
     "from_class": "WorldSpawner",
+    "to_type": "ChunkCount",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/World/WorldSpawner.cs",
+    "from_class": "WorldSpawner",
+    "to_type": "ChunkHeight",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/World/WorldSpawner.cs",
+    "from_class": "WorldSpawner",
     "to_type": "Chunks",
     "relation_type": "uses",
     "strength": 1
@@ -2929,20 +3048,6 @@
     "from_file": "ExpDemo2/Assets/Gameplay/World/WorldSpawner.cs",
     "from_class": "WorldSpawner",
     "to_type": "float",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/World/WorldSpawner.cs",
-    "from_class": "WorldSpawner",
-    "to_type": "GetActiveTilemaps",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/World/WorldSpawner.cs",
-    "from_class": "WorldSpawner",
-    "to_type": "GetComponentInChildren",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3005,13 +3110,6 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/World/WorldSpawner.cs",
     "from_class": "WorldSpawner",
-    "to_type": "Tilemap",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "ExpDemo2/Assets/Gameplay/World/WorldSpawner.cs",
-    "from_class": "WorldSpawner",
     "to_type": "Tilemaps",
     "relation_type": "uses",
     "strength": 1
@@ -3040,6 +3138,34 @@
   {
     "from_file": "ExpDemo2/Assets/Gameplay/World/WorldStats.cs",
     "from_class": "WorldStats",
+    "to_type": "ScriptableObject",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/World/WorldStats.cs",
+    "from_class": "WorldStats",
+    "to_type": "ChunkCount",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/World/WorldStats.cs",
+    "from_class": "WorldStats",
+    "to_type": "ChunkHeight",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/World/WorldStats.cs",
+    "from_class": "WorldStats",
+    "to_type": "CreateAssetMenu",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/World/WorldStats.cs",
+    "from_class": "WorldStats",
     "to_type": "float",
     "relation_type": "uses",
     "strength": 1
@@ -3048,6 +3174,27 @@
     "from_file": "ExpDemo2/Assets/Gameplay/World/WorldStats.cs",
     "from_class": "WorldStats",
     "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/World/WorldStats.cs",
+    "from_class": "WorldStats",
+    "to_type": "ScrollSpeed",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/World/WorldStats.cs",
+    "from_class": "WorldStats",
+    "to_type": "Stats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "ExpDemo2/Assets/Gameplay/World/WorldStats.cs",
+    "from_class": "WorldStats",
+    "to_type": "UnityEngine",
     "relation_type": "uses",
     "strength": 1
   },
