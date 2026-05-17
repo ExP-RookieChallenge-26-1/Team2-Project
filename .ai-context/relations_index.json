@@ -72,6 +72,13 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
+    "to_type": "AddExp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
     "to_type": "Awake",
     "relation_type": "uses",
     "strength": 1
@@ -93,6 +100,13 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
+    "to_type": "CheckLevelUp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
     "to_type": "Destroy",
     "relation_type": "uses",
     "strength": 1
@@ -108,6 +122,13 @@
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
     "to_type": "EnhanceUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "EXP",
     "relation_type": "uses",
     "strength": 1
   },
@@ -163,7 +184,28 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
+    "to_type": "Length",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "Level",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
     "to_type": "LoadScene",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "Log",
     "relation_type": "uses",
     "strength": 1
   },
@@ -255,6 +297,13 @@
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
     "to_type": "State",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "System",
     "relation_type": "uses",
     "strength": 1
   },
@@ -723,6 +772,20 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
+    "to_type": "Collider2D",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "Enemy",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
     "to_type": "Tilemap",
     "relation_type": "component-access",
     "strength": 3
@@ -877,6 +940,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
+    "to_type": "Enemy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
     "to_type": "float",
     "relation_type": "uses",
     "strength": 1
@@ -1003,6 +1073,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
+    "to_type": "TakeDamage",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
     "to_type": "Terrain",
     "relation_type": "uses",
     "strength": 1
@@ -1039,6 +1116,13 @@
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
     "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "UpdateEnemyHitState",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2520,6 +2604,90 @@
     "strength": 1
   },
   {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "GameManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "AddExp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Destroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Die",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Log",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "TakeDamage",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
     "from_file": "Assets/Gameplay/Paddle/Paddle.cs",
     "from_class": "Paddle",
     "to_type": "PaddlePhysics",
@@ -2992,6 +3160,90 @@
     "from_file": "Assets/Gameplay/World/World.cs",
     "from_class": "World",
     "to_type": "WorldStats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "bool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "GetRandomUnusedIndex",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "Instantiate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "Length",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "Min",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "Quaternion",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "SetParent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "SpawnEnemies",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "UnityEngine",
     "relation_type": "uses",
     "strength": 1
   },
