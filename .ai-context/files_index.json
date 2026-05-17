@@ -1,730 +1,7 @@
 [
   {
-    "file_id": "demo_1/Assets/Scripts/ScrollingBackground.cs",
-    "path": "demo_1/Assets/Scripts/ScrollingBackground.cs",
-    "file_name": "ScrollingBackground.cs",
-    "content_hash": "10d3f7ed77eafcd9acda52e165fa88f5472246c2",
-    "size": 361,
-    "line_count": 19,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "Background",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "Background",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Update",
-      "Vector3"
-    ],
-    "fields": [
-      {
-        "name": "moveSpeed",
-        "type": "float",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Update"
-    ],
-    "has_update": true,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 1,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "float",
-      "UnityEngine",
-      "Update",
-      "Vector3"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "Vector3"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      3,
-      10,
-      20
-    ],
-    "guessed_roles": [
-      "runtime",
-      "player"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "Update 기반 처리 존재"
-    ]
-  },
-  {
-    "file_id": "demo_2/Assets/Scripts/CardData.cs",
-    "path": "demo_2/Assets/Scripts/CardData.cs",
-    "file_name": "CardData.cs",
-    "content_hash": "dbb90a4fdd7dacaafebe981dc896cdb6e08850d1",
-    "size": 247,
-    "line_count": 10,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "CardData",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "ScriptableObject"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "CardData",
-    "unity_type": "ScriptableObject",
-    "methods": [],
-    "fields": [
-      {
-        "name": "id",
-        "type": "int",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "cardName",
-        "type": "string",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "icon",
-        "type": "Sprite",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 3,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "int",
-      "string",
-      "Sprite",
-      "UnityEngine",
-      "CreateAssetMenu",
-      "Game",
-      "Card",
-      "Data",
-      "TextArea"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "CardData",
-      "Game/Card Data"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "data"
-    ],
-    "summary_signals": [
-      "데이터 자산 중심 구조"
-    ]
-  },
-  {
-    "file_id": "demo_2/Assets/Scripts/CardDataBase.cs",
-    "path": "demo_2/Assets/Scripts/CardDataBase.cs",
-    "file_name": "CardDataBase.cs",
-    "content_hash": "ffa96628534b428063ba4a4e6c711744c2019837",
-    "size": 1358,
-    "line_count": 49,
-    "namespace": "",
-    "using_list": [
-      "System.Collections.Generic",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "CardDatabase",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "ScriptableObject"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "CardDatabase",
-    "unity_type": "ScriptableObject",
-    "methods": [
-      "Init",
-      "GetById",
-      "GetByName"
-    ],
-    "fields": [],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 3,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "System",
-      "Collections",
-      "Generic",
-      "UnityEngine",
-      "CreateAssetMenu",
-      "Game",
-      "Card",
-      "Database",
-      "CardData",
-      "Init",
-      "ContainsKey",
-      "Add",
-      "LogWarning",
-      "IsNullOrEmpty",
-      "GetById",
-      "TryGetValue",
-      "GetByName"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "List",
-      "Dictionary"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [
-      "CardDatabase",
-      "Game/Card Database",
-      "중복 id 발견: {card.id}",
-      "중복 카드명 발견: {card.cardName}"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "data"
-    ],
-    "summary_signals": [
-      "데이터 자산 중심 구조"
-    ]
-  },
-  {
-    "file_id": "demo_2/Assets/Scripts/CardSelector.cs",
-    "path": "demo_2/Assets/Scripts/CardSelector.cs",
-    "file_name": "CardSelector.cs",
-    "content_hash": "de7ebc4e1a7b8eb1ad4befb53a23576a1d5a7884",
-    "size": 2679,
-    "line_count": 95,
-    "namespace": "",
-    "using_list": [
-      "System.Collections.Generic",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "CardSelector",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "CardSelector",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Pick3ByIds",
-      "Pick3ByNames",
-      "PickUnique",
-      "GetWeightedRandomIndex"
-    ],
-    "fields": [
-      {
-        "name": "totalWeight",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "current",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 7,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "float",
-      "System",
-      "Collections",
-      "Generic",
-      "UnityEngine",
-      "CardDatabase",
-      "CardData",
-      "Pick3ByIds",
-      "Length",
-      "LogError",
-      "GetById",
-      "Add",
-      "PickUnique",
-      "Pick3ByNames",
-      "GetByName",
-      "Min",
-      "Count",
-      "GetWeightedRandomIndex",
-      "RemoveAt"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "List"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [
-      "ids와 weights 길이가 다르거나 null입니다.",
-      "names와 weights 길이가 다르거나 null입니다."
-    ],
-    "numeric_literals": [
-      0,
-      3
-    ],
-    "guessed_roles": [
-      "player",
-      "data",
-      "save-load",
-      "runtime"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "저장/불러오기 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "demo_2/Assets/Scripts/CardSlotUI.cs",
-    "path": "demo_2/Assets/Scripts/CardSlotUI.cs",
-    "file_name": "CardSlotUI.cs",
-    "content_hash": "357cb266e27e6bbd49407fc9da06ffb832cd4219",
-    "size": 1432,
-    "line_count": 62,
-    "namespace": "",
-    "using_list": [
-      "TMPro",
-      "UnityEngine",
-      "UnityEngine.UI"
-    ],
-    "classes": [
-      {
-        "name": "CardSlotUI",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "CardSlotUI",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Awake",
-      "Setup",
-      "OnClickCard",
-      "SetSelected",
-      "Vector2",
-      "GetCard"
-    ],
-    "fields": [
-      {
-        "name": "currentCard",
-        "type": "CardData",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "parentUI",
-        "type": "EnhanceUI",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "slotIndex",
-        "type": "int",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "originalPos",
-        "type": "Vector2",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Awake"
-    ],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": true,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 1,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "CardData",
-      "EnhanceUI",
-      "int",
-      "Vector2",
-      "TMPro",
-      "UnityEngine",
-      "UI",
-      "Image",
-      "TMP_Text",
-      "Button",
-      "RectTransform",
-      "Awake",
-      "Setup",
-      "RemoveAllListeners",
-      "AddListener",
-      "OnClickCard",
-      "SetSelected",
-      "SelectCard",
-      "GetCard"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "Vector2"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      0,
-      20
-    ],
-    "guessed_roles": [
-      "ui",
-      "runtime",
-      "player",
-      "inventory",
-      "data"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "UI 관련 로직 포함",
-      "인벤토리 계열 로직 포함"
-    ]
-  },
-  {
-    "file_id": "demo_2/Assets/Scripts/EnhanceUI.cs",
-    "path": "demo_2/Assets/Scripts/EnhanceUI.cs",
-    "file_name": "EnhanceUI.cs",
-    "content_hash": "74ca3a715f0d77f7d713b61a980e1a659df0d795",
-    "size": 2017,
-    "line_count": 77,
-    "namespace": "",
-    "using_list": [
-      "System.Collections.Generic",
-      "UnityEngine",
-      "UnityEngine.UI"
-    ],
-    "classes": [
-      {
-        "name": "EnhanceUI",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "EnhanceUI",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Start",
-      "ShowCardsByIds",
-      "ShowCardsByNames",
-      "Show",
-      "SelectCard",
-      "OnClickConfirm"
-    ],
-    "fields": [
-      {
-        "name": "selectedIndex",
-        "type": "int",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "selectedCard",
-        "type": "CardData",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Start"
-    ],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": true,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 1,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "int",
-      "CardData",
-      "System",
-      "Collections",
-      "Generic",
-      "UnityEngine",
-      "UI",
-      "CardSelector",
-      "CardSlotUI",
-      "Button",
-      "Start",
-      "AddListener",
-      "OnClickConfirm",
-      "ShowCardsByIds",
-      "Pick3ByIds",
-      "Show",
-      "ShowCardsByNames",
-      "Pick3ByNames",
-      "Length",
-      "Count",
-      "SetActive",
-      "Setup",
-      "SelectCard",
-      "SetSelected",
-      "Log",
-      "Apply"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "List"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [
-      "선택된 카드: "
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "ui",
-      "data",
-      "runtime",
-      "inventory",
-      "save-load"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "UI 관련 로직 포함",
-      "인벤토리 계열 로직 포함",
-      "저장/불러오기 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "demo_2/Assets/Scripts/EnhanceUITest.cs",
-    "path": "demo_2/Assets/Scripts/EnhanceUITest.cs",
-    "file_name": "EnhanceUITest.cs",
-    "content_hash": "e61a2d5d8885f2b2ae2cebf8b39bb1724a6cc966",
-    "size": 297,
-    "line_count": 14,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "EnhanceUITest",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "EnhanceUITest",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Start"
-    ],
-    "fields": [],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Start"
-    ],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": true,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "UnityEngine",
-      "EnhanceUI",
-      "Start",
-      "ShowCardsByIds"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      2,
-      3,
-      4,
-      5,
-      30,
-      25,
-      20,
-      15,
-      10
-    ],
-    "guessed_roles": [
-      "runtime",
-      "ui",
-      "save-load"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "UI 관련 로직 포함",
-      "저장/불러오기 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "ExpDemo2/Assets/_Global/Demo/EnhanceUITest.cs",
-    "path": "ExpDemo2/Assets/_Global/Demo/EnhanceUITest.cs",
+    "file_id": "Assets/_Global/Demo/EnhanceUITest.cs",
+    "path": "Assets/_Global/Demo/EnhanceUITest.cs",
     "file_name": "EnhanceUITest.cs",
     "content_hash": "7d45987b4174b231bcd908fd73c83c7f99e5f72f",
     "size": 228,
@@ -806,12 +83,12 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/_Global/GameManager.cs",
-    "path": "ExpDemo2/Assets/_Global/GameManager.cs",
+    "file_id": "Assets/_Global/GameManager.cs",
+    "path": "Assets/_Global/GameManager.cs",
     "file_name": "GameManager.cs",
-    "content_hash": "c1b48e49adf33c0bb7096e62ee7e96cd6522c58a",
-    "size": 1846,
-    "line_count": 74,
+    "content_hash": "b2cbe0edc523359a0254cec57fb5499fa1de391e",
+    "size": 2827,
+    "line_count": 104,
     "namespace": "",
     "using_list": [
       "UnityEngine",
@@ -840,7 +117,9 @@
       "Update",
       "OnDestroy",
       "OnGameStateChanged",
-      "OpenUpgradeUI"
+      "OpenUpgradeUI",
+      "AddExp",
+      "CheckLevelUp"
     ],
     "fields": [],
     "properties": [
@@ -910,6 +189,8 @@
       "State",
       "Input",
       "EnhanceUI",
+      "Level",
+      "System",
       "Awake",
       "Destroy",
       "GetComponent",
@@ -929,7 +210,12 @@
       "OpenUpgradeUI",
       "Change",
       "SetActive",
-      "ShowCardsByIds"
+      "ShowCardsByIds",
+      "AddExp",
+      "Log",
+      "EXP",
+      "CheckLevelUp",
+      "Length"
     ],
     "component_access_types": [
       "GameStateMachine"
@@ -939,11 +225,30 @@
     ],
     "singleton_access_types": [],
     "string_literals": [
-      "TitleScene"
+      "Level System",
+      "TitleScene",
+      "경험치 획득: +{amount}, 현재 EXP: {this.currentExp}",
+      "레벨업! 현재 레벨: {this.currentLevel}"
     ],
     "numeric_literals": [
+      10,
+      20,
+      35,
+      50,
+      70,
+      100,
       1,
-      0.2
+      0.2,
+      2,
+      3,
+      4,
+      5,
+      6,
+      30,
+      25,
+      20,
+      15,
+      10
     ],
     "guessed_roles": [
       "runtime",
@@ -962,8 +267,8 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
-    "path": "ExpDemo2/Assets/_Global/States/GameStateMachine.cs",
+    "file_id": "Assets/_Global/States/GameStateMachine.cs",
+    "path": "Assets/_Global/States/GameStateMachine.cs",
     "file_name": "GameStateMachine.cs",
     "content_hash": "8aa675a93990f501fb9f31e7c5363bb9cc0c0b78",
     "size": 423,
@@ -1046,8 +351,8 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/_Global/States/InputState.cs",
-    "path": "ExpDemo2/Assets/_Global/States/InputState.cs",
+    "file_id": "Assets/_Global/States/InputState.cs",
+    "path": "Assets/_Global/States/InputState.cs",
     "file_name": "InputState.cs",
     "content_hash": "536681c48e49951ad87f181cba85da3de816b694",
     "size": 1757,
@@ -1210,8 +515,8 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Ball/Ball.cs",
-    "path": "ExpDemo2/Assets/Gameplay/Ball/Ball.cs",
+    "file_id": "Assets/Gameplay/Ball/Ball.cs",
+    "path": "Assets/Gameplay/Ball/Ball.cs",
     "file_name": "Ball.cs",
     "content_hash": "74ccfaa7e3c1c7e37e80a0b060741d2a1b8315ad",
     "size": 857,
@@ -1339,12 +644,12 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
-    "path": "ExpDemo2/Assets/Gameplay/Ball/BallCollision.cs",
+    "file_id": "Assets/Gameplay/Ball/BallCollision.cs",
+    "path": "Assets/Gameplay/Ball/BallCollision.cs",
     "file_name": "BallCollision.cs",
-    "content_hash": "d331dca3d7f6b48000c26d1e86d94ded766a66ca",
-    "size": 4264,
-    "line_count": 181,
+    "content_hash": "c5bf0b6ef322ff472af4301b6f9be9c84555f39d",
+    "size": 6601,
+    "line_count": 228,
     "namespace": "",
     "using_list": [
       "System.Collections.Generic",
@@ -1381,6 +686,7 @@
       "Collision",
       "Awake",
       "Tick",
+      "UpdateEnemyHitState",
       "ApplyCollision",
       "DetectClosestCollision",
       "DetectClosestTileBounds",
@@ -1405,8 +711,22 @@
         "is_static": false
       },
       {
+        "name": "enemy",
+        "type": "Enemy",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
         "name": "ball",
         "type": "Ball",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "lastHitEnemy",
+        "type": "Enemy",
         "access": "private",
         "serialized": false,
         "is_static": false
@@ -1586,16 +906,17 @@
     "has_on_enable": false,
     "has_on_disable": false,
     "serialize_field_count": 0,
-    "public_field_count": 2,
-    "get_component_count": 2,
+    "public_field_count": 3,
+    "get_component_count": 4,
     "find_call_count": 0,
-    "new_keyword_count": 7,
+    "new_keyword_count": 8,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
       "Type",
       "Bounds",
+      "Enemy",
       "Ball",
       "int",
       "float",
@@ -1617,13 +938,16 @@
       "Awake",
       "GetComponent",
       "Tick",
+      "UpdateEnemyHitState",
       "DetectClosestCollision",
       "Stats",
       "Radius",
       "ApplyCollision",
+      "IsTouching",
       "Physics",
       "ApplyWallReflection",
       "ApplyPaddleReflectionAlternative",
+      "TakeDamage",
       "Clear",
       "Physics2D",
       "OverlapCircle",
@@ -1636,13 +960,14 @@
       "WorldToCell",
       "HasTile",
       "CellToWorld",
-      "IsTouching",
       "Min",
       "Clamp"
     ],
     "component_access_types": [
       "Ball",
-      "Tilemap"
+      "Collider2D",
+      "Tilemap",
+      "Enemy"
     ],
     "created_types": [
       "List",
@@ -1654,15 +979,16 @@
     "string_literals": [
       "Wall",
       "Paddle",
-      "Terrain"
+      "Terrain",
+      "Enemy"
     ],
     "numeric_literals": [
       2
     ],
     "guessed_roles": [
+      "combat",
       "runtime",
       "ui",
-      "combat",
       "save-load"
     ],
     "summary_signals": [
@@ -1674,8 +1000,8 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
-    "path": "ExpDemo2/Assets/Gameplay/Ball/BallPhysics.cs",
+    "file_id": "Assets/Gameplay/Ball/BallPhysics.cs",
+    "path": "Assets/Gameplay/Ball/BallPhysics.cs",
     "file_name": "BallPhysics.cs",
     "content_hash": "5a115f1449b94b0060a56f8d10a3de9f052b1807",
     "size": 3332,
@@ -1897,8 +1223,8 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
-    "path": "ExpDemo2/Assets/Gameplay/Ball/BallStats.cs",
+    "file_id": "Assets/Gameplay/Ball/BallStats.cs",
+    "path": "Assets/Gameplay/Ball/BallStats.cs",
     "file_name": "BallStats.cs",
     "content_hash": "17e840b8b37eb215b6765e51cae5f9ab6df8e45f",
     "size": 1310,
@@ -2027,8 +1353,8 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
-    "path": "ExpDemo2/Assets/Gameplay/Ball/BallTrajectory.cs",
+    "file_id": "Assets/Gameplay/Ball/BallTrajectory.cs",
+    "path": "Assets/Gameplay/Ball/BallTrajectory.cs",
     "file_name": "BallTrajectory.cs",
     "content_hash": "a5eb077ceabd3760e05674d983e7839d666c93d3",
     "size": 3203,
@@ -2296,8 +1622,8 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Card/CardData.cs",
-    "path": "ExpDemo2/Assets/Gameplay/Card/CardData.cs",
+    "file_id": "Assets/Gameplay/Card/CardData.cs",
+    "path": "Assets/Gameplay/Card/CardData.cs",
     "file_name": "CardData.cs",
     "content_hash": "9eed66aee22ee0172e72efe6db752566683df7d6",
     "size": 386,
@@ -2392,8 +1718,8 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
-    "path": "ExpDemo2/Assets/Gameplay/Card/CardDatabase.cs",
+    "file_id": "Assets/Gameplay/Card/CardDatabase.cs",
+    "path": "Assets/Gameplay/Card/CardDatabase.cs",
     "file_name": "CardDatabase.cs",
     "content_hash": "094fe8966e3d1123eede2958c9db3abb69346510",
     "size": 1212,
@@ -2488,8 +1814,8 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
-    "path": "ExpDemo2/Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "file_id": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "path": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "file_name": "StatUpgradeCardData.cs",
     "content_hash": "d7e21cbbb7132cdedf0f86b3641394a593825770",
     "size": 1550,
@@ -2646,8 +1972,8 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
-    "path": "ExpDemo2/Assets/Gameplay/Card/CardSelector.cs",
+    "file_id": "Assets/Gameplay/Card/CardSelector.cs",
+    "path": "Assets/Gameplay/Card/CardSelector.cs",
     "file_name": "CardSelector.cs",
     "content_hash": "547246229e2e75413afe92b56754200f20f1f28f",
     "size": 2354,
@@ -2832,8 +2158,105 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Paddle/Paddle.cs",
-    "path": "ExpDemo2/Assets/Gameplay/Paddle/Paddle.cs",
+    "file_id": "Assets/Gameplay/Enemy/Enemy.cs",
+    "path": "Assets/Gameplay/Enemy/Enemy.cs",
+    "file_name": "Enemy.cs",
+    "content_hash": "649b66bf5258f8752ad224add46d1cc34853d99e",
+    "size": 706,
+    "line_count": 38,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "Enemy",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "Enemy",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
+      "TakeDamage",
+      "Die"
+    ],
+    "fields": [
+      {
+        "name": "currentHp",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "int",
+      "UnityEngine",
+      "Start",
+      "TakeDamage",
+      "Log",
+      "Die",
+      "GameManager",
+      "Instance",
+      "AddExp",
+      "Destroy"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [
+      "GameManager"
+    ],
+    "string_literals": [
+      "몬스터 피격, 남은 체력: {currentHp}",
+      "몬스터 처치, 경험치 +{expReward}"
+    ],
+    "numeric_literals": [
+      5
+    ],
+    "guessed_roles": [
+      "combat",
+      "manager",
+      "runtime",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "전투 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/Gameplay/Paddle/Paddle.cs",
+    "path": "Assets/Gameplay/Paddle/Paddle.cs",
     "file_name": "Paddle.cs",
     "content_hash": "bb9036ff20d12ef7f697a48ee8316c4b82baf975",
     "size": 375,
@@ -2930,8 +2353,8 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Paddle/PaddlePhysics.cs",
-    "path": "ExpDemo2/Assets/Gameplay/Paddle/PaddlePhysics.cs",
+    "file_id": "Assets/Gameplay/Paddle/PaddlePhysics.cs",
+    "path": "Assets/Gameplay/Paddle/PaddlePhysics.cs",
     "file_name": "PaddlePhysics.cs",
     "content_hash": "1b06dc7a9e1126aa5e3544968cbd0f583e8c0cf1",
     "size": 941,
@@ -3057,8 +2480,8 @@
     "summary_signals": []
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
-    "path": "ExpDemo2/Assets/Gameplay/Paddle/PaddleStats.cs",
+    "file_id": "Assets/Gameplay/Paddle/PaddleStats.cs",
+    "path": "Assets/Gameplay/Paddle/PaddleStats.cs",
     "file_name": "PaddleStats.cs",
     "content_hash": "e06bd689a6273385034e96d6c4d4dcab418fdb3b",
     "size": 741,
@@ -3172,8 +2595,8 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/World/World.cs",
-    "path": "ExpDemo2/Assets/Gameplay/World/World.cs",
+    "file_id": "Assets/Gameplay/World/World.cs",
+    "path": "Assets/Gameplay/World/World.cs",
     "file_name": "World.cs",
     "content_hash": "2a73ea187a835e5a2c6a40139160d561ae44a1cc",
     "size": 534,
@@ -3279,8 +2702,115 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/World/WorldScroller.cs",
-    "path": "ExpDemo2/Assets/Gameplay/World/WorldScroller.cs",
+    "file_id": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "path": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "file_name": "WorldEnemySpawner.cs",
+    "content_hash": "832c8c5b377aaf4e168cfdb21c2df679f6443f78",
+    "size": 1358,
+    "line_count": 53,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "WorldEnemySpawner",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "WorldEnemySpawner",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
+      "SpawnEnemies",
+      "GetRandomUnusedIndex"
+    ],
+    "fields": [
+      {
+        "name": "used",
+        "type": "bool[]",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "point",
+        "type": "Transform",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "tryCount",
+        "type": "int",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "bool",
+      "int",
+      "UnityEngine",
+      "Start",
+      "SpawnEnemies",
+      "Length",
+      "Min",
+      "GetRandomUnusedIndex",
+      "Instantiate",
+      "Quaternion",
+      "SetParent"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      2,
+      100
+    ],
+    "guessed_roles": [
+      "runtime",
+      "combat",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "전투 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/Gameplay/World/WorldScroller.cs",
+    "path": "Assets/Gameplay/World/WorldScroller.cs",
     "file_name": "WorldScroller.cs",
     "content_hash": "39e236b92bb2964cdc415350e24a3d9ee39150e4",
     "size": 925,
@@ -3386,8 +2916,8 @@
     "summary_signals": []
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/World/WorldSpawner.cs",
-    "path": "ExpDemo2/Assets/Gameplay/World/WorldSpawner.cs",
+    "file_id": "Assets/Gameplay/World/WorldSpawner.cs",
+    "path": "Assets/Gameplay/World/WorldSpawner.cs",
     "file_name": "WorldSpawner.cs",
     "content_hash": "d318779b2d536b75ad2c586ec0eb701165c62ed0",
     "size": 989,
@@ -3506,8 +3036,8 @@
     "summary_signals": []
   },
   {
-    "file_id": "ExpDemo2/Assets/Gameplay/World/WorldStats.cs",
-    "path": "ExpDemo2/Assets/Gameplay/World/WorldStats.cs",
+    "file_id": "Assets/Gameplay/World/WorldStats.cs",
+    "path": "Assets/Gameplay/World/WorldStats.cs",
     "file_name": "WorldStats.cs",
     "content_hash": "5f555d929ff11468624d6fc90a67adc206c540fe",
     "size": 353,
@@ -3596,8 +3126,8 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
-    "path": "ExpDemo2/Assets/UI/Enhancement/CardSlotUI.cs",
+    "file_id": "Assets/UI/Enhancement/CardSlotUI.cs",
+    "path": "Assets/UI/Enhancement/CardSlotUI.cs",
     "file_name": "CardSlotUI.cs",
     "content_hash": "eedecee80273298244ce5671ae4b389d08b4a33b",
     "size": 1273,
@@ -3730,8 +3260,8 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
-    "path": "ExpDemo2/Assets/UI/Enhancement/EnhanceUI.cs",
+    "file_id": "Assets/UI/Enhancement/EnhanceUI.cs",
+    "path": "Assets/UI/Enhancement/EnhanceUI.cs",
     "file_name": "EnhanceUI.cs",
     "content_hash": "ffc89c6c08bd8f364ddc43008868ec61e0425203",
     "size": 2149,
@@ -3881,8 +3411,8 @@
     ]
   },
   {
-    "file_id": "ExpDemo2/Assets/UI/Title/TitleManager.cs",
-    "path": "ExpDemo2/Assets/UI/Title/TitleManager.cs",
+    "file_id": "Assets/UI/Title/TitleManager.cs",
+    "path": "Assets/UI/Title/TitleManager.cs",
     "file_name": "TitleManager.cs",
     "content_hash": "18f67c97f9168c1607b40143cd71ac4bead08ade",
     "size": 181,
@@ -3955,2341 +3485,6 @@
     "summary_signals": [
       "런타임 컴포넌트",
       "UI 관련 로직 포함",
-      "저장/불러오기 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/BackgroundScroller.cs",
-    "path": "ExpDemoA/Assets/Scripts/BackgroundScroller.cs",
-    "file_name": "BackgroundScroller.cs",
-    "content_hash": "528a823d6680955605e16d062dca1ce8b283da5b",
-    "size": 1554,
-    "line_count": 67,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine",
-      "System.Collections.Generic"
-    ],
-    "classes": [
-      {
-        "name": "BackgroundScroller",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "BackgroundScroller",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Start",
-      "MeasureHeight",
-      "SpawnBg",
-      "Vector3",
-      "Update"
-    ],
-    "fields": [
-      {
-        "name": "cameraBottomY",
-        "type": "float",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "cameraTopY",
-        "type": "float",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "bgHeight",
-        "type": "float",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "minY",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "maxY",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "move",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "topY",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "highestTop",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Start",
-      "Update"
-    ],
-    "has_update": true,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": true,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 3,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "float",
-      "UnityEngine",
-      "System",
-      "Collections",
-      "Generic",
-      "Start",
-      "MeasureHeight",
-      "SpawnBg",
-      "Instantiate",
-      "MaxValue",
-      "MinValue",
-      "GetComponentsInChildren",
-      "Renderer",
-      "Min",
-      "Max",
-      "Destroy",
-      "Vector3",
-      "Add",
-      "Update",
-      "Count"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "List",
-      "Vector3"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      0.8,
-      5,
-      0,
-      1
-    ],
-    "guessed_roles": [
-      "runtime",
-      "player",
-      "save-load"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "Update 기반 처리 존재",
-      "저장/불러오기 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/BallController.cs",
-    "path": "ExpDemoA/Assets/Scripts/BallController.cs",
-    "file_name": "BallController.cs",
-    "content_hash": "2838a5e75374e0844256ff3eae9c2a4cc68e647e",
-    "size": 488,
-    "line_count": 30,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine",
-      "UnityEngine.SceneManagement"
-    ],
-    "classes": [
-      {
-        "name": "BallController",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "BallController",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Awake",
-      "Start",
-      "Vector2",
-      "Update",
-      "FixedUpdate"
-    ],
-    "fields": [
-      {
-        "name": "rb",
-        "type": "Rigidbody2D",
-        "access": "internal",
-        "serialized": true,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Awake",
-      "Start",
-      "Update",
-      "FixedUpdate"
-    ],
-    "has_update": true,
-    "has_fixed_update": true,
-    "has_late_update": false,
-    "has_awake": true,
-    "has_start": true,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 1,
-    "public_field_count": 0,
-    "get_component_count": 1,
-    "find_call_count": 0,
-    "new_keyword_count": 1,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "Rigidbody2D",
-      "UnityEngine",
-      "SceneManagement",
-      "Awake",
-      "GetComponent",
-      "Start",
-      "Vector2",
-      "Update",
-      "SceneManager",
-      "LoadScene",
-      "TitleScene",
-      "FixedUpdate"
-    ],
-    "component_access_types": [
-      "Rigidbody2D"
-    ],
-    "created_types": [
-      "Vector2"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [
-      "TitleScene"
-    ],
-    "numeric_literals": [
-      8,
-      1,
-      7
-    ],
-    "guessed_roles": [
-      "runtime",
-      "scene",
-      "save-load",
-      "manager"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "Update 기반 처리 존재",
-      "물리 타이밍 처리 가능성",
-      "인스펙터 직렬화 필드 사용",
-      "저장/불러오기 관련 로직 포함",
-      "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/CardData.cs",
-    "path": "ExpDemoA/Assets/Scripts/CardData.cs",
-    "file_name": "CardData.cs",
-    "content_hash": "8760b67d414793eb2dcd0e518e72fa1f23f9fd72",
-    "size": 409,
-    "line_count": 22,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "CardData",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "ScriptableObject"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "CardData",
-    "unity_type": "ScriptableObject",
-    "methods": [],
-    "fields": [
-      {
-        "name": "id",
-        "type": "int",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "cardName",
-        "type": "string",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "icon",
-        "type": "Sprite",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "upgradeType",
-        "type": "UpgradeType",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "value",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 5,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "int",
-      "string",
-      "Sprite",
-      "UpgradeType",
-      "float",
-      "UnityEngine",
-      "AttackPower",
-      "CritChance",
-      "BallSize",
-      "Speed",
-      "BallCount",
-      "CreateAssetMenu",
-      "Game",
-      "Card",
-      "Data",
-      "TextArea"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "CardData",
-      "Game/Card Data"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "data",
-      "combat"
-    ],
-    "summary_signals": [
-      "데이터 자산 중심 구조",
-      "전투 계열 로직 포함"
-    ]
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/CardDataBase.cs",
-    "path": "ExpDemoA/Assets/Scripts/CardDataBase.cs",
-    "file_name": "CardDataBase.cs",
-    "content_hash": "ffa96628534b428063ba4a4e6c711744c2019837",
-    "size": 1358,
-    "line_count": 49,
-    "namespace": "",
-    "using_list": [
-      "System.Collections.Generic",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "CardDatabase",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "ScriptableObject"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "CardDatabase",
-    "unity_type": "ScriptableObject",
-    "methods": [
-      "Init",
-      "GetById",
-      "GetByName"
-    ],
-    "fields": [],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 3,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "System",
-      "Collections",
-      "Generic",
-      "UnityEngine",
-      "CreateAssetMenu",
-      "Game",
-      "Card",
-      "Database",
-      "CardData",
-      "Init",
-      "ContainsKey",
-      "Add",
-      "LogWarning",
-      "IsNullOrEmpty",
-      "GetById",
-      "TryGetValue",
-      "GetByName"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "List",
-      "Dictionary"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [
-      "CardDatabase",
-      "Game/Card Database",
-      "중복 id 발견: {card.id}",
-      "중복 카드명 발견: {card.cardName}"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "data"
-    ],
-    "summary_signals": [
-      "데이터 자산 중심 구조"
-    ]
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/CardSelector.cs",
-    "path": "ExpDemoA/Assets/Scripts/CardSelector.cs",
-    "file_name": "CardSelector.cs",
-    "content_hash": "de7ebc4e1a7b8eb1ad4befb53a23576a1d5a7884",
-    "size": 2679,
-    "line_count": 95,
-    "namespace": "",
-    "using_list": [
-      "System.Collections.Generic",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "CardSelector",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "CardSelector",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Pick3ByIds",
-      "Pick3ByNames",
-      "PickUnique",
-      "GetWeightedRandomIndex"
-    ],
-    "fields": [
-      {
-        "name": "totalWeight",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "current",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 7,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "float",
-      "System",
-      "Collections",
-      "Generic",
-      "UnityEngine",
-      "CardDatabase",
-      "CardData",
-      "Pick3ByIds",
-      "Length",
-      "LogError",
-      "GetById",
-      "Add",
-      "PickUnique",
-      "Pick3ByNames",
-      "GetByName",
-      "Min",
-      "Count",
-      "GetWeightedRandomIndex",
-      "RemoveAt"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "List"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [
-      "ids와 weights 길이가 다르거나 null입니다.",
-      "names와 weights 길이가 다르거나 null입니다."
-    ],
-    "numeric_literals": [
-      0,
-      3
-    ],
-    "guessed_roles": [
-      "player",
-      "data",
-      "save-load",
-      "runtime"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "저장/불러오기 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/CardSlotUI.cs",
-    "path": "ExpDemoA/Assets/Scripts/CardSlotUI.cs",
-    "file_name": "CardSlotUI.cs",
-    "content_hash": "357cb266e27e6bbd49407fc9da06ffb832cd4219",
-    "size": 1432,
-    "line_count": 62,
-    "namespace": "",
-    "using_list": [
-      "TMPro",
-      "UnityEngine",
-      "UnityEngine.UI"
-    ],
-    "classes": [
-      {
-        "name": "CardSlotUI",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "CardSlotUI",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Awake",
-      "Setup",
-      "OnClickCard",
-      "SetSelected",
-      "Vector2",
-      "GetCard"
-    ],
-    "fields": [
-      {
-        "name": "currentCard",
-        "type": "CardData",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "parentUI",
-        "type": "EnhanceUI",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "slotIndex",
-        "type": "int",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "originalPos",
-        "type": "Vector2",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Awake"
-    ],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": true,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 1,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "CardData",
-      "EnhanceUI",
-      "int",
-      "Vector2",
-      "TMPro",
-      "UnityEngine",
-      "UI",
-      "Image",
-      "TMP_Text",
-      "Button",
-      "RectTransform",
-      "Awake",
-      "Setup",
-      "RemoveAllListeners",
-      "AddListener",
-      "OnClickCard",
-      "SetSelected",
-      "SelectCard",
-      "GetCard"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "Vector2"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      0,
-      20
-    ],
-    "guessed_roles": [
-      "ui",
-      "runtime",
-      "player",
-      "inventory",
-      "data"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "UI 관련 로직 포함",
-      "인벤토리 계열 로직 포함"
-    ]
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/Enemy.cs",
-    "path": "ExpDemoA/Assets/Scripts/Enemy.cs",
-    "file_name": "Enemy.cs",
-    "content_hash": "93dda06cfeada0a0800f30745e1b4b274ddeb168",
-    "size": 184,
-    "line_count": 11,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "Enemy",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "Enemy",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "OnCollisionEnter2D"
-    ],
-    "fields": [],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "UnityEngine",
-      "OnCollisionEnter2D",
-      "Collision2D",
-      "CompareTag",
-      "Ball",
-      "Destroy"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "Ball"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "combat",
-      "runtime"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "전투 계열 로직 포함"
-    ]
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/EnhanceUI.cs",
-    "path": "ExpDemoA/Assets/Scripts/EnhanceUI.cs",
-    "file_name": "EnhanceUI.cs",
-    "content_hash": "a3e089208b916880c500720335efa29aee0a6cd6",
-    "size": 1977,
-    "line_count": 74,
-    "namespace": "",
-    "using_list": [
-      "System.Collections.Generic",
-      "UnityEngine",
-      "UnityEngine.UI"
-    ],
-    "classes": [
-      {
-        "name": "EnhanceUI",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "EnhanceUI",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Start",
-      "ShowCardsByIds",
-      "ShowCardsByNames",
-      "Show",
-      "SelectCard",
-      "OnClickConfirm"
-    ],
-    "fields": [
-      {
-        "name": "selectedIndex",
-        "type": "int",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "selectedCard",
-        "type": "CardData",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Start"
-    ],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": true,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 1,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "int",
-      "CardData",
-      "System",
-      "Collections",
-      "Generic",
-      "UnityEngine",
-      "UI",
-      "CardSelector",
-      "CardSlotUI",
-      "Button",
-      "GameManager",
-      "Start",
-      "RemoveAllListeners",
-      "AddListener",
-      "OnClickConfirm",
-      "ShowCardsByIds",
-      "Pick3ByIds",
-      "Show",
-      "ShowCardsByNames",
-      "Pick3ByNames",
-      "Length",
-      "Count",
-      "SetActive",
-      "Setup",
-      "SelectCard",
-      "SetSelected",
-      "ApplyUpgrade"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "List"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "ui",
-      "data",
-      "runtime",
-      "player",
-      "inventory"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "UI 관련 로직 포함",
-      "인벤토리 계열 로직 포함"
-    ]
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/EnhanceUITest.cs",
-    "path": "ExpDemoA/Assets/Scripts/EnhanceUITest.cs",
-    "file_name": "EnhanceUITest.cs",
-    "content_hash": "e61a2d5d8885f2b2ae2cebf8b39bb1724a6cc966",
-    "size": 297,
-    "line_count": 14,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "EnhanceUITest",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "EnhanceUITest",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Start"
-    ],
-    "fields": [],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Start"
-    ],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": true,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "UnityEngine",
-      "EnhanceUI",
-      "Start",
-      "ShowCardsByIds"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      2,
-      3,
-      4,
-      5,
-      30,
-      25,
-      20,
-      15,
-      10
-    ],
-    "guessed_roles": [
-      "runtime",
-      "ui",
-      "save-load"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "UI 관련 로직 포함",
-      "저장/불러오기 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/GameManager.cs",
-    "path": "ExpDemoA/Assets/Scripts/GameManager.cs",
-    "file_name": "GameManager.cs",
-    "content_hash": "77fb03eca0a93ed197d41ce907871f55a3389c09",
-    "size": 2075,
-    "line_count": 73,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "GameManager",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "GameManager",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "OpenUpgradeUI",
-      "CloseUpgradeUI",
-      "ApplyUpgrade",
-      "OnDestroy"
-    ],
-    "fields": [
-      {
-        "name": "attackPower",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "critChance",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "ballSize",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "moveSpeed",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "ballCount",
-        "type": "int",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "OnDestroy"
-    ],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 5,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "float",
-      "int",
-      "UnityEngine",
-      "Temporary",
-      "Upgrade",
-      "Stats",
-      "UI",
-      "EnhanceUI",
-      "Control",
-      "OpenUpgradeUI",
-      "SetActive",
-      "ShowCardsByIds",
-      "CloseUpgradeUI",
-      "ApplyUpgrade",
-      "CardData",
-      "UpgradeType",
-      "AttackPower",
-      "Log",
-      "CritChance",
-      "BallSize",
-      "Speed",
-      "BallCount",
-      "RoundToInt",
-      "OnDestroy"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "Temporary Upgrade Stats",
-      "Upgrade UI",
-      "Time Control",
-      "[Upgrade] {card.cardName} 선택 -> 공격력: {attackPower}",
-      "[Upgrade] {card.cardName} 선택 -> 치명타: {critChance}",
-      "[Upgrade] {card.cardName} 선택 -> 공 크기: {ballSize}",
-      "[Upgrade] {card.cardName} 선택 -> 속도: {moveSpeed}",
-      "[Upgrade] {card.cardName} 선택 -> 공 개수: {ballCount}"
-    ],
-    "numeric_literals": [
-      10,
-      5,
-      1,
-      0.2,
-      2,
-      3,
-      4,
-      5,
-      6,
-      30,
-      25,
-      20,
-      15
-    ],
-    "guessed_roles": [
-      "ui",
-      "combat",
-      "manager",
-      "data",
-      "player"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "UI 관련 로직 포함",
-      "전투 계열 로직 포함"
-    ]
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/MapScroller.cs",
-    "path": "ExpDemoA/Assets/Scripts/MapScroller.cs",
-    "file_name": "MapScroller.cs",
-    "content_hash": "29fee402399d9c4a5a6603b057589ae7bdd654fe",
-    "size": 1662,
-    "line_count": 75,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine",
-      "UnityEngine.Tilemaps",
-      "System.Collections.Generic"
-    ],
-    "classes": [
-      {
-        "name": "MapScroller",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "MapScroller",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Start",
-      "MeasureMap",
-      "SpawnMap",
-      "Vector3",
-      "Update",
-      "SpawnNextMap"
-    ],
-    "fields": [
-      {
-        "name": "deathY",
-        "type": "float",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "cameraTopY",
-        "type": "float",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "mapHeight",
-        "type": "float",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "contentBottomOffset",
-        "type": "float",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "move",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "contentTopY",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "highestTop",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Start",
-      "Update"
-    ],
-    "has_update": true,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": true,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 2,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "float",
-      "UnityEngine",
-      "Tilemaps",
-      "System",
-      "Collections",
-      "Generic",
-      "Start",
-      "MeasureMap",
-      "SpawnMap",
-      "Instantiate",
-      "GetComponentInChildren",
-      "Tilemap",
-      "CompressBounds",
-      "TransformPoint",
-      "Destroy",
-      "Vector3",
-      "Add",
-      "Update",
-      "Count",
-      "RemoveAt",
-      "SpawnNextMap",
-      "Max"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "List",
-      "Vector3"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      2,
-      7,
-      5,
-      0
-    ],
-    "guessed_roles": [
-      "runtime",
-      "player",
-      "save-load"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "Update 기반 처리 존재",
-      "저장/불러오기 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/PaddleController.cs",
-    "path": "ExpDemoA/Assets/Scripts/PaddleController.cs",
-    "file_name": "PaddleController.cs",
-    "content_hash": "d09c264e5271248b9437dc8c2d3418f276b83314",
-    "size": 465,
-    "line_count": 21,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine",
-      "UnityEngine.InputSystem"
-    ],
-    "classes": [
-      {
-        "name": "PaddleController",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "PaddleController",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Update",
-      "Vector3"
-    ],
-    "fields": [
-      {
-        "name": "mousePos",
-        "type": "Vector2",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "world",
-        "type": "Vector3",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "x",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Update"
-    ],
-    "has_update": true,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 1,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "Vector2",
-      "Vector3",
-      "float",
-      "UnityEngine",
-      "InputSystem",
-      "Update",
-      "Mouse",
-      "ReadValue",
-      "Camera",
-      "ScreenToWorldPoint",
-      "Clamp"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "Vector3"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      7
-    ],
-    "guessed_roles": [
-      "runtime",
-      "player",
-      "save-load"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "Update 기반 처리 존재",
-      "저장/불러오기 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "ExpDemoA/Assets/Scripts/TitleUI.cs",
-    "path": "ExpDemoA/Assets/Scripts/TitleUI.cs",
-    "file_name": "TitleUI.cs",
-    "content_hash": "22ce840911e225fa2c3d2a71ce6f0634e05c0e64",
-    "size": 166,
-    "line_count": 11,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine",
-      "UnityEngine.SceneManagement"
-    ],
-    "classes": [
-      {
-        "name": "TitleUI",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "TitleUI",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "StartGame"
-    ],
-    "fields": [],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "UnityEngine",
-      "SceneManagement",
-      "StartGame",
-      "SceneManager",
-      "LoadScene",
-      "GameScene"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [
-      "GameScene"
-    ],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "scene",
-      "runtime",
-      "ui",
-      "save-load",
-      "manager"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "UI 관련 로직 포함",
-      "저장/불러오기 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "My project/Assets/script/jumBall.cs",
-    "path": "My project/Assets/script/jumBall.cs",
-    "file_name": "jumBall.cs",
-    "content_hash": "6a75cc8ac0d9051096f69d128ae5d63b1384c063",
-    "size": 645,
-    "line_count": 28,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "Ball",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "Ball",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Start",
-      "Vector2",
-      "Update"
-    ],
-    "fields": [
-      {
-        "name": "rb",
-        "type": "Rigidbody2D",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "speed",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "dir",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Start",
-      "Update"
-    ],
-    "has_update": true,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": true,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 1,
-    "get_component_count": 1,
-    "find_call_count": 0,
-    "new_keyword_count": 2,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "Rigidbody2D",
-      "float",
-      "UnityEngine",
-      "Start",
-      "GetComponent",
-      "Vector2",
-      "Update",
-      "Abs"
-    ],
-    "component_access_types": [
-      "Rigidbody2D"
-    ],
-    "created_types": [
-      "Vector2"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      5,
-      1,
-      0.5
-    ],
-    "guessed_roles": [
-      "runtime"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "Update 기반 처리 존재",
-      "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "My project/Assets/script/MakeGround.cs",
-    "path": "My project/Assets/script/MakeGround.cs",
-    "file_name": "MakeGround.cs",
-    "content_hash": "6c4a840af1513f266d47391cbeae2dfb5b5308f4",
-    "size": 1369,
-    "line_count": 52,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "MakeGround",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "MakeGround",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Start",
-      "Update",
-      "Vector3"
-    ],
-    "fields": [
-      {
-        "name": "ground",
-        "type": "GameObject",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "monster",
-        "type": "GameObject",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "timer",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "timediff",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "worldX",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Start",
-      "Update"
-    ],
-    "has_update": true,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": true,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 3,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 3,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "float",
-      "UnityEngine",
-      "Start",
-      "Update",
-      "Instantiate",
-      "Vector3",
-      "Clamp",
-      "Destroy"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "Vector3"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      1,
-      2,
-      3.5,
-      2.8,
-      5.4,
-      0.7,
-      2.5,
-      15
-    ],
-    "guessed_roles": [
-      "runtime"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "Update 기반 처리 존재"
-    ]
-  },
-  {
-    "file_id": "My project/Assets/script/MoveCloud.cs",
-    "path": "My project/Assets/script/MoveCloud.cs",
-    "file_name": "MoveCloud.cs",
-    "content_hash": "567e663d5c4b1bd6bde9700f2b8dc0e0368d63f3",
-    "size": 616,
-    "line_count": 24,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "MoveCloud",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "MoveCloud",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Update",
-      "Vector3"
-    ],
-    "fields": [
-      {
-        "name": "speed",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "targetX",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Update"
-    ],
-    "has_update": true,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 1,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 2,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "float",
-      "UnityEngine",
-      "Update",
-      "Input",
-      "GetMouseButton",
-      "Vector3",
-      "Camera",
-      "ScreenToWorldPoint",
-      "Lerp",
-      "Clamp"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "Vector3"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      10,
-      2.5,
-      0
-    ],
-    "guessed_roles": [
-      "player",
-      "runtime",
-      "ui"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "Update 기반 처리 존재",
-      "UI 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "My project/Assets/script/Moveground.cs",
-    "path": "My project/Assets/script/Moveground.cs",
-    "file_name": "Moveground.cs",
-    "content_hash": "34f7298e056a59110491244e944c55221a8d132e",
-    "size": 379,
-    "line_count": 20,
-    "namespace": "",
-    "using_list": [
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "Moveground",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "MonoBehaviour"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "Moveground",
-    "unity_type": "MonoBehaviour",
-    "methods": [
-      "Start",
-      "FixedUpdate"
-    ],
-    "fields": [
-      {
-        "name": "speed",
-        "type": "float",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "rb",
-        "type": "Rigidbody2D",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "newPos",
-        "type": "Vector2",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [
-      "Start",
-      "FixedUpdate"
-    ],
-    "has_update": false,
-    "has_fixed_update": true,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": true,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 1,
-    "get_component_count": 1,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "float",
-      "Rigidbody2D",
-      "Vector2",
-      "UnityEngine",
-      "Start",
-      "GetComponent",
-      "Destroy",
-      "FixedUpdate",
-      "MovePosition"
-    ],
-    "component_access_types": [
-      "Rigidbody2D"
-    ],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      1,
-      15
-    ],
-    "guessed_roles": [
-      "runtime",
-      "player"
-    ],
-    "summary_signals": [
-      "런타임 컴포넌트",
-      "물리 타이밍 처리 가능성",
-      "컴포넌트 조회 사용"
-    ]
-  },
-  {
-    "file_id": "My project/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs",
-    "path": "My project/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs",
-    "file_name": "ReadmeEditor.cs",
-    "content_hash": "3916f846528f0e94fb55009c0c2707330222928c",
-    "size": 6677,
-    "line_count": 243,
-    "namespace": "",
-    "using_list": [
-      "System.Collections",
-      "System.Collections.Generic",
-      "UnityEngine",
-      "UnityEditor",
-      "System",
-      "System.IO",
-      "System.Reflection"
-    ],
-    "classes": [
-      {
-        "name": "ReadmeEditor",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "Editor"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "ReadmeEditor",
-    "unity_type": "None",
-    "methods": [
-      "ReadmeEditor",
-      "RemoveTutorial",
-      "SelectReadmeAutomatically",
-      "LoadLayout",
-      "SelectReadme",
-      "OnHeaderGUI",
-      "OnInspectorGUI",
-      "GUIContent",
-      "Init",
-      "GUIStyle",
-      "Color",
-      "LinkLabel",
-      "Vector3"
-    ],
-    "fields": [
-      {
-        "name": "s_ShowedReadmeSessionStateName",
-        "type": "string",
-        "access": "internal",
-        "serialized": false,
-        "is_static": true
-      },
-      {
-        "name": "s_ReadmeSourceDirectory",
-        "type": "string",
-        "access": "internal",
-        "serialized": false,
-        "is_static": true
-      },
-      {
-        "name": "k_Space",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "m_Initialized",
-        "type": "bool",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "m_LinkStyle",
-        "type": "GUIStyle",
-        "access": "internal",
-        "serialized": true,
-        "is_static": false
-      },
-      {
-        "name": "m_TitleStyle",
-        "type": "GUIStyle",
-        "access": "internal",
-        "serialized": true,
-        "is_static": false
-      },
-      {
-        "name": "m_HeadingStyle",
-        "type": "GUIStyle",
-        "access": "internal",
-        "serialized": true,
-        "is_static": false
-      },
-      {
-        "name": "m_BodyStyle",
-        "type": "GUIStyle",
-        "access": "internal",
-        "serialized": true,
-        "is_static": false
-      },
-      {
-        "name": "m_ButtonStyle",
-        "type": "GUIStyle",
-        "access": "internal",
-        "serialized": true,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 5,
-    "public_field_count": 0,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 10,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "string",
-      "float",
-      "bool",
-      "GUIStyle",
-      "System",
-      "Collections",
-      "Generic",
-      "UnityEngine",
-      "UnityEditor",
-      "IO",
-      "Reflection",
-      "CustomEditor",
-      "Readme",
-      "InitializeOnLoad",
-      "Editor",
-      "Assets",
-      "TutorialInfo",
-      "EditorApplication",
-      "SelectReadmeAutomatically",
-      "RemoveTutorial",
-      "EditorUtility",
-      "DisplayDialog",
-      "Remove",
-      "All",
-      "Proceed",
-      "Cancel",
-      "Directory",
-      "Exists",
-      "FileUtil",
-      "DeleteFileOrDirectory",
-      "Log",
-      "Could",
-      "SelectReadme",
-      "AssetDatabase",
-      "GetAssetPath",
-      "Refresh",
-      "SessionState",
-      "GetBool",
-      "SetBool",
-      "LoadLayout",
-      "Assembly",
-      "GetType",
-      "WindowLayout",
-      "GetMethod",
-      "LoadWindowLayout",
-      "BindingFlags",
-      "Public",
-      "Static",
-      "Invoke",
-      "Path",
-      "Combine",
-      "Application",
-      "Layout",
-      "FindAssets",
-      "Length",
-      "LoadMainAssetAtPath",
-      "GUIDToAssetPath",
-      "Selection",
-      "Object",
-      "Couldn",
-      "OnHeaderGUI",
-      "Init",
-      "Min",
-      "EditorGUIUtility",
-      "GUILayout",
-      "BeginHorizontal",
-      "In",
-      "BigTitle",
-      "Space",
-      "Label",
-      "Width",
-      "Height",
-      "BeginVertical",
-      "FlexibleSpace",
-      "TitleStyle",
-      "EndVertical",
-      "EndHorizontal",
-      "OnInspectorGUI",
-      "IsNullOrEmpty",
-      "HeadingStyle",
-      "BodyStyle",
-      "LinkLabel",
-      "GUIContent",
-      "OpenURL",
-      "Button",
-      "ButtonStyle",
-      "LinkStyle",
-      "EditorStyles",
-      "FontStyle",
-      "Bold",
-      "Match",
-      "Color",
-      "GUILayoutOption",
-      "GUILayoutUtility",
-      "GetRect",
-      "Handles",
-      "BeginGUI",
-      "DrawLine",
-      "Vector3",
-      "EndGUI",
-      "AddCursorRect",
-      "MouseCursor",
-      "Link",
-      "GUI"
-    ],
-    "component_access_types": [],
-    "created_types": [
-      "GUIContent",
-      "GUIStyle",
-      "Color",
-      "Vector3"
-    ],
-    "singleton_access_types": [],
-    "string_literals": [
-      "ReadmeEditor.showedReadme",
-      "Assets/TutorialInfo",
-      "Remove Readme Assets",
-      "Proceed",
-      "Cancel",
-      ".meta",
-      "Could not find the Readme folder at {s_ReadmeSourceDirectory}",
-      "UnityEditor.WindowLayout",
-      "LoadWindowLayout",
-      "TutorialInfo/Layout.wlt",
-      "Readme t:Readme",
-      "Couldn't find a readme",
-      "In BigTitle"
-    ],
-    "numeric_literals": [
-      16,
-      3,
-      20,
-      128,
-      14,
-      26,
-      18,
-      255,
-      1
-    ],
-    "guessed_roles": [
-      "ui",
-      "save-load",
-      "player",
-      "data",
-      "combat"
-    ],
-    "summary_signals": [
-      "인스펙터 직렬화 필드 사용",
-      "UI 관련 로직 포함",
-      "전투 계열 로직 포함",
-      "저장/불러오기 관련 로직 포함"
-    ]
-  },
-  {
-    "file_id": "My project/Assets/TutorialInfo/Scripts/Readme.cs",
-    "path": "My project/Assets/TutorialInfo/Scripts/Readme.cs",
-    "file_name": "Readme.cs",
-    "content_hash": "5853b87f7a5002c91de6903b50a4aa25a1051279",
-    "size": 302,
-    "line_count": 17,
-    "namespace": "",
-    "using_list": [
-      "System",
-      "UnityEngine"
-    ],
-    "classes": [
-      {
-        "name": "Readme",
-        "kind": "class",
-        "access": "public",
-        "base_types": [
-          "ScriptableObject"
-        ],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      },
-      {
-        "name": "Section",
-        "kind": "class",
-        "access": "public",
-        "base_types": [],
-        "interfaces": [],
-        "attributes": [],
-        "is_partial": false,
-        "is_generic": false
-      }
-    ],
-    "main_class_name": "Readme",
-    "unity_type": "ScriptableObject",
-    "methods": [],
-    "fields": [
-      {
-        "name": "icon",
-        "type": "Texture2D",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "title",
-        "type": "string",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "sections",
-        "type": "Section[]",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "loadedLayout",
-        "type": "bool",
-        "access": "public",
-        "serialized": false,
-        "is_static": false
-      }
-    ],
-    "properties": [],
-    "events": [],
-    "unity_messages": [],
-    "has_update": false,
-    "has_fixed_update": false,
-    "has_late_update": false,
-    "has_awake": false,
-    "has_start": false,
-    "has_on_enable": false,
-    "has_on_disable": false,
-    "serialize_field_count": 0,
-    "public_field_count": 4,
-    "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
-    "singleton_candidate": false,
-    "dont_destroy_on_load": false,
-    "referenced_types": [
-      "Texture2D",
-      "string",
-      "bool",
-      "System",
-      "UnityEngine",
-      "Serializable"
-    ],
-    "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [],
-    "guessed_roles": [
-      "data",
-      "save-load"
-    ],
-    "summary_signals": [
-      "데이터 자산 중심 구조",
       "저장/불러오기 관련 로직 포함"
     ]
   }
