@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BallStats
   m_EditorClassIdentifier: Assembly-CSharp::BallStats
   <Speed>k__BackingField: 5
-  <Radius>k__BackingField: 0.25
+  <BaseRadius>k__BackingField: 0.25
   <AttackPower>k__BackingField: 10
   <CriticalChance>k__BackingField: 0.05
   <CriticalDamage>k__BackingField: 1.5

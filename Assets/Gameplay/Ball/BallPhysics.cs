@@ -10,12 +10,12 @@ public class BallPhysics
 		this.ball = ball;
 	}
 
-	public void Tick(float deltaTime)
+	public void Tick()
 	{
-		if (deltaTime <= 0f)
+		if (Time.deltaTime <= 0f)
 			return;
 
-		this.ball.transform.position += (Vector3)(Velocity * deltaTime);
+		this.ball.transform.position += (Vector3)(Velocity * Time.deltaTime);
 	}
 
 	public void Launch()

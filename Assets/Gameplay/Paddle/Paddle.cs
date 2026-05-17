@@ -17,6 +17,6 @@ public class Paddle : MonoBehaviour
 
 	private void Update()
 	{
-		this.Physics.Tick(Time.deltaTime);
+		this.Physics.Tick();
 	}
 }

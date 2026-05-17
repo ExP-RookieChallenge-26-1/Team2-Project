@@ -4,10 +4,13 @@ using UnityEngine;
 public class BallStats : ScriptableObject
 {
 	[field: SerializeField] public float Speed { get; private set; }
-	[field: SerializeField] public float Radius { get; private set; }
+	[field: SerializeField] public float BaseRadius { get; private set; }
 	[field: SerializeField] public float AttackPower { get; private set; }
 	[field: SerializeField] public float CriticalChance { get; private set; }
 	[field: SerializeField] public float CriticalDamage { get; private set; }
+
+	public float Radius => this.BaseRadius * this.RadiusMultiplier;
+	public float RadiusMultiplier { get; private set; } = 1f;
 
 	public void IncreaseSpeed(float amount)
 	{
@@ -17,8 +20,8 @@ public class BallStats : ScriptableObject
 
 	public void IncreaseRadius(float amount)
 	{
-		this.Radius = Mathf.Max(0.01f, this.Radius + amount);
-		Debug.Log($"Radius: {this.Radius}");
+		this.BaseRadius = Mathf.Max(0.01f, this.BaseRadius + amount);
+		Debug.Log($"BaseRadius: {this.BaseRadius}");
 	}
 
 	public void IncreaseAttackPower(float amount)
@@ -37,5 +40,15 @@ public class BallStats : ScriptableObject
 	{
 		this.CriticalDamage = Mathf.Max(1f, this.CriticalDamage + amount);
 		Debug.Log($"Critical Damage: {this.CriticalDamage}");
+	}
+
+	public void SetRadiusMultiplier(float multiplier)
+	{
+		this.RadiusMultiplier = Mathf.Max(0.01f, multiplier);
+	}
+
+	public void ResetRadiusMultiplier()
+	{
+		this.RadiusMultiplier = 1f;
 	}
 }
