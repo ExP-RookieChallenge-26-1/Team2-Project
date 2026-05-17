@@ -16,7 +16,14 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private WorldStats worldStatsAsset;
 	[SerializeField] private EnhanceUI enhanceUI;
 
-	private void Awake()
+	/*경험치*/
+    [Header("Level System")]
+    [SerializeField] private int currentLevel = 1;
+    [SerializeField] private int currentExp = 0;
+    [SerializeField] private int[] requiredExpByLevel = { 10, 20, 35, 50, 70, 100 };
+
+
+    private void Awake()
 	{
 		if (Instance != null && Instance != this)
 		{
@@ -70,4 +77,27 @@ public class GameManager : MonoBehaviour
 		this.enhanceUI.gameObject.SetActive(true);
 		this.enhanceUI.ShowCardsByIds(ids, weights);
 	}
+    public void AddExp(int amount)
+    {
+        this.currentExp += amount;
+        Debug.Log($"경험치 획득: +{amount}, 현재 EXP: {this.currentExp}");
+
+        CheckLevelUp();
+    }
+
+    private void CheckLevelUp()
+    {
+        while (this.currentLevel - 1 < this.requiredExpByLevel.Length &&
+               this.currentExp >= this.requiredExpByLevel[this.currentLevel - 1])
+        {
+            this.currentExp -= this.requiredExpByLevel[this.currentLevel - 1];
+            this.currentLevel++;
+
+            Debug.Log($"레벨업! 현재 레벨: {this.currentLevel}");
+
+            int[] ids = { 1, 2, 3, 4, 5, 6 };
+            float[] weights = { 30f, 25f, 20f, 15f, 10f, 20f };
+            OpenUpgradeUI(ids, weights);
+        }
+    }
 }
