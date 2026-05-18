@@ -267,6 +267,83 @@
     ]
   },
   {
+    "file_id": "Assets/_Global/SkillEventChannel.cs",
+    "path": "Assets/_Global/SkillEventChannel.cs",
+    "file_name": "SkillEventChannel.cs",
+    "content_hash": "27baf60465e718d11d7c678c8764f2bfd27363c3",
+    "size": 402,
+    "line_count": 19,
+    "namespace": "",
+    "using_list": [
+      "System",
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "SkillEventChannel",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "ScriptableObject"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "SkillEventChannel",
+    "unity_type": "ScriptableObject",
+    "methods": [
+      "RaiseSkill1",
+      "RaiseSkill2"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "System",
+      "UnityEngine",
+      "CreateAssetMenu",
+      "EventChannel",
+      "OnSkill1Activated",
+      "OnSkill2Activated",
+      "RaiseSkill1",
+      "Invoke",
+      "RaiseSkill2"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [
+      "SkillEventChannel",
+      "EventChannel/SkillEventChannel"
+    ],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "data"
+    ],
+    "summary_signals": [
+      "데이터 자산 중심 구조"
+    ]
+  },
+  {
     "file_id": "Assets/_Global/States/GameStateMachine.cs",
     "path": "Assets/_Global/States/GameStateMachine.cs",
     "file_name": "GameStateMachine.cs",
@@ -518,9 +595,9 @@
     "file_id": "Assets/Gameplay/Ball/Ball.cs",
     "path": "Assets/Gameplay/Ball/Ball.cs",
     "file_name": "Ball.cs",
-    "content_hash": "74ccfaa7e3c1c7e37e80a0b060741d2a1b8315ad",
-    "size": 857,
-    "line_count": 38,
+    "content_hash": "5b8a13a2f797669755ec9cb1998418579abce855",
+    "size": 1139,
+    "line_count": 50,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -546,9 +623,19 @@
       "BallPhysics",
       "Start",
       "Update",
+      "UpdateScale",
+      "Vector3",
       "CheckGameOver"
     ],
-    "fields": [],
+    "fields": [
+      {
+        "name": "diameter",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
     "properties": [
       {
         "access": "public",
@@ -569,6 +656,11 @@
         "access": "public",
         "type": "BallTrajectory",
         "name": "Trajectory"
+      },
+      {
+        "access": "public",
+        "type": "GiantSkill",
+        "name": "GiantSKill"
       }
     ],
     "events": [],
@@ -586,23 +678,26 @@
     "has_on_disable": false,
     "serialize_field_count": 0,
     "public_field_count": 0,
-    "get_component_count": 2,
+    "get_component_count": 3,
     "find_call_count": 0,
-    "new_keyword_count": 1,
+    "new_keyword_count": 2,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
+      "float",
       "BallStats",
       "BallPhysics",
       "BallCollision",
       "BallTrajectory",
+      "GiantSkill",
       "UnityEngine",
       "RequireComponent",
       "Stats",
       "Physics",
       "Collision",
       "Trajectory",
+      "GiantSKill",
       "Awake",
       "GetComponent",
       "Start",
@@ -611,7 +706,10 @@
       "Launch",
       "Update",
       "Tick",
+      "UpdateScale",
       "CheckGameOver",
+      "Radius",
+      "Vector3",
       "State",
       "Change",
       "GameStateMachine",
@@ -619,16 +717,20 @@
     ],
     "component_access_types": [
       "BallCollision",
-      "BallTrajectory"
+      "BallTrajectory",
+      "GiantSkill"
     ],
     "created_types": [
-      "BallPhysics"
+      "BallPhysics",
+      "Vector3"
     ],
     "singleton_access_types": [
       "GameManager"
     ],
     "string_literals": [],
     "numeric_literals": [
+      2,
+      1,
       6
     ],
     "guessed_roles": [
@@ -1003,8 +1105,8 @@
     "file_id": "Assets/Gameplay/Ball/BallPhysics.cs",
     "path": "Assets/Gameplay/Ball/BallPhysics.cs",
     "file_name": "BallPhysics.cs",
-    "content_hash": "5a115f1449b94b0060a56f8d10a3de9f052b1807",
-    "size": 3332,
+    "content_hash": "c2a83899b0f80f87ce6f14c874ef0fcefe3c286b",
+    "size": 3327,
     "line_count": 120,
     "namespace": "",
     "using_list": [
@@ -1223,12 +1325,154 @@
     ]
   },
   {
+    "file_id": "Assets/Gameplay/Ball/BallSkill.cs",
+    "path": "Assets/Gameplay/Ball/BallSkill.cs",
+    "file_name": "BallSkill.cs",
+    "content_hash": "1b7e3f10aaeaee3e4d1c17ae8092cd808d6fdc83",
+    "size": 1505,
+    "line_count": 73,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "BallSkill",
+        "kind": "class",
+        "access": "internal",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "BallSkill",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Awake",
+      "Start",
+      "OnDestroy",
+      "Tick",
+      "TryActivate",
+      "ApplyCooldownReduction",
+      "OnActivate",
+      "OnDeactivate",
+      "Subscribe",
+      "Unsubscribe"
+    ],
+    "fields": [
+      {
+        "name": "ball",
+        "type": "Ball",
+        "access": "protected",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "timer",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [
+      {
+        "access": "public",
+        "type": "float",
+        "name": "Cooldown"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "Duration"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "CooldownReductionRate"
+      },
+      {
+        "access": "public",
+        "type": "bool",
+        "name": "IsActive"
+      }
+    ],
+    "events": [],
+    "unity_messages": [
+      "Awake",
+      "Start",
+      "OnDestroy"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "Ball",
+      "float",
+      "bool",
+      "UnityEngine",
+      "SkillEventChannel",
+      "Cooldown",
+      "Duration",
+      "CooldownReductionRate",
+      "IsActive",
+      "IsReady",
+      "Awake",
+      "GetComponent",
+      "Start",
+      "Subscribe",
+      "OnDestroy",
+      "Unsubscribe",
+      "Tick",
+      "OnDeactivate",
+      "TryActivate",
+      "OnActivate",
+      "ApplyCooldownReduction",
+      "Clamp01"
+    ],
+    "component_access_types": [
+      "Ball"
+    ],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      0,
+      1
+    ],
+    "guessed_roles": [
+      "runtime",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
     "file_id": "Assets/Gameplay/Ball/BallStats.cs",
     "path": "Assets/Gameplay/Ball/BallStats.cs",
     "file_name": "BallStats.cs",
-    "content_hash": "17e840b8b37eb215b6765e51cae5f9ab6df8e45f",
-    "size": 1310,
-    "line_count": 41,
+    "content_hash": "a1e24954db77e2d89ad7c22ab85d7d509bca5b74",
+    "size": 1643,
+    "line_count": 54,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -1254,7 +1498,9 @@
       "IncreaseRadius",
       "IncreaseAttackPower",
       "IncreaseCriticalChance",
-      "IncreaseCriticalDamage"
+      "IncreaseCriticalDamage",
+      "SetRadiusMultiplier",
+      "ResetRadiusMultiplier"
     ],
     "fields": [],
     "properties": [
@@ -1266,7 +1512,7 @@
       {
         "access": "public",
         "type": "float",
-        "name": "Radius"
+        "name": "BaseRadius"
       },
       {
         "access": "public",
@@ -1282,6 +1528,11 @@
         "access": "public",
         "type": "float",
         "name": "CriticalDamage"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "RadiusMultiplier"
       }
     ],
     "events": [],
@@ -1307,10 +1558,12 @@
       "CreateAssetMenu",
       "Stats",
       "Speed",
-      "Radius",
+      "BaseRadius",
       "AttackPower",
       "CriticalChance",
       "CriticalDamage",
+      "Radius",
+      "RadiusMultiplier",
       "IncreaseSpeed",
       "Max",
       "Log",
@@ -1321,7 +1574,9 @@
       "Critical",
       "Chance",
       "IncreaseCriticalDamage",
-      "Damage"
+      "Damage",
+      "SetRadiusMultiplier",
+      "ResetRadiusMultiplier"
     ],
     "component_access_types": [],
     "created_types": [],
@@ -1330,16 +1585,16 @@
       "BallStats",
       "Stats/BallStats",
       "Speed: {this.Speed}",
-      "Radius: {this.Radius}",
+      "BaseRadius: {this.BaseRadius}",
       "AttackPower: {this.AttackPower}",
       "Critical Chance: {this.CriticalChance}",
       "Critical Damage: {this.CriticalDamage}"
     ],
     "numeric_literals": [
+      1,
       0.1,
       0.01,
-      0,
-      1
+      0
     ],
     "guessed_roles": [
       "combat",
@@ -1619,6 +1874,119 @@
       "전투 계열 로직 포함",
       "저장/불러오기 관련 로직 포함",
       "컴포넌트 조회 사용"
+    ]
+  },
+  {
+    "file_id": "Assets/Gameplay/Ball/GiantSkill.cs",
+    "path": "Assets/Gameplay/Ball/GiantSkill.cs",
+    "file_name": "GiantSkill.cs",
+    "content_hash": "6946b9098029b78d919cab7e17f5b6676cd30212",
+    "size": 1153,
+    "line_count": 46,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "GiantSkill",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "BallSkill"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "GiantSkill",
+    "unity_type": "None",
+    "methods": [
+      "Awake",
+      "Subscribe",
+      "Unsubscribe",
+      "OnActivate",
+      "OnDeactivate",
+      "IncreaseSizeLevel",
+      "GetCurrentMultiplier"
+    ],
+    "fields": [],
+    "properties": [
+      {
+        "access": "public",
+        "type": "float[]",
+        "name": "RadiusMultiplierPerLevel"
+      },
+      {
+        "access": "public",
+        "type": "int",
+        "name": "SizeLevel"
+      },
+      {
+        "access": "public",
+        "type": "int",
+        "name": "MaxSizeLevel"
+      }
+    ],
+    "events": [],
+    "unity_messages": [
+      "Awake"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "float",
+      "int",
+      "UnityEngine",
+      "BallSkill",
+      "RadiusMultiplierPerLevel",
+      "SizeLevel",
+      "MaxSizeLevel",
+      "Awake",
+      "Subscribe",
+      "OnSkill1Activated",
+      "TryActivate",
+      "Unsubscribe",
+      "OnActivate",
+      "Stats",
+      "SetRadiusMultiplier",
+      "GetCurrentMultiplier",
+      "OnDeactivate",
+      "ResetRadiusMultiplier",
+      "IncreaseSizeLevel",
+      "System",
+      "Math",
+      "Clamp",
+      "Length"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      1
+    ],
+    "guessed_roles": [
+      "runtime",
+      "save-load"
+    ],
+    "summary_signals": [
+      "저장/불러오기 관련 로직 포함"
     ]
   },
   {
@@ -2258,8 +2626,8 @@
     "file_id": "Assets/Gameplay/Paddle/Paddle.cs",
     "path": "Assets/Gameplay/Paddle/Paddle.cs",
     "file_name": "Paddle.cs",
-    "content_hash": "bb9036ff20d12ef7f697a48ee8316c4b82baf975",
-    "size": 375,
+    "content_hash": "d9d9805f37825e82f48b7a31595ff8cbc24e898d",
+    "size": 361,
     "line_count": 22,
     "namespace": "",
     "using_list": [
@@ -2356,8 +2724,8 @@
     "file_id": "Assets/Gameplay/Paddle/PaddlePhysics.cs",
     "path": "Assets/Gameplay/Paddle/PaddlePhysics.cs",
     "file_name": "PaddlePhysics.cs",
-    "content_hash": "1b06dc7a9e1126aa5e3544968cbd0f583e8c0cf1",
-    "size": 941,
+    "content_hash": "98b163bab1885b640f3c6df2de4e770a595e9107",
+    "size": 936,
     "line_count": 38,
     "namespace": "",
     "using_list": [
@@ -3408,6 +3776,95 @@
     "summary_signals": [
       "런타임 컴포넌트",
       "UI 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/UI/HUD/HUD.cs",
+    "path": "Assets/UI/HUD/HUD.cs",
+    "file_name": "HUD.cs",
+    "content_hash": "2c58ea8441b29d88722baa56ee2c41085dabd40d",
+    "size": 709,
+    "line_count": 32,
+    "namespace": "",
+    "using_list": [
+      "Unity.VisualScripting",
+      "UnityEngine",
+      "UnityEngine.UI"
+    ],
+    "classes": [
+      {
+        "name": "HUD",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "HUD",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
+      "Oestroy",
+      "OnClickSkill1",
+      "OnClickSkill2"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "Unity",
+      "VisualScripting",
+      "UnityEngine",
+      "UI",
+      "Button",
+      "SkillEventChannel",
+      "Start",
+      "AddListener",
+      "OnClickSkill1",
+      "Oestroy",
+      "RemoveListener",
+      "OnClickSkill2",
+      "RaiseSkill1",
+      "RaiseSkill2"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "ui",
+      "runtime",
+      "player",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "UI 관련 로직 포함",
+      "저장/불러오기 관련 로직 포함"
     ]
   },
   {
