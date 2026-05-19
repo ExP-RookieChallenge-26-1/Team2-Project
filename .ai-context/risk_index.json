@@ -50,6 +50,27 @@
     "risk_score": 91
   },
   {
+    "file_id": "Assets/Gameplay/Ball/Ball.cs",
+    "class_name": "Ball",
+    "risk_flags": [
+      "update-heavy",
+      "high-coupling",
+      "getcomponent-heavy",
+      "init-order-sensitive",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "Unity 업데이트 루프 사용",
+      "참조 타입 또는 관계 수가 많음",
+      "GetComponent/TryGetComponent 호출이 많음",
+      "초기화 순서에 민감할 가능성",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 68
+  },
+  {
     "file_id": "Assets/Gameplay/Ball/BallTrajectory.cs",
     "class_name": "BallTrajectory",
     "risk_flags": [
@@ -71,23 +92,38 @@
     "risk_score": 66
   },
   {
-    "file_id": "Assets/Gameplay/Ball/Ball.cs",
-    "class_name": "Ball",
+    "file_id": "Assets/Gameplay/Ball/BallSkill.cs",
+    "class_name": "BallSkill",
     "risk_flags": [
-      "update-heavy",
       "high-coupling",
       "init-order-sensitive",
-      "ui-runtime-mixed",
+      "save-load-sensitive",
       "state-owner"
     ],
     "risk_reasons": [
-      "Unity 업데이트 루프 사용",
       "참조 타입 또는 관계 수가 많음",
       "초기화 순서에 민감할 가능성",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "저장/불러오기 관련 로직 포함",
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
-    "risk_score": 56
+    "risk_score": 48
+  },
+  {
+    "file_id": "Assets/Gameplay/Ball/GiantSkill.cs",
+    "class_name": "GiantSkill",
+    "risk_flags": [
+      "high-coupling",
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 48
   },
   {
     "file_id": "Assets/UI/Enhancement/CardSlotUI.cs",
@@ -136,6 +172,23 @@
       "Unity 업데이트 루프 사용",
       "초기화 순서에 민감할 가능성",
       "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 40
+  },
+  {
+    "file_id": "Assets/UI/HUD/HUD.cs",
+    "class_name": "HUD",
+    "risk_flags": [
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
     "risk_score": 40
@@ -385,5 +438,12 @@
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
     "risk_score": 8
+  },
+  {
+    "file_id": "Assets/_Global/SkillEventChannel.cs",
+    "class_name": "SkillEventChannel",
+    "risk_flags": [],
+    "risk_reasons": [],
+    "risk_score": 0
   }
 ]
