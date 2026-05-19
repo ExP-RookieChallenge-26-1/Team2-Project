@@ -33,8 +33,8 @@
     {
       "class_name": "BallCollision",
       "file_id": "Assets/Gameplay/Ball/BallCollision.cs",
-      "relation_count": 57,
-      "referenced_type_count": 48
+      "relation_count": 60,
+      "referenced_type_count": 51
     },
     {
       "class_name": "GameManager",

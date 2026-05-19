@@ -1010,6 +1010,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
+    "to_type": "CircleCastAll",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
     "to_type": "Clamp",
     "relation_type": "uses",
     "strength": 1
@@ -1178,6 +1185,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
+    "to_type": "RaycastHit2D",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
     "to_type": "RequireComponent",
     "relation_type": "uses",
     "strength": 1
@@ -1270,6 +1284,13 @@
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
     "to_type": "Vector3Int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "Velocity",
     "relation_type": "uses",
     "strength": 1
   },
