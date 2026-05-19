@@ -5,223 +5,284 @@ using UnityEngine.Tilemaps;
 [RequireComponent(typeof(Ball))]
 public class BallCollision : MonoBehaviour
 {
-    public readonly struct Collision
-    {
-        public enum Type
-        {
-            None,
-            Wall,
-            Paddle,
-            Terrain,
-            Enemy
-        }
+	public readonly struct Collision
+	{
+		public enum Type
+		{
+			None,
+			Wall,
+			Paddle,
+			Terrain,
+			Enemy
+		}
 
-        public readonly Type type;
-        public readonly Bounds bounds;
-        public readonly Enemy enemy;
+		public readonly Type type;
+		public readonly Bounds bounds;
+		public readonly Enemy enemy;
 
-        public Collision(Type type, Bounds bounds, Enemy enemy = null)
-        {
-            this.type = type;
-            this.bounds = bounds;
-            this.enemy = enemy;
-        }
-    }
+		public Collision(Type type, Bounds bounds, Enemy enemy = null)
+		{
+			this.type = type;
+			this.bounds = bounds;
+			this.enemy = enemy;
+		}
+	}
 
-    private Ball ball;
-    [SerializeField] private Paddle paddle;
-    private static readonly List<Collider2D> overlapBuffer = new List<Collider2D>();
+	private Ball ball;
+	[SerializeField] private Paddle paddle;
+	private static readonly List<Collider2D> overlapBuffer = new List<Collider2D>();
 
-    private Enemy lastHitEnemy;
+	private Enemy lastHitEnemy;
 
-    private void Awake()
-    {
-        this.ball = GetComponent<Ball>();
-    }
+	private void Awake()
+	{
+		this.ball = GetComponent<Ball>();
+	}
 
-    public void Tick()
-    {
-        Collision closest;
+	public void Tick()
+	{
+		Collision closest;
 
-        UpdateEnemyHitState();
-        closest = DetectClosestCollision(this.ball.transform.position, this.ball.Stats.Radius);
-        ApplyCollision(closest);
-    }
+		UpdateEnemyHitState();
+		closest = DetectClosestCollision(this.ball.transform.position, this.ball.Stats.Radius, this.ball.Physics.Velocity);
+		ApplyCollision(closest);
+	}
 
-    private void UpdateEnemyHitState()
-    {
-        if (this.lastHitEnemy == null)
-            return;
+	private void UpdateEnemyHitState()
+	{
+		if (this.lastHitEnemy == null)
+			return;
 
-        Collider2D enemyCollider = this.lastHitEnemy.GetComponent<Collider2D>();
-        if (enemyCollider == null)
-        {
-            this.lastHitEnemy = null;
-            return;
-        }
+		Collider2D enemyCollider = this.lastHitEnemy.GetComponent<Collider2D>();
+		if (enemyCollider == null)
+		{
+			this.lastHitEnemy = null;
+			return;
+		}
 
-        bool stillTouching = IsTouching(enemyCollider.bounds, this.ball.transform.position, this.ball.Stats.Radius);
-        if (!stillTouching)
-        {
-            this.lastHitEnemy = null;
-        }
-    }
+		bool stillTouching = IsTouching(enemyCollider.bounds, this.ball.transform.position, this.ball.Stats.Radius);
+		if (!stillTouching)
+		{
+			this.lastHitEnemy = null;
+		}
+	}
 
-    private void ApplyCollision(Collision collision)
-    {
-        switch (collision.type)
-        {
-            case Collision.Type.None:
-                return;
+	private void ApplyCollision(Collision collision)
+	{
+		switch (collision.type)
+		{
+			case Collision.Type.None:
+				return;
 
-            case Collision.Type.Wall:
-            case Collision.Type.Terrain:
-                this.ball.Physics.ApplyWallReflection(collision.bounds);
-                break;
+			case Collision.Type.Wall:
+			case Collision.Type.Terrain:
+				this.ball.Physics.ApplyWallReflection(collision.bounds);
+				break;
 
-            case Collision.Type.Paddle:
-                this.ball.Physics.ApplyPaddleReflectionAlternative(collision.bounds, this.paddle);
-                break;
+			case Collision.Type.Paddle:
+				this.ball.Physics.ApplyPaddleReflectionAlternative(collision.bounds, this.paddle);
+				break;
 
-            case Collision.Type.Enemy:
-                if (collision.enemy != null && collision.enemy != this.lastHitEnemy)
-                {
-                    collision.enemy.TakeDamage(1);
-                    this.lastHitEnemy = collision.enemy;
-                }
-                break;
-        }
-    }
+			case Collision.Type.Enemy:
+				if (collision.enemy != null && collision.enemy != this.lastHitEnemy)
+				{
+					collision.enemy.TakeDamage(1);
+					this.lastHitEnemy = collision.enemy;
+				}
+				break;
+		}
+	}
 
-    public static Collision DetectClosestCollision(Vector2 pos, float radius)
-    {
-        int hitCount;
-        Collision closest;
-        float closestOverlap;
+	// public static Collision DetectClosestCollision(Vector2 pos, float radius)
+	// {
+	// 	int hitCount;
+	// 	Collision closest;
+	// 	float closestOverlap;
 
-        overlapBuffer.Clear();
-        hitCount = Physics2D.OverlapCircle(pos, radius, ContactFilter2D.noFilter, overlapBuffer);
-        closest = new Collision(Collision.Type.None, default);
-        closestOverlap = float.MaxValue;
+	// 	overlapBuffer.Clear();
+	// 	hitCount = Physics2D.OverlapCircle(pos, radius, ContactFilter2D.noFilter, overlapBuffer);
+	// 	closest = new Collision(Collision.Type.None, default);
+	// 	closestOverlap = float.MaxValue;
 
-        for (int i = 0; i < hitCount; ++i)
-        {
-            Collider2D hit;
-            Collision collision;
-            float overlap;
+	// 	for (int i = 0; i < hitCount; ++i)
+	// 	{
+	// 		Collider2D hit;
+	// 		Collision collision;
+	// 		float overlap;
 
-            hit = overlapBuffer[i];
+	// 		hit = overlapBuffer[i];
 
-            if (hit.CompareTag("Wall"))
-                collision = new Collision(Collision.Type.Wall, hit.bounds);
-            else if (hit.CompareTag("Paddle"))
-                collision = new Collision(Collision.Type.Paddle, hit.bounds);
-            else if (hit.CompareTag("Terrain"))
-            {
-                Tilemap tilemap;
-                Bounds tileBounds;
+	// 		if (hit.CompareTag("Wall"))
+	// 			collision = new Collision(Collision.Type.Wall, hit.bounds);
+	// 		else if (hit.CompareTag("Paddle"))
+	// 			collision = new Collision(Collision.Type.Paddle, hit.bounds);
+	// 		else if (hit.CompareTag("Terrain"))
+	// 		{
+	// 			Tilemap tilemap;
+	// 			Bounds tileBounds;
 
-                tilemap = hit.GetComponent<Tilemap>();
-                if (tilemap == null)
-                    continue;
+	// 			tilemap = hit.GetComponent<Tilemap>();
+	// 			if (tilemap == null)
+	// 				continue;
 
-                tileBounds = DetectClosestTileBounds(tilemap, pos, radius);
-                if (tileBounds.size == Vector3.zero)
-                    continue;
+	// 			tileBounds = DetectClosestTileBounds(tilemap, pos, radius);
+	// 			if (tileBounds.size == Vector3.zero)
+	// 				continue;
 
-                collision = new Collision(Collision.Type.Terrain, tileBounds);
-            }
-            else if (hit.CompareTag("Enemy"))
-            {
-                Enemy enemy = hit.GetComponent<Enemy>();
-                if (enemy == null)
-                    continue;
+	// 			collision = new Collision(Collision.Type.Terrain, tileBounds);
+	// 		}
+	// 		else if (hit.CompareTag("Enemy"))
+	// 		{
+	// 			Enemy enemy = hit.GetComponent<Enemy>();
+	// 			if (enemy == null)
+	// 				continue;
 
-                collision = new Collision(Collision.Type.Enemy, hit.bounds, enemy);
-            }
-            else
-                continue;
+	// 			collision = new Collision(Collision.Type.Enemy, hit.bounds, enemy);
+	// 		}
+	// 		else
+	// 			continue;
 
-            overlap = GetMinOverlap(collision.bounds, pos, radius);
-            if (overlap < closestOverlap)
-            {
-                closestOverlap = overlap;
-                closest = collision;
-            }
-        }
+	// 		overlap = GetMinOverlap(collision.bounds, pos, radius);
+	// 		if (overlap < closestOverlap)
+	// 		{
+	// 			closestOverlap = overlap;
+	// 			closest = collision;
+	// 		}
+	// 	}
 
-        return closest;
-    }
+	// 	return closest;
+	// }
 
-    public static Bounds DetectClosestTileBounds(Tilemap tilemap, Vector2 pos, float radius)
-    {
-        int checkRange;
-        Vector3Int centerCell;
-        Bounds closest;
-        float closestOverlap;
+	public static Collision DetectClosestCollision(Vector2 pos, float radius, Vector2 velocity)
+	{
+		RaycastHit2D[] hits;
+		Collision closest;
+		float closestOverlap;
+		Vector2 direction;
+		float distance;
 
-        checkRange = Mathf.CeilToInt(radius / tilemap.cellSize.x) + 1;
-        centerCell = tilemap.WorldToCell(pos);
-        closest = default;
-        closestOverlap = float.MaxValue;
+		direction = velocity.normalized;
+		distance = velocity.magnitude * Time.deltaTime;
 
-        for (int x = -checkRange; x <= checkRange; ++x)
-        {
-            for (int y = -checkRange; y <= checkRange; ++y)
-            {
-                Vector3Int cellPos;
-                Vector3 worldPos;
-                Bounds tileBounds;
-                float overlap;
+		hits = Physics2D.CircleCastAll(pos, radius, direction, distance);
+		closest = new Collision(Collision.Type.None, default);
+		closestOverlap = float.MaxValue;
 
-                cellPos = new Vector3Int(centerCell.x + x, centerCell.y + y, 0);
+		foreach (RaycastHit2D hit in hits)
+		{
+			Collision collision;
+			float overlap;
 
-                if (!tilemap.HasTile(cellPos))
-                    continue;
+			if (hit.collider.CompareTag("Wall"))
+				collision = new Collision(Collision.Type.Wall, hit.collider.bounds);
+			else if (hit.collider.CompareTag("Paddle"))
+				collision = new Collision(Collision.Type.Paddle, hit.collider.bounds);
+			else if (hit.collider.CompareTag("Terrain"))
+			{
+				Tilemap tilemap;
+				Bounds tileBounds;
 
-                worldPos = tilemap.CellToWorld(cellPos) + tilemap.cellSize / 2f;
-                tileBounds = new Bounds(worldPos, tilemap.cellSize);
+				tilemap = hit.collider.GetComponent<Tilemap>();
+				if (tilemap == null)
+					continue;
 
-                if (!IsTouching(tileBounds, pos, radius))
-                    continue;
+				tileBounds = DetectClosestTileBounds(tilemap, pos, radius);
+				if (tileBounds.size == Vector3.zero)
+					continue;
 
-                overlap = GetMinOverlap(tileBounds, pos, radius);
+				collision = new Collision(Collision.Type.Terrain, tileBounds);
+			}
+			else if (hit.collider.CompareTag("Enemy"))
+			{
+				Enemy enemy = hit.collider.GetComponent<Enemy>();
+				if (enemy == null)
+					continue;
 
-                if (overlap < closestOverlap)
-                {
-                    closestOverlap = overlap;
-                    closest = tileBounds;
-                }
-            }
-        }
+				collision = new Collision(Collision.Type.Enemy, hit.collider.bounds, enemy);
+			}
+			else
+				continue;
 
-        return closest;
-    }
+			overlap = GetMinOverlap(collision.bounds, pos, radius);
+			if (overlap < closestOverlap)
+			{
+				closestOverlap = overlap;
+				closest = collision;
+			}
+		}
 
-    public static float GetMinOverlap(Bounds bounds, Vector2 pos, float radius)
-    {
-        float overlapLeft;
-        float overlapRight;
-        float overlapBottom;
-        float overlapTop;
+		return closest;
+	}
 
-        overlapLeft = (pos.x + radius) - bounds.min.x;
-        overlapRight = bounds.max.x - (pos.x - radius);
-        overlapBottom = (pos.y + radius) - bounds.min.y;
-        overlapTop = bounds.max.y - (pos.y - radius);
+	public static Bounds DetectClosestTileBounds(Tilemap tilemap, Vector2 pos, float radius)
+	{
+		int checkRange;
+		Vector3Int centerCell;
+		Bounds closest;
+		float closestOverlap;
 
-        return Mathf.Min(overlapLeft, overlapRight, overlapBottom, overlapTop);
-    }
+		checkRange = Mathf.CeilToInt(radius / tilemap.cellSize.x) + 1;
+		centerCell = tilemap.WorldToCell(pos);
+		closest = default;
+		closestOverlap = float.MaxValue;
 
-    public static bool IsTouching(Bounds bounds, Vector2 pos, float radius)
-    {
-        Vector2 closest;
-        Vector2 dist;
+		for (int x = -checkRange; x <= checkRange; ++x)
+		{
+			for (int y = -checkRange; y <= checkRange; ++y)
+			{
+				Vector3Int cellPos;
+				Vector3 worldPos;
+				Bounds tileBounds;
+				float overlap;
 
-        closest.x = Mathf.Clamp(pos.x, bounds.min.x, bounds.max.x);
-        closest.y = Mathf.Clamp(pos.y, bounds.min.y, bounds.max.y);
-        dist = pos - closest;
+				cellPos = new Vector3Int(centerCell.x + x, centerCell.y + y, 0);
 
-        return dist.sqrMagnitude <= radius * radius;
-    }
+				if (!tilemap.HasTile(cellPos))
+					continue;
+
+				worldPos = tilemap.CellToWorld(cellPos) + tilemap.cellSize / 2f;
+				tileBounds = new Bounds(worldPos, tilemap.cellSize);
+
+				if (!IsTouching(tileBounds, pos, radius))
+					continue;
+
+				overlap = GetMinOverlap(tileBounds, pos, radius);
+
+				if (overlap < closestOverlap)
+				{
+					closestOverlap = overlap;
+					closest = tileBounds;
+				}
+			}
+		}
+
+		return closest;
+	}
+
+	public static float GetMinOverlap(Bounds bounds, Vector2 pos, float radius)
+	{
+		float overlapLeft;
+		float overlapRight;
+		float overlapBottom;
+		float overlapTop;
+
+		overlapLeft = (pos.x + radius) - bounds.min.x;
+		overlapRight = bounds.max.x - (pos.x - radius);
+		overlapBottom = (pos.y + radius) - bounds.min.y;
+		overlapTop = bounds.max.y - (pos.y - radius);
+
+		return Mathf.Min(overlapLeft, overlapRight, overlapBottom, overlapTop);
+	}
+
+	public static bool IsTouching(Bounds bounds, Vector2 pos, float radius)
+	{
+		Vector2 closest;
+		Vector2 dist;
+
+		closest.x = Mathf.Clamp(pos.x, bounds.min.x, bounds.max.x);
+		closest.y = Mathf.Clamp(pos.y, bounds.min.y, bounds.max.y);
+		dist = pos - closest;
+
+		return dist.sqrMagnitude <= radius * radius;
+	}
 }

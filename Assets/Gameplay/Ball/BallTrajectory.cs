@@ -40,7 +40,7 @@ public class BallTrajectory : MonoBehaviour
 			BallCollision.Collision collision;
 
 			position += velocity * this.deltaTime;
-			collision = BallCollision.DetectClosestCollision(position, this.ball.Stats.Radius);
+			collision = BallCollision.DetectClosestCollision(position, this.ball.Stats.Radius, this.ball.Physics.Velocity);
 
 			switch (collision.type)
 			{
