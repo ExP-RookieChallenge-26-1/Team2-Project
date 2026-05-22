@@ -7,20 +7,25 @@ public class Ball : MonoBehaviour
 	public BallPhysics Physics { get; private set; }
 	public BallCollision Collision { get; private set; }
 	public BallTrajectory Trajectory { get; private set; }
-	public GiantSkill GiantSKill { get; private set; }
+	public GiantSkill GiantSkill { get; private set; }
+	public CloneSkill CloneSkill { get; private set; }
 
 	private void Awake()
 	{
 		this.Collision = GetComponent<BallCollision>();
 		this.Trajectory = GetComponent<BallTrajectory>();
 		this.Physics = new BallPhysics(this);
-		this.GiantSKill = GetComponent<GiantSkill>();
+		this.GiantSkill = GetComponent<GiantSkill>();
+		this.CloneSkill = GetComponent<CloneSkill>();
 	}
 
 	private void Start()
 	{
 		this.Stats = GameManager.Instance.BallStats;
-		this.Physics.Launch();
+
+		float speed = this.Stats.Speed;
+		if (this.Physics.Velocity == Vector2.zero)
+			this.Physics.SetVelocity(new Vector2(speed * 0.5f, speed * 0.866f));
 	}
 
 	private void Update()
@@ -28,9 +33,10 @@ public class Ball : MonoBehaviour
 		this.Collision.Tick();
 		this.Trajectory.Tick();
 		this.Physics.Tick();
-		this.GiantSKill.Tick();
+		this.GiantSkill.Tick();
+		this.CloneSkill.Tick();
 		UpdateScale();
-		CheckGameOver();
+		CheckOutOfBounds();
 	}
 
 	private void UpdateScale()
@@ -41,9 +47,14 @@ public class Ball : MonoBehaviour
 		transform.localScale = new Vector3(diameter, diameter, 1f);
 	}
 
-	private void CheckGameOver()
+	private void CheckOutOfBounds()
 	{
 		if (transform.position.y < -6f)
-			GameManager.Instance.State.Change(GameStateMachine.State.GameOver);
+			Destroy(gameObject);
+	}
+
+	private void OnDestroy()
+	{
+		GameManager.Instance.OnBallDestroyed();
 	}
 }

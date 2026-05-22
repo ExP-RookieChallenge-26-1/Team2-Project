@@ -11,7 +11,7 @@ public class HUD : MonoBehaviour
 	private void Start()
 	{
 		this.skill1Button.onClick.AddListener(OnClickSkill1);
-		this.skill2Button.onClick.AddListener(OnClickSkill1);
+		this.skill2Button.onClick.AddListener(OnClickSkill2);
 	}
 
 	private void Oestroy()

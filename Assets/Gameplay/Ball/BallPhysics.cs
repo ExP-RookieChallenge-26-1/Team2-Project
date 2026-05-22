@@ -18,12 +18,9 @@ public class BallPhysics
 		this.ball.transform.position += (Vector3)(Velocity * Time.deltaTime);
 	}
 
-	public void Launch()
+	public void SetVelocity(Vector2 velocity)
 	{
-		float speed;
-
-		speed = this.ball.Stats.Speed;
-		this.Velocity = new Vector2(speed * 0.5f, speed * 0.866f);
+		this.Velocity = velocity;
 	}
 
 	public void ApplyWallReflection(Bounds bounds)

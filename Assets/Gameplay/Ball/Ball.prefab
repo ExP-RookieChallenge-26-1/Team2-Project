@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8020790064521448634}
   - component: {fileID: 5357760083820707525}
   - component: {fileID: 729734382094322904}
+  - component: {fileID: -1598220075549925114}
   - component: {fileID: 2092348428466411585}
   m_Layer: 0
   m_Name: Ball
@@ -155,7 +156,25 @@ MonoBehaviour:
   - 1.5
   - 2
   <SizeLevel>k__BackingField: 0
-  <MaxSizeLevel>k__BackingField: 2
+--- !u!114 &-1598220075549925114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4906204198325167291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb4f66f0f85e87458ff210469fa501e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CloneSkill
+  skillEventChannel: {fileID: 11400000, guid: 60ac33b9a461bce44a3f3e9d1f6182e0, type: 2}
+  <Cooldown>k__BackingField: 10
+  <Duration>k__BackingField: 0
+  <CloneLevel>k__BackingField: 0
+  cloneCountPerLevel: 020000000300000004000000
+  blockedHorizontalAngle: 20
+  maxBallCount: 128
 --- !u!120 &2092348428466411585
 LineRenderer:
   serializedVersion: 3

@@ -4,7 +4,7 @@ public class GiantSkill : BallSkill
 {
 	[field: SerializeField] public float[] RadiusMultiplierPerLevel { get; private set; }
 	[field: SerializeField] public int SizeLevel { get; private set; }
-	[field: SerializeField] public int MaxSizeLevel { get; private set; }
+	public int MaxSizeLevel => this.RadiusMultiplierPerLevel.Length - 1;
 
 	protected override void Awake()
 	{

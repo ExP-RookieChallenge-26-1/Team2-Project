@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47afc26e37b067443bbf5e5e3e4bb6b0, type: 3}
   m_Name: BallStats
   m_EditorClassIdentifier: Assembly-CSharp::BallStats
-  <Speed>k__BackingField: 10
+  <Speed>k__BackingField: 5
   <BaseRadius>k__BackingField: 0.25
   <AttackPower>k__BackingField: 10
   <CriticalChance>k__BackingField: 0.05

@@ -10,7 +10,7 @@ public abstract class BallSkill : MonoBehaviour
 	public float CooldownReductionRate { get; private set; }
 	public bool IsActive { get; private set; }
 	public bool IsReady => !this.IsActive && this.timer <= 0f;
-	private float timer;
+	[SerializeField] private float timer;
 
 	protected virtual void Awake()
 	{
@@ -53,10 +53,22 @@ public abstract class BallSkill : MonoBehaviour
 	public void TryActivate()
 	{
 		if (!this.IsReady)
+		{
+			Debug.Log($"{GetType().Name} Cooldown Remain: {this.timer}");
 			return;
+		}
 
 		this.IsActive = true;
-		this.timer = this.Duration;
+
+		if (this.Duration <= 0f)
+		{
+			this.IsActive = false;
+			OnDeactivate();
+			this.timer = this.Cooldown * (1f - this.CooldownReductionRate);
+		}
+		else
+			this.timer = this.Duration;
+			
 		OnActivate();
 	}
 

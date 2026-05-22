@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int[] requiredExpByLevel = { 10, 20, 35, 50, 70, 100 };
 
 
-    private void Awake()
+	private void Awake()
 	{
 		if (Instance != null && Instance != this)
 		{
@@ -77,7 +77,14 @@ public class GameManager : MonoBehaviour
 		this.enhanceUI.gameObject.SetActive(true);
 		this.enhanceUI.ShowCardsByIds(ids, weights);
 	}
-    public void AddExp(int amount)
+
+	public void OnBallDestroyed()
+	{
+		if (FindObjectsByType<Ball>(FindObjectsSortMode.None).Length == 0)
+			this.State.Change(GameStateMachine.State.GameOver);
+	}
+
+	public void AddExp(int amount)
     {
         this.currentExp += amount;
         Debug.Log($"경험치 획득: +{amount}, 현재 EXP: {this.currentExp}");
