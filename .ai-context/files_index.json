@@ -86,9 +86,9 @@
     "file_id": "Assets/_Global/GameManager.cs",
     "path": "Assets/_Global/GameManager.cs",
     "file_name": "GameManager.cs",
-    "content_hash": "b2cbe0edc523359a0254cec57fb5499fa1de391e",
-    "size": 2827,
-    "line_count": 104,
+    "content_hash": "a2b0ac30bdfdc96973c96c4429ea84f97055ec19",
+    "size": 2984,
+    "line_count": 111,
     "namespace": "",
     "using_list": [
       "UnityEngine",
@@ -118,6 +118,7 @@
       "OnDestroy",
       "OnGameStateChanged",
       "OpenUpgradeUI",
+      "OnBallDestroyed",
       "AddExp",
       "CheckLevelUp"
     ],
@@ -211,11 +212,16 @@
       "Change",
       "SetActive",
       "ShowCardsByIds",
+      "OnBallDestroyed",
+      "FindObjectsByType",
+      "Ball",
+      "FindObjectsSortMode",
+      "None",
+      "Length",
       "AddExp",
       "Log",
       "EXP",
-      "CheckLevelUp",
-      "Length"
+      "CheckLevelUp"
     ],
     "component_access_types": [
       "GameStateMachine"
@@ -595,9 +601,9 @@
     "file_id": "Assets/Gameplay/Ball/Ball.cs",
     "path": "Assets/Gameplay/Ball/Ball.cs",
     "file_name": "Ball.cs",
-    "content_hash": "5b8a13a2f797669755ec9cb1998418579abce855",
-    "size": 1139,
-    "line_count": 50,
+    "content_hash": "138ffa13949455fb2091edc360ef465cdf743625",
+    "size": 1426,
+    "line_count": 61,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -622,12 +628,21 @@
       "Awake",
       "BallPhysics",
       "Start",
+      "Vector2",
       "Update",
       "UpdateScale",
       "Vector3",
-      "CheckGameOver"
+      "CheckOutOfBounds",
+      "OnDestroy"
     ],
     "fields": [
+      {
+        "name": "speed",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
       {
         "name": "diameter",
         "type": "float",
@@ -660,14 +675,20 @@
       {
         "access": "public",
         "type": "GiantSkill",
-        "name": "GiantSKill"
+        "name": "GiantSkill"
+      },
+      {
+        "access": "public",
+        "type": "CloneSkill",
+        "name": "CloneSkill"
       }
     ],
     "events": [],
     "unity_messages": [
       "Awake",
       "Start",
-      "Update"
+      "Update",
+      "OnDestroy"
     ],
     "has_update": true,
     "has_fixed_update": false,
@@ -678,9 +699,9 @@
     "has_on_disable": false,
     "serialize_field_count": 0,
     "public_field_count": 0,
-    "get_component_count": 3,
+    "get_component_count": 4,
     "find_call_count": 0,
-    "new_keyword_count": 2,
+    "new_keyword_count": 3,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
@@ -691,37 +712,41 @@
       "BallCollision",
       "BallTrajectory",
       "GiantSkill",
+      "CloneSkill",
       "UnityEngine",
       "RequireComponent",
       "Stats",
       "Physics",
       "Collision",
       "Trajectory",
-      "GiantSKill",
       "Awake",
       "GetComponent",
       "Start",
       "GameManager",
       "Instance",
-      "Launch",
+      "Speed",
+      "Velocity",
+      "Vector2",
+      "SetVelocity",
       "Update",
       "Tick",
       "UpdateScale",
-      "CheckGameOver",
+      "CheckOutOfBounds",
       "Radius",
       "Vector3",
-      "State",
-      "Change",
-      "GameStateMachine",
-      "GameOver"
+      "Destroy",
+      "OnDestroy",
+      "OnBallDestroyed"
     ],
     "component_access_types": [
       "BallCollision",
       "BallTrajectory",
-      "GiantSkill"
+      "GiantSkill",
+      "CloneSkill"
     ],
     "created_types": [
       "BallPhysics",
+      "Vector2",
       "Vector3"
     ],
     "singleton_access_types": [
@@ -729,6 +754,8 @@
     ],
     "string_literals": [],
     "numeric_literals": [
+      0.5,
+      0.866,
       2,
       1,
       6
@@ -1115,9 +1142,9 @@
     "file_id": "Assets/Gameplay/Ball/BallPhysics.cs",
     "path": "Assets/Gameplay/Ball/BallPhysics.cs",
     "file_name": "BallPhysics.cs",
-    "content_hash": "c2a83899b0f80f87ce6f14c874ef0fcefe3c286b",
-    "size": 3327,
-    "line_count": 120,
+    "content_hash": "194981813b71c78f31112d211b3d701230ff6f1c",
+    "size": 3266,
+    "line_count": 117,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -1139,8 +1166,7 @@
     "methods": [
       "BallPhysics",
       "Tick",
-      "Launch",
-      "Vector2",
+      "SetVelocity",
       "ApplyWallReflection",
       "ApplyPaddleReflection",
       "ApplyPaddleReflectionAlternative",
@@ -1153,13 +1179,6 @@
         "name": "ball",
         "type": "Ball",
         "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "speed",
-        "type": "float",
-        "access": "internal",
         "serialized": false,
         "is_static": false
       },
@@ -1275,7 +1294,7 @@
     "public_field_count": 0,
     "get_component_count": 0,
     "find_call_count": 0,
-    "new_keyword_count": 1,
+    "new_keyword_count": 0,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
@@ -1287,16 +1306,16 @@
       "Velocity",
       "Tick",
       "Vector3",
-      "Launch",
-      "Stats",
-      "Speed",
+      "SetVelocity",
       "ApplyWallReflection",
       "Bounds",
       "CalculateWallReflection",
+      "Stats",
       "Radius",
       "ApplyPaddleReflection",
       "Paddle",
       "CalculatePaddleReflection",
+      "Speed",
       "ApplyPaddleReflectionAlternative",
       "CalculatePaddleReflectionAlternative",
       "Min",
@@ -1312,17 +1331,14 @@
       "Sign"
     ],
     "component_access_types": [],
-    "created_types": [
-      "Vector2"
-    ],
+    "created_types": [],
     "singleton_access_types": [],
     "string_literals": [],
     "numeric_literals": [
       0,
-      0.5,
-      0.866,
       0.001,
       20,
+      0.5,
       1,
       15,
       90
@@ -1338,9 +1354,9 @@
     "file_id": "Assets/Gameplay/Ball/BallSkill.cs",
     "path": "Assets/Gameplay/Ball/BallSkill.cs",
     "file_name": "BallSkill.cs",
-    "content_hash": "1b7e3f10aaeaee3e4d1c17ae8092cd808d6fdc83",
-    "size": 1505,
-    "line_count": 73,
+    "content_hash": "724621c5d77360e6aeebd3765d78c545802408bf",
+    "size": 1755,
+    "line_count": 85,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -1378,13 +1394,6 @@
         "name": "ball",
         "type": "Ball",
         "access": "protected",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "timer",
-        "type": "float",
-        "access": "private",
         "serialized": false,
         "is_static": false
       }
@@ -1452,6 +1461,10 @@
       "Tick",
       "OnDeactivate",
       "TryActivate",
+      "Log",
+      "GetType",
+      "Name",
+      "Remain",
       "OnActivate",
       "ApplyCooldownReduction",
       "Clamp01"
@@ -1461,7 +1474,9 @@
     ],
     "created_types": [],
     "singleton_access_types": [],
-    "string_literals": [],
+    "string_literals": [
+      "{GetType().Name} Cooldown Remain: {this.timer}"
+    ],
     "numeric_literals": [
       0,
       1
@@ -1887,11 +1902,178 @@
     ]
   },
   {
+    "file_id": "Assets/Gameplay/Ball/CloneSkill.cs",
+    "path": "Assets/Gameplay/Ball/CloneSkill.cs",
+    "file_name": "CloneSkill.cs",
+    "content_hash": "2732094219a3ed41b5379e68857529c106d6198b",
+    "size": 2239,
+    "line_count": 92,
+    "namespace": "",
+    "using_list": [
+      "System",
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "CloneSkill",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "BallSkill"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "CloneSkill",
+    "unity_type": "None",
+    "methods": [
+      "Subscribe",
+      "Unsubscribe",
+      "OnActivate",
+      "OnDeactivate",
+      "IncreaseCloneLevel",
+      "SpawnClones",
+      "Vector2",
+      "GetRandomValidAngle",
+      "IsBlocked",
+      "SpawnClone"
+    ],
+    "fields": [
+      {
+        "name": "currentBallCount",
+        "type": "int",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "spawnCount",
+        "type": "int",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "radian",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "velocity",
+        "type": "Vector2",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "angle",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [
+      {
+        "access": "public",
+        "type": "int",
+        "name": "CloneLevel"
+      }
+    ],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "int",
+      "float",
+      "Vector2",
+      "System",
+      "UnityEngine",
+      "BallSkill",
+      "CloneLevel",
+      "MaxCloneLevel",
+      "Length",
+      "Subscribe",
+      "OnSkill2Activated",
+      "TryActivate",
+      "Unsubscribe",
+      "OnActivate",
+      "SpawnClones",
+      "OnDeactivate",
+      "IncreaseCloneLevel",
+      "Math",
+      "Clamp",
+      "FindObjectsByType",
+      "Ball",
+      "FindObjectsSortMode",
+      "None",
+      "Min",
+      "GetRandomValidAngle",
+      "Deg2Rad",
+      "Cos",
+      "Sin",
+      "Stats",
+      "Speed",
+      "SpawnClone",
+      "IsBlocked",
+      "Instantiate",
+      "Quaternion",
+      "GetComponent",
+      "Physics",
+      "SetVelocity"
+    ],
+    "component_access_types": [
+      "Ball"
+    ],
+    "created_types": [
+      "Vector2"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      2,
+      3,
+      4,
+      20,
+      128,
+      0,
+      360,
+      180,
+      180
+    ],
+    "guessed_roles": [
+      "save-load"
+    ],
+    "summary_signals": [
+      "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
     "file_id": "Assets/Gameplay/Ball/GiantSkill.cs",
     "path": "Assets/Gameplay/Ball/GiantSkill.cs",
     "file_name": "GiantSkill.cs",
-    "content_hash": "6946b9098029b78d919cab7e17f5b6676cd30212",
-    "size": 1153,
+    "content_hash": "5e7a6e8adda299157e87b0bb19d591da7942a5f0",
+    "size": 1152,
     "line_count": 46,
     "namespace": "",
     "using_list": [
@@ -1933,11 +2115,6 @@
         "access": "public",
         "type": "int",
         "name": "SizeLevel"
-      },
-      {
-        "access": "public",
-        "type": "int",
-        "name": "MaxSizeLevel"
       }
     ],
     "events": [],
@@ -1967,6 +2144,7 @@
       "RadiusMultiplierPerLevel",
       "SizeLevel",
       "MaxSizeLevel",
+      "Length",
       "Awake",
       "Subscribe",
       "OnSkill1Activated",
@@ -1981,8 +2159,7 @@
       "IncreaseSizeLevel",
       "System",
       "Math",
-      "Clamp",
-      "Length"
+      "Clamp"
     ],
     "component_access_types": [],
     "created_types": [],
@@ -3792,7 +3969,7 @@
     "file_id": "Assets/UI/HUD/HUD.cs",
     "path": "Assets/UI/HUD/HUD.cs",
     "file_name": "HUD.cs",
-    "content_hash": "2c58ea8441b29d88722baa56ee2c41085dabd40d",
+    "content_hash": "7f567dd4baff8cd37b5046c04553285d18669fbc",
     "size": 709,
     "line_count": 32,
     "namespace": "",
@@ -3854,9 +4031,9 @@
       "Start",
       "AddListener",
       "OnClickSkill1",
+      "OnClickSkill2",
       "Oestroy",
       "RemoveListener",
-      "OnClickSkill2",
       "RaiseSkill1",
       "RaiseSkill2"
     ],
