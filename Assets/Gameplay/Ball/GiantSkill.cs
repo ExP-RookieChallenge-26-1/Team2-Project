@@ -13,12 +13,12 @@ public class GiantSkill : BallSkill
 
 	protected override void Subscribe()
 	{
-		this.skillEventChannel.OnSkill1Activated += TryActivate;
+		this.skillEventChannel.OnSkill1Activated += TryManualActivate;
 	}
 
 	protected override void Unsubscribe()
 	{
-		this.skillEventChannel.OnSkill1Activated -= TryActivate;
+		this.skillEventChannel.OnSkill1Activated -= TryManualActivate;
 	}
 
 	protected override void OnActivate()

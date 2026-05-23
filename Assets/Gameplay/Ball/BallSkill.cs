@@ -4,13 +4,20 @@ public abstract class BallSkill : MonoBehaviour
 {
 	protected Ball ball;
 	[SerializeField] protected SkillEventChannel skillEventChannel;
-	[field: SerializeField] public float Cooldown { get; private set; }
 	[field: SerializeField] public float Duration { get; private set; }
+	[SerializeField] private float durationTimer;
+
+	[field: SerializeField] public bool HasManualTrigger { get; private set; }
+	[field: SerializeField] public float ManualCooldown { get; private set; }
+	[SerializeField] private float manualTimer;
+
+	[field: SerializeField] public bool HasAutoTrigger { get; private set; }
+	[field: SerializeField] public float AutoCooldown { get; private set; }
+	[SerializeField] private float autoTimer;
 
 	public float CooldownReductionRate { get; private set; }
 	public bool IsActive { get; private set; }
-	public bool IsReady => !this.IsActive && this.timer <= 0f;
-	[SerializeField] private float timer;
+	public bool IsManualReady => !this.IsActive && this.manualTimer <= 0f;
 
 	protected virtual void Awake()
 	{
@@ -22,64 +29,118 @@ public abstract class BallSkill : MonoBehaviour
 		if (this.skillEventChannel == null)
 			return;
 		
-		Subscribe();
+		if (this.HasManualTrigger)
+			Subscribe();
 	}
 
 	protected virtual void OnDestroy()
 	{
 		if (this.skillEventChannel == null)
 			return;
-		Unsubscribe();
+
+		if (this.HasManualTrigger)	
+			Unsubscribe();
 	}
 
 	public void Tick()
 	{
 		if (Time.deltaTime <= 0f)
 			return;
-		
-		if (this.timer > 0f)
-		{
-			this.timer -= Time.deltaTime;
 
-			if (this.timer <= 0f && this.IsActive)
-			{
-				this.IsActive = false;
-				OnDeactivate();
-				this.timer = this.Cooldown * (1f - this.CooldownReductionRate);
-			}
-		}
+		TickDuration();
+
+		if (this.HasManualTrigger)
+			TickManual();
+
+		if (this.HasAutoTrigger)
+			TickAuto();
 	}
 
-	public void TryActivate()
+	private void TickDuration()
 	{
-		if (!this.IsReady)
-		{
-			Debug.Log($"{GetType().Name} Cooldown Remain: {this.timer}");
+		if (!this.IsActive)
 			return;
-		}
 
-		this.IsActive = true;
+		this.durationTimer -= Time.deltaTime;
 
-		if (this.Duration <= 0f)
+		if (this.durationTimer <= 0f)
 		{
 			this.IsActive = false;
 			OnDeactivate();
-			this.timer = this.Cooldown * (1f - this.CooldownReductionRate);
 		}
-		else
-			this.timer = this.Duration;
-			
-		OnActivate();
+	}
+
+	private void TickManual()
+	{
+		if (this.IsActive)
+			return;
+
+		if (this.manualTimer <= 0f)
+			return;
+
+		this.manualTimer -= Time.deltaTime;
+	}
+
+	private void TickAuto()
+	{
+		float cooldown;
+
+		cooldown = this.AutoCooldown * (1f - this.CooldownReductionRate);
+		
+		if (cooldown <= 0f)
+			return;
+
+		this.autoTimer -= Time.deltaTime;
+
+		if (this.autoTimer <= 0f)
+		{
+			this.autoTimer = cooldown;
+			Activate();
+		}
 	}
 
 	public void ApplyCooldownReduction(float rate)
 	{
+		float before;
+		float delta;
+
+		before = this.CooldownReductionRate;
 		this.CooldownReductionRate = Mathf.Clamp01(this.CooldownReductionRate + rate);
+		delta = this.CooldownReductionRate - before;
+
+		this.manualTimer = Mathf.Max(0f, this.manualTimer - this.ManualCooldown * delta);
+		this.autoTimer = Mathf.Max(0f, this.autoTimer - this.AutoCooldown * delta);
+	}
+
+	private void Activate()
+	{
+		if (this.Duration > 0f)
+		{
+			this.IsActive = true;
+			this.durationTimer = this.Duration;
+		}
+
+		OnActivate();
+	}
+	public void TryManualActivate()
+	{
+		if (!this.HasManualTrigger)
+			return;
+		
+		if (!this.IsManualReady)
+			return;
+		
+		this.manualTimer = this.ManualCooldown * (1f - this.CooldownReductionRate);
+		Activate();
+	}
+
+	protected virtual void Subscribe()
+	{
+	}
+	protected virtual void Unsubscribe()
+	{
 	}
 
 	protected abstract void OnActivate();
 	protected abstract void OnDeactivate();
-
-	protected abstract void Subscribe();
-	protected abstract void Unsubscribe();
 }

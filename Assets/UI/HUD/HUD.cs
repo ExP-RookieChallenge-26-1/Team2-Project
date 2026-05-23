@@ -19,7 +19,6 @@ public class HUD : MonoBehaviour
 		this.skill1Button.onClick.RemoveListener(OnClickSkill1);
 		this.skill2Button.onClick.RemoveListener(OnClickSkill2);
 	}
-
 	private void OnClickSkill1()
 	{
 		this.skillEventChannel.RaiseSkill1();

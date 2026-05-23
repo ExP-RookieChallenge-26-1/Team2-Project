@@ -150,8 +150,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GiantSkill
   skillEventChannel: {fileID: 11400000, guid: 60ac33b9a461bce44a3f3e9d1f6182e0, type: 2}
-  <Cooldown>k__BackingField: 10
   <Duration>k__BackingField: 5
+  durationTimer: 0
+  <HasManualTrigger>k__BackingField: 1
+  <ManualCooldown>k__BackingField: 10
+  manualTimer: 10
+  <HasAutoTrigger>k__BackingField: 0
+  <AutoCooldown>k__BackingField: 0
+  autoTimer: 0
   <RadiusMultiplierPerLevel>k__BackingField:
   - 1.5
   - 2
@@ -169,8 +175,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CloneSkill
   skillEventChannel: {fileID: 11400000, guid: 60ac33b9a461bce44a3f3e9d1f6182e0, type: 2}
-  <Cooldown>k__BackingField: 10
   <Duration>k__BackingField: 0
+  durationTimer: 0
+  <HasManualTrigger>k__BackingField: 1
+  <ManualCooldown>k__BackingField: 10
+  manualTimer: 10
+  <HasAutoTrigger>k__BackingField: 0
+  <AutoCooldown>k__BackingField: 0
+  autoTimer: 0
   <CloneLevel>k__BackingField: 0
   cloneCountPerLevel: 020000000300000004000000
   blockedHorizontalAngle: 20

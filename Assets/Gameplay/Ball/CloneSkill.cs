@@ -11,12 +11,12 @@ public class CloneSkill : BallSkill
 
 	protected override void Subscribe()
 	{
-		this.skillEventChannel.OnSkill2Activated += TryActivate;
+		this.skillEventChannel.OnSkill2Activated += TryManualActivate;
 	}
 
 	protected override void Unsubscribe()
 	{
-		this.skillEventChannel.OnSkill2Activated -= TryActivate;
+		this.skillEventChannel.OnSkill2Activated -= TryManualActivate;
 	}
 
 	protected override void OnActivate()
