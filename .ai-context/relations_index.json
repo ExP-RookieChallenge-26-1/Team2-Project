@@ -1598,7 +1598,21 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
+    "to_type": "Activate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
     "to_type": "ApplyCooldownReduction",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "AutoCooldown",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1633,13 +1647,6 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
-    "to_type": "Cooldown",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
-    "from_class": "BallSkill",
     "to_type": "CooldownReductionRate",
     "relation_type": "uses",
     "strength": 1
@@ -1668,7 +1675,14 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
-    "to_type": "GetType",
+    "to_type": "HasAutoTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "HasManualTrigger",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1682,21 +1696,21 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
-    "to_type": "IsReady",
+    "to_type": "IsManualReady",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
-    "to_type": "Log",
+    "to_type": "ManualCooldown",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
-    "to_type": "Name",
+    "to_type": "Max",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1718,13 +1732,6 @@
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
     "to_type": "OnDestroy",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
-    "from_class": "BallSkill",
-    "to_type": "Remain",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1759,7 +1766,28 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
-    "to_type": "TryActivate",
+    "to_type": "TickAuto",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "TickDuration",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "TickManual",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "TryManualActivate",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2676,7 +2704,7 @@
   {
     "from_file": "Assets/Gameplay/Ball/CloneSkill.cs",
     "from_class": "CloneSkill",
-    "to_type": "TryActivate",
+    "to_type": "TryManualActivate",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2851,7 +2879,7 @@
   {
     "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
     "from_class": "GiantSkill",
-    "to_type": "TryActivate",
+    "to_type": "TryManualActivate",
     "relation_type": "uses",
     "strength": 1
   },

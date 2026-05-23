@@ -1354,9 +1354,9 @@
     "file_id": "Assets/Gameplay/Ball/BallSkill.cs",
     "path": "Assets/Gameplay/Ball/BallSkill.cs",
     "file_name": "BallSkill.cs",
-    "content_hash": "724621c5d77360e6aeebd3765d78c545802408bf",
-    "size": 1755,
-    "line_count": 85,
+    "content_hash": "e6b1166f389ad6252a72bd9fa027f7998e412a60",
+    "size": 2929,
+    "line_count": 146,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -1382,12 +1382,16 @@
       "Start",
       "OnDestroy",
       "Tick",
-      "TryActivate",
+      "TickDuration",
+      "TickManual",
+      "TickAuto",
       "ApplyCooldownReduction",
-      "OnActivate",
-      "OnDeactivate",
+      "Activate",
+      "TryManualActivate",
       "Subscribe",
-      "Unsubscribe"
+      "Unsubscribe",
+      "OnActivate",
+      "OnDeactivate"
     ],
     "fields": [
       {
@@ -1396,18 +1400,54 @@
         "access": "protected",
         "serialized": false,
         "is_static": false
+      },
+      {
+        "name": "cooldown",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "before",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "delta",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
       }
     ],
     "properties": [
       {
         "access": "public",
         "type": "float",
-        "name": "Cooldown"
+        "name": "Duration"
+      },
+      {
+        "access": "public",
+        "type": "bool",
+        "name": "HasManualTrigger"
       },
       {
         "access": "public",
         "type": "float",
-        "name": "Duration"
+        "name": "ManualCooldown"
+      },
+      {
+        "access": "public",
+        "type": "bool",
+        "name": "HasAutoTrigger"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "AutoCooldown"
       },
       {
         "access": "public",
@@ -1447,11 +1487,14 @@
       "bool",
       "UnityEngine",
       "SkillEventChannel",
-      "Cooldown",
       "Duration",
+      "HasManualTrigger",
+      "ManualCooldown",
+      "HasAutoTrigger",
+      "AutoCooldown",
       "CooldownReductionRate",
       "IsActive",
-      "IsReady",
+      "IsManualReady",
       "Awake",
       "GetComponent",
       "Start",
@@ -1459,24 +1502,23 @@
       "OnDestroy",
       "Unsubscribe",
       "Tick",
+      "TickDuration",
+      "TickManual",
+      "TickAuto",
       "OnDeactivate",
-      "TryActivate",
-      "Log",
-      "GetType",
-      "Name",
-      "Remain",
-      "OnActivate",
+      "Activate",
       "ApplyCooldownReduction",
-      "Clamp01"
+      "Clamp01",
+      "Max",
+      "OnActivate",
+      "TryManualActivate"
     ],
     "component_access_types": [
       "Ball"
     ],
     "created_types": [],
     "singleton_access_types": [],
-    "string_literals": [
-      "{GetType().Name} Cooldown Remain: {this.timer}"
-    ],
+    "string_literals": [],
     "numeric_literals": [
       0,
       1
@@ -1905,8 +1947,8 @@
     "file_id": "Assets/Gameplay/Ball/CloneSkill.cs",
     "path": "Assets/Gameplay/Ball/CloneSkill.cs",
     "file_name": "CloneSkill.cs",
-    "content_hash": "2732094219a3ed41b5379e68857529c106d6198b",
-    "size": 2239,
+    "content_hash": "e601d36a138a227e04d35f2bcb87c77ace39957d",
+    "size": 2251,
     "line_count": 92,
     "namespace": "",
     "using_list": [
@@ -2014,7 +2056,7 @@
       "Length",
       "Subscribe",
       "OnSkill2Activated",
-      "TryActivate",
+      "TryManualActivate",
       "Unsubscribe",
       "OnActivate",
       "SpawnClones",
@@ -2072,8 +2114,8 @@
     "file_id": "Assets/Gameplay/Ball/GiantSkill.cs",
     "path": "Assets/Gameplay/Ball/GiantSkill.cs",
     "file_name": "GiantSkill.cs",
-    "content_hash": "5e7a6e8adda299157e87b0bb19d591da7942a5f0",
-    "size": 1152,
+    "content_hash": "b0d259ebd5503ff140e8f7e2ed2e16cbcc298457",
+    "size": 1164,
     "line_count": 46,
     "namespace": "",
     "using_list": [
@@ -2148,7 +2190,7 @@
       "Awake",
       "Subscribe",
       "OnSkill1Activated",
-      "TryActivate",
+      "TryManualActivate",
       "Unsubscribe",
       "OnActivate",
       "Stats",
@@ -3969,9 +4011,9 @@
     "file_id": "Assets/UI/HUD/HUD.cs",
     "path": "Assets/UI/HUD/HUD.cs",
     "file_name": "HUD.cs",
-    "content_hash": "7f567dd4baff8cd37b5046c04553285d18669fbc",
-    "size": 709,
-    "line_count": 32,
+    "content_hash": "22b2ff7139292d0f2158768e2e8a8b1b379689a5",
+    "size": 708,
+    "line_count": 31,
     "namespace": "",
     "using_list": [
       "Unity.VisualScripting",

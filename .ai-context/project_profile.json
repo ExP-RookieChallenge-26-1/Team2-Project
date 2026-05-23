@@ -61,6 +61,12 @@
       "referenced_type_count": 31
     },
     {
+      "class_name": "BallSkill",
+      "file_id": "Assets/Gameplay/Ball/BallSkill.cs",
+      "relation_count": 32,
+      "referenced_type_count": 30
+    },
+    {
       "class_name": "BallPhysics",
       "file_id": "Assets/Gameplay/Ball/BallPhysics.cs",
       "relation_count": 30,
@@ -71,12 +77,6 @@
       "file_id": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
       "relation_count": 31,
       "referenced_type_count": 29
-    },
-    {
-      "class_name": "BallSkill",
-      "file_id": "Assets/Gameplay/Ball/BallSkill.cs",
-      "relation_count": 28,
-      "referenced_type_count": 26
     },
     {
       "class_name": "BallStats",
