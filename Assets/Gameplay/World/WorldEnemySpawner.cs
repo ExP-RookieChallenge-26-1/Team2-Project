@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class WorldEnemySpawner : MonoBehaviour
@@ -7,6 +8,12 @@ public class WorldEnemySpawner : MonoBehaviour
     [SerializeField] private int minSpawnCount = 1;
     [SerializeField] private int maxSpawnCount = 2;
 
+    private void Awake()
+    {
+        if (this.spawnPoints == null || this.spawnPoints.Length == 0)
+            this.spawnPoints = FindSpawnPoints("EnemySpawnPoints");
+    }
+
     private void Start()
     {
         SpawnEnemies();
@@ -14,39 +21,46 @@ public class WorldEnemySpawner : MonoBehaviour
 
     private void SpawnEnemies()
     {
-        if (enemyPrefab == null || spawnPoints == null || spawnPoints.Length == 0)
+        if (this.enemyPrefab == null || this.spawnPoints == null || this.spawnPoints.Length == 0)
             return;
 
-        int spawnCount = Random.Range(minSpawnCount, maxSpawnCount + 1);
-        spawnCount = Mathf.Min(spawnCount, spawnPoints.Length);
+        int spawnCount = Random.Range(this.minSpawnCount, this.maxSpawnCount + 1);
+        spawnCount = Mathf.Min(spawnCount, this.spawnPoints.Length);
 
-        bool[] used = new bool[spawnPoints.Length];
+        List<int> availableIndices = new List<int>();
+        for (int i = 0; i < this.spawnPoints.Length; ++i)
+        {
+            if (this.spawnPoints[i] != null)
+                availableIndices.Add(i);
+        }
+
+        spawnCount = Mathf.Min(spawnCount, availableIndices.Count);
 
         for (int i = 0; i < spawnCount; i++)
         {
-            int index = GetRandomUnusedIndex(used);
-            if (index == -1)
-                break;
+            int choice = Random.Range(0, availableIndices.Count);
+            int index = availableIndices[choice];
+            availableIndices.RemoveAt(choice);
 
-            Transform point = spawnPoints[index];
-            GameObject enemy = Instantiate(enemyPrefab, point.position, Quaternion.identity);
+            Transform point = this.spawnPoints[index];
+            if (point == null)
+                continue;
 
+            GameObject enemy = Instantiate(this.enemyPrefab, point.position, Quaternion.identity);
             enemy.transform.SetParent(transform);
-            used[index] = true;
         }
     }
 
-    private int GetRandomUnusedIndex(bool[] used)
+    private Transform[] FindSpawnPoints(string rootName)
     {
-        int tryCount = 100;
+        Transform root = transform.Find(rootName);
+        if (root == null)
+            return System.Array.Empty<Transform>();
 
-        while (tryCount-- > 0)
-        {
-            int index = Random.Range(0, used.Length);
-            if (!used[index])
-                return index;
-        }
+        List<Transform> points = new List<Transform>();
+        for (int i = 0; i < root.childCount; ++i)
+            points.Add(root.GetChild(i));
 
-        return -1;
+        return points.ToArray();
     }
 }

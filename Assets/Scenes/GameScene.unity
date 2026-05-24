@@ -1187,6 +1187,14 @@ MonoBehaviour:
   currentLevel: 1
   currentExp: 0
   requiredExpByLevel: 0a0000001400000023000000320000004600000064000000
+  defaultUpgradeIds: 010000000200000003000000040000000500000006000000
+  defaultUpgradeWeights:
+  - 30
+  - 25
+  - 20
+  - 15
+  - 10
+  - 20
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,6 +1416,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::World
   chunkPrefabs:
   - {fileID: 7340138172155822266, guid: fadbedc9e203cb04db5cb08cb36139e0, type: 3}
+  itemPrefabs:
+  - {fileID: 7638128648507445838, guid: 457f7c21af314b2428845c7286c4f338, type: 3}
+  - {fileID: 3112473118668396992, guid: ef2f23d565a376343a68d15f488d0244, type: 3}
+--- !u!1 &845584510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 845584512}
+  - component: {fileID: 845584511}
+  m_Layer: 0
+  m_Name: FallingItemSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &845584511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845584510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b926ba78bce74c48b8072ce33f44631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FallingItemSpawner
+  itemPrefabs:
+  - {fileID: 8659160453847918638, guid: 4d1d20b7e80800b45a024dd2e5d5bfe2, type: 3}
+  - {fileID: 4750646024986614682, guid: a6c24011bf635444da1a89d287174159, type: 3}
+  spawnInterval: 5
+  minX: -2.5
+  maxX: 2.5
+  spawnY: 6
+--- !u!4 &845584512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845584510}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.04342, y: 3.73962, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &896928656
 GameObject:
   m_ObjectHideFlags: 0
@@ -3425,3 +3487,4 @@ SceneRoots:
   - {fileID: 1276109820}
   - {fileID: 1025479941}
   - {fileID: 276565687}
+  - {fileID: 845584512}
