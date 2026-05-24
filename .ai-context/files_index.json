@@ -86,9 +86,9 @@
     "file_id": "Assets/_Global/GameManager.cs",
     "path": "Assets/_Global/GameManager.cs",
     "file_name": "GameManager.cs",
-    "content_hash": "a2b0ac30bdfdc96973c96c4429ea84f97055ec19",
-    "size": 2984,
-    "line_count": 111,
+    "content_hash": "6da6dfff84b29b6e531b0174062f8229d89b42f1",
+    "size": 4047,
+    "line_count": 132,
     "namespace": "",
     "using_list": [
       "UnityEngine",
@@ -117,10 +117,11 @@
       "Update",
       "OnDestroy",
       "OnGameStateChanged",
+      "OpenDefaultUpgradeUI",
       "OpenUpgradeUI",
-      "OnBallDestroyed",
       "AddExp",
-      "CheckLevelUp"
+      "CheckLevelUp",
+      "OnBallDestroyed"
     ],
     "fields": [],
     "properties": [
@@ -192,6 +193,11 @@
       "EnhanceUI",
       "Level",
       "System",
+      "Default",
+      "Upgrade",
+      "Pool",
+      "CurrentLevel",
+      "CurrentExp",
       "Awake",
       "Destroy",
       "GetComponent",
@@ -199,6 +205,7 @@
       "Start",
       "OnChanged",
       "OnGameStateChanged",
+      "SetActive",
       "Update",
       "Tick",
       "OnDestroy",
@@ -208,20 +215,18 @@
       "SceneManager",
       "LoadScene",
       "TitleScene",
+      "OpenDefaultUpgradeUI",
       "OpenUpgradeUI",
-      "Change",
-      "SetActive",
-      "ShowCardsByIds",
-      "OnBallDestroyed",
-      "FindObjectsByType",
-      "Ball",
-      "FindObjectsSortMode",
-      "None",
+      "LogWarning",
       "Length",
+      "UI",
+      "Change",
+      "ShowCardsByIds",
       "AddExp",
       "Log",
       "EXP",
-      "CheckLevelUp"
+      "CheckLevelUp",
+      "OnBallDestroyed"
     ],
     "component_access_types": [
       "GameStateMachine"
@@ -232,7 +237,10 @@
     "singleton_access_types": [],
     "string_literals": [
       "Level System",
+      "Default Upgrade Pool",
       "TitleScene",
+      "EnhanceUI is not assigned.",
+      "Upgrade UI open skipped because the card pool is invalid.",
       "경험치 획득: +{amount}, 현재 EXP: {this.currentExp}",
       "레벨업! 현재 레벨: {this.currentLevel}"
     ],
@@ -243,8 +251,6 @@
       50,
       70,
       100,
-      1,
-      0.2,
       2,
       3,
       4,
@@ -254,7 +260,9 @@
       25,
       20,
       15,
-      10
+      10,
+      1,
+      0.2
     ],
     "guessed_roles": [
       "runtime",
@@ -2758,9 +2766,9 @@
     "file_id": "Assets/Gameplay/Enemy/Enemy.cs",
     "path": "Assets/Gameplay/Enemy/Enemy.cs",
     "file_name": "Enemy.cs",
-    "content_hash": "649b66bf5258f8752ad224add46d1cc34853d99e",
-    "size": 706,
-    "line_count": 38,
+    "content_hash": "234b14175eb4747f7cd7c024cceb9b0e2d96d4cc",
+    "size": 705,
+    "line_count": 37,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -2847,6 +2855,698 @@
     ],
     "summary_signals": [
       "런타임 컴포넌트",
+      "전투 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/Gameplay/Item/EnhancementTriggerItemData.cs",
+    "path": "Assets/Gameplay/Item/EnhancementTriggerItemData.cs",
+    "file_name": "EnhancementTriggerItemData.cs",
+    "content_hash": "d66c9dd6d2abc452df6078b8bde03705faf008d5",
+    "size": 721,
+    "line_count": 20,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "EnhancementTriggerItemData",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "ItemData"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "EnhancementTriggerItemData",
+    "unity_type": "None",
+    "methods": [
+      "Apply"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "UnityEngine",
+      "CreateAssetMenu",
+      "EnhancementTriggerItem",
+      "ItemData",
+      "EnhancementTrigger",
+      "Apply",
+      "Length",
+      "GameManager",
+      "Instance",
+      "OpenUpgradeUI",
+      "OpenDefaultUpgradeUI"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [
+      "GameManager"
+    ],
+    "string_literals": [
+      "EnhancementTriggerItem",
+      "ItemData/EnhancementTrigger"
+    ],
+    "numeric_literals": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      30,
+      25,
+      20,
+      15,
+      10
+    ],
+    "guessed_roles": [
+      "manager",
+      "ui",
+      "inventory",
+      "data",
+      "save-load"
+    ],
+    "summary_signals": [
+      "UI 관련 로직 포함",
+      "인벤토리 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/Gameplay/Item/FallingItem.cs",
+    "path": "Assets/Gameplay/Item/FallingItem.cs",
+    "file_name": "FallingItem.cs",
+    "content_hash": "1aeb72a43475adbc45cd2a4eb0fe603d51ab7b6c",
+    "size": 504,
+    "line_count": 19,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "FallingItem",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "FallingItem",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Update"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "UnityEngine",
+      "Update",
+      "GameManager",
+      "Instance",
+      "State",
+      "Current",
+      "GameStateMachine",
+      "Playing",
+      "Vector3",
+      "Destroy"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [
+      "GameManager"
+    ],
+    "string_literals": [],
+    "numeric_literals": [
+      2,
+      7
+    ],
+    "guessed_roles": [
+      "manager",
+      "runtime",
+      "inventory",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "인벤토리 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "path": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "file_name": "FallingItemSpawner.cs",
+    "content_hash": "a7ff765563204f6c23ea26d44ee5f7e1fb613faa",
+    "size": 1099,
+    "line_count": 42,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "FallingItemSpawner",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "FallingItemSpawner",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Update",
+      "SpawnItem",
+      "Vector3"
+    ],
+    "fields": [
+      {
+        "name": "timer",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "float",
+      "UnityEngine",
+      "Update",
+      "GameManager",
+      "Instance",
+      "State",
+      "Current",
+      "GameStateMachine",
+      "Playing",
+      "SpawnItem",
+      "Length",
+      "Vector3",
+      "Instantiate",
+      "Quaternion"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "Vector3"
+    ],
+    "singleton_access_types": [
+      "GameManager"
+    ],
+    "string_literals": [],
+    "numeric_literals": [
+      5,
+      2.5,
+      6,
+      0
+    ],
+    "guessed_roles": [
+      "manager",
+      "runtime",
+      "inventory",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "인벤토리 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/Gameplay/Item/ItemData.cs",
+    "path": "Assets/Gameplay/Item/ItemData.cs",
+    "file_name": "ItemData.cs",
+    "content_hash": "d9c163236661e00fde0c86acbb1b5181060caab9",
+    "size": 336,
+    "line_count": 10,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "ItemData",
+        "kind": "class",
+        "access": "internal",
+        "base_types": [
+          "ScriptableObject"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "ItemData",
+    "unity_type": "ScriptableObject",
+    "methods": [
+      "Apply"
+    ],
+    "fields": [],
+    "properties": [
+      {
+        "access": "public",
+        "type": "string",
+        "name": "ItemName"
+      },
+      {
+        "access": "public",
+        "type": "Sprite",
+        "name": "Icon"
+      },
+      {
+        "access": "public",
+        "type": "string",
+        "name": "Description"
+      }
+    ],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "string",
+      "Sprite",
+      "UnityEngine",
+      "ItemName",
+      "Icon",
+      "TextArea",
+      "Description",
+      "Apply"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "data",
+      "inventory",
+      "save-load"
+    ],
+    "summary_signals": [
+      "데이터 자산 중심 구조",
+      "인벤토리 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/Gameplay/Item/ItemPickup.cs",
+    "path": "Assets/Gameplay/Item/ItemPickup.cs",
+    "file_name": "ItemPickup.cs",
+    "content_hash": "3b5d23e804266009ce130fa0f5dc5f027ef5dabd",
+    "size": 2581,
+    "line_count": 93,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "ItemPickup",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "ItemPickup",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Awake",
+      "Start",
+      "Update",
+      "GetPickupBounds",
+      "CanBePickedByBall",
+      "CanBePickedByPaddle",
+      "Collect"
+    ],
+    "fields": [
+      {
+        "name": "cachedBall",
+        "type": "Ball",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "cachedPaddle",
+        "type": "Paddle",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "cachedCollider",
+        "type": "Collider2D",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "cachedRenderer",
+        "type": "Renderer",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "paddleCollider",
+        "type": "Collider2D",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "isConsumed",
+        "type": "bool",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Awake",
+      "Start",
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 3,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "Ball",
+      "Paddle",
+      "Collider2D",
+      "Renderer",
+      "bool",
+      "UnityEngine",
+      "PickupTargetType",
+      "Both",
+      "ItemData",
+      "Awake",
+      "GetComponent",
+      "Start",
+      "Object",
+      "FindFirstObjectByType",
+      "Update",
+      "GameManager",
+      "Instance",
+      "State",
+      "Current",
+      "GameStateMachine",
+      "Playing",
+      "Bounds",
+      "GetPickupBounds",
+      "Vector3",
+      "CanBePickedByBall",
+      "CanBePickedByPaddle",
+      "Collect",
+      "BallCollision",
+      "IsTouching",
+      "Stats",
+      "Radius",
+      "Intersects",
+      "Log",
+      "Apply",
+      "Destroy"
+    ],
+    "component_access_types": [
+      "Collider2D",
+      "Renderer"
+    ],
+    "created_types": [],
+    "singleton_access_types": [
+      "GameManager"
+    ],
+    "string_literals": [
+      "아이템 획득: {this.itemData.name}"
+    ],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "runtime",
+      "manager",
+      "inventory",
+      "data",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "인벤토리 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
+    "file_id": "Assets/Gameplay/Item/StatBoostItemData.cs",
+    "path": "Assets/Gameplay/Item/StatBoostItemData.cs",
+    "file_name": "StatBoostItemData.cs",
+    "content_hash": "366fab37ff984c7dbd9f27bf417921d257cf467b",
+    "size": 1377,
+    "line_count": 31,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "StatBoostItemData",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "ItemData"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "StatBoostItemData",
+    "unity_type": "None",
+    "methods": [
+      "Apply"
+    ],
+    "fields": [
+      {
+        "name": "ballStats",
+        "type": "BallStats",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "paddleStats",
+        "type": "PaddleStats",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [
+      {
+        "access": "public",
+        "type": "float",
+        "name": "AttackPower"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "CriticalChance"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "CriticalDamage"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "Speed"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "BallSize"
+      },
+      {
+        "access": "public",
+        "type": "int",
+        "name": "PaddleSizeLevel"
+      }
+    ],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "BallStats",
+      "PaddleStats",
+      "float",
+      "int",
+      "UnityEngine",
+      "CreateAssetMenu",
+      "StatBoostItem",
+      "ItemData",
+      "StatBoost",
+      "Boost",
+      "Value",
+      "AttackPower",
+      "CriticalChance",
+      "CriticalDamage",
+      "Speed",
+      "BallSize",
+      "PaddleSizeLevel",
+      "Apply",
+      "GameManager",
+      "Instance",
+      "IncreaseAttackPower",
+      "IncreaseCriticalChance",
+      "IncreaseCriticalDamage",
+      "IncreaseSpeed",
+      "IncreaseRadius",
+      "IncreasePaddleSizeLevel"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [
+      "GameManager"
+    ],
+    "string_literals": [
+      "StatBoostItem",
+      "ItemData/StatBoost",
+      "Boost Value"
+    ],
+    "numeric_literals": [
+      0
+    ],
+    "guessed_roles": [
+      "combat",
+      "manager",
+      "inventory",
+      "data",
+      "save-load"
+    ],
+    "summary_signals": [
+      "인벤토리 계열 로직 포함",
       "전투 계열 로직 포함",
       "저장/불러오기 관련 로직 포함"
     ]
@@ -3195,9 +3895,9 @@
     "file_id": "Assets/Gameplay/World/World.cs",
     "path": "Assets/Gameplay/World/World.cs",
     "file_name": "World.cs",
-    "content_hash": "2a73ea187a835e5a2c6a40139160d561ae44a1cc",
-    "size": 534,
-    "line_count": 23,
+    "content_hash": "899cb5db5dcb33695b9adc07eb0185abeb08f746",
+    "size": 706,
+    "line_count": 25,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -3270,6 +3970,7 @@
       "Stats",
       "Scroller",
       "Spawner",
+      "ItemPrefabs",
       "Start",
       "GameManager",
       "Instance",
@@ -3290,11 +3991,13 @@
     "guessed_roles": [
       "runtime",
       "manager",
+      "inventory",
       "save-load"
     ],
     "summary_signals": [
       "런타임 컴포넌트",
       "Update 기반 처리 존재",
+      "인벤토리 계열 로직 포함",
       "저장/불러오기 관련 로직 포함"
     ]
   },
@@ -3302,11 +4005,12 @@
     "file_id": "Assets/Gameplay/World/WorldEnemySpawner.cs",
     "path": "Assets/Gameplay/World/WorldEnemySpawner.cs",
     "file_name": "WorldEnemySpawner.cs",
-    "content_hash": "832c8c5b377aaf4e168cfdb21c2df679f6443f78",
-    "size": 1358,
-    "line_count": 53,
+    "content_hash": "956ffb39fac8a7a67d2511430f2a8d3eec172064",
+    "size": 2031,
+    "line_count": 66,
     "namespace": "",
     "using_list": [
+      "System.Collections.Generic",
       "UnityEngine"
     ],
     "classes": [
@@ -3326,14 +4030,15 @@
     "main_class_name": "WorldEnemySpawner",
     "unity_type": "MonoBehaviour",
     "methods": [
+      "Awake",
       "Start",
       "SpawnEnemies",
-      "GetRandomUnusedIndex"
+      "FindSpawnPoints"
     ],
     "fields": [
       {
-        "name": "used",
-        "type": "bool[]",
+        "name": "index",
+        "type": "int",
         "access": "internal",
         "serialized": false,
         "is_static": false
@@ -3344,10 +4049,117 @@
         "access": "internal",
         "serialized": false,
         "is_static": false
-      },
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Awake",
+      "Start"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 1,
+    "new_keyword_count": 2,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "int",
+      "System",
+      "Collections",
+      "Generic",
+      "UnityEngine",
+      "Awake",
+      "Length",
+      "FindSpawnPoints",
+      "EnemySpawnPoints",
+      "Start",
+      "SpawnEnemies",
+      "Min",
+      "Add",
+      "Count",
+      "RemoveAt",
+      "Instantiate",
+      "Quaternion",
+      "SetParent",
+      "Find",
+      "Array",
+      "Empty",
+      "GetChild",
+      "ToArray"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "List"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [
+      "EnemySpawnPoints"
+    ],
+    "numeric_literals": [
+      2
+    ],
+    "guessed_roles": [
+      "runtime",
+      "player",
+      "combat",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "전투 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함",
+      "Find 계열 탐색 사용"
+    ]
+  },
+  {
+    "file_id": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "path": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "file_name": "WorldItemSpawnPoint.cs",
+    "content_hash": "bcf21c0b153ebcecf5d7f76cbf9ed81ca62e45b0",
+    "size": 2285,
+    "line_count": 74,
+    "namespace": "",
+    "using_list": [
+      "System.Collections.Generic",
+      "UnityEngine"
+    ],
+    "classes": [
       {
-        "name": "tryCount",
-        "type": "int",
+        "name": "WorldItemSpawner",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "WorldItemSpawner",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Configure",
+      "Awake",
+      "Start",
+      "SpawnItems",
+      "FindSpawnPoints"
+    ],
+    "fields": [
+      {
+        "name": "point",
+        "type": "Transform",
         "access": "internal",
         "serialized": false,
         "is_static": false
@@ -3356,53 +4168,70 @@
     "properties": [],
     "events": [],
     "unity_messages": [
+      "Awake",
       "Start"
     ],
     "has_update": false,
     "has_fixed_update": false,
     "has_late_update": false,
-    "has_awake": false,
+    "has_awake": true,
     "has_start": true,
     "has_on_enable": false,
     "has_on_disable": false,
     "serialize_field_count": 0,
     "public_field_count": 0,
     "get_component_count": 0,
-    "find_call_count": 0,
-    "new_keyword_count": 0,
+    "find_call_count": 1,
+    "new_keyword_count": 2,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
-      "bool",
-      "int",
+      "System",
+      "Collections",
+      "Generic",
       "UnityEngine",
-      "Start",
-      "SpawnEnemies",
+      "Configure",
       "Length",
+      "Awake",
+      "FindSpawnPoints",
+      "ItemSpawnPoints",
+      "Start",
+      "SpawnItems",
+      "Add",
       "Min",
-      "GetRandomUnusedIndex",
+      "Count",
+      "RemoveAt",
       "Instantiate",
       "Quaternion",
-      "SetParent"
+      "SetParent",
+      "Find",
+      "Array",
+      "Empty",
+      "GetChild",
+      "ToArray"
     ],
     "component_access_types": [],
-    "created_types": [],
-    "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [
-      2,
-      100
+    "created_types": [
+      "List"
     ],
+    "singleton_access_types": [],
+    "string_literals": [
+      "ItemSpawnPoints"
+    ],
+    "numeric_literals": [],
     "guessed_roles": [
       "runtime",
-      "combat",
+      "player",
+      "inventory",
+      "data",
       "save-load"
     ],
     "summary_signals": [
       "런타임 컴포넌트",
-      "전투 계열 로직 포함",
-      "저장/불러오기 관련 로직 포함"
+      "인벤토리 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함",
+      "Find 계열 탐색 사용"
     ]
   },
   {
@@ -3516,13 +4345,12 @@
     "file_id": "Assets/Gameplay/World/WorldSpawner.cs",
     "path": "Assets/Gameplay/World/WorldSpawner.cs",
     "file_name": "WorldSpawner.cs",
-    "content_hash": "d318779b2d536b75ad2c586ec0eb701165c62ed0",
-    "size": 989,
-    "line_count": 40,
+    "content_hash": "782aef6a10976f2e998b64b38c23d08ae7d46405",
+    "size": 1961,
+    "line_count": 72,
     "namespace": "",
     "using_list": [
-      "UnityEngine",
-      "UnityEngine.Tilemaps"
+      "UnityEngine"
     ],
     "classes": [
       {
@@ -3543,7 +4371,9 @@
       "Init",
       "Vector3",
       "ReplaceChunk",
-      "SpawnRandomChunk"
+      "SpawnRandomChunk",
+      "ConfigureChunk",
+      "EnsureWorldItemSpawner"
     ],
     "fields": [
       {
@@ -3573,6 +4403,34 @@
         "access": "internal",
         "serialized": false,
         "is_static": false
+      },
+      {
+        "name": "chunk",
+        "type": "GameObject",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "itemSpawnRoot",
+        "type": "Transform",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "itemSpawner",
+        "type": "WorldItemSpawner",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "itemPrefabs",
+        "type": "GameObject[]",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
       }
     ],
     "properties": [
@@ -3593,7 +4451,7 @@
     "has_on_disable": false,
     "serialize_field_count": 0,
     "public_field_count": 0,
-    "get_component_count": 0,
+    "get_component_count": 1,
     "find_call_count": 0,
     "new_keyword_count": 2,
     "coroutine_count": 0,
@@ -3603,8 +4461,8 @@
       "World",
       "float",
       "int",
+      "WorldItemSpawner",
       "UnityEngine",
-      "Tilemaps",
       "Chunks",
       "Stats",
       "ChunkCount",
@@ -3616,21 +4474,38 @@
       "ReplaceChunk",
       "Destroy",
       "Instantiate",
-      "Quaternion"
+      "Quaternion",
+      "ConfigureChunk",
+      "EnsureWorldItemSpawner",
+      "Find",
+      "ItemSpawnPoints",
+      "ItemPrefabs",
+      "GetComponent",
+      "AddComponent",
+      "Configure"
     ],
-    "component_access_types": [],
+    "component_access_types": [
+      "WorldItemSpawner"
+    ],
     "created_types": [
       "Vector3"
     ],
     "singleton_access_types": [],
-    "string_literals": [],
+    "string_literals": [
+      "ItemSpawnPoints"
+    ],
     "numeric_literals": [
       0
     ],
     "guessed_roles": [
+      "inventory",
+      "data",
       "runtime"
     ],
-    "summary_signals": []
+    "summary_signals": [
+      "인벤토리 계열 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
   },
   {
     "file_id": "Assets/Gameplay/World/WorldStats.cs",

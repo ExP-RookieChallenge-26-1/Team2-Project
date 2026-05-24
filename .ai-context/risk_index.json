@@ -50,6 +50,27 @@
     "risk_score": 91
   },
   {
+    "file_id": "Assets/Gameplay/Item/ItemPickup.cs",
+    "class_name": "ItemPickup",
+    "risk_flags": [
+      "update-heavy",
+      "high-coupling",
+      "getcomponent-heavy",
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "Unity 업데이트 루프 사용",
+      "참조 타입 또는 관계 수가 많음",
+      "GetComponent/TryGetComponent 호출이 많음",
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 70
+  },
+  {
     "file_id": "Assets/Gameplay/Ball/Ball.cs",
     "class_name": "Ball",
     "risk_flags": [
@@ -90,6 +111,44 @@
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
     "risk_score": 66
+  },
+  {
+    "file_id": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "class_name": "WorldEnemySpawner",
+    "risk_flags": [
+      "high-coupling",
+      "find-heavy",
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "Find 계열 탐색 사용",
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 60
+  },
+  {
+    "file_id": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "class_name": "WorldItemSpawner",
+    "risk_flags": [
+      "high-coupling",
+      "find-heavy",
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "Find 계열 탐색 사용",
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 60
   },
   {
     "file_id": "Assets/Gameplay/Ball/BallSkill.cs",
@@ -271,6 +330,21 @@
     "risk_score": 38
   },
   {
+    "file_id": "Assets/Gameplay/Item/StatBoostItemData.cs",
+    "class_name": "StatBoostItemData",
+    "risk_flags": [
+      "high-coupling",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 38
+  },
+  {
     "file_id": "Assets/_Global/States/InputState.cs",
     "class_name": "InputState",
     "risk_flags": [
@@ -316,15 +390,30 @@
     "risk_score": 30
   },
   {
-    "file_id": "Assets/Gameplay/World/WorldEnemySpawner.cs",
-    "class_name": "WorldEnemySpawner",
+    "file_id": "Assets/Gameplay/Item/FallingItem.cs",
+    "class_name": "FallingItem",
     "risk_flags": [
-      "init-order-sensitive",
+      "update-heavy",
       "save-load-sensitive",
       "state-owner"
     ],
     "risk_reasons": [
-      "초기화 순서에 민감할 가능성",
+      "Unity 업데이트 루프 사용",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 30
+  },
+  {
+    "file_id": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "class_name": "FallingItemSpawner",
+    "risk_flags": [
+      "update-heavy",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "Unity 업데이트 루프 사용",
       "저장/불러오기 관련 로직 포함",
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
@@ -344,6 +433,21 @@
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
     "risk_score": 30
+  },
+  {
+    "file_id": "Assets/Gameplay/Item/EnhancementTriggerItemData.cs",
+    "class_name": "EnhancementTriggerItemData",
+    "risk_flags": [
+      "magic-number-heavy",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 28
   },
   {
     "file_id": "Assets/Gameplay/Paddle/Paddle.cs",
@@ -371,6 +475,19 @@
     "risk_reasons": [
       "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
       "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 26
+  },
+  {
+    "file_id": "Assets/Gameplay/World/WorldSpawner.cs",
+    "class_name": "WorldSpawner",
+    "risk_flags": [
+      "high-coupling",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
     "risk_score": 26
@@ -413,6 +530,17 @@
     "risk_score": 12
   },
   {
+    "file_id": "Assets/Gameplay/Item/ItemData.cs",
+    "class_name": "ItemData",
+    "risk_flags": [
+      "save-load-sensitive"
+    ],
+    "risk_reasons": [
+      "저장/불러오기 관련 로직 포함"
+    ],
+    "risk_score": 12
+  },
+  {
     "file_id": "Assets/Gameplay/World/WorldStats.cs",
     "class_name": "WorldStats",
     "risk_flags": [
@@ -437,17 +565,6 @@
   {
     "file_id": "Assets/Gameplay/World/WorldScroller.cs",
     "class_name": "WorldScroller",
-    "risk_flags": [
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 8
-  },
-  {
-    "file_id": "Assets/Gameplay/World/WorldSpawner.cs",
-    "class_name": "WorldSpawner",
     "risk_flags": [
       "state-owner"
     ],
