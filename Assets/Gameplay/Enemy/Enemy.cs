@@ -27,9 +27,10 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log($"몬스터 처치, 경험치 +{expReward}");
 
-        if (GameManager.Instance != null)
+        LevelSystem levelSystem = FindFirstObjectByType<LevelSystem>();
+        if (levelSystem != null)
         {
-            GameManager.Instance.AddExp(expReward);
+            levelSystem.AddExp(expReward);
         }
 
         Destroy(gameObject);

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: CardDatabase
   m_EditorClassIdentifier: Assembly-CSharp::CardDatabase
   cards:
-  - {fileID: 11400000, guid: 277a31492f7d45549b71602508d4c1ad, type: 2}
-  - {fileID: 11400000, guid: 7c54cb95746811b4392f09ebc29bc1e6, type: 2}
-  - {fileID: 11400000, guid: bb0d14d873862b149882587ba8ff0f7f, type: 2}
-  - {fileID: 11400000, guid: 3c54492b9a5b2484bb2b757168d7b493, type: 2}
-  - {fileID: 11400000, guid: a7dd91d32d9796544b9cd7bc09163d76, type: 2}
+  - {fileID: 11400000, guid: c114be1e64703ab4b825878e1f15c983, type: 2}
+  - {fileID: 11400000, guid: e8ae5e7e3453cbe4385d7d31ec7e0eb9, type: 2}
+  - {fileID: 11400000, guid: d1170b06ec49e4b4cbc16b6a73476527, type: 2}
+  - {fileID: 11400000, guid: 82589eff6252b534598c9b6da405f36a, type: 2}
+  - {fileID: 11400000, guid: f6dc6b091971ed744914318ca4b8240c, type: 2}

@@ -1134,6 +1134,7 @@ GameObject:
   - component: {fileID: 545965578}
   - component: {fileID: 545965579}
   - component: {fileID: 545965577}
+  - component: {fileID: 545965580}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1183,7 +1184,18 @@ MonoBehaviour:
   ballStatsAsset: {fileID: 11400000, guid: f6137f4a200d16d40929ca9de49b1ae2, type: 2}
   paddleStatsAsset: {fileID: 11400000, guid: 7973018f7a7aab74c9ec4f9eefce751b, type: 2}
   worldStatsAsset: {fileID: 11400000, guid: dfd8cae767161ea4682bb9ba0df98eac, type: 2}
-  enhanceUI: {fileID: 2564717403809389382}
+--- !u!114 &545965580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545965576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f2c855b57f82647a2c6b22b8bc5f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSystem
   currentLevel: 1
   currentExp: 0
   requiredExpByLevel: 0a0000001400000023000000320000004600000064000000
@@ -1195,6 +1207,7 @@ MonoBehaviour:
   - 15
   - 10
   - 20
+  enhanceUI: {fileID: 2564717403809389382}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

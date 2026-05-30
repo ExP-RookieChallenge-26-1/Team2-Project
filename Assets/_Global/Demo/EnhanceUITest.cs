@@ -6,6 +6,6 @@ public class EnhanceUITest : MonoBehaviour
 	{
 		int[] ids = { 1, 2, 3, 4, 5 };
 		float[] weights = { 5f, 4f, 3f, 2f, 1f };
-		GameManager.Instance.OpenUpgradeUI(ids, weights);
+		FindFirstObjectByType<LevelSystem>()?.OpenUpgradeUI(ids, weights);
 	}
 }
