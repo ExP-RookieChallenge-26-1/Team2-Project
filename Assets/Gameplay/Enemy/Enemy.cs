@@ -57,7 +57,6 @@ public class Enemy : MonoBehaviour
 			return;
 		if (this.HasAttacked)
 			return;
-		Debug.Log($"[Enemy] Y={transform.position.y:F2}, Threshold={this.Stats.TrackYThreshold:F2}, willTrack={transform.position.y < this.Stats.TrackYThreshold}");
 		if (transform.position.y < this.Stats.TrackYThreshold)
 			ChangeState(this.TrackState);
 	}
@@ -111,7 +110,6 @@ public class Enemy : MonoBehaviour
 			min: tilemap.CellToWorld(leftCell).x,
 			max: tilemap.CellToWorld(rightCell).x + tilemap.cellSize.x
 		);
-		Debug.Log($"[Enemy] MoveRange measured: ({this.MoveRange.min:F2}, {this.MoveRange.max:F2}), spawnX={transform.position.x:F2}, startCell={cell}");
 	}
 
 	private void OnDrawGizmos()

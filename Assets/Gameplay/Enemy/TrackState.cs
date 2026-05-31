@@ -4,7 +4,6 @@ public class TrackState : EnemyBaseState
 {
 	public override void Enter(Enemy enemy)
 	{
-		Debug.Log($"[Enemy] → TrackState");
 		OnEncounterAnimation(enemy);
 	}
 

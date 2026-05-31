@@ -77,6 +77,7 @@ public class BallCollision : MonoBehaviour
 			case Collision.Type.Wall:
 			case Collision.Type.Terrain:
 				this.ball.Physics.ApplyWallReflection(collision.bounds);
+				AudioManager.Instance.PlayBallHitSound();
 				break;
 
 			case Collision.Type.Paddle:

@@ -1093,6 +1093,7 @@ GameObject:
   - component: {fileID: 545965582}
   - component: {fileID: 545965581}
   - component: {fileID: 545965580}
+  - component: {fileID: 545965583}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1193,6 +1194,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090399ed1d9562842ab1c97d292119f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::User
+--- !u!114 &545965583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545965576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8450ea8653e05314e99c5259b33e4894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  ballHitClip: {fileID: 8300000, guid: 7433e9aa053034741a90570b2e941a81, type: 3}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

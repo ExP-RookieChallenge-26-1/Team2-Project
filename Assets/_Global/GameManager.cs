@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
 	{
 		this.State.OnChanged += OnGameStateChanged;
 		this.User = FindFirstObjectByType<User>();
+		this.paddle = FindFirstObjectByType<Paddle>();
 		TriggerSpawn();
 	}
 
@@ -87,6 +88,12 @@ public class GameManager : MonoBehaviour
 
 	private void TriggerSpawn()
 	{
+		if (this.paddle == null)
+		{
+			Debug.LogError("Paddle not found!");
+			return;
+		}
+
 		float centerX = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0f, 0f)).x;
 		Vector3 spawnPos = new Vector3(centerX, this.paddle.transform.position.y + 1f, 0f);
 		Ball ball = Instantiate(this.ballPrefab, spawnPos, Quaternion.identity);
