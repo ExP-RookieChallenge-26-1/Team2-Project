@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LevelSystem : MonoBehaviour
+public class UserLevel : MonoBehaviour
 {
 	[SerializeField] private int currentLevel = 1;
 	[SerializeField] private int currentExp = 0;

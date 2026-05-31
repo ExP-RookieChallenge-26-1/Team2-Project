@@ -10,6 +10,10 @@ public class Ball : MonoBehaviour
 	public GiantSkill GiantSkill { get; private set; }
 	public CloneSkill CloneSkill { get; private set; }
 
+	private bool isSpawning = false;
+	private float spawnTimer = 0f;
+	private const float SpawnDelay = 3f;
+
 	private void Awake()
 	{
 		this.Collision = GetComponent<BallCollision>();
@@ -22,14 +26,16 @@ public class Ball : MonoBehaviour
 	private void Start()
 	{
 		this.Stats = GameManager.Instance.BallStats;
-
-		float speed = this.Stats.Speed;
-		if (this.Physics.Velocity == Vector2.zero)
-			this.Physics.SetVelocity(new Vector2(speed * 0.5f, speed * 0.866f));
 	}
 
 	private void Update()
 	{
+		if (this.isSpawning)
+		{
+			TickSpawn();
+			return;
+		}
+
 		this.Collision.Tick();
 		this.Trajectory.Tick();
 		this.Physics.Tick();
@@ -39,22 +45,42 @@ public class Ball : MonoBehaviour
 		CheckOutOfBounds();
 	}
 
+	public void Spawn()
+	{
+		this.isSpawning = true;
+		this.spawnTimer = 0f;
+		this.Physics.SetVelocity(Vector2.zero);
+	}
+
+	private void TickSpawn()
+	{
+		this.spawnTimer += Time.deltaTime;
+		if (this.spawnTimer >= SpawnDelay)
+		{
+			this.isSpawning = false;
+			Launch();
+		}
+	}
+
+	private void Launch()
+	{
+		// 아래 방향(270°) 기준 ±30° → 240°~300°
+		float angleDeg = Random.Range(240f, 300f);
+		float angleRad = angleDeg * Mathf.Deg2Rad;
+		this.Physics.SetVelocity(
+			new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad)) * this.Stats.Speed
+		);
+	}
+
 	private void UpdateScale()
 	{
-		float diameter;
-
-		diameter = this.Stats.Radius * 2f;
+		float diameter = this.Stats.Radius * 2f;
 		transform.localScale = new Vector3(diameter, diameter, 1f);
 	}
 
 	private void CheckOutOfBounds()
 	{
-		if (transform.position.y < -6f)
+		if (transform.position.y < -5f)
 			Destroy(gameObject);
-	}
-
-	private void OnDestroy()
-	{
-		GameManager.Instance.OnBallDestroyed();
 	}
 }

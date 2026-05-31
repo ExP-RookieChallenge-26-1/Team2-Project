@@ -10,11 +10,14 @@ public class GameManager : MonoBehaviour
 	public BallStats BallStats { get; private set; }
 	public PaddleStats PaddleStats { get; private set; }
 	public WorldStats WorldStats { get; private set; }
-	public LevelSystem LevelSystem { get; private set; }
+	public User User { get; private set; }
 
 	[SerializeField] private BallStats ballStatsAsset;
 	[SerializeField] private PaddleStats paddleStatsAsset;
 	[SerializeField] private WorldStats worldStatsAsset;
+	[SerializeField] private Ball ballPrefab;
+	[SerializeField] private Paddle paddle;
+	public Paddle Paddle => this.paddle;
 
 	private void Awake()
 	{
@@ -35,12 +38,14 @@ public class GameManager : MonoBehaviour
 	private void Start()
 	{
 		this.State.OnChanged += OnGameStateChanged;
-		this.LevelSystem = FindFirstObjectByType<LevelSystem>();
+		this.User = FindFirstObjectByType<User>();
+		TriggerSpawn();
 	}
 
 	private void Update()
 	{
 		this.Input.Tick();
+		CheckBallState();
 	}
 
 	private void OnDestroy()
@@ -66,9 +71,25 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	public void OnBallDestroyed()
+	private void CheckBallState()
 	{
-		if (FindObjectsByType<Ball>(FindObjectsSortMode.None).Length == 0)
-			this.State.Change(GameStateMachine.State.GameOver);
+		if (this.State.Current != GameStateMachine.State.Playing)
+			return;
+
+		if (FindObjectsByType<Ball>(FindObjectsSortMode.None).Length > 0)
+			return;
+
+		this.User.Health.TakeDamage(1);
+
+		if (this.User.Health.CurrentHp > 0)
+			TriggerSpawn();
+	}
+
+	private void TriggerSpawn()
+	{
+		float centerX = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0f, 0f)).x;
+		Vector3 spawnPos = new Vector3(centerX, this.paddle.transform.position.y + 1f, 0f);
+		Ball ball = Instantiate(this.ballPrefab, spawnPos, Quaternion.identity);
+		ball.Spawn();
 	}
 }

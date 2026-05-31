@@ -86,7 +86,8 @@ public class BallCollision : MonoBehaviour
 			case Collision.Type.Enemy:
 				if (collision.enemy != null && collision.enemy != this.lastHitEnemy)
 				{
-					collision.enemy.TakeDamage(1);
+					var (damage, isCrit) = CalculateDamage();
+					collision.enemy.TakeDamage(damage, isCrit);
 					this.lastHitEnemy = collision.enemy;
 				}
 				break;
@@ -272,6 +273,15 @@ public class BallCollision : MonoBehaviour
 		overlapTop = bounds.max.y - (pos.y - radius);
 
 		return Mathf.Min(overlapLeft, overlapRight, overlapBottom, overlapTop);
+	}
+
+	private (int damage, bool isCrit) CalculateDamage()
+	{
+		float damage = this.ball.Stats.AttackPower;
+		bool isCrit = Random.value < this.ball.Stats.CriticalChance;
+		if (isCrit)
+			damage *= this.ball.Stats.CriticalDamage;
+		return (Mathf.Max(1, Mathf.RoundToInt(damage)), isCrit);
 	}
 
 	public static bool IsTouching(Bounds bounds, Vector2 pos, float radius)
