@@ -1,54 +1,5 @@
 [
   {
-    "from_file": "Assets/_Global/Demo/EnhanceUITest.cs",
-    "from_class": "EnhanceUITest",
-    "to_type": "MonoBehaviour",
-    "relation_type": "inherits",
-    "strength": 4
-  },
-  {
-    "from_file": "Assets/_Global/Demo/EnhanceUITest.cs",
-    "from_class": "EnhanceUITest",
-    "to_type": "GameManager",
-    "relation_type": "singleton-access",
-    "strength": 4
-  },
-  {
-    "from_file": "Assets/_Global/Demo/EnhanceUITest.cs",
-    "from_class": "EnhanceUITest",
-    "to_type": "GameManager",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/_Global/Demo/EnhanceUITest.cs",
-    "from_class": "EnhanceUITest",
-    "to_type": "Instance",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/_Global/Demo/EnhanceUITest.cs",
-    "from_class": "EnhanceUITest",
-    "to_type": "OnClickTest",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/_Global/Demo/EnhanceUITest.cs",
-    "from_class": "EnhanceUITest",
-    "to_type": "OpenUpgradeUI",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/_Global/Demo/EnhanceUITest.cs",
-    "from_class": "EnhanceUITest",
-    "to_type": "UnityEngine",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
     "to_type": "GameStateMachine",
@@ -65,6 +16,13 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
+    "to_type": "Vector3",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
     "to_type": "MonoBehaviour",
     "relation_type": "inherits",
     "strength": 4
@@ -72,14 +30,14 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "AddExp",
+    "to_type": "Awake",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "Awake",
+    "to_type": "Ball",
     "relation_type": "uses",
     "strength": 1
   },
@@ -93,35 +51,28 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "Change",
+    "to_type": "Camera",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "CheckLevelUp",
+    "to_type": "CheckBallState",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "CurrentExp",
+    "to_type": "Current",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "CurrentLevel",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/_Global/GameManager.cs",
-    "from_class": "GameManager",
-    "to_type": "Default",
+    "to_type": "CurrentHp",
     "relation_type": "uses",
     "strength": 1
   },
@@ -142,14 +93,21 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "EnhanceUI",
+    "to_type": "FindFirstObjectByType",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "EXP",
+    "to_type": "FindObjectsByType",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "FindObjectsSortMode",
     "relation_type": "uses",
     "strength": 1
   },
@@ -171,6 +129,13 @@
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
     "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "Health",
     "relation_type": "uses",
     "strength": 1
   },
@@ -212,13 +177,6 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "Level",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/_Global/GameManager.cs",
-    "from_class": "GameManager",
     "to_type": "LoadScene",
     "relation_type": "uses",
     "strength": 1
@@ -226,21 +184,7 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "Log",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/_Global/GameManager.cs",
-    "from_class": "GameManager",
-    "to_type": "LogWarning",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/_Global/GameManager.cs",
-    "from_class": "GameManager",
-    "to_type": "OnBallDestroyed",
+    "to_type": "None",
     "relation_type": "uses",
     "strength": 1
   },
@@ -268,14 +212,7 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "OpenDefaultUpgradeUI",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/_Global/GameManager.cs",
-    "from_class": "GameManager",
-    "to_type": "OpenUpgradeUI",
+    "to_type": "Paddle",
     "relation_type": "uses",
     "strength": 1
   },
@@ -296,7 +233,7 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "Pool",
+    "to_type": "Quaternion",
     "relation_type": "uses",
     "strength": 1
   },
@@ -324,14 +261,7 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "SetActive",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/_Global/GameManager.cs",
-    "from_class": "GameManager",
-    "to_type": "ShowCardsByIds",
+    "to_type": "Spawn",
     "relation_type": "uses",
     "strength": 1
   },
@@ -352,7 +282,7 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "System",
+    "to_type": "TakeDamage",
     "relation_type": "uses",
     "strength": 1
   },
@@ -373,7 +303,7 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "UI",
+    "to_type": "TriggerSpawn",
     "relation_type": "uses",
     "strength": 1
   },
@@ -394,7 +324,21 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
-    "to_type": "Upgrade",
+    "to_type": "User",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "Vector3",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "ViewportToWorldPoint",
     "relation_type": "uses",
     "strength": 1
   },
@@ -700,6 +644,398 @@
     "strength": 1
   },
   {
+    "from_file": "Assets/_Global/User.cs",
+    "from_class": "User",
+    "to_type": "UserHealth",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/_Global/User.cs",
+    "from_class": "User",
+    "to_type": "UserLevel",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/_Global/User.cs",
+    "from_class": "User",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/_Global/User.cs",
+    "from_class": "User",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/User.cs",
+    "from_class": "User",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/User.cs",
+    "from_class": "User",
+    "to_type": "Health",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/User.cs",
+    "from_class": "User",
+    "to_type": "Level",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/User.cs",
+    "from_class": "User",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/User.cs",
+    "from_class": "User",
+    "to_type": "UserHealth",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/User.cs",
+    "from_class": "User",
+    "to_type": "UserLevel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "DamageTextSpawner",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "GameManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "Change",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "Color",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "CurrentHp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "DamageTextSpawner",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "GameOver",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "GameStateMachine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "MaxHp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "Paddle",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "Spawn",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "State",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "TakeDamage",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "GameManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "AddExp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "Change",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "CheckLevelUp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "CurrentExp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "CurrentLevel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "Default",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "Enhancement",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "EnhanceUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "EXP",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "GameStateMachine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "Length",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "Log",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "LogWarning",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "OpenDefaultUpgradeUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "OpenUpgradeUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "Pool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "SetActive",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "ShowCardsByIds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "State",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "UI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "Upgrade",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
     "to_type": "BallCollision",
@@ -800,6 +1136,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
+    "to_type": "bool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
     "to_type": "CheckOutOfBounds",
     "relation_type": "uses",
     "strength": 1
@@ -815,6 +1158,20 @@
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
     "to_type": "Collision",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Cos",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Deg2Rad",
     "relation_type": "uses",
     "strength": 1
   },
@@ -863,14 +1220,7 @@
   {
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
-    "to_type": "OnBallDestroyed",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Ball/Ball.cs",
-    "from_class": "Ball",
-    "to_type": "OnDestroy",
+    "to_type": "Launch",
     "relation_type": "uses",
     "strength": 1
   },
@@ -905,6 +1255,27 @@
   {
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
+    "to_type": "Sin",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Spawn",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "SpawnDelay",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
     "to_type": "Speed",
     "relation_type": "uses",
     "strength": 1
@@ -927,6 +1298,13 @@
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
     "to_type": "Tick",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "TickSpawn",
     "relation_type": "uses",
     "strength": 1
   },
@@ -969,13 +1347,6 @@
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
     "to_type": "Vector3",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Ball/Ball.cs",
-    "from_class": "Ball",
-    "to_type": "Velocity",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1066,6 +1437,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
+    "to_type": "AttackPower",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
     "to_type": "Awake",
     "relation_type": "uses",
     "strength": 1
@@ -1080,7 +1458,21 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
+    "to_type": "bool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
     "to_type": "Bounds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "CalculateDamage",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1144,6 +1536,20 @@
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
     "to_type": "ContactFilter2D",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "CriticalChance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "CriticalDamage",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1220,6 +1626,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
+    "to_type": "Max",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
     "to_type": "MaxValue",
     "relation_type": "uses",
     "strength": 1
@@ -1284,6 +1697,13 @@
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
     "to_type": "RequireComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "RoundToInt",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3535,10 +3955,185 @@
     "strength": 1
   },
   {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "EnemyBaseState",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "GameManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "AttackDamage",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "bool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "ChangeState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "Enemy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "EnemyBaseState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "Enter",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "Health",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "IdleState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "MarkAttacked",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "OnAttackAnimation",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "Stats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "TakeDamage",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "Tick",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/AttackState.cs",
+    "from_class": "AttackState",
+    "to_type": "User",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "SpriteRenderer",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "AttackState",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "IdleState",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "MoveState",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "TrackState",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Vector3",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
     "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
     "from_class": "Enemy",
     "to_type": "MonoBehaviour",
     "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "DamageTextSpawner",
+    "relation_type": "singleton-access",
     "strength": 4
   },
   {
@@ -3552,6 +4147,76 @@
     "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
     "from_class": "Enemy",
     "to_type": "AddExp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "AttackState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "bool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "CellToWorld",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "ChangeState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "CheckTrackTransition",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Collider2D",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Color",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "CompareTag",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "DamageTextSpawner",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3572,7 +4237,119 @@
   {
     "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
     "from_class": "Enemy",
+    "to_type": "DrawLine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "DrawSphere",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "EnemyStats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Enter",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Exit",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "ExpReward",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "F2",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
     "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "GetComponentInChildren",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Gizmos",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "HasAttacked",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "HasTile",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Heading",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "IdleState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "IEnemyState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "InitializeStates",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3586,7 +4363,28 @@
   {
     "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
     "from_class": "Enemy",
+    "to_type": "Instantiate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
     "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Left",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Level",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3600,7 +4398,119 @@
   {
     "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
     "from_class": "Enemy",
+    "to_type": "MarkAttacked",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Max",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "MaxHp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "MeasureMoveRange",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "MoveLeftState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "MoveRange",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "MoveRightState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "MoveState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "OnDrawGizmos",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "OnTriggerEnter2D",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Paddle",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Right",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "SetHeading",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Spawn",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "SpriteRenderer",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
     "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Stats",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3614,7 +4524,805 @@
   {
     "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
     "from_class": "Enemy",
+    "to_type": "Threshold",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Tick",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Tilemap",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Tilemaps",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "TrackState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "TrackYThreshold",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
     "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Update",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "User",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Vector3",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "Vector3Int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "WorldToCell",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyBaseState.cs",
+    "from_class": "EnemyBaseState",
+    "to_type": "IEnemyState",
+    "relation_type": "implements",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyBaseState.cs",
+    "from_class": "EnemyBaseState",
+    "to_type": "Enemy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyBaseState.cs",
+    "from_class": "EnemyBaseState",
+    "to_type": "Enter",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyBaseState.cs",
+    "from_class": "EnemyBaseState",
+    "to_type": "Exit",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyBaseState.cs",
+    "from_class": "EnemyBaseState",
+    "to_type": "IEnemyState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyBaseState.cs",
+    "from_class": "EnemyBaseState",
+    "to_type": "Tick",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyMovementValidator.cs",
+    "from_class": "EnemyMovementValidator",
+    "to_type": "CanMoveLeft",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyMovementValidator.cs",
+    "from_class": "EnemyMovementValidator",
+    "to_type": "CanMoveRight",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyMovementValidator.cs",
+    "from_class": "EnemyMovementValidator",
+    "to_type": "Enemy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyMovementValidator.cs",
+    "from_class": "EnemyMovementValidator",
+    "to_type": "MoveRange",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyStats.cs",
+    "from_class": "EnemyStats",
+    "to_type": "ScriptableObject",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyStats.cs",
+    "from_class": "EnemyStats",
+    "to_type": "AttackDamage",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyStats.cs",
+    "from_class": "EnemyStats",
+    "to_type": "CreateAssetMenu",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyStats.cs",
+    "from_class": "EnemyStats",
+    "to_type": "ExpReward",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyStats.cs",
+    "from_class": "EnemyStats",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyStats.cs",
+    "from_class": "EnemyStats",
+    "to_type": "IdleDecisionInterval",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyStats.cs",
+    "from_class": "EnemyStats",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyStats.cs",
+    "from_class": "EnemyStats",
+    "to_type": "MaxHp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyStats.cs",
+    "from_class": "EnemyStats",
+    "to_type": "MoveDecisionInterval",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyStats.cs",
+    "from_class": "EnemyStats",
+    "to_type": "MoveSpeed",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyStats.cs",
+    "from_class": "EnemyStats",
+    "to_type": "StateChangeRate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyStats.cs",
+    "from_class": "EnemyStats",
+    "to_type": "Stats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyStats.cs",
+    "from_class": "EnemyStats",
+    "to_type": "TrackSpeed",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyStats.cs",
+    "from_class": "EnemyStats",
+    "to_type": "TrackYThreshold",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemyStats.cs",
+    "from_class": "EnemyStats",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "EnemyBaseState",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "CanMoveLeft",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "CanMoveRight",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "ChangeState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "DecideNextState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "Enemy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "EnemyBaseState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "EnemyMovementValidator",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "Enter",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "Idle",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "IdleDecisionInterval",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "MoveLeftState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "MoveRightState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "StateChangeRate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "Stats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "Tick",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IdleState.cs",
+    "from_class": "IdleState",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IEnemyState.cs",
+    "from_class": "IEnemyState",
+    "to_type": "Enemy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IEnemyState.cs",
+    "from_class": "IEnemyState",
+    "to_type": "Enter",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IEnemyState.cs",
+    "from_class": "IEnemyState",
+    "to_type": "Exit",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/IEnemyState.cs",
+    "from_class": "IEnemyState",
+    "to_type": "Tick",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "EnemyBaseState",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "CanMoveLeft",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "CanMoveRight",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "ChangeState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "Clamp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "DecideNextState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "Enemy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "EnemyBaseState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "EnemyMovementValidator",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "Enter",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "Heading",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "Idle",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "IdleState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "Left",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "Move",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "MoveDecisionInterval",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "MoveLeftState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "MoveRange",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "MoveSpeed",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "Right",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "SetHeading",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "StateChangeRate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "Stats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "Tick",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/MoveState.cs",
+    "from_class": "MoveState",
+    "to_type": "Vector3",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "EnemyBaseState",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "GameManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "bool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "CanMoveLeft",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "CanMoveRight",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "Clamp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "Enemy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "EnemyBaseState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "EnemyMovementValidator",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "Enter",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "Heading",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "Left",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "Log",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "Move",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "MoveRange",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "OnEncounterAnimation",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "OnIdleAnimation",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "OnMoveAnimation",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "Paddle",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "Right",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "SetHeading",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "Stats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "Tick",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "TrackSpeed",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
+    "from_class": "TrackState",
+    "to_type": "Vector3",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3691,7 +5399,7 @@
   {
     "from_file": "Assets/Gameplay/Item/EnhancementTriggerItemData.cs",
     "from_class": "EnhancementTriggerItemData",
-    "to_type": "OpenDefaultUpgradeUI",
+    "to_type": "Level",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3706,6 +5414,20 @@
     "from_file": "Assets/Gameplay/Item/EnhancementTriggerItemData.cs",
     "from_class": "EnhancementTriggerItemData",
     "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/EnhancementTriggerItemData.cs",
+    "from_class": "EnhancementTriggerItemData",
+    "to_type": "User",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/EnhancementTriggerItemData.cs",
+    "from_class": "EnhancementTriggerItemData",
+    "to_type": "UserLevel",
     "relation_type": "uses",
     "strength": 1
   },
@@ -5631,6 +7353,167 @@
     "from_file": "Assets/Gameplay/World/WorldStats.cs",
     "from_class": "WorldStats",
     "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/DamageTextSpawner.cs",
+    "from_class": "DamageTextSpawner",
+    "to_type": "Vector3",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/UI/DamageText/DamageTextSpawner.cs",
+    "from_class": "DamageTextSpawner",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/DamageText/DamageTextSpawner.cs",
+    "from_class": "DamageTextSpawner",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/DamageTextSpawner.cs",
+    "from_class": "DamageTextSpawner",
+    "to_type": "Color",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/DamageTextSpawner.cs",
+    "from_class": "DamageTextSpawner",
+    "to_type": "FloatingDamageText",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/DamageTextSpawner.cs",
+    "from_class": "DamageTextSpawner",
+    "to_type": "Initialize",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/DamageTextSpawner.cs",
+    "from_class": "DamageTextSpawner",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/DamageTextSpawner.cs",
+    "from_class": "DamageTextSpawner",
+    "to_type": "Instantiate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/DamageTextSpawner.cs",
+    "from_class": "DamageTextSpawner",
+    "to_type": "Quaternion",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/DamageTextSpawner.cs",
+    "from_class": "DamageTextSpawner",
+    "to_type": "Spawn",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/DamageTextSpawner.cs",
+    "from_class": "DamageTextSpawner",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/DamageTextSpawner.cs",
+    "from_class": "DamageTextSpawner",
+    "to_type": "Vector3",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/FloatingDamageText.cs",
+    "from_class": "FloatingDamageText",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/DamageText/FloatingDamageText.cs",
+    "from_class": "FloatingDamageText",
+    "to_type": "Color",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/FloatingDamageText.cs",
+    "from_class": "FloatingDamageText",
+    "to_type": "Destroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/FloatingDamageText.cs",
+    "from_class": "FloatingDamageText",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/FloatingDamageText.cs",
+    "from_class": "FloatingDamageText",
+    "to_type": "Initialize",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/FloatingDamageText.cs",
+    "from_class": "FloatingDamageText",
+    "to_type": "TextMeshPro",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/FloatingDamageText.cs",
+    "from_class": "FloatingDamageText",
+    "to_type": "TMPro",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/FloatingDamageText.cs",
+    "from_class": "FloatingDamageText",
+    "to_type": "ToString",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/FloatingDamageText.cs",
+    "from_class": "FloatingDamageText",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/FloatingDamageText.cs",
+    "from_class": "FloatingDamageText",
+    "to_type": "Update",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/DamageText/FloatingDamageText.cs",
+    "from_class": "FloatingDamageText",
+    "to_type": "Vector3",
     "relation_type": "uses",
     "strength": 1
   },

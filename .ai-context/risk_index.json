@@ -25,29 +25,69 @@
     "risk_score": 95
   },
   {
+    "file_id": "Assets/Gameplay/Ball/Ball.cs",
+    "class_name": "Ball",
+    "risk_flags": [
+      "update-heavy",
+      "high-coupling",
+      "getcomponent-heavy",
+      "magic-number-heavy",
+      "init-order-sensitive",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "Unity 업데이트 루프 사용",
+      "참조 타입 또는 관계 수가 많음",
+      "GetComponent/TryGetComponent 호출이 많음",
+      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
+      "초기화 순서에 민감할 가능성",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 76
+  },
+  {
     "file_id": "Assets/_Global/GameManager.cs",
     "class_name": "GameManager",
     "risk_flags": [
       "update-heavy",
       "singleton-candidate",
       "high-coupling",
-      "magic-number-heavy",
       "init-order-sensitive",
       "save-load-sensitive",
-      "ui-runtime-mixed",
       "state-owner"
     ],
     "risk_reasons": [
       "Unity 업데이트 루프 사용",
       "Instance 또는 DontDestroyOnLoad 패턴 감지",
       "참조 타입 또는 관계 수가 많음",
-      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
       "초기화 순서에 민감할 가능성",
       "저장/불러오기 관련 로직 포함",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
-    "risk_score": 91
+    "risk_score": 73
+  },
+  {
+    "file_id": "Assets/Gameplay/Enemy/Enemy.cs",
+    "class_name": "Enemy",
+    "risk_flags": [
+      "update-heavy",
+      "high-coupling",
+      "large-class",
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "Unity 업데이트 루프 사용",
+      "참조 타입 또는 관계 수가 많음",
+      "파일/메서드/필드 수가 많아 책임이 커질 가능성",
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 73
   },
   {
     "file_id": "Assets/Gameplay/Item/ItemPickup.cs",
@@ -71,25 +111,25 @@
     "risk_score": 70
   },
   {
-    "file_id": "Assets/Gameplay/Ball/Ball.cs",
-    "class_name": "Ball",
+    "file_id": "Assets/_Global/UserLevel.cs",
+    "class_name": "UserLevel",
     "risk_flags": [
-      "update-heavy",
       "high-coupling",
-      "getcomponent-heavy",
+      "magic-number-heavy",
       "init-order-sensitive",
+      "save-load-sensitive",
       "ui-runtime-mixed",
       "state-owner"
     ],
     "risk_reasons": [
-      "Unity 업데이트 루프 사용",
       "참조 타입 또는 관계 수가 많음",
-      "GetComponent/TryGetComponent 호출이 많음",
+      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
       "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
       "UI와 런타임 책임이 한 파일에 섞였을 가능성",
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
-    "risk_score": 68
+    "risk_score": 66
   },
   {
     "file_id": "Assets/Gameplay/Ball/BallTrajectory.cs",
@@ -236,6 +276,23 @@
     "risk_score": 46
   },
   {
+    "file_id": "Assets/UI/DamageText/DamageTextSpawner.cs",
+    "class_name": "DamageTextSpawner",
+    "risk_flags": [
+      "singleton-candidate",
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "Instance 또는 DontDestroyOnLoad 패턴 감지",
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 45
+  },
+  {
     "file_id": "Assets/Gameplay/World/World.cs",
     "class_name": "World",
     "risk_flags": [
@@ -375,8 +432,23 @@
     "risk_score": 34
   },
   {
-    "file_id": "Assets/Gameplay/Enemy/Enemy.cs",
-    "class_name": "Enemy",
+    "file_id": "Assets/UI/DamageText/FloatingDamageText.cs",
+    "class_name": "FloatingDamageText",
+    "risk_flags": [
+      "update-heavy",
+      "save-load-sensitive",
+      "ui-runtime-mixed"
+    ],
+    "risk_reasons": [
+      "Unity 업데이트 루프 사용",
+      "저장/불러오기 관련 로직 포함",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성"
+    ],
+    "risk_score": 32
+  },
+  {
+    "file_id": "Assets/_Global/UserHealth.cs",
+    "class_name": "UserHealth",
     "risk_flags": [
       "init-order-sensitive",
       "save-load-sensitive",
@@ -465,16 +537,27 @@
     "risk_score": 28
   },
   {
-    "file_id": "Assets/_Global/Demo/EnhanceUITest.cs",
-    "class_name": "EnhanceUITest",
+    "file_id": "Assets/Gameplay/Enemy/MoveState.cs",
+    "class_name": "MoveState",
     "risk_flags": [
-      "magic-number-heavy",
-      "ui-runtime-mixed",
+      "high-coupling",
       "state-owner"
     ],
     "risk_reasons": [
-      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "참조 타입 또는 관계 수가 많음",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 26
+  },
+  {
+    "file_id": "Assets/Gameplay/Enemy/TrackState.cs",
+    "class_name": "TrackState",
+    "risk_flags": [
+      "high-coupling",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
     "risk_score": 26
@@ -491,6 +574,19 @@
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
     "risk_score": 26
+  },
+  {
+    "file_id": "Assets/Gameplay/Enemy/EnemyStats.cs",
+    "class_name": "EnemyStats",
+    "risk_flags": [
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 20
   },
   {
     "file_id": "Assets/Gameplay/Paddle/PaddleStats.cs",
@@ -552,6 +648,28 @@
     "risk_score": 12
   },
   {
+    "file_id": "Assets/Gameplay/Enemy/AttackState.cs",
+    "class_name": "AttackState",
+    "risk_flags": [
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 8
+  },
+  {
+    "file_id": "Assets/Gameplay/Enemy/IdleState.cs",
+    "class_name": "IdleState",
+    "risk_flags": [
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 8
+  },
+  {
     "file_id": "Assets/Gameplay/Paddle/PaddlePhysics.cs",
     "class_name": "PaddlePhysics",
     "risk_flags": [
@@ -576,6 +694,34 @@
   {
     "file_id": "Assets/_Global/SkillEventChannel.cs",
     "class_name": "SkillEventChannel",
+    "risk_flags": [],
+    "risk_reasons": [],
+    "risk_score": 0
+  },
+  {
+    "file_id": "Assets/_Global/User.cs",
+    "class_name": "User",
+    "risk_flags": [],
+    "risk_reasons": [],
+    "risk_score": 0
+  },
+  {
+    "file_id": "Assets/Gameplay/Enemy/EnemyBaseState.cs",
+    "class_name": "EnemyBaseState",
+    "risk_flags": [],
+    "risk_reasons": [],
+    "risk_score": 0
+  },
+  {
+    "file_id": "Assets/Gameplay/Enemy/EnemyMovementValidator.cs",
+    "class_name": "EnemyMovementValidator",
+    "risk_flags": [],
+    "risk_reasons": [],
+    "risk_score": 0
+  },
+  {
+    "file_id": "Assets/Gameplay/Enemy/IEnemyState.cs",
+    "class_name": "IEnemyState",
     "risk_flags": [],
     "risk_reasons": [],
     "risk_score": 0
