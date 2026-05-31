@@ -2,22 +2,22 @@
   "project_name": "unknown",
   "language": "C#",
   "engine_guess": "Unity",
-  "total_cs_files": 49,
-  "mono_behaviour_files": 24,
+  "total_cs_files": 50,
+  "mono_behaviour_files": 25,
   "scriptable_object_files": 8,
   "files_with_update": 9,
   "files_with_fixed_update": 0,
   "files_with_late_update": 0,
-  "singleton_candidates": 2,
-  "manager_like_classes": 19,
+  "singleton_candidates": 3,
+  "manager_like_classes": 21,
   "ui_related_classes": 12,
-  "save_load_related_classes": 30,
+  "save_load_related_classes": 31,
   "role_counts": {
-    "runtime": 27,
+    "manager": 21,
+    "save-load": 31,
+    "runtime": 28,
+    "combat": 21,
     "scene": 2,
-    "combat": 20,
-    "manager": 19,
-    "save-load": 30,
     "data": 17,
     "player": 16,
     "ui": 12,
@@ -27,14 +27,14 @@
     {
       "class_name": "Enemy",
       "file_id": "Assets/Gameplay/Enemy/Enemy.cs",
-      "relation_count": 75,
-      "referenced_type_count": 66
+      "relation_count": 72,
+      "referenced_type_count": 63
     },
     {
       "class_name": "BallCollision",
       "file_id": "Assets/Gameplay/Ball/BallCollision.cs",
-      "relation_count": 67,
-      "referenced_type_count": 58
+      "relation_count": 71,
+      "referenced_type_count": 61
     },
     {
       "class_name": "BallTrajectory",
@@ -45,8 +45,8 @@
     {
       "class_name": "GameManager",
       "file_id": "Assets/_Global/GameManager.cs",
-      "relation_count": 50,
-      "referenced_type_count": 46
+      "relation_count": 51,
+      "referenced_type_count": 47
     },
     {
       "class_name": "Ball",
@@ -296,8 +296,10 @@
     }
   ],
   "common_patterns": [
+    "MonoBehaviour 중심 구조",
     "Update 사용 빈도 높음",
     "Manager 성격 클래스 다수",
+    "싱글톤 후보 클래스 다수",
     "고결합 클래스 존재"
   ]
 }

@@ -1,5 +1,96 @@
 [
   {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "AudioSource",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "AddComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "AudioClip",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "AudioSource",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "Destroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "DontDestroyOnLoad",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayBallHitSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayOneShot",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
     "to_type": "GameStateMachine",
@@ -178,6 +269,13 @@
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
     "to_type": "LoadScene",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "LogError",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1416,6 +1514,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
+    "to_type": "AudioManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
     "to_type": "ApplyCollision",
     "relation_type": "uses",
     "strength": 1
@@ -1438,6 +1543,13 @@
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
     "to_type": "AttackPower",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "AudioManager",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1612,6 +1724,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
     "to_type": "int",
     "relation_type": "uses",
     "strength": 1
@@ -1676,6 +1795,13 @@
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
     "to_type": "Physics2D",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "PlayBallHitSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4279,13 +4405,6 @@
   {
     "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
     "from_class": "Enemy",
-    "to_type": "F2",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
-    "from_class": "Enemy",
     "to_type": "GameManager",
     "relation_type": "uses",
     "strength": 1
@@ -4385,13 +4504,6 @@
     "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
     "from_class": "Enemy",
     "to_type": "Level",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
-    "from_class": "Enemy",
-    "to_type": "Log",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4518,13 +4630,6 @@
     "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
     "from_class": "Enemy",
     "to_type": "TakeDamage",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
-    "from_class": "Enemy",
-    "to_type": "Threshold",
     "relation_type": "uses",
     "strength": 1
   },
@@ -5225,13 +5330,6 @@
     "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
     "from_class": "TrackState",
     "to_type": "Left",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Enemy/TrackState.cs",
-    "from_class": "TrackState",
-    "to_type": "Log",
     "relation_type": "uses",
     "strength": 1
   },
@@ -8073,6 +8171,27 @@
   {
     "from_file": "Assets/UI/Title/TitleManager.cs",
     "from_class": "TitleManager",
+    "to_type": "GameManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleManager.cs",
+    "from_class": "TitleManager",
+    "to_type": "Destroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleManager.cs",
+    "from_class": "TitleManager",
+    "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleManager.cs",
+    "from_class": "TitleManager",
     "to_type": "GameScene",
     "relation_type": "uses",
     "strength": 1
@@ -8080,7 +8199,21 @@
   {
     "from_file": "Assets/UI/Title/TitleManager.cs",
     "from_class": "TitleManager",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleManager.cs",
+    "from_class": "TitleManager",
     "to_type": "LoadScene",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleManager.cs",
+    "from_class": "TitleManager",
+    "to_type": "Object",
     "relation_type": "uses",
     "strength": 1
   },
