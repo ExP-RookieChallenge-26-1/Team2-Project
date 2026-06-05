@@ -1428,6 +1428,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::World
   chunkPrefabs:
   - {fileID: 7340138172155822266, guid: fadbedc9e203cb04db5cb08cb36139e0, type: 3}
+  - {fileID: 7340138172155822266, guid: 0d72d8f0433e40445a7451aa407b8a8c, type: 3}
+  - {fileID: 7340138172155822266, guid: 17d32b98a4ef20b44981378e982ead71, type: 3}
   itemPrefabs:
   - {fileID: 7638128648507445838, guid: 457f7c21af314b2428845c7286c4f338, type: 3}
   - {fileID: 3112473118668396992, guid: ef2f23d565a376343a68d15f488d0244, type: 3}
