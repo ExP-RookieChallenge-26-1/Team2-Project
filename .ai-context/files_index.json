@@ -3134,6 +3134,426 @@
     ]
   },
   {
+    "file_id": "Assets/Gameplay/Cowking/BossSpawnTrigger.cs",
+    "path": "Assets/Gameplay/Cowking/BossSpawnTrigger.cs",
+    "file_name": "BossSpawnTrigger.cs",
+    "content_hash": "c16bf200e430a3b207d545a6c1981227b292a108",
+    "size": 1699,
+    "line_count": 61,
+    "namespace": "",
+    "using_list": [
+      "System.Collections",
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "BossSpawnTrigger",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "BossSpawnTrigger",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Update",
+      "TrySpawnBoss",
+      "ActivateBossDelayed",
+      "WaitForSeconds"
+    ],
+    "fields": [
+      {
+        "name": "hasSpawned",
+        "type": "bool",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "spawnPos",
+        "type": "Vector3",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 2,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "bool",
+      "Vector3",
+      "System",
+      "Collections",
+      "UnityEngine",
+      "Update",
+      "Camera",
+      "WorldToViewportPoint",
+      "TrySpawnBoss",
+      "Clamp",
+      "ViewportToWorldPoint",
+      "Instantiate",
+      "Quaternion",
+      "CowKing",
+      "GetComponent",
+      "StartCoroutine",
+      "ActivateBossDelayed",
+      "WaitForSeconds",
+      "ActivateBoss"
+    ],
+    "component_access_types": [
+      "CowKing"
+    ],
+    "created_types": [
+      "WaitForSeconds"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      1.5,
+      0,
+      1,
+      0.55,
+      0.25,
+      0.75,
+      0.65,
+      0.85
+    ],
+    "guessed_roles": [
+      "runtime",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
+    "file_id": "Assets/Gameplay/Cowking/CowKing.cs",
+    "path": "Assets/Gameplay/Cowking/CowKing.cs",
+    "file_name": "CowKing.cs",
+    "content_hash": "37cd0dad6a63a0aafd46a02d762e6d8098f9088f",
+    "size": 4520,
+    "line_count": 201,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "CowKing",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "CowKing",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
+      "Update",
+      "ActivateBoss",
+      "UpdateIdle",
+      "UpdateMove",
+      "UpdateAttack",
+      "GetCurrentBreathDuration",
+      "DecideNextState",
+      "StartMove",
+      "Vector3",
+      "StartAttack",
+      "SpawnBreath",
+      "EndBreath",
+      "ChangeState",
+      "TakeDamage",
+      "Die"
+    ],
+    "fields": [
+      {
+        "name": "currentHp",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "currentState",
+        "type": "CowKingState",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "stateTimer",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "targetPosition",
+        "type": "Vector3",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "currentBreath",
+        "type": "GameObject",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "isActivated",
+        "type": "bool",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "currentBreathDuration",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "rand",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start",
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "int",
+      "CowKingState",
+      "float",
+      "Vector3",
+      "bool",
+      "UnityEngine",
+      "Idle",
+      "Move",
+      "Attack",
+      "Stats",
+      "State",
+      "Rates",
+      "Timing",
+      "Breath",
+      "Start",
+      "Update",
+      "UpdateIdle",
+      "UpdateMove",
+      "UpdateAttack",
+      "ActivateBoss",
+      "ChangeState",
+      "DecideNextState",
+      "MoveTowards",
+      "Distance",
+      "SpawnBreath",
+      "GetCurrentBreathDuration",
+      "EndBreath",
+      "StartMove",
+      "StartAttack",
+      "Instantiate",
+      "Quaternion",
+      "Destroy",
+      "TakeDamage",
+      "Die"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "Vector3"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [
+      "Stats",
+      "State Rates",
+      "Timing",
+      "Move Range",
+      "Breath"
+    ],
+    "numeric_literals": [
+      30,
+      0,
+      1,
+      0.5,
+      2,
+      5,
+      2.5,
+      4.5,
+      0.05
+    ],
+    "guessed_roles": [
+      "combat",
+      "runtime",
+      "player",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "전투 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/Gameplay/Cowking/CowKingBreath.cs",
+    "path": "Assets/Gameplay/Cowking/CowKingBreath.cs",
+    "file_name": "CowKingBreath.cs",
+    "content_hash": "2635184b3503ac28b2c94bacace958ef29159e6b",
+    "size": 952,
+    "line_count": 44,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "CowKingBreath",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "CowKingBreath",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Update",
+      "OnTriggerEnter2D",
+      "OnTriggerExit2D"
+    ],
+    "fields": [
+      {
+        "name": "damageTimer",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "isTouchingPaddle",
+        "type": "bool",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "float",
+      "bool",
+      "UnityEngine",
+      "Update",
+      "Log",
+      "OnTriggerEnter2D",
+      "Collider2D",
+      "CompareTag",
+      "Paddle",
+      "OnTriggerExit2D"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [
+      "브레스 피격: {damage}",
+      "Paddle",
+      "브레스 첫 피격: {damage}"
+    ],
+    "numeric_literals": [
+      1,
+      0
+    ],
+    "guessed_roles": [
+      "runtime",
+      "combat",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "전투 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
     "file_id": "Assets/Gameplay/Enemy/AttackState.cs",
     "path": "Assets/Gameplay/Enemy/AttackState.cs",
     "file_name": "AttackState.cs",
