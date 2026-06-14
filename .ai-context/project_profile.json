@@ -81,8 +81,8 @@
     {
       "class_name": "AudioManager",
       "file_id": "Assets/_Global/AudioManager.cs",
-      "relation_count": 37,
-      "referenced_type_count": 35
+      "relation_count": 36,
+      "referenced_type_count": 34
     }
   ],
   "high_risk_classes": [

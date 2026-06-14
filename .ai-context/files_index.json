@@ -3,8 +3,8 @@
     "file_id": "Assets/_Global/AudioManager.cs",
     "path": "Assets/_Global/AudioManager.cs",
     "file_name": "AudioManager.cs",
-    "content_hash": "5eed4b51ec084a453aa16d2dcc2649dcdb6a08e3",
-    "size": 3291,
+    "content_hash": "709d379599489df0a14efc44defc45e991cb8035",
+    "size": 3272,
     "line_count": 134,
     "namespace": "",
     "using_list": [
@@ -114,7 +114,6 @@
       "LoadVolumeSettings",
       "PlayBallHitSound",
       "PlayOneShot",
-      "HEAD",
       "PlayEnemyHitSound",
       "PlayBossHitSound",
       "PlayBossBreathSound",

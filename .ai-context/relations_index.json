@@ -114,13 +114,6 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
-    "to_type": "HEAD",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/_Global/AudioManager.cs",
-    "from_class": "AudioManager",
     "to_type": "Instance",
     "relation_type": "uses",
     "strength": 1
