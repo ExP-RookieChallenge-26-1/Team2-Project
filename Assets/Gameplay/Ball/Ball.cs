@@ -10,6 +10,7 @@ public class Ball : MonoBehaviour
 	public GiantSkill GiantSkill { get; private set; }
 	public CloneSkill CloneSkill { get; private set; }
 
+	private BallAnimation animation;
 	private bool isSpawning = false;
 	private float spawnTimer = 0f;
 	private const float SpawnDelay = 3f;
@@ -21,6 +22,9 @@ public class Ball : MonoBehaviour
 		this.Physics = new BallPhysics(this);
 		this.GiantSkill = GetComponent<GiantSkill>();
 		this.CloneSkill = GetComponent<CloneSkill>();
+
+		Animator animator = GetComponent<Animator>();
+		this.animation = new BallAnimation(animator, this);
 	}
 
 	private void Start()
@@ -39,6 +43,7 @@ public class Ball : MonoBehaviour
 		this.Collision.Tick();
 		this.Trajectory.Tick();
 		this.Physics.Tick();
+		this.animation.Tick();
 		this.GiantSkill.Tick();
 		this.CloneSkill.Tick();
 		UpdateScale();

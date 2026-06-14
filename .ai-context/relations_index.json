@@ -44,6 +44,20 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
+    "to_type": "BGMVolume",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "Clamp01",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
     "to_type": "Destroy",
     "relation_type": "uses",
     "strength": 1
@@ -58,7 +72,42 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "GetBGMVolume",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
     "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "GetFloat",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "GetMasterVolume",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "GetSFXVolume",
     "relation_type": "uses",
     "strength": 1
   },
@@ -72,6 +121,20 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
+    "to_type": "LoadVolumeSettings",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "MasterVolume",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
     "to_type": "PlayBallHitSound",
     "relation_type": "uses",
     "strength": 1
@@ -79,7 +142,63 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
+    "to_type": "PlayerPrefs",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
     "to_type": "PlayOneShot",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "Save",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "SaveVolumeSettings",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "SetBGMVolume",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "SetFloat",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "SetMasterVolume",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "SetSFXVolume",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "SFXVolume",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1136,6 +1255,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
+    "to_type": "Animator",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
     "to_type": "BallCollision",
     "relation_type": "component-access",
     "strength": 3
@@ -1160,6 +1286,13 @@
     "to_type": "GiantSkill",
     "relation_type": "component-access",
     "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "BallAnimation",
+    "relation_type": "creates",
+    "strength": 2
   },
   {
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
@@ -1199,7 +1332,21 @@
   {
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
+    "to_type": "Animator",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
     "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "BallAnimation",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1445,6 +1592,90 @@
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
     "to_type": "Vector3",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "Animator",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "Ball",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "IsMovingUp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "LogError",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "Physics",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "SetBool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "StringToHash",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "Tick",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "UpdateIdleUpDownState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "Velocity",
     "relation_type": "uses",
     "strength": 1
   },
@@ -8645,85 +8876,603 @@
     "strength": 1
   },
   {
-    "from_file": "Assets/UI/Title/TitleManager.cs",
-    "from_class": "TitleManager",
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "RectTransform",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "Vector2",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "WaitForSeconds",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
     "to_type": "MonoBehaviour",
     "relation_type": "inherits",
     "strength": 4
   },
   {
-    "from_file": "Assets/UI/Title/TitleManager.cs",
-    "from_class": "TitleManager",
-    "to_type": "GameManager",
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "AddListener",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "Button",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "CloseCreditPanel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "Collections",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "Coroutine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "OnDestroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "OnSkipClicked",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "RectTransform",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "RemoveListener",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "Scroll",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "ScrollCredits",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "SetActive",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "Settings",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "ShowTitleUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "StartCoroutine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "StopCoroutine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "System",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "TextMeshProUGUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "TitleUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "TMPro",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "UI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "Vector2",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/CreditPanel.cs",
+    "from_class": "CreditPanel",
+    "to_type": "WaitForSeconds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "AudioManager",
     "relation_type": "singleton-access",
     "strength": 4
   },
   {
-    "from_file": "Assets/UI/Title/TitleManager.cs",
-    "from_class": "TitleManager",
-    "to_type": "Destroy",
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "AddListener",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "Assets/UI/Title/TitleManager.cs",
-    "from_class": "TitleManager",
-    "to_type": "GameManager",
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "AudioManager",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "Assets/UI/Title/TitleManager.cs",
-    "from_class": "TitleManager",
-    "to_type": "GameScene",
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "Button",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "Assets/UI/Title/TitleManager.cs",
-    "from_class": "TitleManager",
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "GetBGMVolume",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "GetMasterVolume",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "GetSFXVolume",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "InitializeSliders",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
     "to_type": "Instance",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "Assets/UI/Title/TitleManager.cs",
-    "from_class": "TitleManager",
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "OnBackClicked",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "OnBGMVolumeChanged",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "OnDestroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "OnMasterVolumeChanged",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "OnSFXVolumeChanged",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "RemoveListener",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "RoundToInt",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "SetActive",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "SetBGMVolume",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "SetMasterVolume",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "SetSFXVolume",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "ShowTitleUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "Slider",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "TextMeshProUGUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "TitleUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "TMPro",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "ToString",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "UI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/SettingPanel.cs",
+    "from_class": "SettingPanel",
+    "to_type": "UpdateValueText",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "GameManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "AddListener",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "Button",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "CreditPanel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "Destroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "GameScene",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "HideTitleUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
     "to_type": "LoadScene",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "Assets/UI/Title/TitleManager.cs",
-    "from_class": "TitleManager",
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
     "to_type": "Object",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "Assets/UI/Title/TitleManager.cs",
-    "from_class": "TitleManager",
-    "to_type": "OnStartButtonClicked",
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "OnCreditClicked",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "Assets/UI/Title/TitleManager.cs",
-    "from_class": "TitleManager",
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "OnDestroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "OnSettingClicked",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "OnStartClicked",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "RemoveListener",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
     "to_type": "SceneManagement",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "Assets/UI/Title/TitleManager.cs",
-    "from_class": "TitleManager",
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
     "to_type": "SceneManager",
     "relation_type": "uses",
     "strength": 1
   },
   {
-    "from_file": "Assets/UI/Title/TitleManager.cs",
-    "from_class": "TitleManager",
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "SetActive",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "SettingPanel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "ShowTitleUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
+    "to_type": "UI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Title/TitleUI.cs",
+    "from_class": "TitleUI",
     "to_type": "UnityEngine",
     "relation_type": "uses",
     "strength": 1

@@ -3,9 +3,9 @@
     "file_id": "Assets/_Global/AudioManager.cs",
     "path": "Assets/_Global/AudioManager.cs",
     "file_name": "AudioManager.cs",
-    "content_hash": "0bb5908353635a4ebccf930c773869b7527bead7",
-    "size": 688,
-    "line_count": 35,
+    "content_hash": "875400f84fd246e36b1d76db2c1853e4079cce58",
+    "size": 1752,
+    "line_count": 79,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -28,7 +28,15 @@
     "unity_type": "MonoBehaviour",
     "methods": [
       "Awake",
-      "PlayBallHitSound"
+      "PlayBallHitSound",
+      "SetMasterVolume",
+      "SetBGMVolume",
+      "SetSFXVolume",
+      "GetMasterVolume",
+      "GetBGMVolume",
+      "GetSFXVolume",
+      "SaveVolumeSettings",
+      "LoadVolumeSettings"
     ],
     "fields": [
       {
@@ -36,6 +44,27 @@
         "type": "AudioSource",
         "access": "private",
         "serialized": true,
+        "is_static": false
+      },
+      {
+        "name": "masterVolume",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "bgmVolume",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "sfxVolume",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
         "is_static": false
       }
     ],
@@ -67,6 +96,7 @@
     "dont_destroy_on_load": true,
     "referenced_types": [
       "AudioSource",
+      "float",
       "UnityEngine",
       "Instance",
       "AudioClip",
@@ -75,20 +105,43 @@
       "DontDestroyOnLoad",
       "GetComponent",
       "AddComponent",
+      "LoadVolumeSettings",
       "PlayBallHitSound",
-      "PlayOneShot"
+      "PlayOneShot",
+      "SetMasterVolume",
+      "Clamp01",
+      "SaveVolumeSettings",
+      "SetBGMVolume",
+      "SetSFXVolume",
+      "GetMasterVolume",
+      "GetBGMVolume",
+      "GetSFXVolume",
+      "PlayerPrefs",
+      "SetFloat",
+      "MasterVolume",
+      "BGMVolume",
+      "SFXVolume",
+      "Save",
+      "GetFloat"
     ],
     "component_access_types": [
       "AudioSource"
     ],
     "created_types": [],
     "singleton_access_types": [],
-    "string_literals": [],
-    "numeric_literals": [],
+    "string_literals": [
+      "MasterVolume",
+      "BGMVolume",
+      "SFXVolume"
+    ],
+    "numeric_literals": [
+      1
+    ],
     "guessed_roles": [
-      "manager",
       "save-load",
+      "manager",
       "runtime",
+      "player",
       "combat"
     ],
     "summary_signals": [
@@ -920,9 +973,9 @@
     "file_id": "Assets/Gameplay/Ball/Ball.cs",
     "path": "Assets/Gameplay/Ball/Ball.cs",
     "file_name": "Ball.cs",
-    "content_hash": "fa6cc3ecdc0d624d5d3efeba1720a6a089e6611b",
-    "size": 1911,
-    "line_count": 87,
+    "content_hash": "11096bc12d8fd05fd4900789a87ef01a6f999b51",
+    "size": 2073,
+    "line_count": 92,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -946,6 +999,7 @@
     "methods": [
       "Awake",
       "BallPhysics",
+      "BallAnimation",
       "Start",
       "Update",
       "Spawn",
@@ -957,6 +1011,13 @@
       "CheckOutOfBounds"
     ],
     "fields": [
+      {
+        "name": "animation",
+        "type": "BallAnimation",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
       {
         "name": "isSpawning",
         "type": "bool",
@@ -1040,13 +1101,14 @@
     "has_on_disable": false,
     "serialize_field_count": 0,
     "public_field_count": 0,
-    "get_component_count": 4,
+    "get_component_count": 5,
     "find_call_count": 0,
-    "new_keyword_count": 3,
+    "new_keyword_count": 4,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
+      "BallAnimation",
       "bool",
       "float",
       "BallStats",
@@ -1064,6 +1126,7 @@
       "SpawnDelay",
       "Awake",
       "GetComponent",
+      "Animator",
       "Start",
       "GameManager",
       "Instance",
@@ -1088,10 +1151,12 @@
       "BallCollision",
       "BallTrajectory",
       "GiantSkill",
-      "CloneSkill"
+      "CloneSkill",
+      "Animator"
     ],
     "created_types": [
       "BallPhysics",
+      "BallAnimation",
       "Vector2",
       "Vector3"
     ],
@@ -1123,6 +1188,106 @@
       "UI 관련 로직 포함",
       "컴포넌트 조회 사용"
     ]
+  },
+  {
+    "file_id": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "path": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "file_name": "BallAnimation.cs",
+    "content_hash": "76f928264a78c75938b4b07b09c059f83a4142c8",
+    "size": 644,
+    "line_count": 33,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "BallAnimation",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "BallAnimation",
+    "unity_type": "None",
+    "methods": [
+      "BallAnimation",
+      "Tick",
+      "UpdateIdleUpDownState"
+    ],
+    "fields": [
+      {
+        "name": "animator",
+        "type": "Animator",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "ball",
+        "type": "Ball",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "isMovingUpHash",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "Animator",
+      "Ball",
+      "int",
+      "UnityEngine",
+      "StringToHash",
+      "IsMovingUp",
+      "LogError",
+      "Tick",
+      "UpdateIdleUpDownState",
+      "SetBool",
+      "Physics",
+      "Velocity"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [
+      "IsMovingUp",
+      "BallAnimation: Animator를 찾을 수 없습니다!"
+    ],
+    "numeric_literals": [
+      0
+    ],
+    "guessed_roles": [
+      "runtime"
+    ],
+    "summary_signals": []
   },
   {
     "file_id": "Assets/Gameplay/Ball/BallCollision.cs",
@@ -6893,20 +7058,22 @@
     ]
   },
   {
-    "file_id": "Assets/UI/Title/TitleManager.cs",
-    "path": "Assets/UI/Title/TitleManager.cs",
-    "file_name": "TitleManager.cs",
-    "content_hash": "8161fb6620346c6667e952c79adad813929d3a51",
-    "size": 315,
-    "line_count": 15,
+    "file_id": "Assets/UI/Title/CreditPanel.cs",
+    "path": "Assets/UI/Title/CreditPanel.cs",
+    "file_name": "CreditPanel.cs",
+    "content_hash": "9ebba440c6af3b61022e4db50171c14c2ab21e3d",
+    "size": 1615,
+    "line_count": 61,
     "namespace": "",
     "using_list": [
       "UnityEngine",
-      "UnityEngine.SceneManagement"
+      "UnityEngine.UI",
+      "System.Collections",
+      "TMPro"
     ],
     "classes": [
       {
-        "name": "TitleManager",
+        "name": "CreditPanel",
         "kind": "class",
         "access": "public",
         "base_types": [
@@ -6918,20 +7085,165 @@
         "is_generic": false
       }
     ],
-    "main_class_name": "TitleManager",
+    "main_class_name": "CreditPanel",
     "unity_type": "MonoBehaviour",
     "methods": [
-      "OnStartButtonClicked"
+      "Start",
+      "Vector2",
+      "ScrollCredits",
+      "WaitForSeconds",
+      "OnSkipClicked",
+      "CloseCreditPanel",
+      "OnDestroy"
     ],
-    "fields": [],
+    "fields": [
+      {
+        "name": "rectTransform",
+        "type": "RectTransform",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "scrollCoroutine",
+        "type": "Coroutine",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
     "properties": [],
     "events": [],
-    "unity_messages": [],
+    "unity_messages": [
+      "Start",
+      "OnDestroy"
+    ],
     "has_update": false,
     "has_fixed_update": false,
     "has_late_update": false,
     "has_awake": false,
-    "has_start": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 3,
+    "coroutine_count": 2,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "RectTransform",
+      "Coroutine",
+      "UnityEngine",
+      "UI",
+      "System",
+      "Collections",
+      "TMPro",
+      "TextMeshProUGUI",
+      "Button",
+      "TitleUI",
+      "Scroll",
+      "Settings",
+      "Start",
+      "GetComponent",
+      "AddListener",
+      "OnSkipClicked",
+      "Vector2",
+      "StartCoroutine",
+      "ScrollCredits",
+      "WaitForSeconds",
+      "CloseCreditPanel",
+      "StopCoroutine",
+      "SetActive",
+      "ShowTitleUI",
+      "OnDestroy",
+      "RemoveListener"
+    ],
+    "component_access_types": [
+      "RectTransform"
+    ],
+    "created_types": [
+      "Vector2",
+      "WaitForSeconds"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [
+      "Scroll Settings"
+    ],
+    "numeric_literals": [
+      50,
+      1,
+      2,
+      800
+    ],
+    "guessed_roles": [
+      "ui",
+      "runtime",
+      "player",
+      "combat",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "UI 관련 로직 포함",
+      "전투 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
+    "file_id": "Assets/UI/Title/SettingPanel.cs",
+    "path": "Assets/UI/Title/SettingPanel.cs",
+    "file_name": "SettingPanel.cs",
+    "content_hash": "8e0e81a5c313e3934171e9f3106f95e8dfe2229f",
+    "size": 2717,
+    "line_count": 89,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine",
+      "UnityEngine.UI",
+      "TMPro"
+    ],
+    "classes": [
+      {
+        "name": "SettingPanel",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "SettingPanel",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
+      "InitializeSliders",
+      "OnMasterVolumeChanged",
+      "OnBGMVolumeChanged",
+      "OnSFXVolumeChanged",
+      "UpdateValueText",
+      "OnBackClicked",
+      "OnDestroy"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start",
+      "OnDestroy"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
     "has_on_enable": false,
     "has_on_disable": false,
     "serialize_field_count": 0,
@@ -6944,15 +7256,144 @@
     "dont_destroy_on_load": false,
     "referenced_types": [
       "UnityEngine",
+      "UI",
+      "TMPro",
+      "Slider",
+      "TextMeshProUGUI",
+      "Button",
+      "TitleUI",
+      "Start",
+      "InitializeSliders",
+      "AddListener",
+      "OnMasterVolumeChanged",
+      "OnBGMVolumeChanged",
+      "OnSFXVolumeChanged",
+      "OnBackClicked",
+      "AudioManager",
+      "Instance",
+      "GetMasterVolume",
+      "GetBGMVolume",
+      "GetSFXVolume",
+      "UpdateValueText",
+      "SetMasterVolume",
+      "SetBGMVolume",
+      "SetSFXVolume",
+      "RoundToInt",
+      "ToString",
+      "SetActive",
+      "ShowTitleUI",
+      "OnDestroy",
+      "RemoveListener"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [
+      "AudioManager"
+    ],
+    "string_literals": [
+      "%"
+    ],
+    "numeric_literals": [
+      1,
+      100
+    ],
+    "guessed_roles": [
+      "ui",
+      "runtime",
+      "manager",
+      "player",
+      "combat"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "UI 관련 로직 포함",
+      "전투 계열 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/UI/Title/TitleUI.cs",
+    "path": "Assets/UI/Title/TitleUI.cs",
+    "file_name": "TitleUI.cs",
+    "content_hash": "fe7cdc7b8294d067c414653b351f5bb88fe2022b",
+    "size": 1416,
+    "line_count": 57,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine",
+      "UnityEngine.UI",
+      "UnityEngine.SceneManagement"
+    ],
+    "classes": [
+      {
+        "name": "TitleUI",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "TitleUI",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
+      "OnStartClicked",
+      "OnSettingClicked",
+      "OnCreditClicked",
+      "ShowTitleUI",
+      "HideTitleUI",
+      "OnDestroy"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start",
+      "OnDestroy"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "UnityEngine",
+      "UI",
       "SceneManagement",
-      "OnStartButtonClicked",
+      "Button",
+      "SettingPanel",
+      "CreditPanel",
+      "Start",
+      "AddListener",
+      "OnStartClicked",
+      "OnSettingClicked",
+      "OnCreditClicked",
       "GameManager",
       "Instance",
       "Object",
       "Destroy",
       "SceneManager",
       "LoadScene",
-      "GameScene"
+      "GameScene",
+      "HideTitleUI",
+      "SetActive",
+      "ShowTitleUI",
+      "OnDestroy",
+      "RemoveListener"
     ],
     "component_access_types": [],
     "created_types": [],
@@ -6965,10 +7406,10 @@
     "numeric_literals": [],
     "guessed_roles": [
       "scene",
-      "manager",
-      "runtime",
       "ui",
-      "save-load"
+      "manager",
+      "save-load",
+      "runtime"
     ],
     "summary_signals": [
       "런타임 컴포넌트",
