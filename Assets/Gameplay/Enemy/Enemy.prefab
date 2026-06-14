@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6652707324928656421}
   - component: {fileID: -3411571181893338422}
   - component: {fileID: -4041553433010346673}
+  - component: {fileID: -2710025502805153658}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -107,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   statsAsset: {fileID: 11400000, guid: d5f5af8a53d57f243857656a0c29b6aa, type: 2}
+  encounterDuration: 0.8
 --- !u!70 &-3411571181893338422
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -171,3 +173,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &-2710025502805153658
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545348271308257467}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 74888bf74c9958240993e19900e17daf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

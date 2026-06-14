@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IDamageable
 {
 	public enum Heading { Left, Right }
 
 	[SerializeField] private EnemyStats statsAsset;
+    [SerializeField] private float encounterDuration = 0.8f;
 
-	public EnemyStats Stats { get; private set; }
+    public EnemyStats Stats { get; private set; }
 
 	// min = left end X, max = right end X
 	public (float min, float max) MoveRange { get; private set; }
@@ -19,20 +20,25 @@ public class Enemy : MonoBehaviour
 	public TrackState TrackState { get; private set; }
 	public AttackState AttackState { get; private set; }
 
-	public bool HasAttacked { get; private set; }
-	public void MarkAttacked() => this.HasAttacked = true;
+    public EncounterState EncounterState { get; private set; }
 
-	private int currentHp;
+    public bool HasAttacked { get; private set; }
+	public void MarkAttacked() => this.HasAttacked = true;
+    public float EncounterDuration => this.encounterDuration;
+
+    private int currentHp;
 	private bool isDead;
 	private Heading heading = Heading.Right;
 	private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
-	private void Awake()
+    private void Awake()
 	{
 		this.Stats = Instantiate(this.statsAsset);
 		this.spriteRenderer = GetComponent<SpriteRenderer>();
+        this.animator = GetComponent<Animator>();
 
-		InitializeStates();
+        InitializeStates();
 	}
 
 	private void Start()
@@ -57,9 +63,9 @@ public class Enemy : MonoBehaviour
 			return;
 		if (this.HasAttacked)
 			return;
-		if (transform.position.y < this.Stats.TrackYThreshold)
-			ChangeState(this.TrackState);
-	}
+        if (transform.position.y < this.Stats.TrackYThreshold)
+            ChangeState(this.EncounterState);
+    }
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
@@ -70,12 +76,13 @@ public class Enemy : MonoBehaviour
 
 	private void InitializeStates()
 	{
-		this.IdleState = new IdleState();
-		this.MoveLeftState = new MoveState();
-		this.MoveRightState = new MoveState();
-		this.TrackState = new TrackState();
-		this.AttackState = new AttackState();
-	}
+        this.IdleState = new IdleState();
+        this.MoveLeftState = new MoveState();
+        this.MoveRightState = new MoveState();
+        this.EncounterState = new EncounterState();
+        this.TrackState = new TrackState();
+        this.AttackState = new AttackState();
+    }
 
 	public void ChangeState(IEnemyState newState)
 	{
@@ -129,20 +136,77 @@ public class Enemy : MonoBehaviour
 		this.spriteRenderer.flipX = (newHeading == Heading.Left);
 	}
 
-	public void TakeDamage(int damage, bool isCrit = false)
-	{
-		if (this.isDead) return;
-		damage = Mathf.Max(1, damage);
-		this.currentHp -= damage;
-		Color color = isCrit ? Color.yellow : Color.white;
-		DamageTextSpawner.Instance.Spawn(transform.position, damage, color);
-		if (this.currentHp <= 0) Die();
-	}
+    public void TakeDamage(int damage, bool isCrit = false)
+    {
+        if (this.isDead) return;
 
-	private void Die()
-	{
-		this.isDead = true;
-		GameManager.Instance.User.Level.AddExp(this.Stats.ExpReward);
-		Destroy(gameObject);
-	}
+        damage = Mathf.Max(1, damage);
+        this.currentHp -= damage;
+
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayEnemyHitSound();
+
+        Color color = isCrit ? Color.yellow : Color.white;
+        DamageTextSpawner.Instance.Spawn(transform.position, damage, color);
+
+        if (this.currentHp <= 0)
+        {
+            Die();
+        }
+        else
+        {
+            PlayDamagedAnimation();
+        }
+    }
+
+    private void Die()
+    {
+        if (this.isDead) return;
+
+        this.isDead = true;
+        this.currentState = null;
+
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
+            col.enabled = false;
+
+        PlayDieAnimation();
+        GameManager.Instance.User.Level.AddExp(this.Stats.ExpReward);
+        StartCoroutine(DieSequence());
+    }
+
+    private System.Collections.IEnumerator DieSequence()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
+    }
+    public void SetMoveAnimation(bool isMoving)
+    {
+        if (this.animator != null)
+            this.animator.SetBool("IsMoving", isMoving);
+    }
+
+    public void PlayEncounterAnimation()
+    {
+        if (this.animator != null)
+            this.animator.SetTrigger("Encounter");
+    }
+
+    public void PlayAttackAnimation()
+    {
+        if (this.animator != null)
+            this.animator.SetTrigger("Attack");
+    }
+
+    public void PlayDamagedAnimation()
+    {
+        if (this.animator != null)
+            this.animator.SetTrigger("Damaged");
+    }
+
+    public void PlayDieAnimation()
+    {
+        if (this.animator != null)
+            this.animator.SetTrigger("Die");
+    }
 }

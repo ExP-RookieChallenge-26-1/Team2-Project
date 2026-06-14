@@ -10,9 +10,16 @@ public class MoveState : EnemyBaseState
 		enemy.SetHeading(this == enemy.MoveLeftState
 			? Enemy.Heading.Left
 			: Enemy.Heading.Right);
-	}
+        enemy.SetMoveAnimation(true);
 
-	public override void Tick(Enemy enemy)
+    }
+
+    public override void Exit(Enemy enemy)
+    {
+        enemy.SetMoveAnimation(false);
+    }
+
+    public override void Tick(Enemy enemy)
 	{
 		// 범위 벗어나면 즉시 Idle 전환
 		bool canContinue = (this == enemy.MoveLeftState)

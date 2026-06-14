@@ -9,9 +9,11 @@ public class BossSpawnTrigger : MonoBehaviour
 
     private bool hasSpawned = false;
 
+    private static bool hasSpawnedBossOnce = false;
+
     private void Update()
     {
-        if (hasSpawned)
+        if (hasSpawned || hasSpawnedBossOnce)
             return;
 
         if (bossPrefab == null || bossSpawnPoint == null || Camera.main == null)
@@ -32,30 +34,42 @@ public class BossSpawnTrigger : MonoBehaviour
 
     private void TrySpawnBoss()
     {
-        if (hasSpawned)
+        if (hasSpawned || hasSpawnedBossOnce)
+            return;
+
+        if (bossPrefab == null || bossSpawnPoint == null || Camera.main == null)
             return;
 
         Vector3 spawnPos = bossSpawnPoint.position;
 
         Vector3 viewportPos = Camera.main.WorldToViewportPoint(spawnPos);
         viewportPos.x = Mathf.Clamp(viewportPos.x, 0.25f, 0.75f);
-        viewportPos.y = Mathf.Clamp(viewportPos.y, 0.65f, 0.85f);
+        viewportPos.y = Mathf.Clamp(viewportPos.y, 0.55f, 0.75f);
 
         spawnPos = Camera.main.ViewportToWorldPoint(viewportPos);
         spawnPos.z = 0f;
 
         GameObject bossObject = Instantiate(bossPrefab, spawnPos, Quaternion.identity);
         CowKing cowKing = bossObject.GetComponent<CowKing>();
+        Collider2D bossCollider = bossObject.GetComponent<Collider2D>();
+
+        if (bossCollider != null)
+            bossCollider.enabled = false;
 
         hasSpawned = true;
+        hasSpawnedBossOnce = true;
 
         if (cowKing != null)
-            StartCoroutine(ActivateBossDelayed(cowKing));
+            StartCoroutine(ActivateBossDelayed(cowKing, bossCollider));
     }
 
-    private IEnumerator ActivateBossDelayed(CowKing cowKing)
+    private IEnumerator ActivateBossDelayed(CowKing cowKing, Collider2D bossCollider)
     {
         yield return new WaitForSeconds(activateDelay);
+
+        if (bossCollider != null)
+            bossCollider.enabled = true;
+
         cowKing.ActivateBoss();
     }
 }

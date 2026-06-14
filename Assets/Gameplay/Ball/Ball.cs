@@ -81,6 +81,9 @@ public class Ball : MonoBehaviour
 	private void CheckOutOfBounds()
 	{
 		if (transform.position.y < -5f)
+		{
+			Debug.Log($"공이 화면 아래로 떨어짐: {transform.position}");
 			Destroy(gameObject);
+		}
 	}
 }

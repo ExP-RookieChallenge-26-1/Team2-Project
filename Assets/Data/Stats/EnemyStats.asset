@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649ef0a5156e8a346b55497f4dc612e9, type: 3}
   m_Name: EnemyStats
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStats
-  <MaxHp>k__BackingField: 10
+  <MaxHp>k__BackingField: 20
   <ExpReward>k__BackingField: 2
   <MoveSpeed>k__BackingField: 0.5
   <StateChangeRate>k__BackingField: 0.4

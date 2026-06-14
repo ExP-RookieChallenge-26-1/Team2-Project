@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 92657087609330711}
   - component: {fileID: 2900727056596515713}
   - component: {fileID: 4778841812589070396}
+  - component: {fileID: 6754879175586477595}
   m_Layer: 0
   m_Name: CowKing
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332971707984961469}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.338, y: 4.11352, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.338, y: 4, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -128,7 +129,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.00000008940697, y: 0.011128664}
+  m_Offset: {x: -0.002260819, y: 0.0005787611}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -138,7 +139,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.5548541, y: 0.5325968}
+  m_Size: {x: 0.50813293, y: 0.511497}
   m_EdgeRadius: 0
 --- !u!114 &4778841812589070396
 MonoBehaviour:
@@ -152,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d2ec7b62ae66b459cc9ad953bc2d0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CowKing
-  maxHp: 30
+  maxHp: 500
   attackPower: 1
   stateRateMove: 0.5
   stateRateAttack: 0.5
@@ -167,6 +168,28 @@ MonoBehaviour:
   maxY: 3.5
   breathPrefab: {fileID: 2855934143958481627, guid: 0d1a624cdf36dfb468ad667b4443cdfb, type: 3}
   breathSpawnPoint: {fileID: 2522864450381838763}
+--- !u!95 &6754879175586477595
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332971707984961469}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 29589c9c6ed94234780a65c5590be7fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6353455047075025486
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,8 +215,8 @@ Transform:
   m_GameObject: {fileID: 6353455047075025486}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.2, z: 0}
-  m_LocalScale: {x: 0.5, y: 15, z: 1}
+  m_LocalPosition: {x: 0, y: -0.9, z: 0}
+  m_LocalScale: {x: 0.5, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6871230497693424479}

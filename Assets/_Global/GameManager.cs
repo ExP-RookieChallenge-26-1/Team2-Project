@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private WorldStats worldStatsAsset;
 	[SerializeField] private Ball ballPrefab;
 	[SerializeField] private Paddle paddle;
-	public Paddle Paddle => this.paddle;
+    [SerializeField] private GameObject gameClearPanel;
+    public Paddle Paddle => this.paddle;
 
 	private void Awake()
 	{
@@ -57,7 +58,7 @@ public class GameManager : MonoBehaviour
 
 	private void OnGameStateChanged(GameStateMachine.State newState)
 	{
-		switch (newState)
+        switch (newState)
 		{
 			case GameStateMachine.State.Playing:
 				Time.timeScale = 1f;
@@ -99,4 +100,22 @@ public class GameManager : MonoBehaviour
 		Ball ball = Instantiate(this.ballPrefab, spawnPos, Quaternion.identity);
 		ball.Spawn();
 	}
+
+    public void OnBossDefeated()
+    {
+        Debug.Log("게임 클리어");
+
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayGameClearSound();
+
+        if (gameClearPanel != null)
+            gameClearPanel.SetActive(true);
+
+        Time.timeScale = 0f;
+    }
+    public void GoToTitle()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("TitleScene");
+    }
 }

@@ -18,23 +18,26 @@ public class BallCollision : MonoBehaviour
 
 		public readonly Type type;
 		public readonly Bounds bounds;
-		public readonly Enemy enemy;
+        public readonly IDamageable damageable;
+        public readonly Collider2D damageableCollider;
 
-		public Collision(Type type, Bounds bounds, Enemy enemy = null)
-		{
-			this.type = type;
-			this.bounds = bounds;
-			this.enemy = enemy;
-		}
-	}
+        public Collision(Type type, Bounds bounds, IDamageable damageable = null, Collider2D damageableCollider = null)
+        {
+            this.type = type;
+            this.bounds = bounds;
+            this.damageable = damageable;
+            this.damageableCollider = damageableCollider;
+        }
+    }
 
 	private Ball ball;
 	[SerializeField] private Paddle paddle;
 	private static readonly List<Collider2D> overlapBuffer = new List<Collider2D>();
 
-	private Enemy lastHitEnemy;
+    private IDamageable lastHitDamageable;
+    private Collider2D lastHitDamageableCollider;
 
-	private void Awake()
+    private void Awake()
 	{
 		this.ball = GetComponent<Ball>();
 	}
@@ -48,26 +51,20 @@ public class BallCollision : MonoBehaviour
 		ApplyCollision(closest);
 	}
 
-	private void UpdateEnemyHitState()
-	{
-		if (this.lastHitEnemy == null)
-			return;
+    private void UpdateEnemyHitState()
+    {
+        if (this.lastHitDamageable == null || this.lastHitDamageableCollider == null)
+            return;
 
-		Collider2D enemyCollider = this.lastHitEnemy.GetComponent<Collider2D>();
-		if (enemyCollider == null)
-		{
-			this.lastHitEnemy = null;
-			return;
-		}
+        bool stillTouching = IsTouching(this.lastHitDamageableCollider.bounds, this.ball.transform.position, this.ball.Stats.Radius);
+        if (!stillTouching)
+        {
+            this.lastHitDamageable = null;
+            this.lastHitDamageableCollider = null;
+        }
+    }
 
-		bool stillTouching = IsTouching(enemyCollider.bounds, this.ball.transform.position, this.ball.Stats.Radius);
-		if (!stillTouching)
-		{
-			this.lastHitEnemy = null;
-		}
-	}
-
-	private void ApplyCollision(Collision collision)
+    private void ApplyCollision(Collision collision)
 	{
 		switch (collision.type)
 		{
@@ -84,15 +81,16 @@ public class BallCollision : MonoBehaviour
 				this.ball.Physics.ApplyPaddleReflectionAlternative(collision.bounds, this.paddle);
 				break;
 
-			case Collision.Type.Enemy:
-				if (collision.enemy != null && collision.enemy != this.lastHitEnemy)
-				{
-					var (damage, isCrit) = CalculateDamage();
-					collision.enemy.TakeDamage(damage, isCrit);
-					this.lastHitEnemy = collision.enemy;
-				}
-				break;
-		}
+            case Collision.Type.Enemy:
+                if (collision.damageable != null && collision.damageable != this.lastHitDamageable)
+                {
+                    var (damage, isCrit) = CalculateDamage();
+                    collision.damageable.TakeDamage(damage, isCrit);
+                    this.lastHitDamageable = collision.damageable;
+                    this.lastHitDamageableCollider = collision.damageableCollider;
+                }
+                break;
+        }
 	}
 
 	// public static Collision DetectClosestCollision(Vector2 pos, float radius)
@@ -194,15 +192,15 @@ public class BallCollision : MonoBehaviour
 
 				collision = new Collision(Collision.Type.Terrain, tileBounds);
 			}
-			else if (hit.collider.CompareTag("Enemy"))
-			{
-				Enemy enemy = hit.collider.GetComponent<Enemy>();
-				if (enemy == null)
-					continue;
+            else if (hit.collider.CompareTag("Enemy"))
+            {
+                IDamageable damageable = hit.collider.GetComponent<IDamageable>();
+                if (damageable == null)
+                    continue;
 
-				collision = new Collision(Collision.Type.Enemy, hit.collider.bounds, enemy);
-			}
-			else
+                collision = new Collision(Collision.Type.Enemy, hit.collider.bounds, damageable, hit.collider);
+            }
+            else
 				continue;
 
 			overlap = GetMinOverlap(collision.bounds, pos, radius);
@@ -285,7 +283,7 @@ public class BallCollision : MonoBehaviour
 		return (Mathf.Max(1, Mathf.RoundToInt(damage)), isCrit);
 	}
 
-	public static bool IsTouching(Bounds bounds, Vector2 pos, float radius)
+	public static bool IsTouching(Bounds bounds, Vector2 pos, float radius) 
 	{
 		Vector2 closest;
 		Vector2 dist;

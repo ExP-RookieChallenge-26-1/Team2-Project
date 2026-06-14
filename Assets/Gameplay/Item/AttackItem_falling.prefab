@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
   itemData: {fileID: 11400000, guid: 6f4035b5ddd622d4393ce90cf4db9d96, type: 2}
+  pickupTargetType: 2
 --- !u!212 &-9089331621763001487
 SpriteRenderer:
   serializedVersion: 2

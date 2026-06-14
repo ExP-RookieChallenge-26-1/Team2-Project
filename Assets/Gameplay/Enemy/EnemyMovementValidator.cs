@@ -9,4 +9,5 @@ public static class EnemyMovementValidator
 	{
 		return enemy.transform.position.x < enemy.MoveRange.max;
 	}
+
 }

@@ -6,38 +6,47 @@ public class WorldSpawner
     private readonly GameObject[] chunkPrefabs;
     public GameObject[] Chunks { get; private set; }
 
+    private int nextChunkIndex;
+
     public WorldSpawner(World world, GameObject[] chunkPrefabs)
     {
         this.world = world;
         this.chunkPrefabs = chunkPrefabs;
         this.Chunks = new GameObject[world.Stats.ChunkCount];
+        this.nextChunkIndex = 0;
     }
 
     public void Init()
     {
         for (int i = 0; i < this.Chunks.Length; ++i)
         {
-            float startY;
-
-            startY = i * this.world.Stats.ChunkHeight;
-            this.Chunks[i] = SpawnRandomChunk(new Vector3(0f, startY, 0f));
+            float startY = i * this.world.Stats.ChunkHeight;
+            this.Chunks[i] = SpawnNextChunk(new Vector3(0f, startY, 0f));
         }
     }
 
     public void ReplaceChunk(int index, Vector3 position)
     {
         GameObject.Destroy(this.Chunks[index]);
-        this.Chunks[index] = SpawnRandomChunk(position);
+        this.Chunks[index] = SpawnNextChunk(position);
     }
 
-    private GameObject SpawnRandomChunk(Vector3 position)
+    private GameObject SpawnNextChunk(Vector3 position)
     {
-        int randomIndex;
-        GameObject chunk;
+        if (this.chunkPrefabs == null || this.chunkPrefabs.Length == 0)
+        {
+            Debug.LogError("Chunk Prefabs is empty.");
+            return null;
+        }
 
-        randomIndex = Random.Range(0, this.chunkPrefabs.Length);
-        chunk = GameObject.Instantiate(this.chunkPrefabs[randomIndex], position, Quaternion.identity);
+        GameObject chunk = GameObject.Instantiate(this.chunkPrefabs[this.nextChunkIndex], position, Quaternion.identity);
         ConfigureChunk(chunk);
+
+        this.nextChunkIndex++;
+
+        if (this.nextChunkIndex >= this.chunkPrefabs.Length)
+            this.nextChunkIndex = 0;
+
         return chunk;
     }
 
