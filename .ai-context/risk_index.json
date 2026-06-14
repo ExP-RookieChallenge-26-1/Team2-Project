@@ -25,6 +25,54 @@
     "risk_score": 95
   },
   {
+    "file_id": "Assets/Gameplay/Enemy/Enemy.cs",
+    "class_name": "Enemy",
+    "risk_flags": [
+      "update-heavy",
+      "high-coupling",
+      "getcomponent-heavy",
+      "magic-number-heavy",
+      "large-class",
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "Unity 업데이트 루프 사용",
+      "참조 타입 또는 관계 수가 많음",
+      "GetComponent/TryGetComponent 호출이 많음",
+      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
+      "파일/메서드/필드 수가 많아 책임이 커질 가능성",
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 93
+  },
+  {
+    "file_id": "Assets/Gameplay/Cowking/CowKing.cs",
+    "class_name": "CowKing",
+    "risk_flags": [
+      "update-heavy",
+      "high-coupling",
+      "magic-number-heavy",
+      "large-class",
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "Unity 업데이트 루프 사용",
+      "참조 타입 또는 관계 수가 많음",
+      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
+      "파일/메서드/필드 수가 많아 책임이 커질 가능성",
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 81
+  },
+  {
     "file_id": "Assets/Gameplay/Ball/Ball.cs",
     "class_name": "Ball",
     "risk_flags": [
@@ -62,27 +110,6 @@
       "Unity 업데이트 루프 사용",
       "Instance 또는 DontDestroyOnLoad 패턴 감지",
       "참조 타입 또는 관계 수가 많음",
-      "초기화 순서에 민감할 가능성",
-      "저장/불러오기 관련 로직 포함",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 73
-  },
-  {
-    "file_id": "Assets/Gameplay/Enemy/Enemy.cs",
-    "class_name": "Enemy",
-    "risk_flags": [
-      "update-heavy",
-      "high-coupling",
-      "large-class",
-      "init-order-sensitive",
-      "save-load-sensitive",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "Unity 업데이트 루프 사용",
-      "참조 타입 또는 관계 수가 많음",
-      "파일/메서드/필드 수가 많아 책임이 커질 가능성",
       "초기화 순서에 민감할 가능성",
       "저장/불러오기 관련 로직 포함",
       "상태 중심 또는 관리 중심 클래스일 가능성"
@@ -148,27 +175,6 @@
       "초기화 순서에 민감할 가능성",
       "저장/불러오기 관련 로직 포함",
       "UI와 런타임 책임이 한 파일에 섞였을 가능성",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 66
-  },
-  {
-    "file_id": "Assets/Gameplay/Cowking/CowKing.cs",
-    "class_name": "CowKing",
-    "risk_flags": [
-      "update-heavy",
-      "high-coupling",
-      "magic-number-heavy",
-      "init-order-sensitive",
-      "save-load-sensitive",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "Unity 업데이트 루프 사용",
-      "참조 타입 또는 관계 수가 많음",
-      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
-      "초기화 순서에 민감할 가능성",
-      "저장/불러오기 관련 로직 포함",
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
     "risk_score": 66
@@ -407,6 +413,23 @@
     "risk_score": 45
   },
   {
+    "file_id": "Assets/Gameplay/Cowking/CowKingBreath.cs",
+    "class_name": "CowKingBreath",
+    "risk_flags": [
+      "update-heavy",
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "Unity 업데이트 루프 사용",
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 40
+  },
+  {
     "file_id": "Assets/Gameplay/World/World.cs",
     "class_name": "World",
     "risk_flags": [
@@ -636,6 +659,19 @@
     "risk_score": 28
   },
   {
+    "file_id": "Assets/Gameplay/Enemy/AttackState.cs",
+    "class_name": "AttackState",
+    "risk_flags": [
+      "high-coupling",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 26
+  },
+  {
     "file_id": "Assets/Gameplay/Enemy/MoveState.cs",
     "class_name": "MoveState",
     "risk_flags": [
@@ -673,19 +709,6 @@
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
     "risk_score": 26
-  },
-  {
-    "file_id": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "class_name": "CowKingBreath",
-    "risk_flags": [
-      "update-heavy",
-      "save-load-sensitive"
-    ],
-    "risk_reasons": [
-      "Unity 업데이트 루프 사용",
-      "저장/불러오기 관련 로직 포함"
-    ],
-    "risk_score": 22
   },
   {
     "file_id": "Assets/Gameplay/Enemy/EnemyStats.cs",
@@ -771,8 +794,8 @@
     "risk_score": 8
   },
   {
-    "file_id": "Assets/Gameplay/Enemy/AttackState.cs",
-    "class_name": "AttackState",
+    "file_id": "Assets/Gameplay/Enemy/EncounterState.cs",
+    "class_name": "EncounterState",
     "risk_flags": [
       "state-owner"
     ],
@@ -838,6 +861,13 @@
   {
     "file_id": "Assets/Gameplay/Enemy/EnemyMovementValidator.cs",
     "class_name": "EnemyMovementValidator",
+    "risk_flags": [],
+    "risk_reasons": [],
+    "risk_score": 0
+  },
+  {
+    "file_id": "Assets/Gameplay/Enemy/IDamageable.cs",
+    "class_name": "IDamageable",
     "risk_flags": [],
     "risk_reasons": [],
     "risk_score": 0
