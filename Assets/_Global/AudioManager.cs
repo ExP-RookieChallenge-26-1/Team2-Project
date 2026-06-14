@@ -44,7 +44,7 @@ public class AudioManager : MonoBehaviour
 			this.audioSource.PlayOneShot(this.ballHitClip);
 		}
 	}
-<<<<<<< HEAD
+
     public void PlayEnemyHitSound()
     {
         if (this.enemyHitClip != null && this.audioSource != null)
@@ -91,7 +91,7 @@ public class AudioManager : MonoBehaviour
             this.audioSource.PlayOneShot(this.userDamagedClip);
         }
     }
-=======
+
 
 	public void SetMasterVolume(float volume)
 	{
