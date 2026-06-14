@@ -3,9 +3,9 @@
     "file_id": "Assets/_Global/AudioManager.cs",
     "path": "Assets/_Global/AudioManager.cs",
     "file_name": "AudioManager.cs",
-    "content_hash": "875400f84fd246e36b1d76db2c1853e4079cce58",
-    "size": 1752,
-    "line_count": 79,
+    "content_hash": "5eed4b51ec084a453aa16d2dcc2649dcdb6a08e3",
+    "size": 3291,
+    "line_count": 134,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -29,6 +29,12 @@
     "methods": [
       "Awake",
       "PlayBallHitSound",
+      "PlayEnemyHitSound",
+      "PlayBossHitSound",
+      "PlayBossBreathSound",
+      "PlayBossDieSound",
+      "PlayGameClearSound",
+      "PlayUserDamagedSound",
       "SetMasterVolume",
       "SetBGMVolume",
       "SetSFXVolume",
@@ -108,6 +114,13 @@
       "LoadVolumeSettings",
       "PlayBallHitSound",
       "PlayOneShot",
+      "HEAD",
+      "PlayEnemyHitSound",
+      "PlayBossHitSound",
+      "PlayBossBreathSound",
+      "PlayBossDieSound",
+      "PlayGameClearSound",
+      "PlayUserDamagedSound",
       "SetMasterVolume",
       "Clamp01",
       "SaveVolumeSettings",
@@ -139,10 +152,10 @@
     ],
     "guessed_roles": [
       "save-load",
+      "combat",
       "manager",
       "runtime",
-      "player",
-      "combat"
+      "player"
     ],
     "summary_signals": [
       "런타임 컴포넌트",
@@ -157,9 +170,9 @@
     "file_id": "Assets/_Global/GameManager.cs",
     "path": "Assets/_Global/GameManager.cs",
     "file_name": "GameManager.cs",
-    "content_hash": "93603fa67966640e5a41ae7957ce3e0bbd0fb3a2",
-    "size": 2572,
-    "line_count": 103,
+    "content_hash": "d415d254a0f02f9bdddae7b6b420596d9ac4417f",
+    "size": 3048,
+    "line_count": 122,
     "namespace": "",
     "using_list": [
       "UnityEngine",
@@ -190,7 +203,9 @@
       "OnGameStateChanged",
       "CheckBallState",
       "TriggerSpawn",
-      "Vector3"
+      "Vector3",
+      "OnBossDefeated",
+      "GoToTitle"
     ],
     "fields": [],
     "properties": [
@@ -299,7 +314,13 @@
       "ViewportToWorldPoint",
       "Vector3",
       "Quaternion",
-      "Spawn"
+      "Spawn",
+      "OnBossDefeated",
+      "Log",
+      "AudioManager",
+      "PlayGameClearSound",
+      "SetActive",
+      "GoToTitle"
     ],
     "component_access_types": [
       "GameStateMachine"
@@ -308,10 +329,13 @@
       "InputState",
       "Vector3"
     ],
-    "singleton_access_types": [],
+    "singleton_access_types": [
+      "AudioManager"
+    ],
     "string_literals": [
       "TitleScene",
-      "Paddle not found!"
+      "Paddle not found!",
+      "게임 클리어"
     ],
     "numeric_literals": [
       1,
@@ -973,9 +997,9 @@
     "file_id": "Assets/Gameplay/Ball/Ball.cs",
     "path": "Assets/Gameplay/Ball/Ball.cs",
     "file_name": "Ball.cs",
-    "content_hash": "11096bc12d8fd05fd4900789a87ef01a6f999b51",
-    "size": 2073,
-    "line_count": 92,
+    "content_hash": "33bae3e61de0a54e8df55f4a6ef31116c8da7d6c",
+    "size": 2155,
+    "line_count": 95,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -1145,6 +1169,7 @@
       "Speed",
       "Radius",
       "Vector3",
+      "Log",
       "Destroy"
     ],
     "component_access_types": [
@@ -1163,7 +1188,9 @@
     "singleton_access_types": [
       "GameManager"
     ],
-    "string_literals": [],
+    "string_literals": [
+      "공이 화면 아래로 떨어짐: {transform.position}"
+    ],
     "numeric_literals": [
       0,
       3,
@@ -1293,9 +1320,9 @@
     "file_id": "Assets/Gameplay/Ball/BallCollision.cs",
     "path": "Assets/Gameplay/Ball/BallCollision.cs",
     "file_name": "BallCollision.cs",
-    "content_hash": "4f29863043cc007208b3a3c8e3a2bae15974f6e8",
-    "size": 7371,
-    "line_count": 300,
+    "content_hash": "120f5542bdbdb33dcac751da14241b03609264c5",
+    "size": 8052,
+    "line_count": 298,
     "namespace": "",
     "using_list": [
       "System.Collections.Generic",
@@ -1357,8 +1384,15 @@
         "is_static": false
       },
       {
-        "name": "enemy",
-        "type": "Enemy",
+        "name": "damageable",
+        "type": "IDamageable",
+        "access": "public",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "damageableCollider",
+        "type": "Collider2D",
         "access": "public",
         "serialized": false,
         "is_static": false
@@ -1371,8 +1405,15 @@
         "is_static": false
       },
       {
-        "name": "lastHitEnemy",
-        "type": "Enemy",
+        "name": "lastHitDamageable",
+        "type": "IDamageable",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "lastHitDamageableCollider",
+        "type": "Collider2D",
         "access": "private",
         "serialized": false,
         "is_static": false
@@ -1573,8 +1614,8 @@
     "has_on_enable": false,
     "has_on_disable": false,
     "serialize_field_count": 0,
-    "public_field_count": 3,
-    "get_component_count": 6,
+    "public_field_count": 4,
+    "get_component_count": 5,
     "find_call_count": 0,
     "new_keyword_count": 13,
     "coroutine_count": 0,
@@ -1583,7 +1624,8 @@
     "referenced_types": [
       "Type",
       "Bounds",
-      "Enemy",
+      "IDamageable",
+      "Collider2D",
       "Ball",
       "RaycastHit2D",
       "float",
@@ -1603,7 +1645,7 @@
       "Wall",
       "Paddle",
       "Terrain",
-      "Collider2D",
+      "Enemy",
       "Awake",
       "GetComponent",
       "Tick",
@@ -1645,9 +1687,9 @@
     ],
     "component_access_types": [
       "Ball",
-      "Collider2D",
       "Tilemap",
-      "Enemy"
+      "Enemy",
+      "IDamageable"
     ],
     "created_types": [
       "List",
@@ -3302,9 +3344,9 @@
     "file_id": "Assets/Gameplay/Cowking/BossSpawnTrigger.cs",
     "path": "Assets/Gameplay/Cowking/BossSpawnTrigger.cs",
     "file_name": "BossSpawnTrigger.cs",
-    "content_hash": "c16bf200e430a3b207d545a6c1981227b292a108",
-    "size": 1699,
-    "line_count": 61,
+    "content_hash": "9f59eb9c309e3e2c2a6af1e358c0089e1b9da051",
+    "size": 2199,
+    "line_count": 75,
     "namespace": "",
     "using_list": [
       "System.Collections",
@@ -3341,6 +3383,13 @@
         "is_static": false
       },
       {
+        "name": "hasSpawnedBossOnce",
+        "type": "bool",
+        "access": "private",
+        "serialized": false,
+        "is_static": true
+      },
+      {
         "name": "spawnPos",
         "type": "Vector3",
         "access": "internal",
@@ -3362,7 +3411,7 @@
     "has_on_disable": false,
     "serialize_field_count": 0,
     "public_field_count": 0,
-    "get_component_count": 1,
+    "get_component_count": 2,
     "find_call_count": 0,
     "new_keyword_count": 1,
     "coroutine_count": 2,
@@ -3384,13 +3433,15 @@
       "Quaternion",
       "CowKing",
       "GetComponent",
+      "Collider2D",
       "StartCoroutine",
       "ActivateBossDelayed",
       "WaitForSeconds",
       "ActivateBoss"
     ],
     "component_access_types": [
-      "CowKing"
+      "CowKing",
+      "Collider2D"
     ],
     "created_types": [
       "WaitForSeconds"
@@ -3403,9 +3454,7 @@
       1,
       0.55,
       0.25,
-      0.75,
-      0.65,
-      0.85
+      0.75
     ],
     "guessed_roles": [
       "runtime",
@@ -3422,9 +3471,9 @@
     "file_id": "Assets/Gameplay/Cowking/CowKing.cs",
     "path": "Assets/Gameplay/Cowking/CowKing.cs",
     "file_name": "CowKing.cs",
-    "content_hash": "37cd0dad6a63a0aafd46a02d762e6d8098f9088f",
-    "size": 4520,
-    "line_count": 201,
+    "content_hash": "4dafa13524fd08a2d27fca446475d63e1c4d3faf",
+    "size": 7631,
+    "line_count": 324,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -3435,9 +3484,12 @@
         "kind": "class",
         "access": "public",
         "base_types": [
-          "MonoBehaviour"
+          "MonoBehaviour",
+          "IDamageable"
         ],
-        "interfaces": [],
+        "interfaces": [
+          "IDamageable"
+        ],
         "attributes": [],
         "is_partial": false,
         "is_generic": false
@@ -3452,16 +3504,24 @@
       "UpdateIdle",
       "UpdateMove",
       "UpdateAttack",
-      "GetCurrentBreathDuration",
       "DecideNextState",
+      "StartAttack",
       "StartMove",
       "Vector3",
-      "StartAttack",
       "SpawnBreath",
       "EndBreath",
       "ChangeState",
+      "DamagedRoutine",
+      "WaitForSeconds",
       "TakeDamage",
-      "Die"
+      "Die",
+      "DieSequence",
+      "Awake",
+      "SetMoveAnimation",
+      "PlayAttackAnimation",
+      "PlayDamagedAnimation",
+      "PlayAttackReadyAnimation",
+      "OnDestroy"
     ],
     "fields": [
       {
@@ -3486,6 +3546,20 @@
         "is_static": false
       },
       {
+        "name": "currentBreathDuration",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "breathTimer",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
         "name": "targetPosition",
         "type": "Vector3",
         "access": "private",
@@ -3500,6 +3574,13 @@
         "is_static": false
       },
       {
+        "name": "isDead",
+        "type": "bool",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
         "name": "isActivated",
         "type": "bool",
         "access": "private",
@@ -3507,8 +3588,22 @@
         "is_static": false
       },
       {
-        "name": "currentBreathDuration",
-        "type": "float",
+        "name": "isBreathing",
+        "type": "bool",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "canTakeDamage",
+        "type": "bool",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "animator",
+        "type": "Animator",
         "access": "private",
         "serialized": false,
         "is_static": false
@@ -3519,27 +3614,50 @@
         "access": "internal",
         "serialized": false,
         "is_static": false
+      },
+      {
+        "name": "fallSpeed",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "rotateSpeed",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "bottomY",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
       }
     ],
     "properties": [],
     "events": [],
     "unity_messages": [
       "Start",
-      "Update"
+      "Update",
+      "Awake",
+      "OnDestroy"
     ],
     "has_update": true,
     "has_fixed_update": false,
     "has_late_update": false,
-    "has_awake": false,
+    "has_awake": true,
     "has_start": true,
     "has_on_enable": false,
     "has_on_disable": false,
     "serialize_field_count": 0,
     "public_field_count": 0,
-    "get_component_count": 0,
+    "get_component_count": 2,
     "find_call_count": 0,
-    "new_keyword_count": 1,
-    "coroutine_count": 0,
+    "new_keyword_count": 3,
+    "coroutine_count": 4,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
@@ -3548,10 +3666,14 @@
       "float",
       "Vector3",
       "bool",
+      "Animator",
       "UnityEngine",
+      "IDamageable",
       "Idle",
       "Move",
       "Attack",
+      "Damaged",
+      "Die",
       "Stats",
       "State",
       "Rates",
@@ -3567,28 +3689,67 @@
       "DecideNextState",
       "MoveTowards",
       "Distance",
+      "SetMoveAnimation",
       "SpawnBreath",
-      "GetCurrentBreathDuration",
       "EndBreath",
       "StartMove",
       "StartAttack",
+      "PlayAttackReadyAnimation",
       "Instantiate",
       "Quaternion",
+      "AudioManager",
+      "Instance",
+      "PlayBossBreathSound",
       "Destroy",
+      "System",
+      "Collections",
+      "DamagedRoutine",
+      "WaitForSeconds",
       "TakeDamage",
-      "Die"
+      "Max",
+      "PlayBossHitSound",
+      "Log",
+      "PlayDamagedAnimation",
+      "StartCoroutine",
+      "PlayBossDieSound",
+      "Collider2D",
+      "GetComponent",
+      "DieSequence",
+      "Rotate",
+      "GameManager",
+      "OnBossDefeated",
+      "Awake",
+      "SetBool",
+      "IsMoving",
+      "PlayAttackAnimation",
+      "SetTrigger",
+      "AttackReady",
+      "OnDestroy"
     ],
-    "component_access_types": [],
+    "component_access_types": [
+      "Collider2D",
+      "Animator"
+    ],
     "created_types": [
-      "Vector3"
+      "Vector3",
+      "WaitForSeconds"
     ],
-    "singleton_access_types": [],
+    "singleton_access_types": [
+      "AudioManager",
+      "GameManager"
+    ],
     "string_literals": [
       "Stats",
       "State Rates",
       "Timing",
       "Move Range",
-      "Breath"
+      "Breath",
+      "우마왕 피격, 남은 체력: {currentHp}",
+      "우마왕 die 시작",
+      "IsMoving",
+      "Attack",
+      "Damaged",
+      "AttackReady"
     ],
     "numeric_literals": [
       30,
@@ -3599,11 +3760,15 @@
       5,
       2.5,
       4.5,
-      0.05
+      0.05,
+      0.2,
+      360,
+      7
     ],
     "guessed_roles": [
       "combat",
       "runtime",
+      "manager",
       "player",
       "save-load"
     ],
@@ -3611,16 +3776,17 @@
       "런타임 컴포넌트",
       "Update 기반 처리 존재",
       "전투 계열 로직 포함",
-      "저장/불러오기 관련 로직 포함"
+      "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용"
     ]
   },
   {
     "file_id": "Assets/Gameplay/Cowking/CowKingBreath.cs",
     "path": "Assets/Gameplay/Cowking/CowKingBreath.cs",
     "file_name": "CowKingBreath.cs",
-    "content_hash": "2635184b3503ac28b2c94bacace958ef29159e6b",
-    "size": 952,
-    "line_count": 44,
+    "content_hash": "b3bc5fd4ecec92d302fb44f1197fcf145543af47",
+    "size": 1214,
+    "line_count": 52,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -3642,6 +3808,7 @@
     "main_class_name": "CowKingBreath",
     "unity_type": "MonoBehaviour",
     "methods": [
+      "Start",
       "Update",
       "OnTriggerEnter2D",
       "OnTriggerExit2D"
@@ -3665,13 +3832,14 @@
     "properties": [],
     "events": [],
     "unity_messages": [
+      "Start",
       "Update"
     ],
     "has_update": true,
     "has_fixed_update": false,
     "has_late_update": false,
     "has_awake": false,
-    "has_start": false,
+    "has_start": true,
     "has_on_enable": false,
     "has_on_disable": false,
     "serialize_field_count": 0,
@@ -3686,8 +3854,14 @@
       "float",
       "bool",
       "UnityEngine",
+      "Start",
+      "Destroy",
       "Update",
       "Log",
+      "TODO",
+      "GameManager",
+      "Instance",
+      "TakePlayerDamage",
       "OnTriggerEnter2D",
       "Collider2D",
       "CompareTag",
@@ -3696,7 +3870,9 @@
     ],
     "component_access_types": [],
     "created_types": [],
-    "singleton_access_types": [],
+    "singleton_access_types": [
+      "GameManager"
+    ],
     "string_literals": [
       "브레스 피격: {damage}",
       "Paddle",
@@ -3704,10 +3880,13 @@
     ],
     "numeric_literals": [
       1,
+      6,
       0
     ],
     "guessed_roles": [
       "runtime",
+      "manager",
+      "player",
       "combat",
       "save-load"
     ],
@@ -3722,9 +3901,9 @@
     "file_id": "Assets/Gameplay/Enemy/AttackState.cs",
     "path": "Assets/Gameplay/Enemy/AttackState.cs",
     "file_name": "AttackState.cs",
-    "content_hash": "541f1ab5f4c657682ddd3bbf18e2619181ccd7ea",
-    "size": 453,
-    "line_count": 22,
+    "content_hash": "93645fea0493b2ad1e42cf32c4e2646137f6c44c",
+    "size": 798,
+    "line_count": 34,
     "namespace": "",
     "using_list": [],
     "classes": [
@@ -3745,13 +3924,26 @@
     "unity_type": "None",
     "methods": [
       "Enter",
-      "Tick",
-      "OnAttackAnimation"
+      "Tick"
     ],
     "fields": [
       {
         "name": "hasAttacked",
         "type": "bool",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "attackTimer",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "AttackDelay",
+        "type": "float",
         "access": "private",
         "serialized": false,
         "is_static": false
@@ -3777,12 +3969,15 @@
     "dont_destroy_on_load": false,
     "referenced_types": [
       "bool",
+      "float",
       "EnemyBaseState",
+      "AttackDelay",
       "Enter",
       "Enemy",
       "MarkAttacked",
-      "OnAttackAnimation",
+      "PlayAttackAnimation",
       "Tick",
+      "UnityEngine",
       "GameManager",
       "Instance",
       "User",
@@ -3790,16 +3985,22 @@
       "TakeDamage",
       "Stats",
       "AttackDamage",
+      "AudioManager",
+      "PlayUserDamagedSound",
       "ChangeState",
       "IdleState"
     ],
     "component_access_types": [],
     "created_types": [],
     "singleton_access_types": [
-      "GameManager"
+      "GameManager",
+      "AudioManager"
     ],
     "string_literals": [],
-    "numeric_literals": [],
+    "numeric_literals": [
+      0.3,
+      0
+    ],
     "guessed_roles": [
       "combat",
       "manager"
@@ -3809,12 +4010,100 @@
     ]
   },
   {
+    "file_id": "Assets/Gameplay/Enemy/EncounterState.cs",
+    "path": "Assets/Gameplay/Enemy/EncounterState.cs",
+    "file_name": "EncounterState.cs",
+    "content_hash": "1934874f695a7389d71964353c3fa732a66916e7",
+    "size": 490,
+    "line_count": 25,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "EncounterState",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "EnemyBaseState"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "EncounterState",
+    "unity_type": "None",
+    "methods": [
+      "Enter",
+      "Tick",
+      "Exit"
+    ],
+    "fields": [
+      {
+        "name": "timer",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "float",
+      "UnityEngine",
+      "EnemyBaseState",
+      "Enter",
+      "Enemy",
+      "SetMoveAnimation",
+      "PlayEncounterAnimation",
+      "Tick",
+      "EncounterDuration",
+      "ChangeState",
+      "TrackState",
+      "Exit"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      0
+    ],
+    "guessed_roles": [
+      "player",
+      "combat"
+    ],
+    "summary_signals": [
+      "전투 계열 로직 포함"
+    ]
+  },
+  {
     "file_id": "Assets/Gameplay/Enemy/Enemy.cs",
     "path": "Assets/Gameplay/Enemy/Enemy.cs",
     "file_name": "Enemy.cs",
-    "content_hash": "5ca96ee6d01d2d27bbf8925d773d9dec7d5048b0",
-    "size": 3895,
-    "line_count": 149,
+    "content_hash": "0f371f3e06a493b13427f5e84dd1e9d4a4f12fcc",
+    "size": 5629,
+    "line_count": 213,
     "namespace": "",
     "using_list": [
       "UnityEngine",
@@ -3826,9 +4115,12 @@
         "kind": "class",
         "access": "public",
         "base_types": [
-          "MonoBehaviour"
+          "MonoBehaviour",
+          "IDamageable"
         ],
-        "interfaces": [],
+        "interfaces": [
+          "IDamageable"
+        ],
         "attributes": [],
         "is_partial": false,
         "is_generic": false
@@ -3846,6 +4138,7 @@
       "InitializeStates",
       "IdleState",
       "MoveState",
+      "EncounterState",
       "TrackState",
       "AttackState",
       "ChangeState",
@@ -3854,7 +4147,14 @@
       "Vector3",
       "SetHeading",
       "TakeDamage",
-      "Die"
+      "Die",
+      "DieSequence",
+      "WaitForSeconds",
+      "SetMoveAnimation",
+      "PlayEncounterAnimation",
+      "PlayAttackAnimation",
+      "PlayDamagedAnimation",
+      "PlayDieAnimation"
     ],
     "fields": [
       {
@@ -3888,6 +4188,13 @@
       {
         "name": "spriteRenderer",
         "type": "SpriteRenderer",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "animator",
+        "type": "Animator",
         "access": "private",
         "serialized": false,
         "is_static": false
@@ -3947,6 +4254,11 @@
       },
       {
         "access": "public",
+        "type": "EncounterState",
+        "name": "EncounterState"
+      },
+      {
+        "access": "public",
         "type": "bool",
         "name": "HasAttacked"
       }
@@ -3966,10 +4278,10 @@
     "has_on_disable": false,
     "serialize_field_count": 0,
     "public_field_count": 0,
-    "get_component_count": 1,
+    "get_component_count": 3,
     "find_call_count": 0,
-    "new_keyword_count": 7,
-    "coroutine_count": 0,
+    "new_keyword_count": 9,
+    "coroutine_count": 2,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
@@ -3978,6 +4290,7 @@
       "bool",
       "Heading",
       "SpriteRenderer",
+      "Animator",
       "Vector3Int",
       "Color",
       "EnemyStats",
@@ -3985,8 +4298,10 @@
       "MoveState",
       "TrackState",
       "AttackState",
+      "EncounterState",
       "UnityEngine",
       "Tilemaps",
+      "IDamageable",
       "Left",
       "Right",
       "Stats",
@@ -3995,6 +4310,7 @@
       "MoveRightState",
       "HasAttacked",
       "MarkAttacked",
+      "EncounterDuration",
       "Awake",
       "Instantiate",
       "GetComponent",
@@ -4026,39 +4342,69 @@
       "SetHeading",
       "TakeDamage",
       "Max",
-      "DamageTextSpawner",
+      "AudioManager",
       "Instance",
+      "PlayEnemyHitSound",
+      "DamageTextSpawner",
       "Spawn",
       "Die",
+      "PlayDamagedAnimation",
+      "PlayDieAnimation",
       "GameManager",
       "User",
       "Level",
       "AddExp",
       "ExpReward",
-      "Destroy"
+      "StartCoroutine",
+      "DieSequence",
+      "System",
+      "Collections",
+      "WaitForSeconds",
+      "Destroy",
+      "SetMoveAnimation",
+      "SetBool",
+      "IsMoving",
+      "PlayEncounterAnimation",
+      "SetTrigger",
+      "Encounter",
+      "PlayAttackAnimation",
+      "Attack",
+      "Damaged"
     ],
     "component_access_types": [
-      "SpriteRenderer"
+      "SpriteRenderer",
+      "Animator",
+      "Collider2D"
     ],
     "created_types": [
       "IdleState",
       "MoveState",
+      "EncounterState",
       "TrackState",
       "AttackState",
-      "Vector3"
+      "Vector3",
+      "WaitForSeconds"
     ],
     "singleton_access_types": [
+      "AudioManager",
       "DamageTextSpawner",
       "GameManager"
     ],
     "string_literals": [
-      "Paddle"
+      "Paddle",
+      "IsMoving",
+      "Encounter",
+      "Attack",
+      "Damaged",
+      "Die"
     ],
     "numeric_literals": [
+      0.8,
       5,
       3,
       0,
-      0.1
+      0.1,
+      1
     ],
     "guessed_roles": [
       "combat",
@@ -4149,9 +4495,9 @@
     "file_id": "Assets/Gameplay/Enemy/EnemyMovementValidator.cs",
     "path": "Assets/Gameplay/Enemy/EnemyMovementValidator.cs",
     "file_name": "EnemyMovementValidator.cs",
-    "content_hash": "7b92df1782756c2b309526adfb1b71b7008b615a",
-    "size": 269,
-    "line_count": 13,
+    "content_hash": "39f37decb428c291b1017422a2582ac7c36507f9",
+    "size": 270,
+    "line_count": 14,
     "namespace": "",
     "using_list": [],
     "classes": [
@@ -4340,6 +4686,69 @@
     ]
   },
   {
+    "file_id": "Assets/Gameplay/Enemy/IDamageable.cs",
+    "path": "Assets/Gameplay/Enemy/IDamageable.cs",
+    "file_name": "IDamageable.cs",
+    "content_hash": "a298ceb00dcd5e6402f547ac2d5edbbe3f5caa34",
+    "size": 106,
+    "line_count": 6,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "IDamageable",
+        "kind": "interface",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "IDamageable",
+    "unity_type": "None",
+    "methods": [
+      "TakeDamage"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "UnityEngine",
+      "TakeDamage"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "combat"
+    ],
+    "summary_signals": [
+      "전투 계열 로직 포함"
+    ]
+  },
+  {
     "file_id": "Assets/Gameplay/Enemy/IdleState.cs",
     "path": "Assets/Gameplay/Enemy/IdleState.cs",
     "file_name": "IdleState.cs",
@@ -4510,9 +4919,9 @@
     "file_id": "Assets/Gameplay/Enemy/MoveState.cs",
     "path": "Assets/Gameplay/Enemy/MoveState.cs",
     "file_name": "MoveState.cs",
-    "content_hash": "62205ce59598d3e1bcc261a05ff148422430bc53",
-    "size": 1280,
-    "line_count": 58,
+    "content_hash": "a9d82e20ae6f14b22d0fd1836e8f3bf9eadb7609",
+    "size": 1420,
+    "line_count": 65,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -4535,6 +4944,7 @@
     "unity_type": "None",
     "methods": [
       "Enter",
+      "Exit",
       "Tick",
       "Move",
       "DecideNextState"
@@ -4585,6 +4995,8 @@
       "Heading",
       "Left",
       "Right",
+      "SetMoveAnimation",
+      "Exit",
       "Tick",
       "Idle",
       "EnemyMovementValidator",
@@ -6243,9 +6655,9 @@
     "file_id": "Assets/Gameplay/World/WorldSpawner.cs",
     "path": "Assets/Gameplay/World/WorldSpawner.cs",
     "file_name": "WorldSpawner.cs",
-    "content_hash": "782aef6a10976f2e998b64b38c23d08ae7d46405",
-    "size": 1961,
-    "line_count": 72,
+    "content_hash": "51a6be2826d710c924e4ba822269095195d90886",
+    "size": 2207,
+    "line_count": 81,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -6269,7 +6681,7 @@
       "Init",
       "Vector3",
       "ReplaceChunk",
-      "SpawnRandomChunk",
+      "SpawnNextChunk",
       "ConfigureChunk",
       "EnsureWorldItemSpawner"
     ],
@@ -6289,22 +6701,15 @@
         "is_static": false
       },
       {
+        "name": "nextChunkIndex",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
         "name": "startY",
         "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "randomIndex",
-        "type": "int",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "chunk",
-        "type": "GameObject",
         "access": "internal",
         "serialized": false,
         "is_static": false
@@ -6357,8 +6762,8 @@
     "dont_destroy_on_load": false,
     "referenced_types": [
       "World",
-      "float",
       "int",
+      "float",
       "WorldItemSpawner",
       "UnityEngine",
       "Chunks",
@@ -6367,10 +6772,13 @@
       "Init",
       "Length",
       "ChunkHeight",
-      "SpawnRandomChunk",
+      "SpawnNextChunk",
       "Vector3",
       "ReplaceChunk",
       "Destroy",
+      "LogError",
+      "Chunk",
+      "Prefabs",
       "Instantiate",
       "Quaternion",
       "ConfigureChunk",
@@ -6390,6 +6798,7 @@
     ],
     "singleton_access_types": [],
     "string_literals": [
+      "Chunk Prefabs is empty.",
       "ItemSpawnPoints"
     ],
     "numeric_literals": [
