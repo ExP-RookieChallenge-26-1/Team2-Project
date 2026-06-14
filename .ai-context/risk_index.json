@@ -760,6 +760,17 @@
     "risk_score": 12
   },
   {
+    "file_id": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "class_name": "BallAnimation",
+    "risk_flags": [
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 8
+  },
+  {
     "file_id": "Assets/Gameplay/Enemy/AttackState.cs",
     "class_name": "AttackState",
     "risk_flags": [

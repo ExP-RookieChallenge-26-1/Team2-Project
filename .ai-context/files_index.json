@@ -973,9 +973,9 @@
     "file_id": "Assets/Gameplay/Ball/Ball.cs",
     "path": "Assets/Gameplay/Ball/Ball.cs",
     "file_name": "Ball.cs",
-    "content_hash": "fa6cc3ecdc0d624d5d3efeba1720a6a089e6611b",
-    "size": 1911,
-    "line_count": 87,
+    "content_hash": "11096bc12d8fd05fd4900789a87ef01a6f999b51",
+    "size": 2073,
+    "line_count": 92,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -999,6 +999,7 @@
     "methods": [
       "Awake",
       "BallPhysics",
+      "BallAnimation",
       "Start",
       "Update",
       "Spawn",
@@ -1010,6 +1011,13 @@
       "CheckOutOfBounds"
     ],
     "fields": [
+      {
+        "name": "animation",
+        "type": "BallAnimation",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
       {
         "name": "isSpawning",
         "type": "bool",
@@ -1093,13 +1101,14 @@
     "has_on_disable": false,
     "serialize_field_count": 0,
     "public_field_count": 0,
-    "get_component_count": 4,
+    "get_component_count": 5,
     "find_call_count": 0,
-    "new_keyword_count": 3,
+    "new_keyword_count": 4,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
+      "BallAnimation",
       "bool",
       "float",
       "BallStats",
@@ -1117,6 +1126,7 @@
       "SpawnDelay",
       "Awake",
       "GetComponent",
+      "Animator",
       "Start",
       "GameManager",
       "Instance",
@@ -1141,10 +1151,12 @@
       "BallCollision",
       "BallTrajectory",
       "GiantSkill",
-      "CloneSkill"
+      "CloneSkill",
+      "Animator"
     ],
     "created_types": [
       "BallPhysics",
+      "BallAnimation",
       "Vector2",
       "Vector3"
     ],
@@ -1176,6 +1188,106 @@
       "UI 관련 로직 포함",
       "컴포넌트 조회 사용"
     ]
+  },
+  {
+    "file_id": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "path": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "file_name": "BallAnimation.cs",
+    "content_hash": "76f928264a78c75938b4b07b09c059f83a4142c8",
+    "size": 644,
+    "line_count": 33,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "BallAnimation",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "BallAnimation",
+    "unity_type": "None",
+    "methods": [
+      "BallAnimation",
+      "Tick",
+      "UpdateIdleUpDownState"
+    ],
+    "fields": [
+      {
+        "name": "animator",
+        "type": "Animator",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "ball",
+        "type": "Ball",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "isMovingUpHash",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "Animator",
+      "Ball",
+      "int",
+      "UnityEngine",
+      "StringToHash",
+      "IsMovingUp",
+      "LogError",
+      "Tick",
+      "UpdateIdleUpDownState",
+      "SetBool",
+      "Physics",
+      "Velocity"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [
+      "IsMovingUp",
+      "BallAnimation: Animator를 찾을 수 없습니다!"
+    ],
+    "numeric_literals": [
+      0
+    ],
+    "guessed_roles": [
+      "runtime"
+    ],
+    "summary_signals": []
   },
   {
     "file_id": "Assets/Gameplay/Ball/BallCollision.cs",

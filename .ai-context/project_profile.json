@@ -2,7 +2,7 @@
   "project_name": "unknown",
   "language": "C#",
   "engine_guess": "Unity",
-  "total_cs_files": 55,
+  "total_cs_files": 56,
   "mono_behaviour_files": 30,
   "scriptable_object_files": 8,
   "files_with_update": 12,
@@ -15,7 +15,7 @@
   "role_counts": {
     "save-load": 35,
     "manager": 22,
-    "runtime": 33,
+    "runtime": 34,
     "player": 20,
     "combat": 25,
     "scene": 2,
@@ -51,8 +51,8 @@
     {
       "class_name": "Ball",
       "file_id": "Assets/Gameplay/Ball/Ball.cs",
-      "relation_count": 45,
-      "referenced_type_count": 36
+      "relation_count": 49,
+      "referenced_type_count": 38
     },
     {
       "class_name": "CloneSkill",
