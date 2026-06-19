@@ -2,13 +2,33 @@ using UnityEngine;
 
 public class UserLevel : MonoBehaviour
 {
+	[System.Serializable]
+	public class UpgradePool
+	{
+		[SerializeField] private int[] upgradeIds = { 1, 2, 3, 4, 5, 6 };
+		[SerializeField] private float[] upgradeWeights = { 30f, 25f, 20f, 15f, 10f, 20f };
+
+		public int[] UpgradeIds => this.upgradeIds;
+		public float[] UpgradeWeights => this.upgradeWeights;
+
+		public UpgradePool() { }
+
+		public UpgradePool(int[] upgradeIds, float[] upgradeWeights)
+		{
+			this.upgradeIds = upgradeIds;
+			this.upgradeWeights = upgradeWeights;
+		}
+	}
+
 	[SerializeField] private int currentLevel = 1;
 	[SerializeField] private int currentExp = 0;
 	[SerializeField] private int[] requiredExpByLevel = { 10, 20, 35, 50, 70, 100 };
 
-	[Header("Default Upgrade Pool")]
-	[SerializeField] private int[] defaultUpgradeIds = { 1, 2, 3, 4, 5, 6 };
-	[SerializeField] private float[] defaultUpgradeWeights = { 30f, 25f, 20f, 15f, 10f, 20f };
+	[Header("Default Upgrade Pools")]
+	[SerializeField] private UpgradePool[] defaultUpgradePools =
+	{
+		new UpgradePool(new[] { 1, 2, 3, 4, 5, 6 }, new[] { 30f, 25f, 20f, 15f, 10f, 20f })
+	};
 
 	[SerializeField] private EnhanceUI enhanceUI;
 
@@ -43,7 +63,23 @@ public class UserLevel : MonoBehaviour
 
 	private void OpenDefaultUpgradeUI()
 	{
-		OpenUpgradeUI(this.defaultUpgradeIds, this.defaultUpgradeWeights);
+		UpgradePool upgradePool = GetDefaultUpgradePoolForLevel(this.currentLevel);
+		if (upgradePool == null)
+		{
+			Debug.LogWarning("Default upgrade pool is not assigned.");
+			return;
+		}
+
+		OpenUpgradeUI(upgradePool.UpgradeIds, upgradePool.UpgradeWeights);
+	}
+
+	public UpgradePool GetDefaultUpgradePoolForLevel(int level)
+	{
+		if (this.defaultUpgradePools == null || this.defaultUpgradePools.Length == 0)
+			return null;
+
+		int poolIndex = Mathf.Clamp(level - 2, 0, this.defaultUpgradePools.Length - 1);
+		return this.defaultUpgradePools[poolIndex];
 	}
 
 	public void OpenUpgradeUI(int[] ids, float[] weights)

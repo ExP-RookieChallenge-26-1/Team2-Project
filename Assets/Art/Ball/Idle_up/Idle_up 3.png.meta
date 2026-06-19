@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 9253933034c3bf044bba665787cd7378
+guid: 48c5735250c4140b69d618c9d458e64a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1402423466682383556
-    second: Idle_up_0
-  - first:
-      213: 8831552841608486962
-    second: Idle_up_1
-  - first:
-      213: 6110151804853870356
-    second: Idle_up_2
+      213: 2823001347551562716
+    second: Idle_up 3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,84 +96,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_up_0
+      name: Idle_up 3_0
       rect:
         serializedVersion: 2
-        x: 89
-        y: 250
-        width: 8
-        height: 6
+        x: 0
+        y: 0
+        width: 1500
+        height: 1500
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4cc764c66b8667310800000000000000
-      internalID: 1402423466682383556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_up_1
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 11
-        width: 617
-        height: 537
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2306a23948aff8a70800000000000000
-      internalID: 8831552841608486962
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_up_2
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 186
-        width: 48
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 41fd60c81be9bc450800000000000000
-      internalID: 6110151804853870356
+      spriteID: cdb8249c4c05d2720800000000000000
+      internalID: 2823001347551562716
       vertices: []
       indices: 
       edges: []
@@ -198,9 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Idle_up_0: 1402423466682383556
-      Idle_up_1: 8831552841608486962
-      Idle_up_2: 6110151804853870356
+      Idle_up 3_0: 2823001347551562716
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

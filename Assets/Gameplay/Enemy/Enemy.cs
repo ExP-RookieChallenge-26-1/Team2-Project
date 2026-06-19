@@ -34,15 +34,33 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void Awake()
 	{
-		this.Stats = Instantiate(this.statsAsset);
 		this.spriteRenderer = GetComponent<SpriteRenderer>();
         this.animator = GetComponent<Animator>();
 
         InitializeStates();
 	}
 
+	public void Initialize(EnemyStats statsAsset)
+	{
+		if (statsAsset == null)
+			return;
+
+		this.statsAsset = statsAsset;
+		this.Stats = Instantiate(statsAsset);
+	}
+
 	private void Start()
 	{
+		if (this.Stats == null)
+			Initialize(this.statsAsset);
+
+		if (this.Stats == null)
+		{
+			Debug.LogError("Enemy stats asset is missing.", this);
+			this.enabled = false;
+			return;
+		}
+
 		this.currentHp = this.Stats.MaxHp;
 
 		Tilemap tilemap = transform.parent.GetComponentInChildren<Tilemap>();

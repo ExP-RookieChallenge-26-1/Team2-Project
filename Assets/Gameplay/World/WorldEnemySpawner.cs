@@ -1,10 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class WorldEnemySpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyPrefab;
+    [FormerlySerializedAs("enemyPrefab")]
+    [SerializeField] private GameObject fallbackEnemyPrefab;
     [SerializeField] private Transform[] spawnPoints;
+    [SerializeField] private EnemySpawnData[] enemySpawnDataList;
     [SerializeField] private int minSpawnCount = 1;
     [SerializeField] private int maxSpawnCount = 2;
 
@@ -21,16 +24,15 @@ public class WorldEnemySpawner : MonoBehaviour
 
     private void SpawnEnemies()
     {
-        if (this.enemyPrefab == null || this.spawnPoints == null || this.spawnPoints.Length == 0)
+        if (this.spawnPoints == null || this.spawnPoints.Length == 0)
             return;
 
         int spawnCount = Random.Range(this.minSpawnCount, this.maxSpawnCount + 1);
-        spawnCount = Mathf.Min(spawnCount, this.spawnPoints.Length);
 
         List<int> availableIndices = new List<int>();
         for (int i = 0; i < this.spawnPoints.Length; ++i)
         {
-            if (this.spawnPoints[i] != null)
+            if (this.spawnPoints[i] != null && HasEnemyData(i))
                 availableIndices.Add(i);
         }
 
@@ -46,9 +48,34 @@ public class WorldEnemySpawner : MonoBehaviour
             if (point == null)
                 continue;
 
-            GameObject enemy = Instantiate(this.enemyPrefab, point.position, Quaternion.identity);
-            enemy.transform.SetParent(transform);
+            EnemySpawnData spawnData = GetEnemySpawnData(index);
+            GameObject enemyPrefab = spawnData != null && spawnData.EnemyPrefab != null
+                ? spawnData.EnemyPrefab
+                : this.fallbackEnemyPrefab;
+            if (enemyPrefab == null)
+                continue;
+
+            GameObject enemyObject = Instantiate(enemyPrefab, point.position, Quaternion.identity);
+            Enemy enemy = enemyObject.GetComponent<Enemy>();
+            if (enemy != null && spawnData != null)
+                enemy.Initialize(spawnData);
+
+            enemyObject.transform.SetParent(transform);
         }
+    }
+
+    private bool HasEnemyData(int index)
+    {
+        EnemySpawnData spawnData = GetEnemySpawnData(index);
+        return (spawnData != null && spawnData.EnemyPrefab != null) || this.fallbackEnemyPrefab != null;
+    }
+
+    private EnemySpawnData GetEnemySpawnData(int index)
+    {
+        if (this.enemySpawnDataList == null || index < 0 || index >= this.enemySpawnDataList.Length)
+            return null;
+
+        return this.enemySpawnDataList[index];
     }
 
     private Transform[] FindSpawnPoints(string rootName)
