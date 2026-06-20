@@ -153,16 +153,10 @@ MonoBehaviour:
   skillEventChannel: {fileID: 11400000, guid: 60ac33b9a461bce44a3f3e9d1f6182e0, type: 2}
   <Duration>k__BackingField: 5
   durationTimer: 0
-  <HasManualTrigger>k__BackingField: 1
   <ManualCooldown>k__BackingField: 10
   manualTimer: 10
-  <HasAutoTrigger>k__BackingField: 0
   <AutoCooldown>k__BackingField: 0
   autoTimer: 0
-  <RadiusMultiplierPerLevel>k__BackingField:
-  - 1.5
-  - 2
-  <SizeLevel>k__BackingField: 0
 --- !u!114 &-1598220075549925114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,10 +172,8 @@ MonoBehaviour:
   skillEventChannel: {fileID: 11400000, guid: 60ac33b9a461bce44a3f3e9d1f6182e0, type: 2}
   <Duration>k__BackingField: 0
   durationTimer: 0
-  <HasManualTrigger>k__BackingField: 1
   <ManualCooldown>k__BackingField: 10
   manualTimer: 10
-  <HasAutoTrigger>k__BackingField: 0
   <AutoCooldown>k__BackingField: 0
   autoTimer: 0
   <CloneLevel>k__BackingField: 0

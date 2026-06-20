@@ -887,9 +887,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UserLevel
   currentLevel: 1
   currentExp: 0
-  requiredExpByLevel: 0a0000001400000023000000320000004600000064000000
+  requiredExpByLevel: 020000000a0000001400000023000000320000004600000064000000
   defaultUpgradePools:
-  - upgradeIds: 010000000200000003000000040000000500000006000000
+  - upgradeIds: 65000000
     upgradeWeights:
     - 30
     - 25
@@ -1109,6 +1109,7 @@ MonoBehaviour:
   itemPrefabs:
   - {fileID: 8659160453847918638, guid: 4d1d20b7e80800b45a024dd2e5d5bfe2, type: 3}
   - {fileID: 4750646024986614682, guid: a6c24011bf635444da1a89d287174159, type: 3}
+  itemCardPools: []
   spawnInterval: 5
   minX: -2.5
   maxX: 2.5

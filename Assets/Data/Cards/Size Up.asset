@@ -22,5 +22,7 @@ MonoBehaviour:
   <Speed>k__BackingField: 0
   <BallSize>k__BackingField: 1.2
   <PaddleSizeLevel>k__BackingField: 0
-  <Skill1CooldownReductionRate>k__BackingField: 0
-  <Skill2CooldownReductionRate>k__BackingField: 0
+  <Skill1ManualCooldownReduction>k__BackingField: 0
+  <Skill1AutoCooldownReduction>k__BackingField: 0
+  <Skill2ManualCooldownReduction>k__BackingField: 0
+  <Skill2AutoCooldownReduction>k__BackingField: 0

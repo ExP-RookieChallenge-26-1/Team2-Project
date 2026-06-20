@@ -5,6 +5,7 @@ public class WorldItemSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] itemPrefabs;
     [SerializeField] private Transform[] spawnPoints;
+    [SerializeField] private ItemCardPool[] itemCardPools;
     [SerializeField] private int minSpawnCount = 1;
     [SerializeField] private int maxSpawnCount = 1;
 
@@ -35,28 +36,49 @@ public class WorldItemSpawner : MonoBehaviour
 
         int spawnCount = Random.Range(this.minSpawnCount, this.maxSpawnCount + 1);
 
-        List<Transform> validPoints = new List<Transform>();
+        List<int> validPointIndices = new List<int>();
         for (int i = 0; i < this.spawnPoints.Length; ++i)
         {
             if (this.spawnPoints[i] != null)
-                validPoints.Add(this.spawnPoints[i]);
+                validPointIndices.Add(i);
         }
 
-        spawnCount = Mathf.Min(spawnCount, validPoints.Count);
+        spawnCount = Mathf.Min(spawnCount, validPointIndices.Count);
 
         for (int i = 0; i < spawnCount; ++i)
         {
-            int pointIndex = Random.Range(0, validPoints.Count);
-            Transform point = validPoints[pointIndex];
-            validPoints.RemoveAt(pointIndex);
+            int selectedIndex = Random.Range(0, validPointIndices.Count);
+            int pointIndex = validPointIndices[selectedIndex];
+            Transform point = this.spawnPoints[pointIndex];
+            validPointIndices.RemoveAt(selectedIndex);
 
             GameObject itemPrefab = this.itemPrefabs[Random.Range(0, this.itemPrefabs.Length)];
             if (itemPrefab == null)
                 continue;
 
             GameObject item = Instantiate(itemPrefab, point.position, Quaternion.identity);
+            ApplyCardPool(item, pointIndex);
             item.transform.SetParent(transform);
         }
+    }
+
+    private void ApplyCardPool(GameObject item, int spawnPointIndex)
+    {
+        ItemPickup itemPickup = item.GetComponent<ItemPickup>();
+        ItemCardPool cardPool = GetItemCardPool(spawnPointIndex);
+
+        if (itemPickup == null || cardPool == null)
+            return;
+
+        itemPickup.SetCardPool(cardPool.CardIds, cardPool.CardWeights);
+    }
+
+    private ItemCardPool GetItemCardPool(int index)
+    {
+        if (this.itemCardPools == null || index < 0 || index >= this.itemCardPools.Length)
+            return null;
+
+        return this.itemCardPools[index];
     }
 
     private Transform[] FindSpawnPoints(string rootName)

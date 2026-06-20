@@ -22,14 +22,21 @@ public class Ball : MonoBehaviour
 		this.Physics = new BallPhysics(this);
 		this.GiantSkill = GetComponent<GiantSkill>();
 		this.CloneSkill = GetComponent<CloneSkill>();
+		this.Stats = GameManager.Instance.BallStats;
 
 		Animator animator = GetComponent<Animator>();
 		this.animation = new BallAnimation(animator, this);
-	}
-
-	private void Start()
-	{
-		this.Stats = GameManager.Instance.BallStats;
+		SetSkillStats(
+			this.Stats.Skill1HasManualTrigger,
+			this.Stats.Skill1HasAutoTrigger,
+			this.Stats.Skill1ManualCooldown,
+			this.Stats.Skill1AutoCooldown,
+			this.Stats.Skill2HasManualTrigger,
+			this.Stats.Skill2HasAutoTrigger,
+			this.Stats.Skill2ManualCooldown,
+			this.Stats.Skill2AutoCooldown,
+			this.Stats.Skill1Duration,
+			this.Stats.Skill2Duration);
 	}
 
 	private void Update()
@@ -55,6 +62,64 @@ public class Ball : MonoBehaviour
 		this.isSpawning = true;
 		this.spawnTimer = 0f;
 		this.Physics.SetVelocity(Vector2.zero);
+	}
+
+	public void SetSkillTriggerSettings(
+		bool skill1HasManualTrigger,
+		bool skill1HasAutoTrigger,
+		bool skill2HasManualTrigger,
+		bool skill2HasAutoTrigger)
+	{
+		if (this.GiantSkill != null)
+			this.GiantSkill.SetTriggerSettings(skill1HasManualTrigger, skill1HasAutoTrigger);
+
+		if (this.CloneSkill != null)
+			this.CloneSkill.SetTriggerSettings(skill2HasManualTrigger, skill2HasAutoTrigger);
+	}
+
+	public void SetSkillCooldowns(float skill1ManualCooldown, float skill1AutoCooldown, float skill2ManualCooldown, float skill2AutoCooldown)
+	{
+		if (this.GiantSkill != null)
+		{
+			this.GiantSkill.SetManualCooldown(skill1ManualCooldown);
+			this.GiantSkill.SetAutoCooldown(skill1AutoCooldown);
+		}
+
+		if (this.CloneSkill != null)
+		{
+			this.CloneSkill.SetManualCooldown(skill2ManualCooldown);
+			this.CloneSkill.SetAutoCooldown(skill2AutoCooldown);
+		}
+	}
+
+	public void SetSkillStats(
+		bool skill1HasManualTrigger,
+		bool skill1HasAutoTrigger,
+		float skill1ManualCooldown,
+		float skill1AutoCooldown,
+		bool skill2HasManualTrigger,
+		bool skill2HasAutoTrigger,
+		float skill2ManualCooldown,
+		float skill2AutoCooldown,
+		float skill1Duration,
+		float skill2Duration)
+	{
+		SetSkillTriggerSettings(
+			skill1HasManualTrigger,
+			skill1HasAutoTrigger,
+			skill2HasManualTrigger,
+			skill2HasAutoTrigger);
+		SetSkillCooldowns(
+			skill1ManualCooldown,
+			skill1AutoCooldown,
+			skill2ManualCooldown,
+			skill2AutoCooldown);
+
+		if (this.GiantSkill != null)
+			this.GiantSkill.SetDuration(skill1Duration);
+
+		if (this.CloneSkill != null)
+			this.CloneSkill.SetDuration(skill2Duration);
 	}
 
 	private void TickSpawn()

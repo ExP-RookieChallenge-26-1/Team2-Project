@@ -9,8 +9,10 @@ public class StatUpgradeCardData : CardData
 	[field: SerializeField] public float Speed { get; private set; }
 	[field: SerializeField] public float BallSize { get; private set; }
 	[field: SerializeField] public int PaddleSizeLevel { get; private set; }
-	[field: SerializeField] public float Skill1CooldownReductionRate { get; private set; }
-	[field: SerializeField] public float Skill2CooldownReductionRate { get; private set; }
+	[field: SerializeField] public float Skill1ManualCooldownReduction { get; private set; }
+	[field: SerializeField] public float Skill1AutoCooldownReduction { get; private set; }
+	[field: SerializeField] public float Skill2ManualCooldownReduction { get; private set; }
+	[field: SerializeField] public float Skill2AutoCooldownReduction { get; private set; }
 
 	public override void Apply()
 	{
@@ -30,10 +32,28 @@ public class StatUpgradeCardData : CardData
 		
 		if (this.PaddleSizeLevel != 0)
 			paddleStats.IncreasePaddleSizeLevel(this.PaddleSizeLevel);
-		
-		if (this.Skill1CooldownReductionRate != 0)
-			; // TODO
-		if (this.Skill2CooldownReductionRate != 0)
-			; // TODO
+
+		if (this.Skill1ManualCooldownReduction != 0)
+			ballStats.ReduceSkill1ManualCooldown(this.Skill1ManualCooldownReduction);
+		if (this.Skill1AutoCooldownReduction != 0)
+			ballStats.ReduceSkill1AutoCooldown(this.Skill1AutoCooldownReduction);
+		if (this.Skill2ManualCooldownReduction != 0)
+			ballStats.ReduceSkill2ManualCooldown(this.Skill2ManualCooldownReduction);
+		if (this.Skill2AutoCooldownReduction != 0)
+			ballStats.ReduceSkill2AutoCooldown(this.Skill2AutoCooldownReduction);
+
+		ApplySkillCooldownsToActiveBalls(ballStats);
+	}
+
+	private static void ApplySkillCooldownsToActiveBalls(BallStats ballStats)
+	{
+		foreach (Ball ball in Object.FindObjectsByType<Ball>(FindObjectsSortMode.None))
+		{
+			ball.SetSkillCooldowns(
+				ballStats.Skill1ManualCooldown,
+				ballStats.Skill1AutoCooldown,
+				ballStats.Skill2ManualCooldown,
+				ballStats.Skill2AutoCooldown);
+		}
 	}
 }

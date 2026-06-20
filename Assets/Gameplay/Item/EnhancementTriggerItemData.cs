@@ -8,16 +8,25 @@ public class EnhancementTriggerItemData : ItemData
 
     public override void Apply()
     {
+        Apply(this.upgradeIds, this.upgradeWeights);
+    }
+
+    public void Apply(int[] upgradeIds, float[] upgradeWeights)
+    {
         UserLevel userLevel = GameManager.Instance.User.Level;
 
-        if (this.upgradeIds != null && this.upgradeWeights != null &&
-            this.upgradeIds.Length > 0 && this.upgradeIds.Length == this.upgradeWeights.Length)
-        {
-            userLevel.OpenUpgradeUI(this.upgradeIds, this.upgradeWeights);
-            return;
-        }
+        if (IsValidUpgradePool(upgradeIds, upgradeWeights))
+            userLevel.OpenUpgradeUI(upgradeIds, upgradeWeights);
+        else
+            userLevel.OpenUpgradeUI(new int[] { 1, 2, 3, 4, 5, 6 },
+                                    new float[] { 30f, 25f, 20f, 15f, 10f, 20f });
+    }
 
-        userLevel.OpenUpgradeUI(new int[] { 1, 2, 3, 4, 5, 6 },
-                                new float[] { 30f, 25f, 20f, 15f, 10f, 20f });
+    private static bool IsValidUpgradePool(int[] upgradeIds, float[] upgradeWeights)
+    {
+        return upgradeIds != null &&
+               upgradeWeights != null &&
+               upgradeIds.Length > 0 &&
+               upgradeIds.Length == upgradeWeights.Length;
     }
 }

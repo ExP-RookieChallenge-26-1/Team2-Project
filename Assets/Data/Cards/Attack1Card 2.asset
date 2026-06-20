@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cbb54ee2c57d6744835f81931ef7e04, type: 3}
-  m_Name: Speed up
+  m_Name: Attack1Card 2
   m_EditorClassIdentifier: Assembly-CSharp::StatUpgradeCardData
-  <Id>k__BackingField: 3
-  <CardName>k__BackingField: Speed up
+  <Id>k__BackingField: 1003
+  <CardName>k__BackingField: Attack1
   <Icon>k__BackingField: {fileID: 0}
-  <Description>k__BackingField: speed up
-  <AttackPower>k__BackingField: 0
+  <Description>k__BackingField: Attack1Description
+  <AttackPower>k__BackingField: 1
   <CriticalChance>k__BackingField: 0
   <CriticalDamage>k__BackingField: 0
-  <Speed>k__BackingField: 2
+  <Speed>k__BackingField: 0
   <BallSize>k__BackingField: 0
   <PaddleSizeLevel>k__BackingField: 0
   <Skill1ManualCooldownReduction>k__BackingField: 0
