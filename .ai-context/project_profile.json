@@ -14,7 +14,7 @@
   "save_load_related_classes": 35,
   "role_counts": {
     "save-load": 35,
-    "combat": 27,
+    "combat": 28,
     "manager": 24,
     "runtime": 34,
     "player": 22,
@@ -31,16 +31,16 @@
       "referenced_type_count": 85
     },
     {
+      "class_name": "BallCollision",
+      "file_id": "Assets/Gameplay/Ball/BallCollision.cs",
+      "relation_count": 74,
+      "referenced_type_count": 64
+    },
+    {
       "class_name": "CowKing",
       "file_id": "Assets/Gameplay/Cowking/CowKing.cs",
       "relation_count": 72,
       "referenced_type_count": 64
-    },
-    {
-      "class_name": "BallCollision",
-      "file_id": "Assets/Gameplay/Ball/BallCollision.cs",
-      "relation_count": 72,
-      "referenced_type_count": 62
     },
     {
       "class_name": "BallTrajectory",
@@ -57,14 +57,14 @@
     {
       "class_name": "Ball",
       "file_id": "Assets/Gameplay/Ball/Ball.cs",
-      "relation_count": 50,
+      "relation_count": 49,
       "referenced_type_count": 39
     },
     {
       "class_name": "CloneSkill",
       "file_id": "Assets/Gameplay/Ball/CloneSkill.cs",
-      "relation_count": 40,
-      "referenced_type_count": 37
+      "relation_count": 42,
+      "referenced_type_count": 39
     },
     {
       "class_name": "EnhanceUI",
