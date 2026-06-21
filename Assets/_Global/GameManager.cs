@@ -34,13 +34,13 @@ public class GameManager : MonoBehaviour
 		this.BallStats = Instantiate(this.ballStatsAsset);
 		this.PaddleStats = Instantiate(this.paddleStatsAsset);
 		this.WorldStats = Instantiate(this.worldStatsAsset);
+		this.User = FindFirstObjectByType<User>();
+		this.paddle = FindFirstObjectByType<Paddle>();
 	}
 
 	private void Start()
 	{
 		this.State.OnChanged += OnGameStateChanged;
-		this.User = FindFirstObjectByType<User>();
-		this.paddle = FindFirstObjectByType<Paddle>();
 		TriggerSpawn();
 	}
 
