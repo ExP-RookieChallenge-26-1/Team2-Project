@@ -9,6 +9,8 @@ public class BallAnimation
 	private int isMovingUpHash;
 	private int attackHash;
 	private int cloneHash;
+	private int upsizingHash;
+	private int downsizingHash;
 
 	public BallAnimation(Ball ball)
 	{
@@ -18,6 +20,8 @@ public class BallAnimation
 		this.isMovingUpHash = Animator.StringToHash("IsMovingUp");
 		this.attackHash = Animator.StringToHash("Attack");
 		this.cloneHash = Animator.StringToHash("Clone");
+		this.upsizingHash = Animator.StringToHash("Upsizing");
+		this.downsizingHash = Animator.StringToHash("Downsizing");
 
 		if (this.animator == null)
 			Debug.LogError("BallAnimation: Animator를 찾을 수 없습니다!");
@@ -35,6 +39,16 @@ public class BallAnimation
 	private void UpdateIdleUpDownState()
 	{
 		this.animator.SetBool(this.isMovingUpHash, this.ball.Physics.Velocity.y >= 0f);
+	}
+
+	public void TriggerUpsizing()
+	{
+		this.animator.SetTrigger(this.upsizingHash);
+	}
+
+	public void TriggerDownsizing()
+	{
+		this.animator.SetTrigger(this.downsizingHash);
 	}
 
 	public void TriggerClone()
