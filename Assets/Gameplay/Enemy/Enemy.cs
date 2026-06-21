@@ -164,6 +164,10 @@ public class Enemy : MonoBehaviour, IDamageable
         if (this.isDead) return;
 
         this.isDead = true;
+
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayMobDieSound();
+
         this.currentState = null;
 
         Collider2D col = GetComponent<Collider2D>();

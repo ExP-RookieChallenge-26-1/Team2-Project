@@ -99,7 +99,9 @@ public class GameManager : MonoBehaviour
 		Vector3 spawnPos = new Vector3(centerX, this.paddle.transform.position.y + 1f, 0f);
 		Ball ball = Instantiate(this.ballPrefab, spawnPos, Quaternion.identity);
 		ball.Spawn();
-	}
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayRespawnSound();
+    }
 
     public void OnBossDefeated()
     {
