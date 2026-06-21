@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GiantSkill : BallSkill
@@ -23,12 +24,26 @@ public class GiantSkill : BallSkill
 
 	protected override void OnActivate()
 	{
-		this.ball.Stats.SetRadiusMultiplier(GetCurrentMultiplier());
+		this.ball.Animation.TriggerUpsizing();
+		StartCoroutine(UpsizingReadyRoutine());
+	}
+
+	private IEnumerator UpsizingReadyRoutine()
+	{
+		float frameTime = 1f / 12f;
+		float target = GetCurrentMultiplier();
+
+		this.ball.Stats.SetRadiusMultiplier(1f);
+		yield return new WaitForSeconds(frameTime);
+		this.ball.Stats.SetRadiusMultiplier((1f + target) / 2f);
+		yield return new WaitForSeconds(frameTime);
+		this.ball.Stats.SetRadiusMultiplier(target);
 	}
 
 	protected override void OnDeactivate()
 	{
 		this.ball.Stats.ResetRadiusMultiplier();
+		this.ball.Animation.TriggerDownsizing();
 	}
 
 	public void IncreaseSizeLevel(int amount)

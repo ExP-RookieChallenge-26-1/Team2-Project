@@ -872,7 +872,11 @@ MonoBehaviour:
   worldStatsAsset: {fileID: 11400000, guid: dfd8cae767161ea4682bb9ba0df98eac, type: 2}
   ballPrefab: {fileID: 3490022258553058108, guid: f3b113dc1038c7f43ab9e58030b17ff4, type: 3}
   paddle: {fileID: 1676666485}
+
   gameClearPanel: {fileID: 2084320668}
+
+  gameClearPanel: {fileID: 0}
+
 --- !u!114 &545965580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,6 +938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8450ea8653e05314e99c5259b33e4894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+
   ballHitClip: {fileID: 8300000, guid: a9bb7ccf778531f4892854cc872f0447, type: 3}
   enemyHitClip: {fileID: 8300000, guid: e4c2aa110dfaae34099dd51e79e2eb96, type: 3}
   bossHitClip: {fileID: 0}
@@ -957,6 +962,15 @@ MonoBehaviour:
   bossAttackOutloopClip: {fileID: 8300000, guid: 0e2dbe88c6bf5ca44b044a06b26bc1db, type: 3}
   bossAttackLoopClip: {fileID: 8300000, guid: a69a8d1dcb8c81347a7515456df69a6a, type: 3}
   bossAttackInloopClip: {fileID: 8300000, guid: 82599dd0de49c714482ecf49531f9fb0, type: 3}
+
+  ballHitClip: {fileID: 8300000, guid: 7433e9aa053034741a90570b2e941a81, type: 3}
+  enemyHitClip: {fileID: 0}
+  bossHitClip: {fileID: 0}
+  bossBreathClip: {fileID: 0}
+  bossDieClip: {fileID: 0}
+  gameClearClip: {fileID: 0}
+  userDamagedClip: {fileID: 0}
+
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
