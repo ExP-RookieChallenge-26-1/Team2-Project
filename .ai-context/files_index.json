@@ -3,9 +3,9 @@
     "file_id": "Assets/_Global/AudioManager.cs",
     "path": "Assets/_Global/AudioManager.cs",
     "file_name": "AudioManager.cs",
-    "content_hash": "709d379599489df0a14efc44defc45e991cb8035",
-    "size": 3272,
-    "line_count": 134,
+    "content_hash": "afa594e08ff6521490f70fddef73c8b2e45e51e0",
+    "size": 4908,
+    "line_count": 213,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -35,6 +35,22 @@
       "PlayBossDieSound",
       "PlayGameClearSound",
       "PlayUserDamagedSound",
+      "PlayRespawnSound",
+      "PlayGetItemSound",
+      "PlayCloneSound",
+      "PlayAttackSound",
+      "PlayAttackVoiceSound",
+      "PlayMobDieSound",
+      "PlayMobDamagedVoiceSound",
+      "PlayUpgradeSelectSound",
+      "PlayBossVoiceSound",
+      "PlayBossIdleSound",
+      "PlayBossFallSound",
+      "PlayBossEntrySound",
+      "PlayBossAttackReadySound",
+      "PlayBossAttackOutloopSound",
+      "PlayBossAttackLoopSound",
+      "PlayBossAttackInloopSound",
       "SetMasterVolume",
       "SetBGMVolume",
       "SetSFXVolume",
@@ -42,6 +58,7 @@
       "GetBGMVolume",
       "GetSFXVolume",
       "SaveVolumeSettings",
+      "PlaySfx",
       "LoadVolumeSettings"
     ],
     "fields": [
@@ -113,13 +130,29 @@
       "AddComponent",
       "LoadVolumeSettings",
       "PlayBallHitSound",
-      "PlayOneShot",
+      "PlaySfx",
       "PlayEnemyHitSound",
       "PlayBossHitSound",
       "PlayBossBreathSound",
       "PlayBossDieSound",
       "PlayGameClearSound",
       "PlayUserDamagedSound",
+      "PlayRespawnSound",
+      "PlayGetItemSound",
+      "PlayCloneSound",
+      "PlayAttackSound",
+      "PlayAttackVoiceSound",
+      "PlayMobDieSound",
+      "PlayMobDamagedVoiceSound",
+      "PlayUpgradeSelectSound",
+      "PlayBossVoiceSound",
+      "PlayBossIdleSound",
+      "PlayBossFallSound",
+      "PlayBossEntrySound",
+      "PlayBossAttackReadySound",
+      "PlayBossAttackOutloopSound",
+      "PlayBossAttackLoopSound",
+      "PlayBossAttackInloopSound",
       "SetMasterVolume",
       "Clamp01",
       "SaveVolumeSettings",
@@ -134,6 +167,7 @@
       "BGMVolume",
       "SFXVolume",
       "Save",
+      "PlayOneShot",
       "GetFloat"
     ],
     "component_access_types": [
@@ -150,8 +184,8 @@
       1
     ],
     "guessed_roles": [
-      "save-load",
       "combat",
+      "save-load",
       "manager",
       "runtime",
       "player"
@@ -169,9 +203,9 @@
     "file_id": "Assets/_Global/GameManager.cs",
     "path": "Assets/_Global/GameManager.cs",
     "file_name": "GameManager.cs",
-    "content_hash": "d415d254a0f02f9bdddae7b6b420596d9ac4417f",
-    "size": 3048,
-    "line_count": 122,
+    "content_hash": "e304f57c7c997e8e46a30f52ac670fe0ca603c5b",
+    "size": 3148,
+    "line_count": 124,
     "namespace": "",
     "using_list": [
       "UnityEngine",
@@ -314,9 +348,10 @@
       "Vector3",
       "Quaternion",
       "Spawn",
+      "AudioManager",
+      "PlayRespawnSound",
       "OnBossDefeated",
       "Log",
-      "AudioManager",
       "PlayGameClearSound",
       "SetActive",
       "GoToTitle"
@@ -3556,9 +3591,9 @@
     "file_id": "Assets/Gameplay/Cowking/CowKing.cs",
     "path": "Assets/Gameplay/Cowking/CowKing.cs",
     "file_name": "CowKing.cs",
-    "content_hash": "4dafa13524fd08a2d27fca446475d63e1c4d3faf",
-    "size": 7631,
-    "line_count": 324,
+    "content_hash": "0eadcb8f06a91e9ec1e12a90bbf2de0168648891",
+    "size": 8195,
+    "line_count": 341,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -3601,6 +3636,7 @@
       "TakeDamage",
       "Die",
       "DieSequence",
+      "PlayBossEntrySfx",
       "Awake",
       "SetMoveAnimation",
       "PlayAttackAnimation",
@@ -3779,12 +3815,16 @@
       "EndBreath",
       "StartMove",
       "StartAttack",
-      "PlayAttackReadyAnimation",
-      "Instantiate",
-      "Quaternion",
       "AudioManager",
       "Instance",
-      "PlayBossBreathSound",
+      "PlayBossVoiceSound",
+      "PlayAttackReadyAnimation",
+      "PlayBossAttackReadySound",
+      "Instantiate",
+      "Quaternion",
+      "PlayBossAttackInloopSound",
+      "PlayBossAttackLoopSound",
+      "PlayBossAttackOutloopSound",
       "Destroy",
       "System",
       "Collections",
@@ -3800,9 +3840,12 @@
       "Collider2D",
       "GetComponent",
       "DieSequence",
+      "PlayBossFallSound",
       "Rotate",
       "GameManager",
       "OnBossDefeated",
+      "PlayBossEntrySfx",
+      "PlayBossEntrySound",
       "Awake",
       "SetBool",
       "IsMoving",
@@ -3830,7 +3873,6 @@
       "Move Range",
       "Breath",
       "우마왕 피격, 남은 체력: {currentHp}",
-      "우마왕 die 시작",
       "IsMoving",
       "Attack",
       "Damaged",
@@ -4186,9 +4228,9 @@
     "file_id": "Assets/Gameplay/Enemy/Enemy.cs",
     "path": "Assets/Gameplay/Enemy/Enemy.cs",
     "file_name": "Enemy.cs",
-    "content_hash": "0f371f3e06a493b13427f5e84dd1e9d4a4f12fcc",
-    "size": 5629,
-    "line_count": 213,
+    "content_hash": "b88402363ff0dafd94496c977067d8b476ceaabb",
+    "size": 5727,
+    "line_count": 217,
     "namespace": "",
     "using_list": [
       "UnityEngine",
@@ -4434,6 +4476,7 @@
       "Spawn",
       "Die",
       "PlayDamagedAnimation",
+      "PlayMobDieSound",
       "PlayDieAnimation",
       "GameManager",
       "User",
@@ -5635,9 +5678,9 @@
     "file_id": "Assets/Gameplay/Item/ItemPickup.cs",
     "path": "Assets/Gameplay/Item/ItemPickup.cs",
     "file_name": "ItemPickup.cs",
-    "content_hash": "3b5d23e804266009ce130fa0f5dc5f027ef5dabd",
-    "size": 2581,
-    "line_count": 93,
+    "content_hash": "6e7094066046e4dd3cadea116215dd3214c2850a",
+    "size": 2679,
+    "line_count": 96,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -5767,6 +5810,8 @@
       "Radius",
       "Intersects",
       "Log",
+      "AudioManager",
+      "PlayGetItemSound",
       "Apply",
       "Destroy"
     ],
@@ -5776,7 +5821,8 @@
     ],
     "created_types": [],
     "singleton_access_types": [
-      "GameManager"
+      "GameManager",
+      "AudioManager"
     ],
     "string_literals": [
       "아이템 획득: {this.itemData.name}"
@@ -7181,9 +7227,9 @@
     "file_id": "Assets/UI/Enhancement/CardSlotUI.cs",
     "path": "Assets/UI/Enhancement/CardSlotUI.cs",
     "file_name": "CardSlotUI.cs",
-    "content_hash": "eedecee80273298244ce5671ae4b389d08b4a33b",
-    "size": 1273,
-    "line_count": 54,
+    "content_hash": "c984a49bc74bbfd389b483d4a14fd56eccd56b0c",
+    "size": 1383,
+    "line_count": 57,
     "namespace": "",
     "using_list": [
       "TMPro",
@@ -7285,6 +7331,9 @@
       "AddListener",
       "OnClickCard",
       "SetSelected",
+      "AudioManager",
+      "Instance",
+      "PlayUpgradeSelectSound",
       "SelectCard",
       "GetCard"
     ],
@@ -7292,7 +7341,9 @@
     "created_types": [
       "Vector2"
     ],
-    "singleton_access_types": [],
+    "singleton_access_types": [
+      "AudioManager"
+    ],
     "string_literals": [],
     "numeric_literals": [
       0,
@@ -7300,10 +7351,10 @@
     ],
     "guessed_roles": [
       "ui",
+      "manager",
       "runtime",
       "player",
-      "inventory",
-      "data"
+      "inventory"
     ],
     "summary_signals": [
       "런타임 컴포넌트",
@@ -7315,9 +7366,9 @@
     "file_id": "Assets/UI/Enhancement/EnhanceUI.cs",
     "path": "Assets/UI/Enhancement/EnhanceUI.cs",
     "file_name": "EnhanceUI.cs",
-    "content_hash": "ffc89c6c08bd8f364ddc43008868ec61e0425203",
-    "size": 2149,
-    "line_count": 89,
+    "content_hash": "2a8a11c18b687fa676fec83250c1a100cc0ae056",
+    "size": 2257,
+    "line_count": 92,
     "namespace": "",
     "using_list": [
       "System.Collections.Generic",
@@ -7436,6 +7487,8 @@
       "Setup",
       "SelectCard",
       "SetSelected",
+      "AudioManager",
+      "PlayUpgradeSelectSound",
       "Apply",
       "Change",
       "GameStateMachine",
@@ -7446,7 +7499,8 @@
       "List"
     ],
     "singleton_access_types": [
-      "GameManager"
+      "GameManager",
+      "AudioManager"
     ],
     "string_literals": [],
     "numeric_literals": [],
