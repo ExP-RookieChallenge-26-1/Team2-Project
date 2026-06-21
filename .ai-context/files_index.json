@@ -203,7 +203,7 @@
     "file_id": "Assets/_Global/GameManager.cs",
     "path": "Assets/_Global/GameManager.cs",
     "file_name": "GameManager.cs",
-    "content_hash": "e304f57c7c997e8e46a30f52ac670fe0ca603c5b",
+    "content_hash": "621b70d431e6d17fc2c41214755c0f1b01bd9dca",
     "size": 3148,
     "line_count": 124,
     "namespace": "",
@@ -319,10 +319,10 @@
       "Destroy",
       "GetComponent",
       "Instantiate",
+      "FindFirstObjectByType",
       "Start",
       "OnChanged",
       "OnGameStateChanged",
-      "FindFirstObjectByType",
       "TriggerSpawn",
       "Update",
       "Tick",
@@ -809,11 +809,12 @@
     "file_id": "Assets/_Global/UserHealth.cs",
     "path": "Assets/_Global/UserHealth.cs",
     "file_name": "UserHealth.cs",
-    "content_hash": "a0f16fc42dc8cacf5228e59089daeaa3e2ba2073",
-    "size": 546,
-    "line_count": 26,
+    "content_hash": "c7b81a488e0735d4e822998082219d39d46ff3d5",
+    "size": 757,
+    "line_count": 36,
     "namespace": "",
     "using_list": [
+      "System",
       "UnityEngine"
     ],
     "classes": [
@@ -834,6 +835,7 @@
     "unity_type": "MonoBehaviour",
     "methods": [
       "Awake",
+      "Start",
       "TakeDamage"
     ],
     "fields": [],
@@ -846,13 +848,14 @@
     ],
     "events": [],
     "unity_messages": [
-      "Awake"
+      "Awake",
+      "Start"
     ],
     "has_update": false,
     "has_fixed_update": false,
     "has_late_update": false,
     "has_awake": true,
-    "has_start": false,
+    "has_start": true,
     "has_on_enable": false,
     "has_on_disable": false,
     "serialize_field_count": 0,
@@ -865,10 +868,14 @@
     "dont_destroy_on_load": false,
     "referenced_types": [
       "int",
+      "System",
       "UnityEngine",
       "MaxHp",
       "CurrentHp",
+      "OnHpChanged",
       "Awake",
+      "Start",
+      "Invoke",
       "TakeDamage",
       "DamageTextSpawner",
       "Instance",
@@ -892,9 +899,9 @@
       3
     ],
     "guessed_roles": [
+      "runtime",
       "combat",
       "manager",
-      "runtime",
       "save-load"
     ],
     "summary_signals": [
@@ -907,11 +914,12 @@
     "file_id": "Assets/_Global/UserLevel.cs",
     "path": "Assets/_Global/UserLevel.cs",
     "file_name": "UserLevel.cs",
-    "content_hash": "e96009b57579b8aadb22a2b5f1e345ae91529e87",
-    "size": 1852,
-    "line_count": 68,
+    "content_hash": "0d0aee3e1f454346d522ae1e227bc8ca1d4dd841",
+    "size": 2111,
+    "line_count": 75,
     "namespace": "",
     "using_list": [
+      "System",
       "UnityEngine"
     ],
     "classes": [
@@ -959,6 +967,7 @@
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
+      "System",
       "UnityEngine",
       "Default",
       "Upgrade",
@@ -966,13 +975,16 @@
       "EnhanceUI",
       "CurrentLevel",
       "CurrentExp",
+      "RequiredExp",
+      "Length",
+      "OnExpChanged",
       "Start",
       "SetActive",
       "AddExp",
       "Log",
       "EXP",
       "CheckLevelUp",
-      "Length",
+      "Invoke",
       "OpenDefaultUpgradeUI",
       "OpenUpgradeUI",
       "LogWarning",
@@ -7514,6 +7526,310 @@
     "summary_signals": [
       "런타임 컴포넌트",
       "UI 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/UI/HUD/EXPBarUI.cs",
+    "path": "Assets/UI/HUD/EXPBarUI.cs",
+    "file_name": "EXPBarUI.cs",
+    "content_hash": "b4d675dcaf2d05127ab57463754d7e52dd8db3b5",
+    "size": 1531,
+    "line_count": 52,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "EXPBarUI",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "EXPBarUI",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Awake",
+      "Start",
+      "OnDestroy",
+      "OnExpChanged",
+      "SetFill",
+      "Vector3"
+    ],
+    "fields": [
+      {
+        "name": "spriteRenderer",
+        "type": "SpriteRenderer",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "initialLocalPos",
+        "type": "Vector3",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "initialLocalScale",
+        "type": "Vector3",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "spriteHalfWidth",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "level",
+        "type": "var",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "level",
+        "type": "var",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "newScaleX",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Awake",
+      "Start",
+      "OnDestroy"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 2,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "SpriteRenderer",
+      "Vector3",
+      "float",
+      "UnityEngine",
+      "Awake",
+      "GetComponent",
+      "Start",
+      "GameManager",
+      "Instance",
+      "User",
+      "Level",
+      "OnExpChanged",
+      "SetFill",
+      "CurrentExp",
+      "RequiredExp",
+      "OnDestroy",
+      "Clamp01"
+    ],
+    "component_access_types": [
+      "SpriteRenderer"
+    ],
+    "created_types": [
+      "Vector3"
+    ],
+    "singleton_access_types": [
+      "GameManager"
+    ],
+    "string_literals": [],
+    "numeric_literals": [
+      1
+    ],
+    "guessed_roles": [
+      "runtime",
+      "manager",
+      "ui"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "UI 관련 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
+    "file_id": "Assets/UI/HUD/HPBarUI.cs",
+    "path": "Assets/UI/HUD/HPBarUI.cs",
+    "file_name": "HPBarUI.cs",
+    "content_hash": "e954b8aabf810a29140824fab851bdc0ecef3696",
+    "size": 1630,
+    "line_count": 53,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "HPBarUI",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "HPBarUI",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Awake",
+      "Start",
+      "OnDestroy",
+      "OnHpChanged",
+      "SetFill",
+      "Vector3"
+    ],
+    "fields": [
+      {
+        "name": "spriteRenderer",
+        "type": "SpriteRenderer",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "initialLocalPos",
+        "type": "Vector3",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "initialLocalScale",
+        "type": "Vector3",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "spriteHalfWidth",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "health",
+        "type": "var",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "health",
+        "type": "var",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "newScaleX",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Awake",
+      "Start",
+      "OnDestroy"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 2,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "SpriteRenderer",
+      "Vector3",
+      "float",
+      "UnityEngine",
+      "Awake",
+      "GetComponent",
+      "Start",
+      "GameManager",
+      "Instance",
+      "User",
+      "Health",
+      "OnHpChanged",
+      "SetFill",
+      "CurrentHp",
+      "MaxHp",
+      "OnDestroy",
+      "Clamp01"
+    ],
+    "component_access_types": [
+      "SpriteRenderer"
+    ],
+    "created_types": [
+      "Vector3"
+    ],
+    "singleton_access_types": [
+      "GameManager"
+    ],
+    "string_literals": [],
+    "numeric_literals": [
+      1
+    ],
+    "guessed_roles": [
+      "runtime",
+      "manager",
+      "ui",
+      "combat"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "UI 관련 로직 포함",
+      "전투 계열 로직 포함",
+      "컴포넌트 조회 사용"
     ]
   },
   {

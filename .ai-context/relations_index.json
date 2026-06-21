@@ -1241,7 +1241,21 @@
   {
     "from_file": "Assets/_Global/UserHealth.cs",
     "from_class": "UserHealth",
+    "to_type": "Invoke",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
     "to_type": "MaxHp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "OnHpChanged",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1262,7 +1276,21 @@
   {
     "from_file": "Assets/_Global/UserHealth.cs",
     "from_class": "UserHealth",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
     "to_type": "State",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "System",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1381,6 +1409,13 @@
   {
     "from_file": "Assets/_Global/UserLevel.cs",
     "from_class": "UserLevel",
+    "to_type": "Invoke",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
     "to_type": "Length",
     "relation_type": "uses",
     "strength": 1
@@ -1402,6 +1437,13 @@
   {
     "from_file": "Assets/_Global/UserLevel.cs",
     "from_class": "UserLevel",
+    "to_type": "OnExpChanged",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
     "to_type": "OpenDefaultUpgradeUI",
     "relation_type": "uses",
     "strength": 1
@@ -1417,6 +1459,13 @@
     "from_file": "Assets/_Global/UserLevel.cs",
     "from_class": "UserLevel",
     "to_type": "Pool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "RequiredExp",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1445,6 +1494,13 @@
     "from_file": "Assets/_Global/UserLevel.cs",
     "from_class": "UserLevel",
     "to_type": "State",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "System",
     "relation_type": "uses",
     "strength": 1
   },
@@ -9992,6 +10048,300 @@
     "from_file": "Assets/UI/Enhancement/EnhanceUI.cs",
     "from_class": "EnhanceUI",
     "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "SpriteRenderer",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "Vector3",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "GameManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "Clamp01",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "CurrentExp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "Level",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "OnDestroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "OnExpChanged",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "RequiredExp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "SetFill",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "SpriteRenderer",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "User",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "Vector3",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "SpriteRenderer",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "Vector3",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "GameManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "Clamp01",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "CurrentHp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "Health",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "MaxHp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "OnDestroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "OnHpChanged",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "SetFill",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "SpriteRenderer",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "User",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "Vector3",
     "relation_type": "uses",
     "strength": 1
   },

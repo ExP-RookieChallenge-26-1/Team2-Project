@@ -296,6 +296,23 @@
     "risk_score": 56
   },
   {
+    "file_id": "Assets/_Global/UserHealth.cs",
+    "class_name": "UserHealth",
+    "risk_flags": [
+      "high-coupling",
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 48
+  },
+  {
     "file_id": "Assets/Gameplay/Ball/BallSkill.cs",
     "class_name": "BallSkill",
     "risk_flags": [
@@ -366,6 +383,40 @@
   {
     "file_id": "Assets/UI/Enhancement/EnhanceUI.cs",
     "class_name": "EnhanceUI",
+    "risk_flags": [
+      "high-coupling",
+      "init-order-sensitive",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "초기화 순서에 민감할 가능성",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 46
+  },
+  {
+    "file_id": "Assets/UI/HUD/EXPBarUI.cs",
+    "class_name": "EXPBarUI",
+    "risk_flags": [
+      "high-coupling",
+      "init-order-sensitive",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "초기화 순서에 민감할 가능성",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 46
+  },
+  {
+    "file_id": "Assets/UI/HUD/HPBarUI.cs",
+    "class_name": "HPBarUI",
     "risk_flags": [
       "high-coupling",
       "init-order-sensitive",
@@ -584,21 +635,6 @@
       "UI와 런타임 책임이 한 파일에 섞였을 가능성"
     ],
     "risk_score": 32
-  },
-  {
-    "file_id": "Assets/_Global/UserHealth.cs",
-    "class_name": "UserHealth",
-    "risk_flags": [
-      "init-order-sensitive",
-      "save-load-sensitive",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "초기화 순서에 민감할 가능성",
-      "저장/불러오기 관련 로직 포함",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 30
   },
   {
     "file_id": "Assets/Gameplay/Item/FallingItem.cs",
