@@ -39,7 +39,10 @@ public class CardSlotUI : MonoBehaviour
 
 	private void OnClickCard()
 	{
-		this.parentUI.SelectCard(this.slotIndex);
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayUpgradeSelectSound();
+
+        this.parentUI.SelectCard(this.slotIndex);
 	}
 	
 	public void SetSelected(bool selected)

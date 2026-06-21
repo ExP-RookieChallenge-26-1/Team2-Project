@@ -135,7 +135,49 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
+    "to_type": "PlayAttackSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayAttackVoiceSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
     "to_type": "PlayBallHitSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayBossAttackInloopSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayBossAttackLoopSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayBossAttackOutloopSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayBossAttackReadySound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -156,7 +198,42 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
+    "to_type": "PlayBossEntrySound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayBossFallSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
     "to_type": "PlayBossHitSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayBossIdleSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayBossVoiceSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayCloneSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -184,7 +261,49 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
+    "to_type": "PlayGetItemSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayMobDamagedVoiceSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayMobDieSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
     "to_type": "PlayOneShot",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayRespawnSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlaySfx",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayUpgradeSelectSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -528,6 +647,13 @@
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
     "to_type": "Playing",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "PlayRespawnSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1346,13 +1472,6 @@
   {
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
-    "to_type": "Animator",
-    "relation_type": "component-access",
-    "strength": 3
-  },
-  {
-    "from_file": "Assets/Gameplay/Ball/Ball.cs",
-    "from_class": "Ball",
     "to_type": "BallCollision",
     "relation_type": "component-access",
     "strength": 3
@@ -1423,7 +1542,7 @@
   {
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
-    "to_type": "Animator",
+    "to_type": "Animation",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1697,6 +1816,27 @@
     "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
     "from_class": "BallAnimation",
     "to_type": "Animator",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "SpriteRenderer",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "Animator",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "Attack",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1704,6 +1844,27 @@
     "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
     "from_class": "BallAnimation",
     "to_type": "Ball",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "Clone",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "Downsizing",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "GetComponent",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1745,6 +1906,20 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
     "from_class": "BallAnimation",
+    "to_type": "SetTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "SpriteRenderer",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
     "to_type": "StringToHash",
     "relation_type": "uses",
     "strength": 1
@@ -1759,6 +1934,34 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
     "from_class": "BallAnimation",
+    "to_type": "TriggerAttack",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "TriggerClone",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "TriggerDownsizing",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "TriggerUpsizing",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
     "to_type": "UnityEngine",
     "relation_type": "uses",
     "strength": 1
@@ -1766,7 +1969,21 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
     "from_class": "BallAnimation",
+    "to_type": "UpdateFlipState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
     "to_type": "UpdateIdleUpDownState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "Upsizing",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1846,6 +2063,13 @@
     "to_type": "AudioManager",
     "relation_type": "singleton-access",
     "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "Animation",
+    "relation_type": "uses",
+    "strength": 1
   },
   {
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
@@ -2215,6 +2439,13 @@
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
     "to_type": "Tilemaps",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "TriggerAttack",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3383,6 +3614,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/CloneSkill.cs",
     "from_class": "CloneSkill",
+    "to_type": "Animation",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/CloneSkill.cs",
+    "from_class": "CloneSkill",
     "to_type": "Ball",
     "relation_type": "uses",
     "strength": 1
@@ -3614,6 +3852,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/CloneSkill.cs",
     "from_class": "CloneSkill",
+    "to_type": "TriggerClone",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/CloneSkill.cs",
+    "from_class": "CloneSkill",
     "to_type": "TryManualActivate",
     "relation_type": "uses",
     "strength": 1
@@ -3642,9 +3887,23 @@
   {
     "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
     "from_class": "GiantSkill",
+    "to_type": "WaitForSeconds",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
+    "from_class": "GiantSkill",
     "to_type": "BallSkill",
     "relation_type": "inherits",
     "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
+    "from_class": "GiantSkill",
+    "to_type": "Animation",
+    "relation_type": "uses",
+    "strength": 1
   },
   {
     "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
@@ -3664,6 +3923,13 @@
     "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
     "from_class": "GiantSkill",
     "to_type": "Clamp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
+    "from_class": "GiantSkill",
+    "to_type": "Collections",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3768,6 +4034,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
     "from_class": "GiantSkill",
+    "to_type": "StartCoroutine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
+    "from_class": "GiantSkill",
     "to_type": "Stats",
     "relation_type": "uses",
     "strength": 1
@@ -3789,6 +4062,20 @@
   {
     "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
     "from_class": "GiantSkill",
+    "to_type": "TriggerDownsizing",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
+    "from_class": "GiantSkill",
+    "to_type": "TriggerUpsizing",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
+    "from_class": "GiantSkill",
     "to_type": "TryManualActivate",
     "relation_type": "uses",
     "strength": 1
@@ -3804,6 +4091,20 @@
     "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
     "from_class": "GiantSkill",
     "to_type": "Unsubscribe",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
+    "from_class": "GiantSkill",
+    "to_type": "UpsizingReadyRoutine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
+    "from_class": "GiantSkill",
+    "to_type": "WaitForSeconds",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4902,7 +5203,28 @@
   {
     "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
     "from_class": "CowKing",
-    "to_type": "PlayBossBreathSound",
+    "to_type": "PlayBossAttackInloopSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
+    "to_type": "PlayBossAttackLoopSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
+    "to_type": "PlayBossAttackOutloopSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
+    "to_type": "PlayBossAttackReadySound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4916,7 +5238,35 @@
   {
     "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
     "from_class": "CowKing",
+    "to_type": "PlayBossEntrySfx",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
+    "to_type": "PlayBossEntrySound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
+    "to_type": "PlayBossFallSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
     "to_type": "PlayBossHitSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
+    "to_type": "PlayBossVoiceSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -6002,6 +6352,13 @@
     "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
     "from_class": "Enemy",
     "to_type": "PlayEnemyHitSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "PlayMobDieSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7310,6 +7667,13 @@
   {
     "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
     "from_class": "ItemPickup",
+    "to_type": "AudioManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
     "to_type": "GameManager",
     "relation_type": "singleton-access",
     "strength": 4
@@ -7318,6 +7682,13 @@
     "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
     "from_class": "ItemPickup",
     "to_type": "Apply",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
+    "to_type": "AudioManager",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7493,6 +7864,13 @@
     "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
     "from_class": "ItemPickup",
     "to_type": "PickupTargetType",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
+    "to_type": "PlayGetItemSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -9144,7 +9522,21 @@
   {
     "from_file": "Assets/UI/Enhancement/CardSlotUI.cs",
     "from_class": "CardSlotUI",
+    "to_type": "AudioManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
     "to_type": "AddListener",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "AudioManager",
     "relation_type": "uses",
     "strength": 1
   },
@@ -9214,6 +9606,13 @@
   {
     "from_file": "Assets/UI/Enhancement/CardSlotUI.cs",
     "from_class": "CardSlotUI",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
     "to_type": "int",
     "relation_type": "uses",
     "strength": 1
@@ -9222,6 +9621,13 @@
     "from_file": "Assets/UI/Enhancement/CardSlotUI.cs",
     "from_class": "CardSlotUI",
     "to_type": "OnClickCard",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "PlayUpgradeSelectSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -9312,6 +9718,13 @@
   {
     "from_file": "Assets/UI/Enhancement/EnhanceUI.cs",
     "from_class": "EnhanceUI",
+    "to_type": "AudioManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
     "to_type": "GameManager",
     "relation_type": "singleton-access",
     "strength": 4
@@ -9327,6 +9740,13 @@
     "from_file": "Assets/UI/Enhancement/EnhanceUI.cs",
     "from_class": "EnhanceUI",
     "to_type": "Apply",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "AudioManager",
     "relation_type": "uses",
     "strength": 1
   },
@@ -9474,6 +9894,13 @@
     "from_file": "Assets/UI/Enhancement/EnhanceUI.cs",
     "from_class": "EnhanceUI",
     "to_type": "Playing",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "PlayUpgradeSelectSound",
     "relation_type": "uses",
     "strength": 1
   },

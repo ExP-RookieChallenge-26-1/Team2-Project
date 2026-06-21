@@ -87,6 +87,9 @@ public class ItemPickup : MonoBehaviour
     {
         this.isConsumed = true;
         Debug.Log($"아이템 획득: {this.itemData.name}");
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayGetItemSound();
+
         this.itemData.Apply();
         Destroy(gameObject);
     }
