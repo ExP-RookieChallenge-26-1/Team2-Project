@@ -2,33 +2,33 @@
   "project_name": "unknown",
   "language": "C#",
   "engine_guess": "Unity",
-  "total_cs_files": 60,
+  "total_cs_files": 64,
   "mono_behaviour_files": 32,
   "scriptable_object_files": 8,
   "files_with_update": 12,
   "files_with_fixed_update": 0,
   "files_with_late_update": 0,
   "singleton_candidates": 3,
-  "manager_like_classes": 27,
+  "manager_like_classes": 29,
   "ui_related_classes": 16,
-  "save_load_related_classes": 35,
+  "save_load_related_classes": 38,
   "role_counts": {
-    "combat": 29,
-    "save-load": 35,
-    "manager": 27,
+    "combat": 31,
+    "save-load": 38,
+    "manager": 29,
     "runtime": 36,
-    "player": 22,
+    "player": 23,
     "scene": 2,
-    "data": 16,
+    "data": 19,
     "ui": 16,
-    "inventory": 10
+    "inventory": 11
   },
   "high_coupling_classes": [
     {
       "class_name": "Enemy",
       "file_id": "Assets/Gameplay/Enemy/Enemy.cs",
-      "relation_count": 101,
-      "referenced_type_count": 86
+      "relation_count": 103,
+      "referenced_type_count": 88
     },
     {
       "class_name": "CowKing",
@@ -49,6 +49,12 @@
       "referenced_type_count": 55
     },
     {
+      "class_name": "Ball",
+      "file_id": "Assets/Gameplay/Ball/Ball.cs",
+      "relation_count": 65,
+      "referenced_type_count": 55
+    },
+    {
       "class_name": "GameManager",
       "file_id": "Assets/_Global/GameManager.cs",
       "relation_count": 59,
@@ -61,28 +67,22 @@
       "referenced_type_count": 51
     },
     {
-      "class_name": "Ball",
-      "file_id": "Assets/Gameplay/Ball/Ball.cs",
-      "relation_count": 49,
-      "referenced_type_count": 39
-    },
-    {
-      "class_name": "CloneSkill",
-      "file_id": "Assets/Gameplay/Ball/CloneSkill.cs",
-      "relation_count": 42,
-      "referenced_type_count": 39
-    },
-    {
-      "class_name": "EnhanceUI",
-      "file_id": "Assets/UI/Enhancement/EnhanceUI.cs",
-      "relation_count": 42,
-      "referenced_type_count": 38
+      "class_name": "BallStats",
+      "file_id": "Assets/Gameplay/Ball/BallStats.cs",
+      "relation_count": 47,
+      "referenced_type_count": 46
     },
     {
       "class_name": "ItemPickup",
       "file_id": "Assets/Gameplay/Item/ItemPickup.cs",
-      "relation_count": 42,
-      "referenced_type_count": 37
+      "relation_count": 49,
+      "referenced_type_count": 44
+    },
+    {
+      "class_name": "StatUpgradeCardData",
+      "file_id": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+      "relation_count": 47,
+      "referenced_type_count": 45
     }
   ],
   "high_risk_classes": [

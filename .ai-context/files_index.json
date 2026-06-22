@@ -914,9 +914,9 @@
     "file_id": "Assets/_Global/UserLevel.cs",
     "path": "Assets/_Global/UserLevel.cs",
     "file_name": "UserLevel.cs",
-    "content_hash": "0d0aee3e1f454346d522ae1e227bc8ca1d4dd841",
-    "size": 2111,
-    "line_count": 75,
+    "content_hash": "f8c559fb7427ec3cb0d5e37c88f3a985ed0b7916",
+    "size": 3068,
+    "line_count": 111,
     "namespace": "",
     "using_list": [
       "System",
@@ -934,15 +934,27 @@
         "attributes": [],
         "is_partial": false,
         "is_generic": false
+      },
+      {
+        "name": "UpgradePool",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
       }
     ],
     "main_class_name": "UserLevel",
     "unity_type": "MonoBehaviour",
     "methods": [
+      "UpgradePool",
       "Start",
       "AddExp",
       "CheckLevelUp",
       "OpenDefaultUpgradeUI",
+      "GetDefaultUpgradePoolForLevel",
       "OpenUpgradeUI"
     ],
     "fields": [],
@@ -962,16 +974,19 @@
     "public_field_count": 0,
     "get_component_count": 0,
     "find_call_count": 0,
-    "new_keyword_count": 0,
+    "new_keyword_count": 1,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
       "System",
       "UnityEngine",
+      "Serializable",
+      "UpgradeIds",
+      "UpgradeWeights",
       "Default",
       "Upgrade",
-      "Pool",
+      "Pools",
       "EnhanceUI",
       "CurrentLevel",
       "CurrentExp",
@@ -986,8 +1001,10 @@
       "CheckLevelUp",
       "Invoke",
       "OpenDefaultUpgradeUI",
-      "OpenUpgradeUI",
+      "GetDefaultUpgradePoolForLevel",
       "LogWarning",
+      "OpenUpgradeUI",
+      "Clamp",
       "UI",
       "GameManager",
       "Instance",
@@ -998,24 +1015,21 @@
       "ShowCardsByIds"
     ],
     "component_access_types": [],
-    "created_types": [],
+    "created_types": [
+      "UpgradePool"
+    ],
     "singleton_access_types": [
       "GameManager"
     ],
     "string_literals": [
-      "Default Upgrade Pool",
+      "Default Upgrade Pools",
       "경험치 획득: +{amount}, 현재 EXP: {this.currentExp}",
       "레벨업! 현재 레벨: {this.currentLevel}",
+      "Default upgrade pool is not assigned.",
       "EnhanceUI is not assigned.",
       "Upgrade UI open skipped because the card pool is invalid."
     ],
     "numeric_literals": [
-      10,
-      20,
-      35,
-      50,
-      70,
-      100,
       2,
       3,
       4,
@@ -1025,7 +1039,13 @@
       25,
       20,
       15,
-      10
+      10,
+      10,
+      20,
+      35,
+      50,
+      70,
+      100
     ],
     "guessed_roles": [
       "manager",
@@ -1043,9 +1063,9 @@
     "file_id": "Assets/Gameplay/Ball/Ball.cs",
     "path": "Assets/Gameplay/Ball/Ball.cs",
     "file_name": "Ball.cs",
-    "content_hash": "d3e03fff5b39b51af0b46571b9afa617f4a01014",
-    "size": 2117,
-    "line_count": 94,
+    "content_hash": "4aa308cfb49a5a90d233b84128f24660eafb8122",
+    "size": 4038,
+    "line_count": 159,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -1070,9 +1090,11 @@
       "Awake",
       "BallPhysics",
       "BallAnimation",
-      "Start",
       "Update",
       "Spawn",
+      "SetSkillTriggerSettings",
+      "SetSkillCooldowns",
+      "SetSkillStats",
       "TickSpawn",
       "Launch",
       "Vector2",
@@ -1157,14 +1179,13 @@
     "events": [],
     "unity_messages": [
       "Awake",
-      "Start",
       "Update"
     ],
     "has_update": true,
     "has_fixed_update": false,
     "has_late_update": false,
     "has_awake": true,
-    "has_start": true,
+    "has_start": false,
     "has_on_enable": false,
     "has_on_disable": false,
     "serialize_field_count": 0,
@@ -1195,9 +1216,19 @@
       "SpawnDelay",
       "Awake",
       "GetComponent",
-      "Start",
       "GameManager",
       "Instance",
+      "SetSkillStats",
+      "Skill1HasManualTrigger",
+      "Skill1HasAutoTrigger",
+      "Skill1ManualCooldown",
+      "Skill1AutoCooldown",
+      "Skill2HasManualTrigger",
+      "Skill2HasAutoTrigger",
+      "Skill2ManualCooldown",
+      "Skill2AutoCooldown",
+      "Skill1Duration",
+      "Skill2Duration",
       "Update",
       "TickSpawn",
       "Tick",
@@ -1206,6 +1237,12 @@
       "Spawn",
       "SetVelocity",
       "Vector2",
+      "SetSkillTriggerSettings",
+      "SetTriggerSettings",
+      "SetSkillCooldowns",
+      "SetManualCooldown",
+      "SetAutoCooldown",
+      "SetDuration",
       "Launch",
       "Deg2Rad",
       "Cos",
@@ -2048,9 +2085,9 @@
     "file_id": "Assets/Gameplay/Ball/BallSkill.cs",
     "path": "Assets/Gameplay/Ball/BallSkill.cs",
     "file_name": "BallSkill.cs",
-    "content_hash": "e6b1166f389ad6252a72bd9fa027f7998e412a60",
-    "size": 2929,
-    "line_count": 146,
+    "content_hash": "b13f6fab1e69b35367d5a486118c65ad59430473",
+    "size": 3000,
+    "line_count": 157,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -2079,7 +2116,10 @@
       "TickDuration",
       "TickManual",
       "TickAuto",
-      "ApplyCooldownReduction",
+      "SetManualCooldown",
+      "SetAutoCooldown",
+      "SetTriggerSettings",
+      "SetDuration",
       "Activate",
       "TryManualActivate",
       "Subscribe",
@@ -2097,20 +2137,6 @@
       },
       {
         "name": "cooldown",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "before",
-        "type": "float",
-        "access": "internal",
-        "serialized": false,
-        "is_static": false
-      },
-      {
-        "name": "delta",
         "type": "float",
         "access": "internal",
         "serialized": false,
@@ -2142,11 +2168,6 @@
         "access": "public",
         "type": "float",
         "name": "AutoCooldown"
-      },
-      {
-        "access": "public",
-        "type": "float",
-        "name": "CooldownReductionRate"
       },
       {
         "access": "public",
@@ -2186,7 +2207,6 @@
       "ManualCooldown",
       "HasAutoTrigger",
       "AutoCooldown",
-      "CooldownReductionRate",
       "IsActive",
       "IsManualReady",
       "Awake",
@@ -2201,9 +2221,12 @@
       "TickAuto",
       "OnDeactivate",
       "Activate",
-      "ApplyCooldownReduction",
-      "Clamp01",
+      "SetManualCooldown",
       "Max",
+      "Min",
+      "SetAutoCooldown",
+      "SetTriggerSettings",
+      "SetDuration",
       "OnActivate",
       "TryManualActivate"
     ],
@@ -2214,8 +2237,7 @@
     "singleton_access_types": [],
     "string_literals": [],
     "numeric_literals": [
-      0,
-      1
+      0
     ],
     "guessed_roles": [
       "runtime",
@@ -2231,9 +2253,9 @@
     "file_id": "Assets/Gameplay/Ball/BallStats.cs",
     "path": "Assets/Gameplay/Ball/BallStats.cs",
     "file_name": "BallStats.cs",
-    "content_hash": "a1e24954db77e2d89ad7c22ab85d7d509bca5b74",
-    "size": 1643,
-    "line_count": 54,
+    "content_hash": "64abc74dd6045dbc4d8b707c5f301bc187f4113a",
+    "size": 3486,
+    "line_count": 98,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -2260,6 +2282,11 @@
       "IncreaseAttackPower",
       "IncreaseCriticalChance",
       "IncreaseCriticalDamage",
+      "ReduceSkill1ManualCooldown",
+      "ReduceSkill1AutoCooldown",
+      "ReduceSkill2ManualCooldown",
+      "ReduceSkill2AutoCooldown",
+      "ReduceCooldown",
       "SetRadiusMultiplier",
       "ResetRadiusMultiplier"
     ],
@@ -2278,6 +2305,11 @@
       {
         "access": "public",
         "type": "float",
+        "name": "GiantSize"
+      },
+      {
+        "access": "public",
+        "type": "float",
         "name": "AttackPower"
       },
       {
@@ -2289,6 +2321,56 @@
         "access": "public",
         "type": "float",
         "name": "CriticalDamage"
+      },
+      {
+        "access": "public",
+        "type": "bool",
+        "name": "Skill1HasManualTrigger"
+      },
+      {
+        "access": "public",
+        "type": "bool",
+        "name": "Skill1HasAutoTrigger"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "Skill1ManualCooldown"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "Skill1AutoCooldown"
+      },
+      {
+        "access": "public",
+        "type": "bool",
+        "name": "Skill2HasManualTrigger"
+      },
+      {
+        "access": "public",
+        "type": "bool",
+        "name": "Skill2HasAutoTrigger"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "Skill2ManualCooldown"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "Skill2AutoCooldown"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "Skill1Duration"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "Skill2Duration"
       },
       {
         "access": "public",
@@ -2315,14 +2397,26 @@
     "dont_destroy_on_load": false,
     "referenced_types": [
       "float",
+      "bool",
       "UnityEngine",
       "CreateAssetMenu",
       "Stats",
       "Speed",
       "BaseRadius",
+      "GiantSize",
       "AttackPower",
       "CriticalChance",
       "CriticalDamage",
+      "Skill1HasManualTrigger",
+      "Skill1HasAutoTrigger",
+      "Skill1ManualCooldown",
+      "Skill1AutoCooldown",
+      "Skill2HasManualTrigger",
+      "Skill2HasAutoTrigger",
+      "Skill2ManualCooldown",
+      "Skill2AutoCooldown",
+      "Skill1Duration",
+      "Skill2Duration",
       "Radius",
       "RadiusMultiplier",
       "IncreaseSpeed",
@@ -2336,6 +2430,16 @@
       "Chance",
       "IncreaseCriticalDamage",
       "Damage",
+      "ReduceSkill1ManualCooldown",
+      "ReduceCooldown",
+      "Skill1",
+      "Manual",
+      "Cooldown",
+      "ReduceSkill1AutoCooldown",
+      "Auto",
+      "ReduceSkill2ManualCooldown",
+      "Skill2",
+      "ReduceSkill2AutoCooldown",
       "SetRadiusMultiplier",
       "ResetRadiusMultiplier"
     ],
@@ -2349,7 +2453,11 @@
       "BaseRadius: {this.BaseRadius}",
       "AttackPower: {this.AttackPower}",
       "Critical Chance: {this.CriticalChance}",
-      "Critical Damage: {this.CriticalDamage}"
+      "Critical Damage: {this.CriticalDamage}",
+      "Skill1 Manual Cooldown: {this.Skill1ManualCooldown}",
+      "Skill1 Auto Cooldown: {this.Skill1AutoCooldown}",
+      "Skill2 Manual Cooldown: {this.Skill2ManualCooldown}",
+      "Skill2 Auto Cooldown: {this.Skill2AutoCooldown}"
     ],
     "numeric_literals": [
       1,
@@ -3132,9 +3240,9 @@
     "file_id": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "path": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "file_name": "StatUpgradeCardData.cs",
-    "content_hash": "d7e21cbbb7132cdedf0f86b3641394a593825770",
-    "size": 1550,
-    "line_count": 40,
+    "content_hash": "bd45974cc6af684bee6aedb394c47c4f762839a5",
+    "size": 2484,
+    "line_count": 60,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -3156,7 +3264,8 @@
     "main_class_name": "StatUpgradeCardData",
     "unity_type": "None",
     "methods": [
-      "Apply"
+      "Apply",
+      "ApplySkillCooldownsToActiveBalls"
     ],
     "fields": [
       {
@@ -3208,12 +3317,22 @@
       {
         "access": "public",
         "type": "float",
-        "name": "Skill1CooldownReductionRate"
+        "name": "Skill1ManualCooldownReduction"
       },
       {
         "access": "public",
         "type": "float",
-        "name": "Skill2CooldownReductionRate"
+        "name": "Skill1AutoCooldownReduction"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "Skill2ManualCooldownReduction"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "Skill2AutoCooldownReduction"
       }
     ],
     "events": [],
@@ -3251,8 +3370,10 @@
       "Speed",
       "BallSize",
       "PaddleSizeLevel",
-      "Skill1CooldownReductionRate",
-      "Skill2CooldownReductionRate",
+      "Skill1ManualCooldownReduction",
+      "Skill1AutoCooldownReduction",
+      "Skill2ManualCooldownReduction",
+      "Skill2AutoCooldownReduction",
       "Apply",
       "GameManager",
       "Instance",
@@ -3262,7 +3383,21 @@
       "IncreaseSpeed",
       "IncreaseRadius",
       "IncreasePaddleSizeLevel",
-      "TODO"
+      "ReduceSkill1ManualCooldown",
+      "ReduceSkill1AutoCooldown",
+      "ReduceSkill2ManualCooldown",
+      "ReduceSkill2AutoCooldown",
+      "ApplySkillCooldownsToActiveBalls",
+      "Ball",
+      "Object",
+      "FindObjectsByType",
+      "FindObjectsSortMode",
+      "None",
+      "SetSkillCooldowns",
+      "Skill1ManualCooldown",
+      "Skill1AutoCooldown",
+      "Skill2ManualCooldown",
+      "Skill2AutoCooldown"
     ],
     "component_access_types": [],
     "created_types": [],
@@ -4240,9 +4375,9 @@
     "file_id": "Assets/Gameplay/Enemy/Enemy.cs",
     "path": "Assets/Gameplay/Enemy/Enemy.cs",
     "file_name": "Enemy.cs",
-    "content_hash": "b88402363ff0dafd94496c977067d8b476ceaabb",
-    "size": 5727,
-    "line_count": 217,
+    "content_hash": "f2a1e445fa1d7db2a55490d8a151d437f4a8903a",
+    "size": 6034,
+    "line_count": 235,
     "namespace": "",
     "using_list": [
       "UnityEngine",
@@ -4270,6 +4405,7 @@
     "methods": [
       "MarkAttacked",
       "Awake",
+      "Initialize",
       "Start",
       "Update",
       "CheckTrackTransition",
@@ -4451,10 +4587,12 @@
       "MarkAttacked",
       "EncounterDuration",
       "Awake",
-      "Instantiate",
       "GetComponent",
       "InitializeStates",
+      "Initialize",
+      "Instantiate",
       "Start",
+      "LogError",
       "MaxHp",
       "Tilemap",
       "GetComponentInChildren",
@@ -4531,6 +4669,7 @@
       "GameManager"
     ],
     "string_literals": [
+      "Enemy stats asset is missing.",
       "Paddle",
       "IsMoving",
       "Encounter",
@@ -4694,6 +4833,84 @@
     ],
     "summary_signals": [
       "전투 계열 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/Gameplay/Enemy/EnemySpawnData.cs",
+    "path": "Assets/Gameplay/Enemy/EnemySpawnData.cs",
+    "file_name": "EnemySpawnData.cs",
+    "content_hash": "db583048f9a478f2d579ad172f3f5e8a3aecab81",
+    "size": 227,
+    "line_count": 8,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "EnemySpawnData",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "EnemyStats"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "EnemySpawnData",
+    "unity_type": "None",
+    "methods": [],
+    "fields": [],
+    "properties": [
+      {
+        "access": "public",
+        "type": "GameObject",
+        "name": "EnemyPrefab"
+      }
+    ],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "UnityEngine",
+      "CreateAssetMenu",
+      "Spawn",
+      "EnemyStats",
+      "EnemyPrefab"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [
+      "EnemySpawnData",
+      "Spawn/EnemySpawnData"
+    ],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "combat",
+      "data",
+      "save-load"
+    ],
+    "summary_signals": [
+      "전투 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함"
     ]
   },
   {
@@ -5303,9 +5520,9 @@
     "file_id": "Assets/Gameplay/Item/EnhancementTriggerItemData.cs",
     "path": "Assets/Gameplay/Item/EnhancementTriggerItemData.cs",
     "file_name": "EnhancementTriggerItemData.cs",
-    "content_hash": "b0e545fc2256230ba1e22cbf8db86ea7e97f68f9",
-    "size": 865,
-    "line_count": 24,
+    "content_hash": "a308a80468886fcdd58dfd7fa064fccf3b00e0bf",
+    "size": 1134,
+    "line_count": 33,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -5327,7 +5544,8 @@
     "main_class_name": "EnhancementTriggerItemData",
     "unity_type": "None",
     "methods": [
-      "Apply"
+      "Apply",
+      "IsValidUpgradePool"
     ],
     "fields": [
       {
@@ -5368,8 +5586,9 @@
       "Instance",
       "User",
       "Level",
-      "Length",
-      "OpenUpgradeUI"
+      "IsValidUpgradePool",
+      "OpenUpgradeUI",
+      "Length"
     ],
     "component_access_types": [],
     "created_types": [],
@@ -5495,9 +5714,9 @@
     "file_id": "Assets/Gameplay/Item/FallingItemSpawner.cs",
     "path": "Assets/Gameplay/Item/FallingItemSpawner.cs",
     "file_name": "FallingItemSpawner.cs",
-    "content_hash": "a7ff765563204f6c23ea26d44ee5f7e1fb613faa",
-    "size": 1099,
-    "line_count": 42,
+    "content_hash": "2b95770a2f4095115b8c706abae05ee289806e6b",
+    "size": 1823,
+    "line_count": 65,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -5521,13 +5740,22 @@
     "methods": [
       "Update",
       "SpawnItem",
-      "Vector3"
+      "Vector3",
+      "ApplyCardPool",
+      "GetItemCardPool"
     ],
     "fields": [
       {
         "name": "timer",
         "type": "float",
         "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "prefab",
+        "type": "GameObject",
+        "access": "internal",
         "serialized": false,
         "is_static": false
       }
@@ -5546,7 +5774,7 @@
     "has_on_disable": false,
     "serialize_field_count": 0,
     "public_field_count": 0,
-    "get_component_count": 0,
+    "get_component_count": 1,
     "find_call_count": 0,
     "new_keyword_count": 1,
     "coroutine_count": 0,
@@ -5555,6 +5783,7 @@
     "referenced_types": [
       "float",
       "UnityEngine",
+      "ItemCardPool",
       "Update",
       "GameManager",
       "Instance",
@@ -5566,9 +5795,18 @@
       "Length",
       "Vector3",
       "Instantiate",
-      "Quaternion"
+      "Quaternion",
+      "ApplyCardPool",
+      "ItemPickup",
+      "GetComponent",
+      "GetItemCardPool",
+      "SetCardPool",
+      "CardIds",
+      "CardWeights"
     ],
-    "component_access_types": [],
+    "component_access_types": [
+      "ItemPickup"
+    ],
     "created_types": [
       "Vector3"
     ],
@@ -5591,6 +5829,73 @@
     "summary_signals": [
       "런타임 컴포넌트",
       "Update 기반 처리 존재",
+      "인벤토리 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
+    "file_id": "Assets/Gameplay/Item/ItemCardPool.cs",
+    "path": "Assets/Gameplay/Item/ItemCardPool.cs",
+    "file_name": "ItemCardPool.cs",
+    "content_hash": "64f41230774f12789392422deecebbf2f5b45824",
+    "size": 261,
+    "line_count": 12,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "ItemCardPool",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "ItemCardPool",
+    "unity_type": "None",
+    "methods": [],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "UnityEngine",
+      "System",
+      "Serializable",
+      "CardIds",
+      "CardWeights"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "inventory",
+      "save-load"
+    ],
+    "summary_signals": [
       "인벤토리 계열 로직 포함",
       "저장/불러오기 관련 로직 포함"
     ]
@@ -5690,9 +5995,9 @@
     "file_id": "Assets/Gameplay/Item/ItemPickup.cs",
     "path": "Assets/Gameplay/Item/ItemPickup.cs",
     "file_name": "ItemPickup.cs",
-    "content_hash": "6e7094066046e4dd3cadea116215dd3214c2850a",
-    "size": 2679,
-    "line_count": 96,
+    "content_hash": "3f3768aa2beedd86eb07aa1d720fecc5292e7d65",
+    "size": 3559,
+    "line_count": 125,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -5720,7 +6025,10 @@
       "GetPickupBounds",
       "CanBePickedByBall",
       "CanBePickedByPaddle",
-      "Collect"
+      "SetCardPool",
+      "Collect",
+      "ApplyItem",
+      "HasOverrideCardPool"
     ],
     "fields": [
       {
@@ -5764,6 +6072,27 @@
         "access": "private",
         "serialized": false,
         "is_static": false
+      },
+      {
+        "name": "overrideCardIds",
+        "type": "int[]",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "overrideCardWeights",
+        "type": "float[]",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "enhancementItemData",
+        "type": "EnhancementTriggerItemData",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
       }
     ],
     "properties": [],
@@ -5794,6 +6123,9 @@
       "Collider2D",
       "Renderer",
       "bool",
+      "int",
+      "float",
+      "EnhancementTriggerItemData",
       "UnityEngine",
       "PickupTargetType",
       "Both",
@@ -5821,11 +6153,15 @@
       "Stats",
       "Radius",
       "Intersects",
+      "SetCardPool",
       "Log",
       "AudioManager",
       "PlayGetItemSound",
+      "ApplyItem",
+      "Destroy",
+      "HasOverrideCardPool",
       "Apply",
-      "Destroy"
+      "Length"
     ],
     "component_access_types": [
       "Collider2D",
@@ -6458,13 +6794,14 @@
     "file_id": "Assets/Gameplay/World/WorldEnemySpawner.cs",
     "path": "Assets/Gameplay/World/WorldEnemySpawner.cs",
     "file_name": "WorldEnemySpawner.cs",
-    "content_hash": "956ffb39fac8a7a67d2511430f2a8d3eec172064",
-    "size": 2031,
-    "line_count": 66,
+    "content_hash": "9e24b3e19f25dbca8936d95aaf39c481a6fe11b1",
+    "size": 3033,
+    "line_count": 94,
     "namespace": "",
     "using_list": [
       "System.Collections.Generic",
-      "UnityEngine"
+      "UnityEngine",
+      "UnityEngine.Serialization"
     ],
     "classes": [
       {
@@ -6486,6 +6823,8 @@
       "Awake",
       "Start",
       "SpawnEnemies",
+      "HasEnemyData",
+      "GetEnemySpawnData",
       "FindSpawnPoints"
     ],
     "fields": [
@@ -6519,7 +6858,7 @@
     "has_on_disable": false,
     "serialize_field_count": 0,
     "public_field_count": 0,
-    "get_component_count": 0,
+    "get_component_count": 1,
     "find_call_count": 1,
     "new_keyword_count": 2,
     "coroutine_count": 0,
@@ -6531,18 +6870,27 @@
       "Collections",
       "Generic",
       "UnityEngine",
+      "Serialization",
+      "FormerlySerializedAs",
+      "EnemySpawnData",
       "Awake",
       "Length",
       "FindSpawnPoints",
       "EnemySpawnPoints",
       "Start",
       "SpawnEnemies",
-      "Min",
+      "HasEnemyData",
       "Add",
+      "Min",
       "Count",
       "RemoveAt",
+      "GetEnemySpawnData",
+      "EnemyPrefab",
       "Instantiate",
       "Quaternion",
+      "Enemy",
+      "GetComponent",
+      "Initialize",
       "SetParent",
       "Find",
       "Array",
@@ -6550,12 +6898,15 @@
       "GetChild",
       "ToArray"
     ],
-    "component_access_types": [],
+    "component_access_types": [
+      "Enemy"
+    ],
     "created_types": [
       "List"
     ],
     "singleton_access_types": [],
     "string_literals": [
+      "enemyPrefab",
       "EnemySpawnPoints"
     ],
     "numeric_literals": [
@@ -6565,12 +6916,14 @@
       "runtime",
       "player",
       "combat",
-      "save-load"
+      "save-load",
+      "data"
     ],
     "summary_signals": [
       "런타임 컴포넌트",
       "전투 계열 로직 포함",
       "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용",
       "Find 계열 탐색 사용"
     ]
   },
@@ -6578,9 +6931,9 @@
     "file_id": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
     "path": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
     "file_name": "WorldItemSpawnPoint.cs",
-    "content_hash": "bcf21c0b153ebcecf5d7f76cbf9ed81ca62e45b0",
-    "size": 2285,
-    "line_count": 74,
+    "content_hash": "68023a0d2c33936d8342d195882265e1c79ffdc2",
+    "size": 3047,
+    "line_count": 97,
     "namespace": "",
     "using_list": [
       "System.Collections.Generic",
@@ -6607,9 +6960,18 @@
       "Awake",
       "Start",
       "SpawnItems",
+      "ApplyCardPool",
+      "GetItemCardPool",
       "FindSpawnPoints"
     ],
     "fields": [
+      {
+        "name": "pointIndex",
+        "type": "int",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
       {
         "name": "point",
         "type": "Transform",
@@ -6633,17 +6995,19 @@
     "has_on_disable": false,
     "serialize_field_count": 0,
     "public_field_count": 0,
-    "get_component_count": 0,
+    "get_component_count": 1,
     "find_call_count": 1,
     "new_keyword_count": 2,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
+      "int",
       "System",
       "Collections",
       "Generic",
       "UnityEngine",
+      "ItemCardPool",
       "Configure",
       "Length",
       "Awake",
@@ -6657,14 +7021,23 @@
       "RemoveAt",
       "Instantiate",
       "Quaternion",
+      "ApplyCardPool",
       "SetParent",
+      "ItemPickup",
+      "GetComponent",
+      "GetItemCardPool",
+      "SetCardPool",
+      "CardIds",
+      "CardWeights",
       "Find",
       "Array",
       "Empty",
       "GetChild",
       "ToArray"
     ],
-    "component_access_types": [],
+    "component_access_types": [
+      "ItemPickup"
+    ],
     "created_types": [
       "List"
     ],
@@ -6684,6 +7057,7 @@
       "런타임 컴포넌트",
       "인벤토리 계열 로직 포함",
       "저장/불러오기 관련 로직 포함",
+      "컴포넌트 조회 사용",
       "Find 계열 탐색 사용"
     ]
   },
@@ -7046,6 +7420,229 @@
       "데이터 자산 중심 구조",
       "저장/불러오기 관련 로직 포함"
     ]
+  },
+  {
+    "file_id": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "path": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "file_name": "EnemySpawnDataTests.cs",
+    "content_hash": "88cb97c4b1d43fad9e3c0acbde12b048b766ec67",
+    "size": 1775,
+    "line_count": 49,
+    "namespace": "",
+    "using_list": [
+      "NUnit.Framework",
+      "UnityEditor",
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "EnemySpawnDataTests",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "EnemySpawnDataTests",
+    "unity_type": "None",
+    "methods": [
+      "EnemyInitializeCopiesStatsFromSpawnData",
+      "GameObject",
+      "SetInt",
+      "SerializedObject",
+      "SetFloat"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 3,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "UNITY_EDITOR",
+      "NUnit",
+      "Framework",
+      "UnityEditor",
+      "UnityEngine",
+      "Test",
+      "EnemyInitializeCopiesStatsFromSpawnData",
+      "EnemySpawnData",
+      "CreateInstance",
+      "SetInt",
+      "MaxHp",
+      "ExpReward",
+      "SetFloat",
+      "MoveSpeed",
+      "AttackDamage",
+      "Enemy",
+      "AddComponent",
+      "Initialize",
+      "Assert",
+      "That",
+      "Stats",
+      "Is",
+      "Not",
+      "Null",
+      "SameAs",
+      "EqualTo",
+      "Object",
+      "DestroyImmediate",
+      "SerializedObject",
+      "FindProperty",
+      "ApplyModifiedPropertiesWithoutUndo"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "GameObject",
+      "SerializedObject"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [
+      "<MaxHp>k__BackingField",
+      "<ExpReward>k__BackingField",
+      "<MoveSpeed>k__BackingField",
+      "<AttackDamage>k__BackingField",
+      "Enemy"
+    ],
+    "numeric_literals": [
+      42,
+      7,
+      1.5,
+      9
+    ],
+    "guessed_roles": [
+      "combat",
+      "data",
+      "player",
+      "save-load",
+      "manager"
+    ],
+    "summary_signals": [
+      "전투 계열 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "path": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "file_name": "UserLevelUpgradePoolTests.cs",
+    "content_hash": "c291575c84ecd29cf3da899f8c6078305b960ccb",
+    "size": 1253,
+    "line_count": 34,
+    "namespace": "",
+    "using_list": [
+      "System.Reflection",
+      "NUnit.Framework",
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "UserLevelUpgradePoolTests",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "UserLevelUpgradePoolTests",
+    "unity_type": "None",
+    "methods": [
+      "GetDefaultUpgradePoolForLevelUsesMatchingPoolAndClampsToLast",
+      "GameObject",
+      "SetPrivateField"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 3,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "UNITY_EDITOR",
+      "System",
+      "Reflection",
+      "NUnit",
+      "Framework",
+      "UnityEngine",
+      "Test",
+      "GetDefaultUpgradePoolForLevelUsesMatchingPoolAndClampsToLast",
+      "UserLevel",
+      "AddComponent",
+      "UpgradePool",
+      "SetPrivateField",
+      "Assert",
+      "That",
+      "GetDefaultUpgradePoolForLevel",
+      "UpgradeIds",
+      "Is",
+      "EqualTo",
+      "Object",
+      "DestroyImmediate",
+      "FieldInfo",
+      "GetType",
+      "GetField",
+      "BindingFlags",
+      "Instance",
+      "NonPublic",
+      "SetValue"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "GameObject"
+    ],
+    "singleton_access_types": [
+      "BindingFlags"
+    ],
+    "string_literals": [
+      "UserLevel",
+      "defaultUpgradePools"
+    ],
+    "numeric_literals": [
+      2,
+      10,
+      20,
+      3,
+      4,
+      30,
+      40,
+      10
+    ],
+    "guessed_roles": [
+      "manager"
+    ],
+    "summary_signals": []
   },
   {
     "file_id": "Assets/UI/DamageText/DamageTextSpawner.cs",

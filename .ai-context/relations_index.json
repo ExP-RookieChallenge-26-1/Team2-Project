@@ -1311,6 +1311,13 @@
   {
     "from_file": "Assets/_Global/UserLevel.cs",
     "from_class": "UserLevel",
+    "to_type": "UpgradePool",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
     "to_type": "MonoBehaviour",
     "relation_type": "inherits",
     "strength": 4
@@ -1340,6 +1347,13 @@
     "from_file": "Assets/_Global/UserLevel.cs",
     "from_class": "UserLevel",
     "to_type": "CheckLevelUp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "Clamp",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1402,6 +1416,13 @@
   {
     "from_file": "Assets/_Global/UserLevel.cs",
     "from_class": "UserLevel",
+    "to_type": "GetDefaultUpgradePoolForLevel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
     "to_type": "Instance",
     "relation_type": "uses",
     "strength": 1
@@ -1458,7 +1479,7 @@
   {
     "from_file": "Assets/_Global/UserLevel.cs",
     "from_class": "UserLevel",
-    "to_type": "Pool",
+    "to_type": "Pools",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1466,6 +1487,13 @@
     "from_file": "Assets/_Global/UserLevel.cs",
     "from_class": "UserLevel",
     "to_type": "RequiredExp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "Serializable",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1522,6 +1550,20 @@
     "from_file": "Assets/_Global/UserLevel.cs",
     "from_class": "UserLevel",
     "to_type": "Upgrade",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "UpgradeIds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "UpgradeWeights",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1766,6 +1808,55 @@
   {
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
+    "to_type": "SetAutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "SetDuration",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "SetManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "SetSkillCooldowns",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "SetSkillStats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "SetSkillTriggerSettings",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "SetTriggerSettings",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
     "to_type": "SetVelocity",
     "relation_type": "uses",
     "strength": 1
@@ -1774,6 +1865,76 @@
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
     "to_type": "Sin",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill1AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill1Duration",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill1HasAutoTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill1HasManualTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill1ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill2AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill2Duration",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill2HasAutoTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill2HasManualTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill2ManualCooldown",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1795,13 +1956,6 @@
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
     "to_type": "Speed",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Ball/Ball.cs",
-    "from_class": "Ball",
-    "to_type": "Start",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2802,13 +2956,6 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
-    "to_type": "ApplyCooldownReduction",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
-    "from_class": "BallSkill",
     "to_type": "AutoCooldown",
     "relation_type": "uses",
     "strength": 1
@@ -2831,20 +2978,6 @@
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
     "to_type": "bool",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
-    "from_class": "BallSkill",
-    "to_type": "Clamp01",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
-    "from_class": "BallSkill",
-    "to_type": "CooldownReductionRate",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2914,6 +3047,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
+    "to_type": "Min",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
     "to_type": "OnActivate",
     "relation_type": "uses",
     "strength": 1
@@ -2929,6 +3069,34 @@
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
     "to_type": "OnDestroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "SetAutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "SetDuration",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "SetManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "SetTriggerSettings",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3019,7 +3187,21 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallStats.cs",
     "from_class": "BallStats",
+    "to_type": "Auto",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
     "to_type": "BaseRadius",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "bool",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3034,6 +3216,13 @@
     "from_file": "Assets/Gameplay/Ball/BallStats.cs",
     "from_class": "BallStats",
     "to_type": "Clamp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Cooldown",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3082,6 +3271,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallStats.cs",
     "from_class": "BallStats",
+    "to_type": "GiantSize",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
     "to_type": "IncreaseAttackPower",
     "relation_type": "uses",
     "strength": 1
@@ -3124,6 +3320,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallStats.cs",
     "from_class": "BallStats",
+    "to_type": "Manual",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
     "to_type": "Max",
     "relation_type": "uses",
     "strength": 1
@@ -3145,6 +3348,41 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallStats.cs",
     "from_class": "BallStats",
+    "to_type": "ReduceCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "ReduceSkill1AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "ReduceSkill1ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "ReduceSkill2AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "ReduceSkill2ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
     "to_type": "ResetRadiusMultiplier",
     "relation_type": "uses",
     "strength": 1
@@ -3153,6 +3391,90 @@
     "from_file": "Assets/Gameplay/Ball/BallStats.cs",
     "from_class": "BallStats",
     "to_type": "SetRadiusMultiplier",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill1",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill1AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill1Duration",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill1HasAutoTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill1HasManualTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill1ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill2",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill2AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill2Duration",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill2HasAutoTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill2HasManualTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill2ManualCooldown",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4412,7 +4734,21 @@
   {
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
+    "to_type": "ApplySkillCooldownsToActiveBalls",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
     "to_type": "AttackPower",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Ball",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4455,6 +4791,20 @@
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
     "to_type": "CriticalDamage",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "FindObjectsByType",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "FindObjectsSortMode",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4531,6 +4881,20 @@
   {
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
+    "to_type": "None",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Object",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
     "to_type": "PaddleSizeLevel",
     "relation_type": "uses",
     "strength": 1
@@ -4545,14 +4909,91 @@
   {
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
-    "to_type": "Skill1CooldownReductionRate",
+    "to_type": "ReduceSkill1AutoCooldown",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
-    "to_type": "Skill2CooldownReductionRate",
+    "to_type": "ReduceSkill1ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "ReduceSkill2AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "ReduceSkill2ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "SetSkillCooldowns",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill1AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill1AutoCooldownReduction",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill1ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill1ManualCooldownReduction",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill2AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill2AutoCooldownReduction",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill2ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill2ManualCooldownReduction",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4574,13 +5015,6 @@
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
     "to_type": "StatUpgradeCard",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
-    "from_class": "StatUpgradeCardData",
-    "to_type": "TODO",
     "relation_type": "uses",
     "strength": 1
   },
@@ -6253,6 +6687,13 @@
   {
     "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
     "from_class": "Enemy",
+    "to_type": "Initialize",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
     "to_type": "InitializeStates",
     "relation_type": "uses",
     "strength": 1
@@ -6296,6 +6737,13 @@
     "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
     "from_class": "Enemy",
     "to_type": "Level",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "LogError",
     "relation_type": "uses",
     "strength": 1
   },
@@ -6653,6 +7101,48 @@
     "from_file": "Assets/Gameplay/Enemy/EnemyMovementValidator.cs",
     "from_class": "EnemyMovementValidator",
     "to_type": "MoveRange",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemySpawnData.cs",
+    "from_class": "EnemySpawnData",
+    "to_type": "EnemyStats",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemySpawnData.cs",
+    "from_class": "EnemySpawnData",
+    "to_type": "CreateAssetMenu",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemySpawnData.cs",
+    "from_class": "EnemySpawnData",
+    "to_type": "EnemyPrefab",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemySpawnData.cs",
+    "from_class": "EnemySpawnData",
+    "to_type": "EnemyStats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemySpawnData.cs",
+    "from_class": "EnemySpawnData",
+    "to_type": "Spawn",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemySpawnData.cs",
+    "from_class": "EnemySpawnData",
+    "to_type": "UnityEngine",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7387,6 +7877,13 @@
   {
     "from_file": "Assets/Gameplay/Item/EnhancementTriggerItemData.cs",
     "from_class": "EnhancementTriggerItemData",
+    "to_type": "IsValidUpgradePool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/EnhancementTriggerItemData.cs",
+    "from_class": "EnhancementTriggerItemData",
     "to_type": "ItemData",
     "relation_type": "uses",
     "strength": 1
@@ -7520,6 +8017,13 @@
   {
     "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
     "from_class": "FallingItemSpawner",
+    "to_type": "ItemPickup",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
     "to_type": "Vector3",
     "relation_type": "creates",
     "strength": 2
@@ -7537,6 +8041,27 @@
     "to_type": "GameManager",
     "relation_type": "singleton-access",
     "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
+    "to_type": "ApplyCardPool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
+    "to_type": "CardIds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
+    "to_type": "CardWeights",
+    "relation_type": "uses",
+    "strength": 1
   },
   {
     "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
@@ -7569,6 +8094,20 @@
   {
     "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
     "from_class": "FallingItemSpawner",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
+    "to_type": "GetItemCardPool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
     "to_type": "Instance",
     "relation_type": "uses",
     "strength": 1
@@ -7577,6 +8116,20 @@
     "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
     "from_class": "FallingItemSpawner",
     "to_type": "Instantiate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
+    "to_type": "ItemCardPool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
+    "to_type": "ItemPickup",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7598,6 +8151,13 @@
     "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
     "from_class": "FallingItemSpawner",
     "to_type": "Quaternion",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
+    "to_type": "SetCardPool",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7633,6 +8193,41 @@
     "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
     "from_class": "FallingItemSpawner",
     "to_type": "Vector3",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemCardPool.cs",
+    "from_class": "ItemCardPool",
+    "to_type": "CardIds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemCardPool.cs",
+    "from_class": "ItemCardPool",
+    "to_type": "CardWeights",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemCardPool.cs",
+    "from_class": "ItemCardPool",
+    "to_type": "Serializable",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemCardPool.cs",
+    "from_class": "ItemCardPool",
+    "to_type": "System",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemCardPool.cs",
+    "from_class": "ItemCardPool",
+    "to_type": "UnityEngine",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7744,6 +8339,13 @@
   {
     "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
     "from_class": "ItemPickup",
+    "to_type": "ApplyItem",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
     "to_type": "AudioManager",
     "relation_type": "uses",
     "strength": 1
@@ -7835,7 +8437,21 @@
   {
     "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
     "from_class": "ItemPickup",
+    "to_type": "EnhancementTriggerItemData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
     "to_type": "FindFirstObjectByType",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
+    "to_type": "float",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7870,7 +8486,21 @@
   {
     "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
     "from_class": "ItemPickup",
+    "to_type": "HasOverrideCardPool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
     "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
+    "to_type": "int",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7892,6 +8522,13 @@
     "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
     "from_class": "ItemPickup",
     "to_type": "ItemData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
+    "to_type": "Length",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7948,6 +8585,13 @@
     "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
     "from_class": "ItemPickup",
     "to_type": "Renderer",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
+    "to_type": "SetCardPool",
     "relation_type": "uses",
     "strength": 1
   },
@@ -8675,6 +9319,13 @@
   {
     "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
     "from_class": "WorldEnemySpawner",
+    "to_type": "Enemy",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
     "to_type": "List",
     "relation_type": "creates",
     "strength": 2
@@ -8731,6 +9382,27 @@
   {
     "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
     "from_class": "WorldEnemySpawner",
+    "to_type": "Enemy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "EnemyPrefab",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "EnemySpawnData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
     "to_type": "EnemySpawnPoints",
     "relation_type": "uses",
     "strength": 1
@@ -8752,6 +9424,13 @@
   {
     "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
     "from_class": "WorldEnemySpawner",
+    "to_type": "FormerlySerializedAs",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
     "to_type": "Generic",
     "relation_type": "uses",
     "strength": 1
@@ -8760,6 +9439,34 @@
     "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
     "from_class": "WorldEnemySpawner",
     "to_type": "GetChild",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "GetEnemySpawnData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "HasEnemyData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "Initialize",
     "relation_type": "uses",
     "strength": 1
   },
@@ -8808,6 +9515,13 @@
   {
     "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
     "from_class": "WorldEnemySpawner",
+    "to_type": "Serialization",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
     "to_type": "SetParent",
     "relation_type": "uses",
     "strength": 1
@@ -8850,6 +9564,13 @@
   {
     "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
     "from_class": "WorldItemSpawner",
+    "to_type": "ItemPickup",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
     "to_type": "List",
     "relation_type": "creates",
     "strength": 2
@@ -8871,6 +9592,13 @@
   {
     "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
     "from_class": "WorldItemSpawner",
+    "to_type": "ApplyCardPool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
     "to_type": "Array",
     "relation_type": "uses",
     "strength": 1
@@ -8879,6 +9607,20 @@
     "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
     "from_class": "WorldItemSpawner",
     "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
+    "to_type": "CardIds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
+    "to_type": "CardWeights",
     "relation_type": "uses",
     "strength": 1
   },
@@ -8941,7 +9683,42 @@
   {
     "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
     "from_class": "WorldItemSpawner",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
+    "to_type": "GetItemCardPool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
     "to_type": "Instantiate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
+    "to_type": "ItemCardPool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
+    "to_type": "ItemPickup",
     "relation_type": "uses",
     "strength": 1
   },
@@ -8977,6 +9754,13 @@
     "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
     "from_class": "WorldItemSpawner",
     "to_type": "RemoveAt",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
+    "to_type": "SetCardPool",
     "relation_type": "uses",
     "strength": 1
   },
@@ -9397,6 +10181,440 @@
     "from_file": "Assets/Gameplay/World/WorldStats.cs",
     "from_class": "WorldStats",
     "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "GameObject",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "SerializedObject",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "AddComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "ApplyModifiedPropertiesWithoutUndo",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Assert",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "AttackDamage",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "CreateInstance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "DestroyImmediate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Enemy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "EnemyInitializeCopiesStatsFromSpawnData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "EnemySpawnData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "EqualTo",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "ExpReward",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "FindProperty",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Framework",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Initialize",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Is",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "MaxHp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "MoveSpeed",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Not",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Null",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "NUnit",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Object",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "SameAs",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "SerializedObject",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "SetFloat",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "SetInt",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Stats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Test",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "That",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "UNITY_EDITOR",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "UnityEditor",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "GameObject",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "BindingFlags",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "AddComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "Assert",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "BindingFlags",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "DestroyImmediate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "EqualTo",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "FieldInfo",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "Framework",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "GetDefaultUpgradePoolForLevel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "GetDefaultUpgradePoolForLevelUsesMatchingPoolAndClampsToLast",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "GetField",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "GetType",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "Is",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "NonPublic",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "NUnit",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "Object",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "Reflection",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "SetPrivateField",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "SetValue",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "System",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "Test",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "That",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "UNITY_EDITOR",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "UpgradeIds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "UpgradePool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "UserLevel",
     "relation_type": "uses",
     "strength": 1
   },
