@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class UserLevel : MonoBehaviour
@@ -34,6 +35,11 @@ public class UserLevel : MonoBehaviour
 
 	public int CurrentLevel => this.currentLevel;
 	public int CurrentExp => this.currentExp;
+	public int RequiredExp => this.currentLevel - 1 < this.requiredExpByLevel.Length
+		? this.requiredExpByLevel[this.currentLevel - 1]
+		: 1;
+
+	public event Action<int, int> OnExpChanged;
 
 	private void Start()
 	{
@@ -46,6 +52,7 @@ public class UserLevel : MonoBehaviour
 		this.currentExp += amount;
 		Debug.Log($"경험치 획득: +{amount}, 현재 EXP: {this.currentExp}");
 		CheckLevelUp();
+		OnExpChanged?.Invoke(this.currentExp, this.RequiredExp);
 	}
 
 	private void CheckLevelUp()

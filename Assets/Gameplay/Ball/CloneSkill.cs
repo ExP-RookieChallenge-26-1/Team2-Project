@@ -22,6 +22,9 @@ public class CloneSkill : BallSkill
 	protected override void OnActivate()
 	{
 		SpawnClones();
+
+		foreach (Ball ball in FindObjectsByType<Ball>(FindObjectsSortMode.None))
+			ball.Animation.TriggerClone();
 	}
 
 	protected override void OnDeactivate()

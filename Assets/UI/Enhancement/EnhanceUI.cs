@@ -76,8 +76,11 @@ public class EnhanceUI : MonoBehaviour
 	{
 		if (this.selectedIndex < 0 || this.selectedIndex >= this.currentCards.Count)
 			return;
-		
-		this.currentCards[this.selectedIndex].Apply();
+
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayUpgradeSelectSound();
+
+        this.currentCards[this.selectedIndex].Apply();
 		GameManager.Instance.State.Change(GameStateMachine.State.Playing);
 	}
 

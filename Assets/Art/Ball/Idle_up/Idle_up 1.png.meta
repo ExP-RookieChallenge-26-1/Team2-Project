@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 2f0e042a8ac924976afde8309497887e
+guid: 5ceda58d3393dc5479bc97e472c97f6a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8781163652858933504
+      213: 8905770954975354953
     second: Idle_up 1_0
+  - first:
+      213: 8781163652858933504
+    second: Idle_up 1_1
+  - first:
+      213: -7278649598703438177
+    second: Idle_up 1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +52,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 631
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,6 +102,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -103,12 +122,34 @@ TextureImporter:
       name: Idle_up 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1500
-        height: 1500
+        x: 381
+        y: 698
+        width: 9
+        height: 7
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9402c4eaf77a79b70800000000000000
+      internalID: 8905770954975354953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_up 1_1
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 454
+        width: 631
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -117,6 +158,28 @@ TextureImporter:
       bones: []
       spriteID: 0017a3351d5fcd970800000000000000
       internalID: 8781163652858933504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_up 1_2
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 633
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f96fdb001ca0dfa90800000000000000
+      internalID: -7278649598703438177
       vertices: []
       indices: 
       edges: []
@@ -133,11 +196,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1500.0,"y":1500.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Idle_up 1_0: 8781163652858933504
+      Idle_up 1_0: 8905770954975354953
+      Idle_up 1_1: 8781163652858933504
+      Idle_up 1_2: -7278649598703438177
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

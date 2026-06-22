@@ -11,6 +11,22 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip bossDieClip;
     [SerializeField] private AudioClip gameClearClip;
     [SerializeField] private AudioClip userDamagedClip;
+    [SerializeField] private AudioClip respawnClip;
+    [SerializeField] private AudioClip getItemClip;
+    [SerializeField] private AudioClip cloneClip;
+    [SerializeField] private AudioClip attackClip;
+    [SerializeField] private AudioClip attackVoiceClip;
+    [SerializeField] private AudioClip mobDieClip;
+    [SerializeField] private AudioClip mobDamagedVoiceClip;
+    [SerializeField] private AudioClip upgradeSelectClip;
+    [SerializeField] private AudioClip bossVoiceClip;
+    [SerializeField] private AudioClip bossIdleClip;
+    [SerializeField] private AudioClip bossFallClip;
+    [SerializeField] private AudioClip bossEntryClip;
+    [SerializeField] private AudioClip bossAttackReadyClip;
+    [SerializeField] private AudioClip bossAttackOutloopClip;
+    [SerializeField] private AudioClip bossAttackLoopClip;
+    [SerializeField] private AudioClip bossAttackInloopClip;
     private AudioSource audioSource;
 
 	private float masterVolume = 1f;
@@ -36,64 +52,120 @@ public class AudioManager : MonoBehaviour
 		LoadVolumeSettings();
 	}
 
-	public void PlayBallHitSound()
-	{
-		if (this.ballHitClip != null && this.audioSource != null)
-		{
-			this.audioSource.volume = masterVolume * sfxVolume;
-			this.audioSource.PlayOneShot(this.ballHitClip);
-		}
-	}
+    public void PlayBallHitSound()
+    {
+        PlaySfx(ballHitClip);
+    }
 
     public void PlayEnemyHitSound()
     {
-        if (this.enemyHitClip != null && this.audioSource != null)
-        {
-            this.audioSource.PlayOneShot(this.enemyHitClip);
-        }
+        PlaySfx(enemyHitClip);
     }
 
     public void PlayBossHitSound()
     {
-        if (this.bossHitClip != null && this.audioSource != null)
-        {
-            this.audioSource.PlayOneShot(this.bossHitClip);
-        }
+        PlaySfx(bossHitClip);
     }
+
 
     public void PlayBossBreathSound()
     {
-        if (this.bossBreathClip != null && this.audioSource != null)
-        {
-            this.audioSource.PlayOneShot(this.bossBreathClip);
-        }
+        PlaySfx(bossBreathClip);
     }
 
     public void PlayBossDieSound()
     {
-        if (this.bossDieClip != null && this.audioSource != null)
-        {
-            this.audioSource.PlayOneShot(this.bossDieClip);
-        }
+        PlaySfx(bossDieClip);
     }
 
     public void PlayGameClearSound()
     {
-        if (this.gameClearClip != null && this.audioSource != null)
-        {
-            this.audioSource.PlayOneShot(this.gameClearClip);
-        }
+        PlaySfx(gameClearClip);
     }
     public void PlayUserDamagedSound()
     {
-        if (this.userDamagedClip != null && this.audioSource != null)
-        {
-            this.audioSource.PlayOneShot(this.userDamagedClip);
-        }
+        PlaySfx(userDamagedClip);
     }
 
+    public void PlayRespawnSound()
+    {
+        PlaySfx(respawnClip);
+    }
 
-	public void SetMasterVolume(float volume)
+    public void PlayGetItemSound()
+    {
+        PlaySfx(getItemClip);
+    }
+
+    public void PlayCloneSound()
+    {
+        PlaySfx(cloneClip);
+    }
+
+    public void PlayAttackSound()
+    {
+        PlaySfx(attackClip);
+    }
+
+    public void PlayAttackVoiceSound()
+    {
+        PlaySfx(attackVoiceClip);
+    }
+
+    public void PlayMobDieSound()
+    {
+        PlaySfx(mobDieClip);
+    }
+
+    public void PlayMobDamagedVoiceSound()
+    {
+        PlaySfx(mobDamagedVoiceClip);
+    }
+
+    public void PlayUpgradeSelectSound()
+    {
+        PlaySfx(upgradeSelectClip);
+    }
+    public void PlayBossVoiceSound()
+    {
+        PlaySfx(bossVoiceClip);
+    }
+
+    public void PlayBossIdleSound()
+    {
+        PlaySfx(bossIdleClip);
+    }
+
+    public void PlayBossFallSound()
+    {
+        PlaySfx(bossFallClip);
+    }
+
+    public void PlayBossEntrySound()
+    {
+        PlaySfx(bossEntryClip);
+    }
+
+    public void PlayBossAttackReadySound()
+    {
+        PlaySfx(bossAttackReadyClip);
+    }
+
+    public void PlayBossAttackOutloopSound()
+    {
+        PlaySfx(bossAttackOutloopClip);
+    }
+
+    public void PlayBossAttackLoopSound()
+    {
+        PlaySfx(bossAttackLoopClip);
+    }
+
+    public void PlayBossAttackInloopSound()
+    {
+        PlaySfx(bossAttackInloopClip);
+    }
+    public void SetMasterVolume(float volume)
 	{
 		masterVolume = Mathf.Clamp01(volume);
 		SaveVolumeSettings();
@@ -122,8 +194,15 @@ public class AudioManager : MonoBehaviour
 		PlayerPrefs.SetFloat("SFXVolume", sfxVolume);
 		PlayerPrefs.Save();
 	}
+    private void PlaySfx(AudioClip clip)
+    {
+        if (clip == null || this.audioSource == null)
+            return;
 
-	private void LoadVolumeSettings()
+        this.audioSource.volume = masterVolume * sfxVolume;
+        this.audioSource.PlayOneShot(clip);
+    }
+    private void LoadVolumeSettings()
 	{
 		masterVolume = PlayerPrefs.GetFloat("MasterVolume", 1f);
 		bgmVolume = PlayerPrefs.GetFloat("BGMVolume", 1f);

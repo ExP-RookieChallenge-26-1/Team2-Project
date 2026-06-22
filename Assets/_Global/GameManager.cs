@@ -34,13 +34,13 @@ public class GameManager : MonoBehaviour
 		this.BallStats = Instantiate(this.ballStatsAsset);
 		this.PaddleStats = Instantiate(this.paddleStatsAsset);
 		this.WorldStats = Instantiate(this.worldStatsAsset);
+		this.User = FindFirstObjectByType<User>();
+		this.paddle = FindFirstObjectByType<Paddle>();
 	}
 
 	private void Start()
 	{
 		this.State.OnChanged += OnGameStateChanged;
-		this.User = FindFirstObjectByType<User>();
-		this.paddle = FindFirstObjectByType<Paddle>();
 		TriggerSpawn();
 	}
 
@@ -99,7 +99,9 @@ public class GameManager : MonoBehaviour
 		Vector3 spawnPos = new Vector3(centerX, this.paddle.transform.position.y + 1f, 0f);
 		Ball ball = Instantiate(this.ballPrefab, spawnPos, Quaternion.identity);
 		ball.Spawn();
-	}
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayRespawnSound();
+    }
 
     public void OnBossDefeated()
     {

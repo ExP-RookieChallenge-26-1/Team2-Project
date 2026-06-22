@@ -86,6 +86,7 @@ public class BallCollision : MonoBehaviour
                 {
                     var (damage, isCrit) = CalculateDamage();
                     collision.damageable.TakeDamage(damage, isCrit);
+                    this.ball.Animation.TriggerAttack();
                     this.lastHitDamageable = collision.damageable;
                     this.lastHitDamageableCollider = collision.damageableCollider;
                 }

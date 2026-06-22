@@ -3,9 +3,9 @@
     "file_id": "Assets/_Global/AudioManager.cs",
     "path": "Assets/_Global/AudioManager.cs",
     "file_name": "AudioManager.cs",
-    "content_hash": "709d379599489df0a14efc44defc45e991cb8035",
-    "size": 3272,
-    "line_count": 134,
+    "content_hash": "afa594e08ff6521490f70fddef73c8b2e45e51e0",
+    "size": 4908,
+    "line_count": 213,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -35,6 +35,22 @@
       "PlayBossDieSound",
       "PlayGameClearSound",
       "PlayUserDamagedSound",
+      "PlayRespawnSound",
+      "PlayGetItemSound",
+      "PlayCloneSound",
+      "PlayAttackSound",
+      "PlayAttackVoiceSound",
+      "PlayMobDieSound",
+      "PlayMobDamagedVoiceSound",
+      "PlayUpgradeSelectSound",
+      "PlayBossVoiceSound",
+      "PlayBossIdleSound",
+      "PlayBossFallSound",
+      "PlayBossEntrySound",
+      "PlayBossAttackReadySound",
+      "PlayBossAttackOutloopSound",
+      "PlayBossAttackLoopSound",
+      "PlayBossAttackInloopSound",
       "SetMasterVolume",
       "SetBGMVolume",
       "SetSFXVolume",
@@ -42,6 +58,7 @@
       "GetBGMVolume",
       "GetSFXVolume",
       "SaveVolumeSettings",
+      "PlaySfx",
       "LoadVolumeSettings"
     ],
     "fields": [
@@ -113,13 +130,29 @@
       "AddComponent",
       "LoadVolumeSettings",
       "PlayBallHitSound",
-      "PlayOneShot",
+      "PlaySfx",
       "PlayEnemyHitSound",
       "PlayBossHitSound",
       "PlayBossBreathSound",
       "PlayBossDieSound",
       "PlayGameClearSound",
       "PlayUserDamagedSound",
+      "PlayRespawnSound",
+      "PlayGetItemSound",
+      "PlayCloneSound",
+      "PlayAttackSound",
+      "PlayAttackVoiceSound",
+      "PlayMobDieSound",
+      "PlayMobDamagedVoiceSound",
+      "PlayUpgradeSelectSound",
+      "PlayBossVoiceSound",
+      "PlayBossIdleSound",
+      "PlayBossFallSound",
+      "PlayBossEntrySound",
+      "PlayBossAttackReadySound",
+      "PlayBossAttackOutloopSound",
+      "PlayBossAttackLoopSound",
+      "PlayBossAttackInloopSound",
       "SetMasterVolume",
       "Clamp01",
       "SaveVolumeSettings",
@@ -134,6 +167,7 @@
       "BGMVolume",
       "SFXVolume",
       "Save",
+      "PlayOneShot",
       "GetFloat"
     ],
     "component_access_types": [
@@ -150,8 +184,8 @@
       1
     ],
     "guessed_roles": [
-      "save-load",
       "combat",
+      "save-load",
       "manager",
       "runtime",
       "player"
@@ -169,9 +203,9 @@
     "file_id": "Assets/_Global/GameManager.cs",
     "path": "Assets/_Global/GameManager.cs",
     "file_name": "GameManager.cs",
-    "content_hash": "d415d254a0f02f9bdddae7b6b420596d9ac4417f",
-    "size": 3048,
-    "line_count": 122,
+    "content_hash": "621b70d431e6d17fc2c41214755c0f1b01bd9dca",
+    "size": 3148,
+    "line_count": 124,
     "namespace": "",
     "using_list": [
       "UnityEngine",
@@ -285,10 +319,10 @@
       "Destroy",
       "GetComponent",
       "Instantiate",
+      "FindFirstObjectByType",
       "Start",
       "OnChanged",
       "OnGameStateChanged",
-      "FindFirstObjectByType",
       "TriggerSpawn",
       "Update",
       "Tick",
@@ -314,9 +348,10 @@
       "Vector3",
       "Quaternion",
       "Spawn",
+      "AudioManager",
+      "PlayRespawnSound",
       "OnBossDefeated",
       "Log",
-      "AudioManager",
       "PlayGameClearSound",
       "SetActive",
       "GoToTitle"
@@ -774,11 +809,12 @@
     "file_id": "Assets/_Global/UserHealth.cs",
     "path": "Assets/_Global/UserHealth.cs",
     "file_name": "UserHealth.cs",
-    "content_hash": "a0f16fc42dc8cacf5228e59089daeaa3e2ba2073",
-    "size": 546,
-    "line_count": 26,
+    "content_hash": "c7b81a488e0735d4e822998082219d39d46ff3d5",
+    "size": 757,
+    "line_count": 36,
     "namespace": "",
     "using_list": [
+      "System",
       "UnityEngine"
     ],
     "classes": [
@@ -799,6 +835,7 @@
     "unity_type": "MonoBehaviour",
     "methods": [
       "Awake",
+      "Start",
       "TakeDamage"
     ],
     "fields": [],
@@ -811,13 +848,14 @@
     ],
     "events": [],
     "unity_messages": [
-      "Awake"
+      "Awake",
+      "Start"
     ],
     "has_update": false,
     "has_fixed_update": false,
     "has_late_update": false,
     "has_awake": true,
-    "has_start": false,
+    "has_start": true,
     "has_on_enable": false,
     "has_on_disable": false,
     "serialize_field_count": 0,
@@ -830,10 +868,14 @@
     "dont_destroy_on_load": false,
     "referenced_types": [
       "int",
+      "System",
       "UnityEngine",
       "MaxHp",
       "CurrentHp",
+      "OnHpChanged",
       "Awake",
+      "Start",
+      "Invoke",
       "TakeDamage",
       "DamageTextSpawner",
       "Instance",
@@ -857,9 +899,9 @@
       3
     ],
     "guessed_roles": [
+      "runtime",
       "combat",
       "manager",
-      "runtime",
       "save-load"
     ],
     "summary_signals": [
@@ -872,11 +914,12 @@
     "file_id": "Assets/_Global/UserLevel.cs",
     "path": "Assets/_Global/UserLevel.cs",
     "file_name": "UserLevel.cs",
-    "content_hash": "e96009b57579b8aadb22a2b5f1e345ae91529e87",
-    "size": 1852,
-    "line_count": 68,
+    "content_hash": "0d0aee3e1f454346d522ae1e227bc8ca1d4dd841",
+    "size": 2111,
+    "line_count": 75,
     "namespace": "",
     "using_list": [
+      "System",
       "UnityEngine"
     ],
     "classes": [
@@ -924,6 +967,7 @@
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
+      "System",
       "UnityEngine",
       "Default",
       "Upgrade",
@@ -931,13 +975,16 @@
       "EnhanceUI",
       "CurrentLevel",
       "CurrentExp",
+      "RequiredExp",
+      "Length",
+      "OnExpChanged",
       "Start",
       "SetActive",
       "AddExp",
       "Log",
       "EXP",
       "CheckLevelUp",
-      "Length",
+      "Invoke",
       "OpenDefaultUpgradeUI",
       "OpenUpgradeUI",
       "LogWarning",
@@ -996,9 +1043,9 @@
     "file_id": "Assets/Gameplay/Ball/Ball.cs",
     "path": "Assets/Gameplay/Ball/Ball.cs",
     "file_name": "Ball.cs",
-    "content_hash": "33bae3e61de0a54e8df55f4a6ef31116c8da7d6c",
-    "size": 2155,
-    "line_count": 95,
+    "content_hash": "d3e03fff5b39b51af0b46571b9afa617f4a01014",
+    "size": 2117,
+    "line_count": 94,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -1034,13 +1081,6 @@
       "CheckOutOfBounds"
     ],
     "fields": [
-      {
-        "name": "animation",
-        "type": "BallAnimation",
-        "access": "private",
-        "serialized": false,
-        "is_static": false
-      },
       {
         "name": "isSpawning",
         "type": "bool",
@@ -1107,6 +1147,11 @@
         "access": "public",
         "type": "CloneSkill",
         "name": "CloneSkill"
+      },
+      {
+        "access": "public",
+        "type": "BallAnimation",
+        "name": "Animation"
       }
     ],
     "events": [],
@@ -1124,14 +1169,13 @@
     "has_on_disable": false,
     "serialize_field_count": 0,
     "public_field_count": 0,
-    "get_component_count": 5,
+    "get_component_count": 4,
     "find_call_count": 0,
     "new_keyword_count": 4,
     "coroutine_count": 0,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
-      "BallAnimation",
       "bool",
       "float",
       "BallStats",
@@ -1140,16 +1184,17 @@
       "BallTrajectory",
       "GiantSkill",
       "CloneSkill",
+      "BallAnimation",
       "UnityEngine",
       "RequireComponent",
       "Stats",
       "Physics",
       "Collision",
       "Trajectory",
+      "Animation",
       "SpawnDelay",
       "Awake",
       "GetComponent",
-      "Animator",
       "Start",
       "GameManager",
       "Instance",
@@ -1175,8 +1220,7 @@
       "BallCollision",
       "BallTrajectory",
       "GiantSkill",
-      "CloneSkill",
-      "Animator"
+      "CloneSkill"
     ],
     "created_types": [
       "BallPhysics",
@@ -1219,9 +1263,9 @@
     "file_id": "Assets/Gameplay/Ball/BallAnimation.cs",
     "path": "Assets/Gameplay/Ball/BallAnimation.cs",
     "file_name": "BallAnimation.cs",
-    "content_hash": "76f928264a78c75938b4b07b09c059f83a4142c8",
-    "size": 644,
-    "line_count": 33,
+    "content_hash": "1b1260dbc4c6455faa6f60676e2c78866ba2e280",
+    "size": 1587,
+    "line_count": 72,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -1243,7 +1287,12 @@
     "methods": [
       "BallAnimation",
       "Tick",
-      "UpdateIdleUpDownState"
+      "UpdateIdleUpDownState",
+      "TriggerUpsizing",
+      "TriggerDownsizing",
+      "TriggerClone",
+      "TriggerAttack",
+      "UpdateFlipState"
     ],
     "fields": [
       {
@@ -1261,7 +1310,42 @@
         "is_static": false
       },
       {
+        "name": "spriteRenderer",
+        "type": "SpriteRenderer",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
         "name": "isMovingUpHash",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "attackHash",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "cloneHash",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "upsizingHash",
+        "type": "int",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "downsizingHash",
         "type": "int",
         "access": "private",
         "serialized": false,
@@ -1280,7 +1364,7 @@
     "has_on_disable": false,
     "serialize_field_count": 0,
     "public_field_count": 0,
-    "get_component_count": 0,
+    "get_component_count": 2,
     "find_call_count": 0,
     "new_keyword_count": 0,
     "coroutine_count": 0,
@@ -1289,39 +1373,62 @@
     "referenced_types": [
       "Animator",
       "Ball",
+      "SpriteRenderer",
       "int",
       "UnityEngine",
+      "GetComponent",
       "StringToHash",
       "IsMovingUp",
+      "Attack",
+      "Clone",
+      "Upsizing",
+      "Downsizing",
       "LogError",
       "Tick",
       "UpdateIdleUpDownState",
+      "UpdateFlipState",
       "SetBool",
       "Physics",
-      "Velocity"
+      "Velocity",
+      "TriggerUpsizing",
+      "SetTrigger",
+      "TriggerDownsizing",
+      "TriggerClone",
+      "TriggerAttack"
     ],
-    "component_access_types": [],
+    "component_access_types": [
+      "Animator",
+      "SpriteRenderer"
+    ],
     "created_types": [],
     "singleton_access_types": [],
     "string_literals": [
       "IsMovingUp",
+      "Attack",
+      "Clone",
+      "Upsizing",
+      "Downsizing",
       "BallAnimation: Animator를 찾을 수 없습니다!"
     ],
     "numeric_literals": [
       0
     ],
     "guessed_roles": [
+      "combat",
       "runtime"
     ],
-    "summary_signals": []
+    "summary_signals": [
+      "전투 계열 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
   },
   {
     "file_id": "Assets/Gameplay/Ball/BallCollision.cs",
     "path": "Assets/Gameplay/Ball/BallCollision.cs",
     "file_name": "BallCollision.cs",
-    "content_hash": "120f5542bdbdb33dcac751da14241b03609264c5",
-    "size": 8052,
-    "line_count": 298,
+    "content_hash": "55c99fc8893aa69e3e6c963532eea46ddbbadc54",
+    "size": 8109,
+    "line_count": 299,
     "namespace": "",
     "using_list": [
       "System.Collections.Generic",
@@ -1663,6 +1770,8 @@
       "ApplyPaddleReflectionAlternative",
       "CalculateDamage",
       "TakeDamage",
+      "Animation",
+      "TriggerAttack",
       "Clear",
       "Physics2D",
       "OverlapCircle",
@@ -2532,9 +2641,9 @@
     "file_id": "Assets/Gameplay/Ball/CloneSkill.cs",
     "path": "Assets/Gameplay/Ball/CloneSkill.cs",
     "file_name": "CloneSkill.cs",
-    "content_hash": "e601d36a138a227e04d35f2bcb87c77ace39957d",
-    "size": 2251,
-    "line_count": 92,
+    "content_hash": "4d79eb15f0957492d9afad5c7d950a2ff25dea11",
+    "size": 2361,
+    "line_count": 95,
     "namespace": "",
     "using_list": [
       "System",
@@ -2645,14 +2754,16 @@
       "Unsubscribe",
       "OnActivate",
       "SpawnClones",
+      "Ball",
+      "FindObjectsByType",
+      "FindObjectsSortMode",
+      "None",
+      "Animation",
+      "TriggerClone",
       "OnDeactivate",
       "IncreaseCloneLevel",
       "Math",
       "Clamp",
-      "FindObjectsByType",
-      "Ball",
-      "FindObjectsSortMode",
-      "None",
       "Min",
       "GetRandomValidAngle",
       "Deg2Rad",
@@ -2699,11 +2810,12 @@
     "file_id": "Assets/Gameplay/Ball/GiantSkill.cs",
     "path": "Assets/Gameplay/Ball/GiantSkill.cs",
     "file_name": "GiantSkill.cs",
-    "content_hash": "b0d259ebd5503ff140e8f7e2ed2e16cbcc298457",
-    "size": 1164,
-    "line_count": 46,
+    "content_hash": "04923b6a6dc97c60b7dddc9383e04fcf0b84114d",
+    "size": 1617,
+    "line_count": 61,
     "namespace": "",
     "using_list": [
+      "System.Collections",
       "UnityEngine"
     ],
     "classes": [
@@ -2727,11 +2839,21 @@
       "Subscribe",
       "Unsubscribe",
       "OnActivate",
+      "UpsizingReadyRoutine",
+      "WaitForSeconds",
       "OnDeactivate",
       "IncreaseSizeLevel",
       "GetCurrentMultiplier"
     ],
-    "fields": [],
+    "fields": [
+      {
+        "name": "frameTime",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
     "properties": [
       {
         "access": "public",
@@ -2759,13 +2881,15 @@
     "public_field_count": 0,
     "get_component_count": 0,
     "find_call_count": 0,
-    "new_keyword_count": 0,
-    "coroutine_count": 0,
+    "new_keyword_count": 2,
+    "coroutine_count": 2,
     "singleton_candidate": false,
     "dont_destroy_on_load": false,
     "referenced_types": [
       "float",
       "int",
+      "System",
+      "Collections",
       "UnityEngine",
       "BallSkill",
       "RadiusMultiplierPerLevel",
@@ -2778,22 +2902,31 @@
       "TryManualActivate",
       "Unsubscribe",
       "OnActivate",
+      "Animation",
+      "TriggerUpsizing",
+      "StartCoroutine",
+      "UpsizingReadyRoutine",
+      "GetCurrentMultiplier",
       "Stats",
       "SetRadiusMultiplier",
-      "GetCurrentMultiplier",
+      "WaitForSeconds",
       "OnDeactivate",
       "ResetRadiusMultiplier",
+      "TriggerDownsizing",
       "IncreaseSizeLevel",
-      "System",
       "Math",
       "Clamp"
     ],
     "component_access_types": [],
-    "created_types": [],
+    "created_types": [
+      "WaitForSeconds"
+    ],
     "singleton_access_types": [],
     "string_literals": [],
     "numeric_literals": [
-      1
+      1,
+      12,
+      2
     ],
     "guessed_roles": [
       "runtime",
@@ -3470,9 +3603,9 @@
     "file_id": "Assets/Gameplay/Cowking/CowKing.cs",
     "path": "Assets/Gameplay/Cowking/CowKing.cs",
     "file_name": "CowKing.cs",
-    "content_hash": "4dafa13524fd08a2d27fca446475d63e1c4d3faf",
-    "size": 7631,
-    "line_count": 324,
+    "content_hash": "0eadcb8f06a91e9ec1e12a90bbf2de0168648891",
+    "size": 8195,
+    "line_count": 341,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -3515,6 +3648,7 @@
       "TakeDamage",
       "Die",
       "DieSequence",
+      "PlayBossEntrySfx",
       "Awake",
       "SetMoveAnimation",
       "PlayAttackAnimation",
@@ -3693,12 +3827,16 @@
       "EndBreath",
       "StartMove",
       "StartAttack",
-      "PlayAttackReadyAnimation",
-      "Instantiate",
-      "Quaternion",
       "AudioManager",
       "Instance",
-      "PlayBossBreathSound",
+      "PlayBossVoiceSound",
+      "PlayAttackReadyAnimation",
+      "PlayBossAttackReadySound",
+      "Instantiate",
+      "Quaternion",
+      "PlayBossAttackInloopSound",
+      "PlayBossAttackLoopSound",
+      "PlayBossAttackOutloopSound",
       "Destroy",
       "System",
       "Collections",
@@ -3714,9 +3852,12 @@
       "Collider2D",
       "GetComponent",
       "DieSequence",
+      "PlayBossFallSound",
       "Rotate",
       "GameManager",
       "OnBossDefeated",
+      "PlayBossEntrySfx",
+      "PlayBossEntrySound",
       "Awake",
       "SetBool",
       "IsMoving",
@@ -3744,7 +3885,6 @@
       "Move Range",
       "Breath",
       "우마왕 피격, 남은 체력: {currentHp}",
-      "우마왕 die 시작",
       "IsMoving",
       "Attack",
       "Damaged",
@@ -4100,9 +4240,9 @@
     "file_id": "Assets/Gameplay/Enemy/Enemy.cs",
     "path": "Assets/Gameplay/Enemy/Enemy.cs",
     "file_name": "Enemy.cs",
-    "content_hash": "0f371f3e06a493b13427f5e84dd1e9d4a4f12fcc",
-    "size": 5629,
-    "line_count": 213,
+    "content_hash": "b88402363ff0dafd94496c977067d8b476ceaabb",
+    "size": 5727,
+    "line_count": 217,
     "namespace": "",
     "using_list": [
       "UnityEngine",
@@ -4348,6 +4488,7 @@
       "Spawn",
       "Die",
       "PlayDamagedAnimation",
+      "PlayMobDieSound",
       "PlayDieAnimation",
       "GameManager",
       "User",
@@ -5549,9 +5690,9 @@
     "file_id": "Assets/Gameplay/Item/ItemPickup.cs",
     "path": "Assets/Gameplay/Item/ItemPickup.cs",
     "file_name": "ItemPickup.cs",
-    "content_hash": "3b5d23e804266009ce130fa0f5dc5f027ef5dabd",
-    "size": 2581,
-    "line_count": 93,
+    "content_hash": "6e7094066046e4dd3cadea116215dd3214c2850a",
+    "size": 2679,
+    "line_count": 96,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -5681,6 +5822,8 @@
       "Radius",
       "Intersects",
       "Log",
+      "AudioManager",
+      "PlayGetItemSound",
       "Apply",
       "Destroy"
     ],
@@ -5690,7 +5833,8 @@
     ],
     "created_types": [],
     "singleton_access_types": [
-      "GameManager"
+      "GameManager",
+      "AudioManager"
     ],
     "string_literals": [
       "아이템 획득: {this.itemData.name}"
@@ -7095,9 +7239,9 @@
     "file_id": "Assets/UI/Enhancement/CardSlotUI.cs",
     "path": "Assets/UI/Enhancement/CardSlotUI.cs",
     "file_name": "CardSlotUI.cs",
-    "content_hash": "eedecee80273298244ce5671ae4b389d08b4a33b",
-    "size": 1273,
-    "line_count": 54,
+    "content_hash": "c984a49bc74bbfd389b483d4a14fd56eccd56b0c",
+    "size": 1383,
+    "line_count": 57,
     "namespace": "",
     "using_list": [
       "TMPro",
@@ -7199,6 +7343,9 @@
       "AddListener",
       "OnClickCard",
       "SetSelected",
+      "AudioManager",
+      "Instance",
+      "PlayUpgradeSelectSound",
       "SelectCard",
       "GetCard"
     ],
@@ -7206,7 +7353,9 @@
     "created_types": [
       "Vector2"
     ],
-    "singleton_access_types": [],
+    "singleton_access_types": [
+      "AudioManager"
+    ],
     "string_literals": [],
     "numeric_literals": [
       0,
@@ -7214,10 +7363,10 @@
     ],
     "guessed_roles": [
       "ui",
+      "manager",
       "runtime",
       "player",
-      "inventory",
-      "data"
+      "inventory"
     ],
     "summary_signals": [
       "런타임 컴포넌트",
@@ -7229,9 +7378,9 @@
     "file_id": "Assets/UI/Enhancement/EnhanceUI.cs",
     "path": "Assets/UI/Enhancement/EnhanceUI.cs",
     "file_name": "EnhanceUI.cs",
-    "content_hash": "ffc89c6c08bd8f364ddc43008868ec61e0425203",
-    "size": 2149,
-    "line_count": 89,
+    "content_hash": "2a8a11c18b687fa676fec83250c1a100cc0ae056",
+    "size": 2257,
+    "line_count": 92,
     "namespace": "",
     "using_list": [
       "System.Collections.Generic",
@@ -7350,6 +7499,8 @@
       "Setup",
       "SelectCard",
       "SetSelected",
+      "AudioManager",
+      "PlayUpgradeSelectSound",
       "Apply",
       "Change",
       "GameStateMachine",
@@ -7360,7 +7511,8 @@
       "List"
     ],
     "singleton_access_types": [
-      "GameManager"
+      "GameManager",
+      "AudioManager"
     ],
     "string_literals": [],
     "numeric_literals": [],
@@ -7374,6 +7526,310 @@
     "summary_signals": [
       "런타임 컴포넌트",
       "UI 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/UI/HUD/EXPBarUI.cs",
+    "path": "Assets/UI/HUD/EXPBarUI.cs",
+    "file_name": "EXPBarUI.cs",
+    "content_hash": "b4d675dcaf2d05127ab57463754d7e52dd8db3b5",
+    "size": 1531,
+    "line_count": 52,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "EXPBarUI",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "EXPBarUI",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Awake",
+      "Start",
+      "OnDestroy",
+      "OnExpChanged",
+      "SetFill",
+      "Vector3"
+    ],
+    "fields": [
+      {
+        "name": "spriteRenderer",
+        "type": "SpriteRenderer",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "initialLocalPos",
+        "type": "Vector3",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "initialLocalScale",
+        "type": "Vector3",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "spriteHalfWidth",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "level",
+        "type": "var",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "level",
+        "type": "var",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "newScaleX",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Awake",
+      "Start",
+      "OnDestroy"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 2,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "SpriteRenderer",
+      "Vector3",
+      "float",
+      "UnityEngine",
+      "Awake",
+      "GetComponent",
+      "Start",
+      "GameManager",
+      "Instance",
+      "User",
+      "Level",
+      "OnExpChanged",
+      "SetFill",
+      "CurrentExp",
+      "RequiredExp",
+      "OnDestroy",
+      "Clamp01"
+    ],
+    "component_access_types": [
+      "SpriteRenderer"
+    ],
+    "created_types": [
+      "Vector3"
+    ],
+    "singleton_access_types": [
+      "GameManager"
+    ],
+    "string_literals": [],
+    "numeric_literals": [
+      1
+    ],
+    "guessed_roles": [
+      "runtime",
+      "manager",
+      "ui"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "UI 관련 로직 포함",
+      "컴포넌트 조회 사용"
+    ]
+  },
+  {
+    "file_id": "Assets/UI/HUD/HPBarUI.cs",
+    "path": "Assets/UI/HUD/HPBarUI.cs",
+    "file_name": "HPBarUI.cs",
+    "content_hash": "e954b8aabf810a29140824fab851bdc0ecef3696",
+    "size": 1630,
+    "line_count": 53,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "HPBarUI",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "HPBarUI",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Awake",
+      "Start",
+      "OnDestroy",
+      "OnHpChanged",
+      "SetFill",
+      "Vector3"
+    ],
+    "fields": [
+      {
+        "name": "spriteRenderer",
+        "type": "SpriteRenderer",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "initialLocalPos",
+        "type": "Vector3",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "initialLocalScale",
+        "type": "Vector3",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "spriteHalfWidth",
+        "type": "float",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "health",
+        "type": "var",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "health",
+        "type": "var",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "newScaleX",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Awake",
+      "Start",
+      "OnDestroy"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 1,
+    "find_call_count": 0,
+    "new_keyword_count": 2,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "SpriteRenderer",
+      "Vector3",
+      "float",
+      "UnityEngine",
+      "Awake",
+      "GetComponent",
+      "Start",
+      "GameManager",
+      "Instance",
+      "User",
+      "Health",
+      "OnHpChanged",
+      "SetFill",
+      "CurrentHp",
+      "MaxHp",
+      "OnDestroy",
+      "Clamp01"
+    ],
+    "component_access_types": [
+      "SpriteRenderer"
+    ],
+    "created_types": [
+      "Vector3"
+    ],
+    "singleton_access_types": [
+      "GameManager"
+    ],
+    "string_literals": [],
+    "numeric_literals": [
+      1
+    ],
+    "guessed_roles": [
+      "runtime",
+      "manager",
+      "ui",
+      "combat"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "UI 관련 로직 포함",
+      "전투 계열 로직 포함",
+      "컴포넌트 조회 사용"
     ]
   },
   {

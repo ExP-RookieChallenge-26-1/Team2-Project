@@ -150,6 +150,9 @@ public class CowKing : MonoBehaviour, IDamageable
         float randomX = Random.Range(minX, maxX);
         float randomY = Random.Range(minY, maxY);
 
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayBossVoiceSound();
+
         targetPosition = new Vector3(randomX, randomY, transform.position.z);
         SetMoveAnimation(true);
         ChangeState(CowKingState.Move);
@@ -161,6 +164,9 @@ public class CowKing : MonoBehaviour, IDamageable
 
         SetMoveAnimation(false);
         PlayAttackReadyAnimation();
+
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayBossAttackReadySound();
 
         isBreathing = false;
         breathTimer = 0f;
@@ -184,7 +190,10 @@ public class CowKing : MonoBehaviour, IDamageable
         currentBreath = Instantiate(breathPrefab, breathSpawnPoint.position, Quaternion.identity);
 
         if (AudioManager.Instance != null)
-            AudioManager.Instance.PlayBossBreathSound();
+        {
+            AudioManager.Instance.PlayBossAttackInloopSound();
+            AudioManager.Instance.PlayBossAttackLoopSound();
+        }
 
         isBreathing = true;
         breathTimer = 0f;
@@ -194,6 +203,9 @@ public class CowKing : MonoBehaviour, IDamageable
     {
         if (currentBreath != null)
         {
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayBossAttackOutloopSound();
+
             Destroy(currentBreath);
             currentBreath = null;
         }
@@ -267,9 +279,11 @@ public class CowKing : MonoBehaviour, IDamageable
 
     private System.Collections.IEnumerator DieSequence()
     {
-        Debug.Log("우마왕 die 시작");
 
         yield return new WaitForSeconds(1f);
+
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayBossFallSound();
 
         float fallSpeed = 2.5f;
         float rotateSpeed = 360f;
@@ -287,7 +301,10 @@ public class CowKing : MonoBehaviour, IDamageable
 
         Destroy(gameObject);
     }
-
+    public void PlayBossEntrySfx()
+    {
+        AudioManager.Instance?.PlayBossEntrySound();
+    }
 
     private void Awake()
     {
