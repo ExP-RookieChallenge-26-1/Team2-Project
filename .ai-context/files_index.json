@@ -200,6 +200,124 @@
     ]
   },
   {
+    "file_id": "Assets/_Global/BuffBadgeManager.cs",
+    "path": "Assets/_Global/BuffBadgeManager.cs",
+    "file_name": "BuffBadgeManager.cs",
+    "content_hash": "4b78ff4316867847e7bafdc2a56d9ea86d0918ff",
+    "size": 1385,
+    "line_count": 56,
+    "namespace": "",
+    "using_list": [
+      "System",
+      "System.Collections.Generic",
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "BuffBadgeManager",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "BuffBadgeManager",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Awake",
+      "Update",
+      "Attach",
+      "ActiveBuffBadge",
+      "Detach"
+    ],
+    "fields": [
+      {
+        "name": "badge",
+        "type": "ActiveBuffBadge",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [
+      {
+        "access": "internal",
+        "type": "BuffBadgeManager",
+        "name": "Instance"
+      }
+    ],
+    "events": [],
+    "unity_messages": [
+      "Awake",
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": true,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 1,
+    "coroutine_count": 0,
+    "singleton_candidate": true,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "ActiveBuffBadge",
+      "System",
+      "Collections",
+      "Generic",
+      "UnityEngine",
+      "Instance",
+      "OnBadgeAttached",
+      "OnBadgeDetached",
+      "Awake",
+      "Destroy",
+      "Update",
+      "Count",
+      "IsPermanent",
+      "RemainingTime",
+      "Detach",
+      "Attach",
+      "BuffBadgeData",
+      "LogWarning",
+      "Add",
+      "Invoke",
+      "Remove"
+    ],
+    "component_access_types": [],
+    "created_types": [
+      "ActiveBuffBadge"
+    ],
+    "singleton_access_types": [],
+    "string_literals": [
+      "BuffBadgeData is null."
+    ],
+    "numeric_literals": [
+      0
+    ],
+    "guessed_roles": [
+      "runtime",
+      "manager",
+      "player",
+      "data"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "싱글톤 후보"
+    ]
+  },
+  {
     "file_id": "Assets/_Global/GameManager.cs",
     "path": "Assets/_Global/GameManager.cs",
     "file_name": "GameManager.cs",
@@ -2085,9 +2203,9 @@
     "file_id": "Assets/Gameplay/Ball/BallSkill.cs",
     "path": "Assets/Gameplay/Ball/BallSkill.cs",
     "file_name": "BallSkill.cs",
-    "content_hash": "b13f6fab1e69b35367d5a486118c65ad59430473",
-    "size": 3000,
-    "line_count": 157,
+    "content_hash": "d05082d844ebf59b01503a4ed6efd8075a035b39",
+    "size": 3396,
+    "line_count": 168,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -2136,7 +2254,21 @@
         "is_static": false
       },
       {
+        "name": "lastBadgeFrame",
+        "type": "int",
+        "access": "private",
+        "serialized": true,
+        "is_static": true
+      },
+      {
         "name": "cooldown",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "attachDuration",
         "type": "float",
         "access": "internal",
         "serialized": false,
@@ -2188,7 +2320,7 @@
     "has_start": true,
     "has_on_enable": false,
     "has_on_disable": false,
-    "serialize_field_count": 0,
+    "serialize_field_count": 1,
     "public_field_count": 0,
     "get_component_count": 1,
     "find_call_count": 0,
@@ -2198,11 +2330,13 @@
     "dont_destroy_on_load": false,
     "referenced_types": [
       "Ball",
+      "int",
       "float",
       "bool",
       "UnityEngine",
       "SkillEventChannel",
       "Duration",
+      "BuffBadgeData",
       "HasManualTrigger",
       "ManualCooldown",
       "HasAutoTrigger",
@@ -2227,6 +2361,9 @@
       "SetAutoCooldown",
       "SetTriggerSettings",
       "SetDuration",
+      "BuffBadgeManager",
+      "Instance",
+      "Attach",
       "OnActivate",
       "TryManualActivate"
     ],
@@ -2234,17 +2371,22 @@
       "Ball"
     ],
     "created_types": [],
-    "singleton_access_types": [],
+    "singleton_access_types": [
+      "BuffBadgeManager"
+    ],
     "string_literals": [],
     "numeric_literals": [
       0
     ],
     "guessed_roles": [
       "runtime",
+      "manager",
+      "data",
       "save-load"
     ],
     "summary_signals": [
       "런타임 컴포넌트",
+      "인스펙터 직렬화 필드 사용",
       "저장/불러오기 관련 로직 포함",
       "컴포넌트 조회 사용"
     ]
@@ -3240,9 +3382,9 @@
     "file_id": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "path": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "file_name": "StatUpgradeCardData.cs",
-    "content_hash": "bd45974cc6af684bee6aedb394c47c4f762839a5",
-    "size": 2484,
-    "line_count": 60,
+    "content_hash": "7c4aaa8ded773c2c6180802480b7fbb3e2e6beea",
+    "size": 2744,
+    "line_count": 66,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -3284,6 +3426,16 @@
       }
     ],
     "properties": [
+      {
+        "access": "public",
+        "type": "BuffBadgeData",
+        "name": "BadgeData"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "BadgeDuration"
+      },
       {
         "access": "public",
         "type": "float",
@@ -3355,6 +3507,7 @@
     "referenced_types": [
       "BallStats",
       "PaddleStats",
+      "BuffBadgeData",
       "float",
       "int",
       "UnityEngine",
@@ -3362,6 +3515,9 @@
       "StatUpgradeCard",
       "CardData",
       "StatUpgrade",
+      "Badge",
+      "BadgeData",
+      "BadgeDuration",
       "Upgrade",
       "Value",
       "AttackPower",
@@ -3388,6 +3544,8 @@
       "ReduceSkill2ManualCooldown",
       "ReduceSkill2AutoCooldown",
       "ApplySkillCooldownsToActiveBalls",
+      "BuffBadgeManager",
+      "Attach",
       "Ball",
       "Object",
       "FindObjectsByType",
@@ -3402,11 +3560,13 @@
     "component_access_types": [],
     "created_types": [],
     "singleton_access_types": [
-      "GameManager"
+      "GameManager",
+      "BuffBadgeManager"
     ],
     "string_literals": [
       "StatUpgradeCard",
       "CardData/StatUpgrade",
+      "Badge",
       "Upgrade Value"
     ],
     "numeric_literals": [],
@@ -7643,6 +7803,343 @@
       "manager"
     ],
     "summary_signals": []
+  },
+  {
+    "file_id": "Assets/UI/BuffBadge/ActiveBuffBadge.cs",
+    "path": "Assets/UI/BuffBadge/ActiveBuffBadge.cs",
+    "file_name": "ActiveBuffBadge.cs",
+    "content_hash": "958dff88f08d8db1a21ed147d1a2449cf4facb23",
+    "size": 359,
+    "line_count": 15,
+    "namespace": "",
+    "using_list": [],
+    "classes": [
+      {
+        "name": "ActiveBuffBadge",
+        "kind": "class",
+        "access": "public",
+        "base_types": [],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "ActiveBuffBadge",
+    "unity_type": "None",
+    "methods": [
+      "ActiveBuffBadge"
+    ],
+    "fields": [],
+    "properties": [
+      {
+        "access": "public",
+        "type": "BuffBadgeData",
+        "name": "Data"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "Duration"
+      },
+      {
+        "access": "public",
+        "type": "float",
+        "name": "RemainingTime"
+      }
+    ],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "BuffBadgeData",
+      "float",
+      "Data",
+      "Duration",
+      "RemainingTime",
+      "IsPermanent"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [
+      0
+    ],
+    "guessed_roles": [
+      "data"
+    ],
+    "summary_signals": []
+  },
+  {
+    "file_id": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "path": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "file_name": "BuffBadgeBarUI.cs",
+    "content_hash": "378f7d3398698731d92c8e6ceac85b827b2ee29d",
+    "size": 1044,
+    "line_count": 37,
+    "namespace": "",
+    "using_list": [
+      "System.Collections.Generic",
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "BuffBadgeBarUI",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "BuffBadgeBarUI",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Start",
+      "OnDestroy",
+      "OnBadgeAttached",
+      "OnBadgeDetached"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Start",
+      "OnDestroy"
+    ],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": true,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "System",
+      "Collections",
+      "Generic",
+      "UnityEngine",
+      "BuffBadgeUI",
+      "ActiveBuffBadge",
+      "Start",
+      "BuffBadgeManager",
+      "Instance",
+      "OnBadgeAttached",
+      "OnBadgeDetached",
+      "OnDestroy",
+      "Instantiate",
+      "Setup",
+      "Add",
+      "TryGetValue",
+      "Remove",
+      "Destroy"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [
+      "BuffBadgeManager"
+    ],
+    "string_literals": [],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "manager",
+      "runtime",
+      "ui",
+      "player",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "UI 관련 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "path": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "file_name": "BuffBadgeData.cs",
+    "content_hash": "660e8ffbbabac3ac2b279d8ab2738463e6679e3f",
+    "size": 292,
+    "line_count": 9,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine"
+    ],
+    "classes": [
+      {
+        "name": "BuffBadgeData",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "ScriptableObject"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "BuffBadgeData",
+    "unity_type": "ScriptableObject",
+    "methods": [],
+    "fields": [],
+    "properties": [
+      {
+        "access": "public",
+        "type": "string",
+        "name": "BadgeName"
+      },
+      {
+        "access": "public",
+        "type": "Sprite",
+        "name": "Icon"
+      }
+    ],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "string",
+      "Sprite",
+      "UnityEngine",
+      "CreateAssetMenu",
+      "Buff",
+      "BadgeName",
+      "Icon"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [
+      "BuffBadgeData",
+      "Buff/BuffBadgeData"
+    ],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "data",
+      "save-load"
+    ],
+    "summary_signals": [
+      "데이터 자산 중심 구조",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "path": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "file_name": "BuffBadgeUI.cs",
+    "content_hash": "5205ed3188d438549be06451e7d78320029cec7f",
+    "size": 225,
+    "line_count": 13,
+    "namespace": "",
+    "using_list": [
+      "UnityEngine",
+      "UnityEngine.UI"
+    ],
+    "classes": [
+      {
+        "name": "BuffBadgeUI",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "BuffBadgeUI",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Setup"
+    ],
+    "fields": [],
+    "properties": [],
+    "events": [],
+    "unity_messages": [],
+    "has_update": false,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "UnityEngine",
+      "UI",
+      "Image",
+      "Setup",
+      "ActiveBuffBadge",
+      "Data",
+      "Icon"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [],
+    "numeric_literals": [],
+    "guessed_roles": [
+      "ui",
+      "data",
+      "save-load",
+      "runtime"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "UI 관련 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
   },
   {
     "file_id": "Assets/UI/DamageText/DamageTextSpawner.cs",

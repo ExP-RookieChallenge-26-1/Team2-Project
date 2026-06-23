@@ -201,6 +201,25 @@
     "risk_score": 66
   },
   {
+    "file_id": "Assets/_Global/BuffBadgeManager.cs",
+    "class_name": "BuffBadgeManager",
+    "risk_flags": [
+      "update-heavy",
+      "singleton-candidate",
+      "high-coupling",
+      "init-order-sensitive",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "Unity 업데이트 루프 사용",
+      "Instance 또는 DontDestroyOnLoad 패턴 감지",
+      "참조 타입 또는 관계 수가 많음",
+      "초기화 순서에 민감할 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 61
+  },
+  {
     "file_id": "Assets/Gameplay/World/WorldEnemySpawner.cs",
     "class_name": "WorldEnemySpawner",
     "risk_flags": [
@@ -237,6 +256,25 @@
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
     "risk_score": 60
+  },
+  {
+    "file_id": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "class_name": "BuffBadgeBarUI",
+    "risk_flags": [
+      "high-coupling",
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "참조 타입 또는 관계 수가 많음",
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 58
   },
   {
     "file_id": "Assets/UI/Title/CreditPanel.cs",
@@ -794,6 +832,19 @@
     "risk_score": 26
   },
   {
+    "file_id": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "class_name": "BuffBadgeUI",
+    "risk_flags": [
+      "save-load-sensitive",
+      "ui-runtime-mixed"
+    ],
+    "risk_reasons": [
+      "저장/불러오기 관련 로직 포함",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성"
+    ],
+    "risk_score": 22
+  },
+  {
     "file_id": "Assets/Gameplay/Enemy/EnemyStats.cs",
     "class_name": "EnemyStats",
     "risk_flags": [
@@ -888,6 +939,17 @@
     "risk_score": 12
   },
   {
+    "file_id": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "class_name": "BuffBadgeData",
+    "risk_flags": [
+      "save-load-sensitive"
+    ],
+    "risk_reasons": [
+      "저장/불러오기 관련 로직 포함"
+    ],
+    "risk_score": 12
+  },
+  {
     "file_id": "Assets/Gameplay/Enemy/EncounterState.cs",
     "class_name": "EncounterState",
     "risk_flags": [
@@ -969,6 +1031,13 @@
   {
     "file_id": "Assets/Gameplay/Enemy/IEnemyState.cs",
     "class_name": "IEnemyState",
+    "risk_flags": [],
+    "risk_reasons": [],
+    "risk_score": 0
+  },
+  {
+    "file_id": "Assets/UI/BuffBadge/ActiveBuffBadge.cs",
+    "class_name": "ActiveBuffBadge",
     "risk_flags": [],
     "risk_reasons": [],
     "risk_score": 0

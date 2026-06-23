@@ -371,6 +371,167 @@
     "strength": 1
   },
   {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "ActiveBuffBadge",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "ActiveBuffBadge",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Add",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Attach",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "BuffBadgeData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Collections",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Count",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Destroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Detach",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Generic",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Invoke",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "IsPermanent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "LogWarning",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "OnBadgeAttached",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "OnBadgeDetached",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "RemainingTime",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Remove",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "System",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Update",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
     "to_type": "GameStateMachine",
@@ -2949,7 +3110,21 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
+    "to_type": "BuffBadgeManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
     "to_type": "Activate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "Attach",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2978,6 +3153,20 @@
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
     "to_type": "bool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "BuffBadgeData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "BuffBadgeManager",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3013,6 +3202,20 @@
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
     "to_type": "HasManualTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "int",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4720,6 +4923,13 @@
   {
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
+    "to_type": "BuffBadgeManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
     "to_type": "GameManager",
     "relation_type": "singleton-access",
     "strength": 4
@@ -4741,7 +4951,35 @@
   {
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
+    "to_type": "Attach",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
     "to_type": "AttackPower",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Badge",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "BadgeData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "BadgeDuration",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4763,6 +5001,20 @@
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
     "to_type": "BallStats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "BuffBadgeData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "BuffBadgeManager",
     "relation_type": "uses",
     "strength": 1
   },
@@ -10615,6 +10867,300 @@
     "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
     "from_class": "UserLevelUpgradePoolTests",
     "to_type": "UserLevel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/ActiveBuffBadge.cs",
+    "from_class": "ActiveBuffBadge",
+    "to_type": "BuffBadgeData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/ActiveBuffBadge.cs",
+    "from_class": "ActiveBuffBadge",
+    "to_type": "Data",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/ActiveBuffBadge.cs",
+    "from_class": "ActiveBuffBadge",
+    "to_type": "Duration",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/ActiveBuffBadge.cs",
+    "from_class": "ActiveBuffBadge",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/ActiveBuffBadge.cs",
+    "from_class": "ActiveBuffBadge",
+    "to_type": "IsPermanent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/ActiveBuffBadge.cs",
+    "from_class": "ActiveBuffBadge",
+    "to_type": "RemainingTime",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "BuffBadgeManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "ActiveBuffBadge",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Add",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "BuffBadgeManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "BuffBadgeUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Collections",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Destroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Generic",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Instantiate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "OnBadgeAttached",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "OnBadgeDetached",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "OnDestroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Remove",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Setup",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "System",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "TryGetValue",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "from_class": "BuffBadgeData",
+    "to_type": "ScriptableObject",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "from_class": "BuffBadgeData",
+    "to_type": "BadgeName",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "from_class": "BuffBadgeData",
+    "to_type": "Buff",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "from_class": "BuffBadgeData",
+    "to_type": "CreateAssetMenu",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "from_class": "BuffBadgeData",
+    "to_type": "Icon",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "from_class": "BuffBadgeData",
+    "to_type": "Sprite",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "from_class": "BuffBadgeData",
+    "to_type": "string",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "from_class": "BuffBadgeData",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "from_class": "BuffBadgeUI",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "from_class": "BuffBadgeUI",
+    "to_type": "ActiveBuffBadge",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "from_class": "BuffBadgeUI",
+    "to_type": "Data",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "from_class": "BuffBadgeUI",
+    "to_type": "Icon",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "from_class": "BuffBadgeUI",
+    "to_type": "Image",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "from_class": "BuffBadgeUI",
+    "to_type": "Setup",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "from_class": "BuffBadgeUI",
+    "to_type": "UI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "from_class": "BuffBadgeUI",
+    "to_type": "UnityEngine",
     "relation_type": "uses",
     "strength": 1
   },
