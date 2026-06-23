@@ -16,6 +16,8 @@ MonoBehaviour:
   <CardName>k__BackingField: Attack UP
   <Icon>k__BackingField: {fileID: 0}
   <Description>k__BackingField: Attack 10 Up
+  <BadgeData>k__BackingField: {fileID: 11400000, guid: e0f644e5f9f38fb499e86747f133b723, type: 2}
+  <BadgeDuration>k__BackingField: 0
   <AttackPower>k__BackingField: 10
   <CriticalChance>k__BackingField: 0
   <CriticalDamage>k__BackingField: 0

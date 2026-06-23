@@ -7,6 +7,10 @@ public abstract class BallSkill : MonoBehaviour
 	[field: SerializeField] public float Duration { get; private set; }
 	[SerializeField] private float durationTimer;
 
+	[SerializeField] private BuffBadgeData badgeData;
+	[SerializeField] private float badgeDuration = 0f;
+	private static int lastBadgeFrame = -1;
+
 	public bool HasManualTrigger { get; private set; }
 	[field: SerializeField] public float ManualCooldown { get; private set; }
 	[SerializeField] private float manualTimer;
@@ -128,6 +132,13 @@ public abstract class BallSkill : MonoBehaviour
 		{
 			this.IsActive = true;
 			this.durationTimer = this.Duration;
+		}
+
+		if (badgeData != null && lastBadgeFrame != Time.frameCount)
+		{
+			lastBadgeFrame = Time.frameCount;
+			float attachDuration = badgeDuration > 0f ? badgeDuration : this.Duration;
+			BuffBadgeManager.Instance?.Attach(badgeData, attachDuration);
 		}
 
 		OnActivate();

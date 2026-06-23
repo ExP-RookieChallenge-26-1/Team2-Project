@@ -821,6 +821,7 @@ GameObject:
   - component: {fileID: 545965581}
   - component: {fileID: 545965580}
   - component: {fileID: 545965583}
+  - component: {fileID: 545965584}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -942,6 +943,34 @@ MonoBehaviour:
   bossDieClip: {fileID: 0}
   gameClearClip: {fileID: 0}
   userDamagedClip: {fileID: 0}
+  respawnClip: {fileID: 0}
+  getItemClip: {fileID: 0}
+  cloneClip: {fileID: 0}
+  attackClip: {fileID: 0}
+  attackVoiceClip: {fileID: 0}
+  mobDieClip: {fileID: 0}
+  mobDamagedVoiceClip: {fileID: 0}
+  upgradeSelectClip: {fileID: 0}
+  bossVoiceClip: {fileID: 0}
+  bossIdleClip: {fileID: 0}
+  bossFallClip: {fileID: 0}
+  bossEntryClip: {fileID: 0}
+  bossAttackReadyClip: {fileID: 0}
+  bossAttackOutloopClip: {fileID: 0}
+  bossAttackLoopClip: {fileID: 0}
+  bossAttackInloopClip: {fileID: 0}
+--- !u!114 &545965584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545965576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e694e20b4ce52e24a8371452f5cc112e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BuffBadgeManager
 --- !u!1 &588920810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,6 +1419,7 @@ RectTransform:
   - {fileID: 588920811}
   - {fileID: 1759139466}
   - {fileID: 1803335911}
+  - {fileID: 1863848645}
   m_Father: {fileID: 1064938943}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2381,6 +2411,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e42d0f49aa38a14fb8031498d0c35fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EXPBarUI
+--- !u!1 &1863848644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1863848645}
+  - component: {fileID: 1863848647}
+  - component: {fileID: 1863848646}
+  m_Layer: 5
+  m_Name: BuffBadgeBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1863848645
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863848644}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 913679908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -271, y: 615}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1863848646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863848644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7397975927f90714dbb3175f675abf96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BuffBadgeBarUI
+  badgePrefab: {fileID: 3176182489689357916, guid: ca419a6cf0d47124e8e18397c8e7a4d6, type: 3}
+--- !u!114 &1863848647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863848644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.HorizontalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 3
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &2108540279
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,6 +3,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "StatUpgradeCard", menuName = "CardData/StatUpgrade")]
 public class StatUpgradeCardData : CardData
 {
+	[field: Header("Badge"), SerializeField] public BuffBadgeData BadgeData { get; private set; }
+	[field: SerializeField] public float BadgeDuration { get; private set; }
+
 	[field: Header("Upgrade Value"), SerializeField] public float AttackPower { get; private set; }
 	[field: SerializeField] public float CriticalChance { get; private set; }
 	[field: SerializeField] public float CriticalDamage { get; private set; }
@@ -43,6 +46,9 @@ public class StatUpgradeCardData : CardData
 			ballStats.ReduceSkill2AutoCooldown(this.Skill2AutoCooldownReduction);
 
 		ApplySkillCooldownsToActiveBalls(ballStats);
+
+		if (BadgeData != null)
+			BuffBadgeManager.Instance?.Attach(BadgeData, BadgeDuration);
 	}
 
 	private static void ApplySkillCooldownsToActiveBalls(BallStats ballStats)
