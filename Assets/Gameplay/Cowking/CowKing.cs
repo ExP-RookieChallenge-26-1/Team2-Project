@@ -53,6 +53,10 @@ public class CowKing : MonoBehaviour, IDamageable
     private bool isBreathing = false;
     private bool canTakeDamage = false;
     private Animator animator;
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     private void Start()
     {
         currentHp = maxHp;
@@ -92,6 +96,8 @@ public class CowKing : MonoBehaviour, IDamageable
 
         isActivated = true;
         canTakeDamage = true;
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayBossBgm();
         ChangeState(CowKingState.Idle);
     }
 
@@ -165,11 +171,15 @@ public class CowKing : MonoBehaviour, IDamageable
         SetMoveAnimation(false);
         PlayAttackReadyAnimation();
 
+        if (animator != null)
+            animator.SetTrigger("AttackReady");
+
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayBossAttackReadySound();
 
         isBreathing = false;
         breathTimer = 0f;
+  
         ChangeState(CowKingState.Attack);
     }
 
@@ -183,6 +193,9 @@ public class CowKing : MonoBehaviour, IDamageable
             ChangeState(CowKingState.Idle);
             return;
         }
+
+        if (animator != null)
+            animator.SetTrigger("Attack");
 
         if (currentBreath != null)
             EndBreath();
@@ -206,7 +219,14 @@ public class CowKing : MonoBehaviour, IDamageable
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayBossAttackOutloopSound();
 
-            Destroy(currentBreath);
+            CowKingBreathAnimation breathAnimation =
+                currentBreath.GetComponent<CowKingBreathAnimation>();
+
+            if (breathAnimation != null)
+                breathAnimation.PlayEndAndDestroy();
+            else
+                Destroy(currentBreath);
+
             currentBreath = null;
         }
 
@@ -236,9 +256,6 @@ public class CowKing : MonoBehaviour, IDamageable
         damage = Mathf.Max(1, damage);
         currentHp -= damage;
 
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.PlayBossHitSound();
-
         Debug.Log($"우마왕 피격, 남은 체력: {currentHp}");
 
         if (currentHp <= 0)
@@ -265,8 +282,12 @@ public class CowKing : MonoBehaviour, IDamageable
         canTakeDamage = false;
 
         if (AudioManager.Instance != null)
+        {
             AudioManager.Instance.PlayBossDieSound();
+            AudioManager.Instance.StopBgm();
+        }
 
+           
         EndBreath();
         ChangeState(CowKingState.Die);
 
@@ -274,6 +295,7 @@ public class CowKing : MonoBehaviour, IDamageable
         if (col != null)
             col.enabled = false;
 
+        PlayDieAnimation();
         StartCoroutine(DieSequence());
     }
 
@@ -306,11 +328,6 @@ public class CowKing : MonoBehaviour, IDamageable
         AudioManager.Instance?.PlayBossEntrySound();
     }
 
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-    }
-
     private void SetMoveAnimation(bool isMoving)
     {
         if (animator != null)
@@ -333,6 +350,11 @@ public class CowKing : MonoBehaviour, IDamageable
     {
         if (animator != null)
             animator.SetTrigger("AttackReady");
+    }
+    private void PlayDieAnimation()
+    {
+        if (animator != null)
+            animator.SetTrigger("Die");
     }
     private void OnDestroy()
     {

@@ -5,9 +5,6 @@ public class AudioManager : MonoBehaviour
 	public static AudioManager Instance { get; private set; }
 
 	[SerializeField] private AudioClip ballHitClip;
-    [SerializeField] private AudioClip enemyHitClip;
-    [SerializeField] private AudioClip bossHitClip;
-    [SerializeField] private AudioClip bossBreathClip;
     [SerializeField] private AudioClip bossDieClip;
     [SerializeField] private AudioClip gameClearClip;
     [SerializeField] private AudioClip userDamagedClip;
@@ -27,6 +24,13 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip bossAttackOutloopClip;
     [SerializeField] private AudioClip bossAttackLoopClip;
     [SerializeField] private AudioClip bossAttackInloopClip;
+    [SerializeField] private AudioClip gameOverClip;
+    [SerializeField] private AudioClip bossBgmClip;
+    [SerializeField] private AudioSource bgmSource;
+    [SerializeField] private AudioClip[] gameBgmClips;
+    [SerializeField] private AudioClip giantSkillClip;
+    [SerializeField] private AudioClip cloneSkillClip;
+
     private AudioSource audioSource;
 
 	private float masterVolume = 1f;
@@ -49,7 +53,15 @@ public class AudioManager : MonoBehaviour
 			this.audioSource = gameObject.AddComponent<AudioSource>();
 		}
 
-		LoadVolumeSettings();
+        if (bgmSource == null)
+        {
+            bgmSource = gameObject.AddComponent<AudioSource>();
+            bgmSource.loop = true;
+            bgmSource.playOnAwake = false;
+            bgmSource.spatialBlend = 0f;
+        }
+
+        LoadVolumeSettings();
 	}
 
     public void PlayBallHitSound()
@@ -57,21 +69,6 @@ public class AudioManager : MonoBehaviour
         PlaySfx(ballHitClip);
     }
 
-    public void PlayEnemyHitSound()
-    {
-        PlaySfx(enemyHitClip);
-    }
-
-    public void PlayBossHitSound()
-    {
-        PlaySfx(bossHitClip);
-    }
-
-
-    public void PlayBossBreathSound()
-    {
-        PlaySfx(bossBreathClip);
-    }
 
     public void PlayBossDieSound()
     {
@@ -160,10 +157,73 @@ public class AudioManager : MonoBehaviour
     {
         PlaySfx(bossAttackLoopClip);
     }
+    public void PlayGiantSkillSound()
+    {
+        PlaySfx(giantSkillClip);
+    }
 
+    public void PlayCloneSkillSound()
+    {
+        PlaySfx(cloneSkillClip);
+    }
     public void PlayBossAttackInloopSound()
     {
         PlaySfx(bossAttackInloopClip);
+    }
+    public void PlayGameOverSound()
+    {
+        PlaySfx(gameOverClip);
+    }
+    public void PlayRandomGameBgm()
+    {
+        if (gameBgmClips == null || gameBgmClips.Length == 0)
+        {
+            Debug.LogWarning("Game BGM Clips가 비어 있습니다.");
+            return;
+        }
+
+        if (bgmSource == null)
+        {
+            bgmSource = gameObject.AddComponent<AudioSource>();
+            bgmSource.loop = true;
+            bgmSource.playOnAwake = false;
+            bgmSource.spatialBlend = 0f;
+        }
+
+        int index = Random.Range(0, gameBgmClips.Length);
+
+        bgmSource.Stop();
+        bgmSource.clip = gameBgmClips[index];
+        bgmSource.volume = masterVolume * bgmVolume;
+        bgmSource.loop = true;
+        bgmSource.Play();
+
+        Debug.Log($"게임 BGM 재생: {bgmSource.clip.name}");
+    }
+    public void PlayBossBgm()
+    {
+        if (bossBgmClip == null)
+        {
+            Debug.LogWarning("Boss BGM Clip이 연결되지 않았습니다.");
+            return;
+        }
+
+        if (bgmSource == null)
+            bgmSource = gameObject.AddComponent<AudioSource>();
+
+        bgmSource.clip = bossBgmClip;
+        bgmSource.loop = true;
+        bgmSource.playOnAwake = false;
+        bgmSource.spatialBlend = 0f;
+        bgmSource.volume = bgmVolume * masterVolume;
+        bgmSource.Play();
+
+        Debug.Log("우마왕 BGM 재생");
+    }
+    public void StopBgm()
+    {
+        if (bgmSource != null)
+            bgmSource.Stop();
     }
     public void SetMasterVolume(float volume)
 	{

@@ -50,7 +50,10 @@ public class CloneSkill : BallSkill
 		if (spawnCount <= 0)
 			return;
 
-		for (int i = 0; i < spawnCount; i++)
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayCloneSkillSound();
+
+        for (int i = 0; i < spawnCount; i++)
 		{
 			float radian;
 			Vector2 velocity;

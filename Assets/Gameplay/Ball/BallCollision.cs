@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using System.Collections;
 
 [RequireComponent(typeof(Ball))]
 public class BallCollision : MonoBehaviour
@@ -41,8 +42,14 @@ public class BallCollision : MonoBehaviour
 	{
 		this.ball = GetComponent<Ball>();
 	}
+    private IEnumerator PlayAttackVoiceNextFrame()
+    {
+        yield return null;
 
-	public void Tick()
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayAttackVoiceSound();
+    }
+    public void Tick()
 	{
 		Collision closest;
 
@@ -85,8 +92,15 @@ public class BallCollision : MonoBehaviour
                 if (collision.damageable != null && collision.damageable != this.lastHitDamageable)
                 {
                     var (damage, isCrit) = CalculateDamage();
+
+                    if (AudioManager.Instance != null)
+                        AudioManager.Instance.PlayAttackSound();
+
+                    StartCoroutine(PlayAttackVoiceNextFrame());
+
                     collision.damageable.TakeDamage(damage, isCrit);
                     this.ball.Animation.TriggerAttack();
+
                     this.lastHitDamageable = collision.damageable;
                     this.lastHitDamageableCollider = collision.damageableCollider;
                 }

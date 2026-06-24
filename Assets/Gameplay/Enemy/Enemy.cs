@@ -143,9 +143,6 @@ public class Enemy : MonoBehaviour, IDamageable
         damage = Mathf.Max(1, damage);
         this.currentHp -= damage;
 
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.PlayEnemyHitSound();
-
         Color color = isCrit ? Color.yellow : Color.white;
         DamageTextSpawner.Instance.Spawn(transform.position, damage, color);
 

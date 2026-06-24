@@ -24,7 +24,9 @@ public class GiantSkill : BallSkill
 
 	protected override void OnActivate()
 	{
-		this.ball.Animation.TriggerUpsizing();
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayGiantSkillSound();
+        this.ball.Animation.TriggerUpsizing();
 		StartCoroutine(UpsizingReadyRoutine());
 	}
 

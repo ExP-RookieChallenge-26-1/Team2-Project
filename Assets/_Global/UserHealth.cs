@@ -19,7 +19,11 @@ public class UserHealth : MonoBehaviour
 		if (this.CurrentHp <= 0)
 		{
 			this.CurrentHp = 0;
-			GameManager.Instance.State.Change(GameStateMachine.State.GameOver);
+
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayGameOverSound();
+
+            GameManager.Instance.State.Change(GameStateMachine.State.GameOver);
 		}
 	}
 }

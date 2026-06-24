@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private Ball ballPrefab;
 	[SerializeField] private Paddle paddle;
     [SerializeField] private GameObject gameClearPanel;
+    [SerializeField] private GameObject gameOverPanel;
     public Paddle Paddle => this.paddle;
 
 	private void Awake()
@@ -41,7 +42,9 @@ public class GameManager : MonoBehaviour
 		this.State.OnChanged += OnGameStateChanged;
 		this.User = FindFirstObjectByType<User>();
 		this.paddle = FindFirstObjectByType<Paddle>();
-		TriggerSpawn();
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayRandomGameBgm();
+        TriggerSpawn(false);
 	}
 
 	private void Update()
@@ -66,11 +69,14 @@ public class GameManager : MonoBehaviour
 			case GameStateMachine.State.Enhancement:
 				Time.timeScale = 0.2f;
 				break;
-			case GameStateMachine.State.GameOver:
-				Time.timeScale = 1f;
-				SceneManager.LoadScene("TitleScene");
-				break;
-		}
+            case GameStateMachine.State.GameOver:
+                Time.timeScale = 0f;
+
+                if (gameOverPanel != null)
+                    gameOverPanel.SetActive(true);
+
+                break;
+        }
 	}
 
 	private void CheckBallState()
@@ -87,19 +93,21 @@ public class GameManager : MonoBehaviour
 			TriggerSpawn();
 	}
 
-	private void TriggerSpawn()
-	{
-		if (this.paddle == null)
-		{
-			Debug.LogError("Paddle not found!");
-			return;
-		}
+    private void TriggerSpawn(bool playSound = true)
+    {
+        if (this.paddle == null)
+        {
+            Debug.LogError("Paddle not found!");
+            return;
+        }
 
-		float centerX = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0f, 0f)).x;
-		Vector3 spawnPos = new Vector3(centerX, this.paddle.transform.position.y + 1f, 0f);
-		Ball ball = Instantiate(this.ballPrefab, spawnPos, Quaternion.identity);
-		ball.Spawn();
-        if (AudioManager.Instance != null)
+        float centerX = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0f, 0f)).x;
+        Vector3 spawnPos = new Vector3(centerX, this.paddle.transform.position.y + 1f, 0f);
+
+        Ball ball = Instantiate(this.ballPrefab, spawnPos, Quaternion.identity);
+        ball.Spawn();
+
+        if (playSound && AudioManager.Instance != null)
             AudioManager.Instance.PlayRespawnSound();
     }
 
