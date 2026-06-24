@@ -646,8 +646,8 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2377081157
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -931,12 +931,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a0022b1b89b5f49b631afd476fabd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldEnemySpawner
-  enemyPrefab: {fileID: 545348271308257467, guid: 579be6e0d7d7dd345a42630e5edf2893, type: 3}
+  fallbackEnemyPrefab: {fileID: 545348271308257467, guid: 579be6e0d7d7dd345a42630e5edf2893, type: 3}
   spawnPoints:
   - {fileID: 7127155639396504348}
   - {fileID: 4502690807896925298}
   - {fileID: 1562725748691788327}
   - {fileID: 0}
+  enemySpawnDataList:
+  - {fileID: 11400000, guid: 8c2f32a334c75f4cbcbce4af2f2c0001, type: 2}
+  - {fileID: 11400000, guid: 8c2f32a334c75f4cbcbce4af2f2c0002, type: 2}
+  - {fileID: 11400000, guid: 8c2f32a334c75f4cbcbce4af2f2c0003, type: 2}
+  - {fileID: 11400000, guid: 8c2f32a334c75f4cbcbce4af2f2c0004, type: 2}
   minSpawnCount: 3
   maxSpawnCount: 5
 --- !u!114 &2876734302472044796

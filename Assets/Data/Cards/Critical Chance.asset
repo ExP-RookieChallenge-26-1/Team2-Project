@@ -16,11 +16,15 @@ MonoBehaviour:
   <CardName>k__BackingField: Critical Chance
   <Icon>k__BackingField: {fileID: 0}
   <Description>k__BackingField: Critical Chance
+  <BadgeData>k__BackingField: {fileID: 11400000, guid: e0f644e5f9f38fb499e86747f133b723, type: 2}
+  <BadgeDuration>k__BackingField: 0
   <AttackPower>k__BackingField: 0
   <CriticalChance>k__BackingField: 10
   <CriticalDamage>k__BackingField: 0
   <Speed>k__BackingField: 0
   <BallSize>k__BackingField: 0
   <PaddleSizeLevel>k__BackingField: 0
-  <Skill1CooldownReductionRate>k__BackingField: 0
-  <Skill2CooldownReductionRate>k__BackingField: 0
+  <Skill1ManualCooldownReduction>k__BackingField: 0
+  <Skill1AutoCooldownReduction>k__BackingField: 0
+  <Skill2ManualCooldownReduction>k__BackingField: 0
+  <Skill2AutoCooldownReduction>k__BackingField: 0

@@ -30,7 +30,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5417476295554738176}
-  - {fileID: 7060499665487848119}
   m_Father: {fileID: 3716088780616314803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2918766265512003385
@@ -735,8 +734,8 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2377081157
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -886,7 +885,6 @@ Transform:
   - {fileID: 4502690807896925298}
   - {fileID: 1562725748691788327}
   - {fileID: 1719486405144688425}
-  - {fileID: 1773837361255445065}
   - {fileID: 958611812171891996}
   m_Father: {fileID: 3716088780616314803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -970,7 +968,7 @@ GameObject:
   - component: {fileID: 958611812171891996}
   - component: {fileID: 4246344033254132403}
   m_Layer: 0
-  m_Name: SpawnPoint_6
+  m_Name: SpawnPoint_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -998,75 +996,6 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6046803343084627148}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
-  m_Direction: 0
---- !u!1 &7309158920736449454
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1773837361255445065}
-  - component: {fileID: 1281308311880371290}
-  m_Layer: 0
-  m_Name: SpawnPoint_5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1773837361255445065
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7309158920736449454}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.56, y: 12.56, z: 0}
-  m_LocalScale: {x: 0.5, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 86296243901452094}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &1281308311880371290
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7309158920736449454}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -1158,12 +1087,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a0022b1b89b5f49b631afd476fabd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldEnemySpawner
-  enemyPrefab: {fileID: 545348271308257467, guid: 579be6e0d7d7dd345a42630e5edf2893, type: 3}
+  fallbackEnemyPrefab: {fileID: 545348271308257467, guid: 579be6e0d7d7dd345a42630e5edf2893, type: 3}
   spawnPoints:
   - {fileID: 7127155639396504348}
   - {fileID: 4502690807896925298}
   - {fileID: 1562725748691788327}
   - {fileID: 1719486405144688425}
+  enemySpawnDataList:
+  - {fileID: 11400000, guid: 7b1e21f223b64e3bababd39e1f1b0001, type: 2}
+  - {fileID: 11400000, guid: 7b1e21f223b64e3bababd39e1f1b0002, type: 2}
+  - {fileID: 11400000, guid: 7b1e21f223b64e3bababd39e1f1b0003, type: 2}
+  - {fileID: 11400000, guid: 7b1e21f223b64e3bababd39e1f1b0004, type: 2}
   minSpawnCount: 3
   maxSpawnCount: 5
 --- !u!114 &2876734302472044796
@@ -1181,87 +1115,11 @@ MonoBehaviour:
   itemPrefabs: []
   spawnPoints:
   - {fileID: 5417476295554738176}
-  - {fileID: 7060499665487848119}
+  itemCardPools:
+  - cardIds: []
+    cardWeights: []
   minSpawnCount: 1
   maxSpawnCount: 1
---- !u!1 &7823052843533997158
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7060499665487848119}
-  - component: {fileID: 8197158527939223244}
-  m_Layer: 0
-  m_Name: SpawnPoint_2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7060499665487848119
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7823052843533997158}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.76, y: 4.36, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1583637598017529920}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &8197158527939223244
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7823052843533997158}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &9059600461163034696
 GameObject:
   m_ObjectHideFlags: 0

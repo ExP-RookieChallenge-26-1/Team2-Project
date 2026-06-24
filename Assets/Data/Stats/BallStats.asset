@@ -14,6 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BallStats
   <Speed>k__BackingField: 5
   <BaseRadius>k__BackingField: 0.25
-  <AttackPower>k__BackingField: 10
+  <GiantSize>k__BackingField: 1.5
+  <AttackPower>k__BackingField: 2
   <CriticalChance>k__BackingField: 0.05
   <CriticalDamage>k__BackingField: 1.5
+  <Skill1HasManualTrigger>k__BackingField: 1
+  <Skill1HasAutoTrigger>k__BackingField: 0
+  <Skill1ManualCooldown>k__BackingField: 10
+  <Skill1AutoCooldown>k__BackingField: 0
+  <Skill2HasManualTrigger>k__BackingField: 1
+  <Skill2HasAutoTrigger>k__BackingField: 0
+  <Skill2ManualCooldown>k__BackingField: 10
+  <Skill2AutoCooldown>k__BackingField: 0
+  <Skill1Duration>k__BackingField: 5
+  <Skill2Duration>k__BackingField: 0

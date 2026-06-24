@@ -2,45 +2,51 @@
   "project_name": "unknown",
   "language": "C#",
   "engine_guess": "Unity",
-  "total_cs_files": 58,
-  "mono_behaviour_files": 30,
-  "scriptable_object_files": 8,
-  "files_with_update": 12,
+  "total_cs_files": 72,
+  "mono_behaviour_files": 37,
+  "scriptable_object_files": 9,
+  "files_with_update": 14,
   "files_with_fixed_update": 0,
   "files_with_late_update": 0,
-  "singleton_candidates": 3,
-  "manager_like_classes": 24,
-  "ui_related_classes": 14,
-  "save_load_related_classes": 35,
+  "singleton_candidates": 5,
+  "manager_like_classes": 33,
+  "ui_related_classes": 18,
+  "save_load_related_classes": 42,
   "role_counts": {
-    "save-load": 35,
-    "combat": 28,
-    "manager": 24,
-    "runtime": 34,
-    "player": 22,
+    "combat": 33,
+    "save-load": 42,
+    "manager": 33,
+    "runtime": 41,
+    "player": 25,
+    "data": 24,
     "scene": 2,
-    "data": 17,
-    "ui": 14,
-    "inventory": 10
+    "ui": 18,
+    "inventory": 11
   },
   "high_coupling_classes": [
     {
       "class_name": "Enemy",
       "file_id": "Assets/Gameplay/Enemy/Enemy.cs",
-      "relation_count": 100,
-      "referenced_type_count": 85
-    },
-    {
-      "class_name": "BallCollision",
-      "file_id": "Assets/Gameplay/Ball/BallCollision.cs",
-      "relation_count": 74,
-      "referenced_type_count": 64
+      "relation_count": 103,
+      "referenced_type_count": 88
     },
     {
       "class_name": "CowKing",
       "file_id": "Assets/Gameplay/Cowking/CowKing.cs",
-      "relation_count": 72,
-      "referenced_type_count": 64
+      "relation_count": 79,
+      "referenced_type_count": 71
+    },
+    {
+      "class_name": "BallCollision",
+      "file_id": "Assets/Gameplay/Ball/BallCollision.cs",
+      "relation_count": 77,
+      "referenced_type_count": 66
+    },
+    {
+      "class_name": "Ball",
+      "file_id": "Assets/Gameplay/Ball/Ball.cs",
+      "relation_count": 69,
+      "referenced_type_count": 58
     },
     {
       "class_name": "BallTrajectory",
@@ -51,38 +57,32 @@
     {
       "class_name": "GameManager",
       "file_id": "Assets/_Global/GameManager.cs",
-      "relation_count": 58,
-      "referenced_type_count": 53
+      "relation_count": 59,
+      "referenced_type_count": 54
     },
     {
-      "class_name": "Ball",
-      "file_id": "Assets/Gameplay/Ball/Ball.cs",
-      "relation_count": 49,
-      "referenced_type_count": 39
-    },
-    {
-      "class_name": "CloneSkill",
-      "file_id": "Assets/Gameplay/Ball/CloneSkill.cs",
-      "relation_count": 42,
-      "referenced_type_count": 39
-    },
-    {
-      "class_name": "EnhanceUI",
-      "file_id": "Assets/UI/Enhancement/EnhanceUI.cs",
-      "relation_count": 39,
-      "referenced_type_count": 36
-    },
-    {
-      "class_name": "ItemPickup",
-      "file_id": "Assets/Gameplay/Item/ItemPickup.cs",
-      "relation_count": 39,
-      "referenced_type_count": 35
+      "class_name": "StatUpgradeCardData",
+      "file_id": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+      "relation_count": 54,
+      "referenced_type_count": 51
     },
     {
       "class_name": "AudioManager",
       "file_id": "Assets/_Global/AudioManager.cs",
-      "relation_count": 36,
-      "referenced_type_count": 34
+      "relation_count": 53,
+      "referenced_type_count": 51
+    },
+    {
+      "class_name": "BallStats",
+      "file_id": "Assets/Gameplay/Ball/BallStats.cs",
+      "relation_count": 47,
+      "referenced_type_count": 46
+    },
+    {
+      "class_name": "ItemPickup",
+      "file_id": "Assets/Gameplay/Item/ItemPickup.cs",
+      "relation_count": 49,
+      "referenced_type_count": 44
     }
   ],
   "high_risk_classes": [
@@ -158,6 +158,27 @@
         "상태 중심 또는 관리 중심 클래스일 가능성"
       ],
       "risk_score": 81
+    },
+    {
+      "file_id": "Assets/_Global/AudioManager.cs",
+      "class_name": "AudioManager",
+      "risk_flags": [
+        "singleton-candidate",
+        "high-coupling",
+        "large-class",
+        "init-order-sensitive",
+        "save-load-sensitive",
+        "state-owner"
+      ],
+      "risk_reasons": [
+        "Instance 또는 DontDestroyOnLoad 패턴 감지",
+        "참조 타입 또는 관계 수가 많음",
+        "파일/메서드/필드 수가 많아 책임이 커질 가능성",
+        "초기화 순서에 민감할 가능성",
+        "저장/불러오기 관련 로직 포함",
+        "상태 중심 또는 관리 중심 클래스일 가능성"
+      ],
+      "risk_score": 78
     },
     {
       "file_id": "Assets/Gameplay/Ball/Ball.cs",
@@ -267,42 +288,23 @@
       "risk_score": 66
     },
     {
-      "file_id": "Assets/_Global/AudioManager.cs",
-      "class_name": "AudioManager",
+      "file_id": "Assets/_Global/BuffBadgeManager.cs",
+      "class_name": "BuffBadgeManager",
       "risk_flags": [
+        "update-heavy",
         "singleton-candidate",
         "high-coupling",
         "init-order-sensitive",
-        "save-load-sensitive",
         "state-owner"
       ],
       "risk_reasons": [
+        "Unity 업데이트 루프 사용",
         "Instance 또는 DontDestroyOnLoad 패턴 감지",
         "참조 타입 또는 관계 수가 많음",
         "초기화 순서에 민감할 가능성",
-        "저장/불러오기 관련 로직 포함",
         "상태 중심 또는 관리 중심 클래스일 가능성"
       ],
-      "risk_score": 63
-    },
-    {
-      "file_id": "Assets/Gameplay/World/WorldEnemySpawner.cs",
-      "class_name": "WorldEnemySpawner",
-      "risk_flags": [
-        "high-coupling",
-        "find-heavy",
-        "init-order-sensitive",
-        "save-load-sensitive",
-        "state-owner"
-      ],
-      "risk_reasons": [
-        "참조 타입 또는 관계 수가 많음",
-        "Find 계열 탐색 사용",
-        "초기화 순서에 민감할 가능성",
-        "저장/불러오기 관련 로직 포함",
-        "상태 중심 또는 관리 중심 클래스일 가능성"
-      ],
-      "risk_score": 60
+      "risk_score": 61
     }
   ],
   "common_patterns": [

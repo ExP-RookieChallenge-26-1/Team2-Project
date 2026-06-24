@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 264b0f6ab75f2a84186c84c9339cab43
+guid: 6a653690fb8c1bb4a9e2b77ce98a84da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5170842449826793690
-    second: attack_up_effect 2_0
-  - first:
-      213: 7638685577767588767
-    second: attack_up_effect 2_1
-  - first:
-      213: -9123992654150467876
-    second: attack_up_effect 2_2
-  - first:
-      213: -7288158857385627681
-    second: attack_up_effect 2_3
-  - first:
-      213: -1269886647948017680
-    second: attack_up_effect 2_4
+      213: -1269967439111889505
+    second: IMG_9440_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: attack_up_effect 2_0
+      name: IMG_9440_0
       rect:
         serializedVersion: 2
-        x: 899
-        y: 1002
-        width: 87
-        height: 172
+        x: 99
+        y: 68
+        width: 220
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,96 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad8cf63dfc582c740800000000000000
-      internalID: 5170842449826793690
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: attack_up_effect 2_1
-      rect:
-        serializedVersion: 2
-        x: 995
-        y: 1121
-        width: 31
-        height: 88
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f939cbdbf00120a60800000000000000
-      internalID: 7638685577767588767
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: attack_up_effect 2_2
-      rect:
-        serializedVersion: 2
-        x: 1007
-        y: 1014
-        width: 99
-        height: 186
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cde7614a501116180800000000000000
-      internalID: -9123992654150467876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: attack_up_effect 2_3
-      rect:
-        serializedVersion: 2
-        x: 1065
-        y: 913
-        width: 138
-        height: 178
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fdfa9ee22224bda90800000000000000
-      internalID: -7288158857385627681
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: attack_up_effect 2_4
-      rect:
-        serializedVersion: 2
-        x: 1116
-        y: 873
-        width: 99
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0fffb0462d4706ee0800000000000000
-      internalID: -1269886647948017680
+      spriteID: f9d5c6bb75b206ee0800000000000000
+      internalID: -1269967439111889505
       vertices: []
       indices: 
       edges: []
@@ -248,11 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      attack_up_effect 2_0: 5170842449826793690
-      attack_up_effect 2_1: 7638685577767588767
-      attack_up_effect 2_2: -9123992654150467876
-      attack_up_effect 2_3: -7288158857385627681
-      attack_up_effect 2_4: -1269886647948017680
+      IMG_9440_0: -1269967439111889505
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

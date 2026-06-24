@@ -18,6 +18,8 @@ public class ItemPickup : MonoBehaviour
     private Renderer cachedRenderer;
     private Collider2D paddleCollider;
     private bool isConsumed;
+    private int[] overrideCardIds;
+    private float[] overrideCardWeights;
 
     private void Awake()
     {
@@ -83,6 +85,12 @@ public class ItemPickup : MonoBehaviour
         return itemBounds.Intersects(this.paddleCollider.bounds);
     }
 
+    public void SetCardPool(int[] cardIds, float[] cardWeights)
+    {
+        this.overrideCardIds = cardIds;
+        this.overrideCardWeights = cardWeights;
+    }
+
     private void Collect()
     {
         this.isConsumed = true;
@@ -90,7 +98,27 @@ public class ItemPickup : MonoBehaviour
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayGetItemSound();
 
-        this.itemData.Apply();
+        ApplyItem();
         Destroy(gameObject);
+    }
+
+    private void ApplyItem()
+    {
+        EnhancementTriggerItemData enhancementItemData = this.itemData as EnhancementTriggerItemData;
+        if (enhancementItemData != null && HasOverrideCardPool())
+        {
+            enhancementItemData.Apply(this.overrideCardIds, this.overrideCardWeights);
+            return;
+        }
+
+        this.itemData.Apply();
+    }
+
+    private bool HasOverrideCardPool()
+    {
+        return this.overrideCardIds != null &&
+               this.overrideCardWeights != null &&
+               this.overrideCardIds.Length > 0 &&
+               this.overrideCardIds.Length == this.overrideCardWeights.Length;
     }
 }

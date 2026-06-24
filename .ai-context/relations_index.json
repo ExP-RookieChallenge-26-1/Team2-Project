@@ -135,7 +135,49 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
+    "to_type": "PlayAttackSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayAttackVoiceSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
     "to_type": "PlayBallHitSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayBossAttackInloopSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayBossAttackLoopSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayBossAttackOutloopSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayBossAttackReadySound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -156,7 +198,42 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
+    "to_type": "PlayBossEntrySound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayBossFallSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
     "to_type": "PlayBossHitSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayBossIdleSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayBossVoiceSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayCloneSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -184,7 +261,49 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
+    "to_type": "PlayGetItemSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayMobDamagedVoiceSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayMobDieSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
     "to_type": "PlayOneShot",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayRespawnSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlaySfx",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayUpgradeSelectSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -248,6 +367,167 @@
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
     "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "ActiveBuffBadge",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "ActiveBuffBadge",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Add",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Attach",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "BuffBadgeData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Collections",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Count",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Destroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Detach",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Generic",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Invoke",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "IsPermanent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "LogWarning",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "OnBadgeAttached",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "OnBadgeDetached",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "RemainingTime",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Remove",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "System",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/BuffBadgeManager.cs",
+    "from_class": "BuffBadgeManager",
+    "to_type": "Update",
     "relation_type": "uses",
     "strength": 1
   },
@@ -528,6 +808,13 @@
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
     "to_type": "Playing",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "PlayRespawnSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1115,7 +1402,21 @@
   {
     "from_file": "Assets/_Global/UserHealth.cs",
     "from_class": "UserHealth",
+    "to_type": "Invoke",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
     "to_type": "MaxHp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "OnHpChanged",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1136,7 +1437,21 @@
   {
     "from_file": "Assets/_Global/UserHealth.cs",
     "from_class": "UserHealth",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
     "to_type": "State",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "System",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1153,6 +1468,13 @@
     "to_type": "UnityEngine",
     "relation_type": "uses",
     "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "UpgradePool",
+    "relation_type": "creates",
+    "strength": 2
   },
   {
     "from_file": "Assets/_Global/UserLevel.cs",
@@ -1186,6 +1508,13 @@
     "from_file": "Assets/_Global/UserLevel.cs",
     "from_class": "UserLevel",
     "to_type": "CheckLevelUp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "Clamp",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1248,7 +1577,21 @@
   {
     "from_file": "Assets/_Global/UserLevel.cs",
     "from_class": "UserLevel",
+    "to_type": "GetDefaultUpgradePoolForLevel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
     "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "Invoke",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1276,6 +1619,13 @@
   {
     "from_file": "Assets/_Global/UserLevel.cs",
     "from_class": "UserLevel",
+    "to_type": "OnExpChanged",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
     "to_type": "OpenDefaultUpgradeUI",
     "relation_type": "uses",
     "strength": 1
@@ -1290,7 +1640,21 @@
   {
     "from_file": "Assets/_Global/UserLevel.cs",
     "from_class": "UserLevel",
-    "to_type": "Pool",
+    "to_type": "Pools",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "RequiredExp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "Serializable",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1325,6 +1689,13 @@
   {
     "from_file": "Assets/_Global/UserLevel.cs",
     "from_class": "UserLevel",
+    "to_type": "System",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
     "to_type": "UI",
     "relation_type": "uses",
     "strength": 1
@@ -1340,6 +1711,20 @@
     "from_file": "Assets/_Global/UserLevel.cs",
     "from_class": "UserLevel",
     "to_type": "Upgrade",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "UpgradeIds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserLevel.cs",
+    "from_class": "UserLevel",
+    "to_type": "UpgradeWeights",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1382,6 +1767,13 @@
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
     "to_type": "BallPhysics",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "BallRotation",
     "relation_type": "creates",
     "strength": 2
   },
@@ -1445,6 +1837,13 @@
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
     "to_type": "BallPhysics",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "BallRotation",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1549,6 +1948,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
+    "to_type": "IsEnabled",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
     "to_type": "Launch",
     "relation_type": "uses",
     "strength": 1
@@ -1584,6 +1990,62 @@
   {
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
+    "to_type": "Rotation",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "SetAutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "SetDuration",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "SetManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "SetSkillCooldowns",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "SetSkillStats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "SetSkillTriggerSettings",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "SetTriggerSettings",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
     "to_type": "SetVelocity",
     "relation_type": "uses",
     "strength": 1
@@ -1592,6 +2054,76 @@
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
     "to_type": "Sin",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill1AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill1Duration",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill1HasAutoTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill1HasManualTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill1ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill2AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill2Duration",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill2HasAutoTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill2HasManualTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "Skill2ManualCooldown",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1613,13 +2145,6 @@
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
     "to_type": "Speed",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Ball/Ball.cs",
-    "from_class": "Ball",
-    "to_type": "Start",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1934,6 +2459,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
+    "to_type": "AttackEffectSpawner",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
     "to_type": "AudioManager",
     "relation_type": "singleton-access",
     "strength": 4
@@ -1963,6 +2495,13 @@
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
     "to_type": "ApplyWallReflection",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "AttackEffectSpawner",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2264,6 +2803,13 @@
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
     "to_type": "RoundToInt",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "Spawn",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2597,6 +3143,90 @@
     "strength": 1
   },
   {
+    "from_file": "Assets/Gameplay/Ball/BallRotation.cs",
+    "from_class": "BallRotation",
+    "to_type": "Atan2",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallRotation.cs",
+    "from_class": "BallRotation",
+    "to_type": "Ball",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallRotation.cs",
+    "from_class": "BallRotation",
+    "to_type": "bool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallRotation.cs",
+    "from_class": "BallRotation",
+    "to_type": "Euler",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallRotation.cs",
+    "from_class": "BallRotation",
+    "to_type": "IsEnabled",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallRotation.cs",
+    "from_class": "BallRotation",
+    "to_type": "Physics",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallRotation.cs",
+    "from_class": "BallRotation",
+    "to_type": "Quaternion",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallRotation.cs",
+    "from_class": "BallRotation",
+    "to_type": "Rad2Deg",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallRotation.cs",
+    "from_class": "BallRotation",
+    "to_type": "Tick",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallRotation.cs",
+    "from_class": "BallRotation",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallRotation.cs",
+    "from_class": "BallRotation",
+    "to_type": "Vector2",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallRotation.cs",
+    "from_class": "BallRotation",
+    "to_type": "Velocity",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
     "to_type": "Ball",
@@ -2613,6 +3243,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
+    "to_type": "BuffBadgeManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
     "to_type": "Activate",
     "relation_type": "uses",
     "strength": 1
@@ -2620,7 +3257,7 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
-    "to_type": "ApplyCooldownReduction",
+    "to_type": "Attach",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2655,14 +3292,14 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
-    "to_type": "Clamp01",
+    "to_type": "BuffBadgeData",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
-    "to_type": "CooldownReductionRate",
+    "to_type": "BuffBadgeManager",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2704,6 +3341,20 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
     "to_type": "IsActive",
     "relation_type": "uses",
     "strength": 1
@@ -2732,6 +3383,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
+    "to_type": "Min",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
     "to_type": "OnActivate",
     "relation_type": "uses",
     "strength": 1
@@ -2747,6 +3405,34 @@
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
     "to_type": "OnDestroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "SetAutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "SetDuration",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "SetManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "SetTriggerSettings",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2837,7 +3523,21 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallStats.cs",
     "from_class": "BallStats",
+    "to_type": "Auto",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
     "to_type": "BaseRadius",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "bool",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2852,6 +3552,13 @@
     "from_file": "Assets/Gameplay/Ball/BallStats.cs",
     "from_class": "BallStats",
     "to_type": "Clamp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Cooldown",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2900,6 +3607,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallStats.cs",
     "from_class": "BallStats",
+    "to_type": "GiantSize",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
     "to_type": "IncreaseAttackPower",
     "relation_type": "uses",
     "strength": 1
@@ -2942,6 +3656,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallStats.cs",
     "from_class": "BallStats",
+    "to_type": "Manual",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
     "to_type": "Max",
     "relation_type": "uses",
     "strength": 1
@@ -2963,6 +3684,41 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallStats.cs",
     "from_class": "BallStats",
+    "to_type": "ReduceCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "ReduceSkill1AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "ReduceSkill1ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "ReduceSkill2AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "ReduceSkill2ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
     "to_type": "ResetRadiusMultiplier",
     "relation_type": "uses",
     "strength": 1
@@ -2971,6 +3727,90 @@
     "from_file": "Assets/Gameplay/Ball/BallStats.cs",
     "from_class": "BallStats",
     "to_type": "SetRadiusMultiplier",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill1",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill1AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill1Duration",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill1HasAutoTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill1HasManualTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill1ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill2",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill2AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill2Duration",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill2HasAutoTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill2HasManualTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallStats.cs",
+    "from_class": "BallStats",
+    "to_type": "Skill2ManualCooldown",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3759,6 +4599,195 @@
     "strength": 1
   },
   {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffect.cs",
+    "from_class": "AttackEffect",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffect.cs",
+    "from_class": "AttackEffect",
+    "to_type": "Destroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffect.cs",
+    "from_class": "AttackEffect",
+    "to_type": "DestroyDelay",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffect.cs",
+    "from_class": "AttackEffect",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffect.cs",
+    "from_class": "AttackEffect",
+    "to_type": "ScrollSpeed",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffect.cs",
+    "from_class": "AttackEffect",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffect.cs",
+    "from_class": "AttackEffect",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffect.cs",
+    "from_class": "AttackEffect",
+    "to_type": "Update",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffect.cs",
+    "from_class": "AttackEffect",
+    "to_type": "Vector3",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "AttackEffect",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "SpriteRenderer",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "GameManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "AttackEffect",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "DestroyDelay",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "Instantiate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "Quaternion",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "ScrollSpeed",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "Spawn",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "SpriteRenderer",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "Vector2",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Effect/AttackEffectSpawner.cs",
+    "from_class": "AttackEffectSpawner",
+    "to_type": "WorldStats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
     "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
     "from_class": "GiantSkill",
     "to_type": "WaitForSeconds",
@@ -4216,6 +5245,13 @@
   {
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
+    "to_type": "BuffBadgeManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
     "to_type": "GameManager",
     "relation_type": "singleton-access",
     "strength": 4
@@ -4230,7 +5266,49 @@
   {
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
+    "to_type": "ApplySkillCooldownsToActiveBalls",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Attach",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
     "to_type": "AttackPower",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Badge",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "BadgeData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "BadgeDuration",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Ball",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4245,6 +5323,20 @@
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
     "to_type": "BallStats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "BuffBadgeData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "BuffBadgeManager",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4273,6 +5365,20 @@
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
     "to_type": "CriticalDamage",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "FindObjectsByType",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "FindObjectsSortMode",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4349,6 +5455,20 @@
   {
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
+    "to_type": "None",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Object",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
     "to_type": "PaddleSizeLevel",
     "relation_type": "uses",
     "strength": 1
@@ -4363,14 +5483,91 @@
   {
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
-    "to_type": "Skill1CooldownReductionRate",
+    "to_type": "ReduceSkill1AutoCooldown",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
-    "to_type": "Skill2CooldownReductionRate",
+    "to_type": "ReduceSkill1ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "ReduceSkill2AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "ReduceSkill2ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "SetSkillCooldowns",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill1AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill1AutoCooldownReduction",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill1ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill1ManualCooldownReduction",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill2AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill2AutoCooldownReduction",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill2ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
+    "from_class": "StatUpgradeCardData",
+    "to_type": "Skill2ManualCooldownReduction",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4392,13 +5589,6 @@
     "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
     "from_class": "StatUpgradeCardData",
     "to_type": "StatUpgradeCard",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Card/Cards/StatUpgradeCardData.cs",
-    "from_class": "StatUpgradeCardData",
-    "to_type": "TODO",
     "relation_type": "uses",
     "strength": 1
   },
@@ -5077,7 +6267,28 @@
   {
     "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
     "from_class": "CowKing",
-    "to_type": "PlayBossBreathSound",
+    "to_type": "PlayBossAttackInloopSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
+    "to_type": "PlayBossAttackLoopSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
+    "to_type": "PlayBossAttackOutloopSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
+    "to_type": "PlayBossAttackReadySound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -5091,7 +6302,35 @@
   {
     "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
     "from_class": "CowKing",
+    "to_type": "PlayBossEntrySfx",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
+    "to_type": "PlayBossEntrySound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
+    "to_type": "PlayBossFallSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
     "to_type": "PlayBossHitSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
+    "to_type": "PlayBossVoiceSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -6022,6 +7261,13 @@
   {
     "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
     "from_class": "Enemy",
+    "to_type": "Initialize",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
     "to_type": "InitializeStates",
     "relation_type": "uses",
     "strength": 1
@@ -6065,6 +7311,13 @@
     "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
     "from_class": "Enemy",
     "to_type": "Level",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "LogError",
     "relation_type": "uses",
     "strength": 1
   },
@@ -6177,6 +7430,13 @@
     "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
     "from_class": "Enemy",
     "to_type": "PlayEnemyHitSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
+    "from_class": "Enemy",
+    "to_type": "PlayMobDieSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -6415,6 +7675,48 @@
     "from_file": "Assets/Gameplay/Enemy/EnemyMovementValidator.cs",
     "from_class": "EnemyMovementValidator",
     "to_type": "MoveRange",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemySpawnData.cs",
+    "from_class": "EnemySpawnData",
+    "to_type": "EnemyStats",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemySpawnData.cs",
+    "from_class": "EnemySpawnData",
+    "to_type": "CreateAssetMenu",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemySpawnData.cs",
+    "from_class": "EnemySpawnData",
+    "to_type": "EnemyPrefab",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemySpawnData.cs",
+    "from_class": "EnemySpawnData",
+    "to_type": "EnemyStats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemySpawnData.cs",
+    "from_class": "EnemySpawnData",
+    "to_type": "Spawn",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Enemy/EnemySpawnData.cs",
+    "from_class": "EnemySpawnData",
+    "to_type": "UnityEngine",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7149,6 +8451,13 @@
   {
     "from_file": "Assets/Gameplay/Item/EnhancementTriggerItemData.cs",
     "from_class": "EnhancementTriggerItemData",
+    "to_type": "IsValidUpgradePool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/EnhancementTriggerItemData.cs",
+    "from_class": "EnhancementTriggerItemData",
     "to_type": "ItemData",
     "relation_type": "uses",
     "strength": 1
@@ -7282,6 +8591,13 @@
   {
     "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
     "from_class": "FallingItemSpawner",
+    "to_type": "ItemPickup",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
     "to_type": "Vector3",
     "relation_type": "creates",
     "strength": 2
@@ -7299,6 +8615,27 @@
     "to_type": "GameManager",
     "relation_type": "singleton-access",
     "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
+    "to_type": "ApplyCardPool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
+    "to_type": "CardIds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
+    "to_type": "CardWeights",
+    "relation_type": "uses",
+    "strength": 1
   },
   {
     "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
@@ -7331,6 +8668,20 @@
   {
     "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
     "from_class": "FallingItemSpawner",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
+    "to_type": "GetItemCardPool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
     "to_type": "Instance",
     "relation_type": "uses",
     "strength": 1
@@ -7339,6 +8690,20 @@
     "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
     "from_class": "FallingItemSpawner",
     "to_type": "Instantiate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
+    "to_type": "ItemCardPool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
+    "to_type": "ItemPickup",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7360,6 +8725,13 @@
     "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
     "from_class": "FallingItemSpawner",
     "to_type": "Quaternion",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
+    "from_class": "FallingItemSpawner",
+    "to_type": "SetCardPool",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7395,6 +8767,41 @@
     "from_file": "Assets/Gameplay/Item/FallingItemSpawner.cs",
     "from_class": "FallingItemSpawner",
     "to_type": "Vector3",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemCardPool.cs",
+    "from_class": "ItemCardPool",
+    "to_type": "CardIds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemCardPool.cs",
+    "from_class": "ItemCardPool",
+    "to_type": "CardWeights",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemCardPool.cs",
+    "from_class": "ItemCardPool",
+    "to_type": "Serializable",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemCardPool.cs",
+    "from_class": "ItemCardPool",
+    "to_type": "System",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemCardPool.cs",
+    "from_class": "ItemCardPool",
+    "to_type": "UnityEngine",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7485,6 +8892,13 @@
   {
     "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
     "from_class": "ItemPickup",
+    "to_type": "AudioManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
     "to_type": "GameManager",
     "relation_type": "singleton-access",
     "strength": 4
@@ -7493,6 +8907,20 @@
     "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
     "from_class": "ItemPickup",
     "to_type": "Apply",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
+    "to_type": "ApplyItem",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
+    "to_type": "AudioManager",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7583,7 +9011,21 @@
   {
     "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
     "from_class": "ItemPickup",
+    "to_type": "EnhancementTriggerItemData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
     "to_type": "FindFirstObjectByType",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
+    "to_type": "float",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7618,7 +9060,21 @@
   {
     "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
     "from_class": "ItemPickup",
+    "to_type": "HasOverrideCardPool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
     "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
+    "to_type": "int",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7640,6 +9096,13 @@
     "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
     "from_class": "ItemPickup",
     "to_type": "ItemData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
+    "to_type": "Length",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7674,6 +9137,13 @@
   {
     "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
     "from_class": "ItemPickup",
+    "to_type": "PlayGetItemSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
     "to_type": "Playing",
     "relation_type": "uses",
     "strength": 1
@@ -7689,6 +9159,13 @@
     "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
     "from_class": "ItemPickup",
     "to_type": "Renderer",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Item/ItemPickup.cs",
+    "from_class": "ItemPickup",
+    "to_type": "SetCardPool",
     "relation_type": "uses",
     "strength": 1
   },
@@ -8416,6 +9893,13 @@
   {
     "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
     "from_class": "WorldEnemySpawner",
+    "to_type": "Enemy",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
     "to_type": "List",
     "relation_type": "creates",
     "strength": 2
@@ -8472,6 +9956,27 @@
   {
     "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
     "from_class": "WorldEnemySpawner",
+    "to_type": "Enemy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "EnemyPrefab",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "EnemySpawnData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
     "to_type": "EnemySpawnPoints",
     "relation_type": "uses",
     "strength": 1
@@ -8493,6 +9998,13 @@
   {
     "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
     "from_class": "WorldEnemySpawner",
+    "to_type": "FormerlySerializedAs",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
     "to_type": "Generic",
     "relation_type": "uses",
     "strength": 1
@@ -8501,6 +10013,34 @@
     "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
     "from_class": "WorldEnemySpawner",
     "to_type": "GetChild",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "GetEnemySpawnData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "HasEnemyData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
+    "to_type": "Initialize",
     "relation_type": "uses",
     "strength": 1
   },
@@ -8549,6 +10089,13 @@
   {
     "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
     "from_class": "WorldEnemySpawner",
+    "to_type": "Serialization",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldEnemySpawner.cs",
+    "from_class": "WorldEnemySpawner",
     "to_type": "SetParent",
     "relation_type": "uses",
     "strength": 1
@@ -8591,6 +10138,13 @@
   {
     "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
     "from_class": "WorldItemSpawner",
+    "to_type": "ItemPickup",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
     "to_type": "List",
     "relation_type": "creates",
     "strength": 2
@@ -8612,6 +10166,13 @@
   {
     "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
     "from_class": "WorldItemSpawner",
+    "to_type": "ApplyCardPool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
     "to_type": "Array",
     "relation_type": "uses",
     "strength": 1
@@ -8620,6 +10181,20 @@
     "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
     "from_class": "WorldItemSpawner",
     "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
+    "to_type": "CardIds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
+    "to_type": "CardWeights",
     "relation_type": "uses",
     "strength": 1
   },
@@ -8682,7 +10257,42 @@
   {
     "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
     "from_class": "WorldItemSpawner",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
+    "to_type": "GetItemCardPool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
     "to_type": "Instantiate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
+    "to_type": "int",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
+    "to_type": "ItemCardPool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
+    "to_type": "ItemPickup",
     "relation_type": "uses",
     "strength": 1
   },
@@ -8718,6 +10328,13 @@
     "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
     "from_class": "WorldItemSpawner",
     "to_type": "RemoveAt",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/World/WorldItemSpawnPoint.cs",
+    "from_class": "WorldItemSpawner",
+    "to_type": "SetCardPool",
     "relation_type": "uses",
     "strength": 1
   },
@@ -9142,6 +10759,734 @@
     "strength": 1
   },
   {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "GameObject",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "SerializedObject",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "AddComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "ApplyModifiedPropertiesWithoutUndo",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Assert",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "AttackDamage",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "CreateInstance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "DestroyImmediate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Enemy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "EnemyInitializeCopiesStatsFromSpawnData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "EnemySpawnData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "EqualTo",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "ExpReward",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "FindProperty",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Framework",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Initialize",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Is",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "MaxHp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "MoveSpeed",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Not",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Null",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "NUnit",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Object",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "SameAs",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "SerializedObject",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "SetFloat",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "SetInt",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Stats",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "Test",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "That",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "UNITY_EDITOR",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "UnityEditor",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/EnemySpawnDataTests.cs",
+    "from_class": "EnemySpawnDataTests",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "GameObject",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "BindingFlags",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "AddComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "Assert",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "BindingFlags",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "DestroyImmediate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "EqualTo",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "FieldInfo",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "Framework",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "GetDefaultUpgradePoolForLevel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "GetDefaultUpgradePoolForLevelUsesMatchingPoolAndClampsToLast",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "GetField",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "GetType",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "Is",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "NonPublic",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "NUnit",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "Object",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "Reflection",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "SetPrivateField",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "SetValue",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "System",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "Test",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "That",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "UNITY_EDITOR",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "UpgradeIds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "UpgradePool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Tests/EditMode/UserLevelUpgradePoolTests.cs",
+    "from_class": "UserLevelUpgradePoolTests",
+    "to_type": "UserLevel",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/ActiveBuffBadge.cs",
+    "from_class": "ActiveBuffBadge",
+    "to_type": "BuffBadgeData",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/ActiveBuffBadge.cs",
+    "from_class": "ActiveBuffBadge",
+    "to_type": "Data",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/ActiveBuffBadge.cs",
+    "from_class": "ActiveBuffBadge",
+    "to_type": "Duration",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/ActiveBuffBadge.cs",
+    "from_class": "ActiveBuffBadge",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/ActiveBuffBadge.cs",
+    "from_class": "ActiveBuffBadge",
+    "to_type": "IsPermanent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/ActiveBuffBadge.cs",
+    "from_class": "ActiveBuffBadge",
+    "to_type": "RemainingTime",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "BuffBadgeManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "ActiveBuffBadge",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Add",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "BuffBadgeManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "BuffBadgeUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Collections",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Destroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Generic",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Instantiate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "OnBadgeAttached",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "OnBadgeDetached",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "OnDestroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Remove",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Setup",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "System",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "TryGetValue",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeBarUI.cs",
+    "from_class": "BuffBadgeBarUI",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "from_class": "BuffBadgeData",
+    "to_type": "ScriptableObject",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "from_class": "BuffBadgeData",
+    "to_type": "BadgeName",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "from_class": "BuffBadgeData",
+    "to_type": "Buff",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "from_class": "BuffBadgeData",
+    "to_type": "CreateAssetMenu",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "from_class": "BuffBadgeData",
+    "to_type": "Icon",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "from_class": "BuffBadgeData",
+    "to_type": "Sprite",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "from_class": "BuffBadgeData",
+    "to_type": "string",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeData.cs",
+    "from_class": "BuffBadgeData",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "from_class": "BuffBadgeUI",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "from_class": "BuffBadgeUI",
+    "to_type": "ActiveBuffBadge",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "from_class": "BuffBadgeUI",
+    "to_type": "Data",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "from_class": "BuffBadgeUI",
+    "to_type": "Icon",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "from_class": "BuffBadgeUI",
+    "to_type": "Image",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "from_class": "BuffBadgeUI",
+    "to_type": "Setup",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "from_class": "BuffBadgeUI",
+    "to_type": "UI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/BuffBadge/BuffBadgeUI.cs",
+    "from_class": "BuffBadgeUI",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
     "from_file": "Assets/UI/DamageText/DamageTextSpawner.cs",
     "from_class": "DamageTextSpawner",
     "to_type": "Vector3",
@@ -9319,7 +11664,21 @@
   {
     "from_file": "Assets/UI/Enhancement/CardSlotUI.cs",
     "from_class": "CardSlotUI",
+    "to_type": "AudioManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
     "to_type": "AddListener",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "AudioManager",
     "relation_type": "uses",
     "strength": 1
   },
@@ -9389,6 +11748,13 @@
   {
     "from_file": "Assets/UI/Enhancement/CardSlotUI.cs",
     "from_class": "CardSlotUI",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
     "to_type": "int",
     "relation_type": "uses",
     "strength": 1
@@ -9397,6 +11763,13 @@
     "from_file": "Assets/UI/Enhancement/CardSlotUI.cs",
     "from_class": "CardSlotUI",
     "to_type": "OnClickCard",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Enhancement/CardSlotUI.cs",
+    "from_class": "CardSlotUI",
+    "to_type": "PlayUpgradeSelectSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -9487,6 +11860,13 @@
   {
     "from_file": "Assets/UI/Enhancement/EnhanceUI.cs",
     "from_class": "EnhanceUI",
+    "to_type": "AudioManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
     "to_type": "GameManager",
     "relation_type": "singleton-access",
     "strength": 4
@@ -9502,6 +11882,13 @@
     "from_file": "Assets/UI/Enhancement/EnhanceUI.cs",
     "from_class": "EnhanceUI",
     "to_type": "Apply",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
+    "to_type": "AudioManager",
     "relation_type": "uses",
     "strength": 1
   },
@@ -9655,6 +12042,13 @@
   {
     "from_file": "Assets/UI/Enhancement/EnhanceUI.cs",
     "from_class": "EnhanceUI",
+    "to_type": "PlayUpgradeSelectSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/Enhancement/EnhanceUI.cs",
+    "from_class": "EnhanceUI",
     "to_type": "RemoveAllListeners",
     "relation_type": "uses",
     "strength": 1
@@ -9740,6 +12134,300 @@
     "from_file": "Assets/UI/Enhancement/EnhanceUI.cs",
     "from_class": "EnhanceUI",
     "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "SpriteRenderer",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "Vector3",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "GameManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "Clamp01",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "CurrentExp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "Level",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "OnDestroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "OnExpChanged",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "RequiredExp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "SetFill",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "SpriteRenderer",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "User",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
+    "from_class": "EXPBarUI",
+    "to_type": "Vector3",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "SpriteRenderer",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "Vector3",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "GameManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "Clamp01",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "CurrentHp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "Health",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "MaxHp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "OnDestroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "OnHpChanged",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "SetFill",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "SpriteRenderer",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "User",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/HPBarUI.cs",
+    "from_class": "HPBarUI",
+    "to_type": "Vector3",
     "relation_type": "uses",
     "strength": 1
   },
