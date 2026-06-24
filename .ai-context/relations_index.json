@@ -44,6 +44,13 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
+    "to_type": "BGM",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
     "to_type": "BGMVolume",
     "relation_type": "uses",
     "strength": 1
@@ -51,7 +58,28 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
+    "to_type": "Boss",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
     "to_type": "Clamp01",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "Clip",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "Clips",
     "relation_type": "uses",
     "strength": 1
   },
@@ -73,6 +101,13 @@
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
     "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "Game",
     "relation_type": "uses",
     "strength": 1
   },
@@ -121,6 +156,13 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
+    "to_type": "Length",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
     "to_type": "LoadVolumeSettings",
     "relation_type": "uses",
     "strength": 1
@@ -128,7 +170,28 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
+    "to_type": "Log",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "LogWarning",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
     "to_type": "MasterVolume",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "Play",
     "relation_type": "uses",
     "strength": 1
   },
@@ -184,7 +247,7 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
-    "to_type": "PlayBossBreathSound",
+    "to_type": "PlayBossBgm",
     "relation_type": "uses",
     "strength": 1
   },
@@ -212,13 +275,6 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
-    "to_type": "PlayBossHitSound",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/_Global/AudioManager.cs",
-    "from_class": "AudioManager",
     "to_type": "PlayBossIdleSound",
     "relation_type": "uses",
     "strength": 1
@@ -233,14 +289,14 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
-    "to_type": "PlayCloneSound",
+    "to_type": "PlayCloneSkillSound",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
-    "to_type": "PlayEnemyHitSound",
+    "to_type": "PlayCloneSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -261,7 +317,21 @@
   {
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
+    "to_type": "PlayGameOverSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
     "to_type": "PlayGetItemSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayGiantSkillSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -283,6 +353,13 @@
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
     "to_type": "PlayOneShot",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "PlayRandomGameBgm",
     "relation_type": "uses",
     "strength": 1
   },
@@ -360,6 +437,20 @@
     "from_file": "Assets/_Global/AudioManager.cs",
     "from_class": "AudioManager",
     "to_type": "SFXVolume",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "Stop",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/AudioManager.cs",
+    "from_class": "AudioManager",
+    "to_type": "StopBgm",
     "relation_type": "uses",
     "strength": 1
   },
@@ -808,6 +899,13 @@
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
     "to_type": "Playing",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "PlayRandomGameBgm",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1318,6 +1416,13 @@
   {
     "from_file": "Assets/_Global/UserHealth.cs",
     "from_class": "UserHealth",
+    "to_type": "AudioManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
     "to_type": "DamageTextSpawner",
     "relation_type": "singleton-access",
     "strength": 4
@@ -1328,6 +1433,13 @@
     "to_type": "GameManager",
     "relation_type": "singleton-access",
     "strength": 4
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "AudioManager",
+    "relation_type": "uses",
+    "strength": 1
   },
   {
     "from_file": "Assets/_Global/UserHealth.cs",
@@ -1424,6 +1536,13 @@
     "from_file": "Assets/_Global/UserHealth.cs",
     "from_class": "UserHealth",
     "to_type": "Paddle",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/UserHealth.cs",
+    "from_class": "UserHealth",
+    "to_type": "PlayGameOverSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2690,6 +2809,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
+    "to_type": "HEAD",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
     "to_type": "IDamageable",
     "relation_type": "uses",
     "strength": 1
@@ -2774,6 +2900,27 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
+    "to_type": "PlayAttackSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "PlayAttackVoiceNextFrame",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "PlayAttackVoiceSound",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
     "to_type": "PlayBallHitSound",
     "relation_type": "uses",
     "strength": 1
@@ -2810,6 +2957,13 @@
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
     "to_type": "Spawn",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
+    "from_class": "BallCollision",
+    "to_type": "StartCoroutine",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4328,7 +4482,21 @@
   {
     "from_file": "Assets/Gameplay/Ball/CloneSkill.cs",
     "from_class": "CloneSkill",
+    "to_type": "AudioManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/CloneSkill.cs",
+    "from_class": "CloneSkill",
     "to_type": "Animation",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/CloneSkill.cs",
+    "from_class": "CloneSkill",
+    "to_type": "AudioManager",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4419,6 +4587,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/CloneSkill.cs",
     "from_class": "CloneSkill",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/CloneSkill.cs",
+    "from_class": "CloneSkill",
     "to_type": "Instantiate",
     "relation_type": "uses",
     "strength": 1
@@ -4497,6 +4672,13 @@
     "from_file": "Assets/Gameplay/Ball/CloneSkill.cs",
     "from_class": "CloneSkill",
     "to_type": "Physics",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/CloneSkill.cs",
+    "from_class": "CloneSkill",
+    "to_type": "PlayCloneSkillSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4804,7 +4986,21 @@
   {
     "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
     "from_class": "GiantSkill",
+    "to_type": "AudioManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
+    "from_class": "GiantSkill",
     "to_type": "Animation",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
+    "from_class": "GiantSkill",
+    "to_type": "AudioManager",
     "relation_type": "uses",
     "strength": 1
   },
@@ -4860,6 +5056,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
     "from_class": "GiantSkill",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
+    "from_class": "GiantSkill",
     "to_type": "int",
     "relation_type": "uses",
     "strength": 1
@@ -4903,6 +5106,13 @@
     "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
     "from_class": "GiantSkill",
     "to_type": "OnSkill1Activated",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/GiantSkill.cs",
+    "from_class": "GiantSkill",
+    "to_type": "PlayGiantSkillSound",
     "relation_type": "uses",
     "strength": 1
   },
@@ -5950,6 +6160,265 @@
     "strength": 1
   },
   {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "GameManager",
+    "relation_type": "singleton-access",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "ApplyDamage",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "bool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "Collider2D",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "CompareTag",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "Destroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "GameManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "Health",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "Instance",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "Log",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "OnTriggerEnter2D",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "OnTriggerExit2D",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "Paddle",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "Start",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "TakeDamage",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "Update",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreath.cs",
+    "from_class": "CowKingBreath",
+    "to_type": "User",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "Animator",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "WaitForSeconds",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "Animator",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "Awake",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "bool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "Collections",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "Destroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "End",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "EndRoutine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "GetComponent",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "PlayEndAndDestroy",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "SetTrigger",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "StartCoroutine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "System",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/Breath/CowKingBreathAnimation.cs",
+    "from_class": "CowKingBreathAnimation",
+    "to_type": "WaitForSeconds",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
     "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
     "from_class": "CowKing",
     "to_type": "Animator",
@@ -5960,6 +6429,13 @@
     "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
     "from_class": "CowKing",
     "to_type": "Collider2D",
+    "relation_type": "component-access",
+    "strength": 3
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
+    "to_type": "CowKingBreathAnimation",
     "relation_type": "component-access",
     "strength": 3
   },
@@ -6079,6 +6555,13 @@
     "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
     "from_class": "CowKing",
     "to_type": "Collider2D",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
+    "to_type": "CowKingBreathAnimation",
     "relation_type": "uses",
     "strength": 1
   },
@@ -6295,6 +6778,13 @@
   {
     "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
     "from_class": "CowKing",
+    "to_type": "PlayBossBgm",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
     "to_type": "PlayBossDieSound",
     "relation_type": "uses",
     "strength": 1
@@ -6323,13 +6813,6 @@
   {
     "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
     "from_class": "CowKing",
-    "to_type": "PlayBossHitSound",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
-    "from_class": "CowKing",
     "to_type": "PlayBossVoiceSound",
     "relation_type": "uses",
     "strength": 1
@@ -6338,6 +6821,20 @@
     "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
     "from_class": "CowKing",
     "to_type": "PlayDamagedAnimation",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
+    "to_type": "PlayDieAnimation",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
+    "to_type": "PlayEndAndDestroy",
     "relation_type": "uses",
     "strength": 1
   },
@@ -6435,6 +6932,13 @@
   {
     "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
     "from_class": "CowKing",
+    "to_type": "StopBgm",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
+    "from_class": "CowKing",
     "to_type": "System",
     "relation_type": "uses",
     "strength": 1
@@ -6499,132 +7003,6 @@
     "from_file": "Assets/Gameplay/Cowking/CowKing.cs",
     "from_class": "CowKing",
     "to_type": "WaitForSeconds",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "MonoBehaviour",
-    "relation_type": "inherits",
-    "strength": 4
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "GameManager",
-    "relation_type": "singleton-access",
-    "strength": 4
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "bool",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "Collider2D",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "CompareTag",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "Destroy",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "float",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "GameManager",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "Instance",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "Log",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "OnTriggerEnter2D",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "OnTriggerExit2D",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "Paddle",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "Start",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "TakePlayerDamage",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "TODO",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "UnityEngine",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Cowking/CowKingBreath.cs",
-    "from_class": "CowKingBreath",
-    "to_type": "Update",
     "relation_type": "uses",
     "strength": 1
   },
@@ -7423,13 +7801,6 @@
     "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
     "from_class": "Enemy",
     "to_type": "PlayEncounterAnimation",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Enemy/Enemy.cs",
-    "from_class": "Enemy",
-    "to_type": "PlayEnemyHitSound",
     "relation_type": "uses",
     "strength": 1
   },
