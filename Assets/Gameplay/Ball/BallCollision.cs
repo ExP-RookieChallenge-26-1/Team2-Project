@@ -100,15 +100,11 @@ public class BallCollision : MonoBehaviour
 
                     collision.damageable.TakeDamage(damage, isCrit);
                     this.ball.Animation.TriggerAttack();
-<<<<<<< HEAD
-
-=======
                     Vector2 velocity = this.ball.Physics.Velocity;
                     AttackEffectSpawner.Instance?.Spawn(
                         this.ball.transform.position,
                         isMovingUp: velocity.y >= 0f,
                         flipX: velocity.x < 0f);
->>>>>>> 28ab4afae3b101458ae192f583c1263c95202c8a
                     this.lastHitDamageable = collision.damageable;
                     this.lastHitDamageableCollider = collision.damageableCollider;
                 }
