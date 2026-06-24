@@ -341,9 +341,9 @@
     "file_id": "Assets/_Global/GameManager.cs",
     "path": "Assets/_Global/GameManager.cs",
     "file_name": "GameManager.cs",
-    "content_hash": "e5c7ede220aa4b6cff08d2af3fff94ed758dc40e",
-    "size": 3622,
-    "line_count": 138,
+    "content_hash": "1d52b54e5be5636f8ab55ee54fefb288400b98b1",
+    "size": 3603,
+    "line_count": 136,
     "namespace": "",
     "using_list": [
       "UnityEngine",
