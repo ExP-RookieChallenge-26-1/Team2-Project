@@ -2,21 +2,21 @@
   "project_name": "unknown",
   "language": "C#",
   "engine_guess": "Unity",
-  "total_cs_files": 69,
-  "mono_behaviour_files": 35,
+  "total_cs_files": 72,
+  "mono_behaviour_files": 37,
   "scriptable_object_files": 9,
-  "files_with_update": 13,
+  "files_with_update": 14,
   "files_with_fixed_update": 0,
   "files_with_late_update": 0,
-  "singleton_candidates": 4,
-  "manager_like_classes": 32,
+  "singleton_candidates": 5,
+  "manager_like_classes": 33,
   "ui_related_classes": 18,
-  "save_load_related_classes": 41,
+  "save_load_related_classes": 42,
   "role_counts": {
-    "combat": 31,
-    "save-load": 41,
-    "manager": 32,
-    "runtime": 39,
+    "combat": 33,
+    "save-load": 42,
+    "manager": 33,
+    "runtime": 41,
     "player": 25,
     "data": 24,
     "scene": 2,
@@ -39,19 +39,19 @@
     {
       "class_name": "BallCollision",
       "file_id": "Assets/Gameplay/Ball/BallCollision.cs",
-      "relation_count": 74,
-      "referenced_type_count": 64
+      "relation_count": 77,
+      "referenced_type_count": 66
+    },
+    {
+      "class_name": "Ball",
+      "file_id": "Assets/Gameplay/Ball/Ball.cs",
+      "relation_count": 69,
+      "referenced_type_count": 58
     },
     {
       "class_name": "BallTrajectory",
       "file_id": "Assets/Gameplay/Ball/BallTrajectory.cs",
       "relation_count": 67,
-      "referenced_type_count": 55
-    },
-    {
-      "class_name": "Ball",
-      "file_id": "Assets/Gameplay/Ball/Ball.cs",
-      "relation_count": 65,
       "referenced_type_count": 55
     },
     {
