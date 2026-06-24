@@ -49,8 +49,6 @@ public class GameManager : MonoBehaviour
             AudioManager.Instance.PlayRandomGameBgm();
         TriggerSpawn(false);
 
-		TriggerSpawn();
-
 	}
 
 	private void Update()
