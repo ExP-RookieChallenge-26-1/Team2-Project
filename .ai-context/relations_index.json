@@ -2809,13 +2809,6 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
     "from_class": "BallCollision",
-    "to_type": "HEAD",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/Gameplay/Ball/BallCollision.cs",
-    "from_class": "BallCollision",
     "to_type": "IDamageable",
     "relation_type": "uses",
     "strength": 1

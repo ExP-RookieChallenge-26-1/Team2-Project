@@ -39,8 +39,8 @@
     {
       "class_name": "BallCollision",
       "file_id": "Assets/Gameplay/Ball/BallCollision.cs",
-      "relation_count": 82,
-      "referenced_type_count": 71
+      "relation_count": 81,
+      "referenced_type_count": 70
     },
     {
       "class_name": "AudioManager",
