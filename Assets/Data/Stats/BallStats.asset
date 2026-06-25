@@ -19,12 +19,12 @@ MonoBehaviour:
   <CriticalChance>k__BackingField: 0.05
   <CriticalDamage>k__BackingField: 1.5
   <Skill1HasManualTrigger>k__BackingField: 1
-  <Skill1HasAutoTrigger>k__BackingField: 0
+  <Skill1HasAutoTrigger>k__BackingField: 1
   <Skill1ManualCooldown>k__BackingField: 10
-  <Skill1AutoCooldown>k__BackingField: 0
+  <Skill1AutoCooldown>k__BackingField: 8
   <Skill2HasManualTrigger>k__BackingField: 1
-  <Skill2HasAutoTrigger>k__BackingField: 0
+  <Skill2HasAutoTrigger>k__BackingField: 1
   <Skill2ManualCooldown>k__BackingField: 10
-  <Skill2AutoCooldown>k__BackingField: 0
+  <Skill2AutoCooldown>k__BackingField: 6
   <Skill1Duration>k__BackingField: 5
   <Skill2Duration>k__BackingField: 0

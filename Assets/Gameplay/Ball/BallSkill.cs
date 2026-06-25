@@ -22,6 +22,16 @@ public abstract class BallSkill : MonoBehaviour
 	public bool IsActive { get; private set; }
 	public bool IsManualReady => !this.IsActive && this.manualTimer <= 0f;
 
+	public float AutoCooldownRemaining => Mathf.Max(0f, this.autoTimer);
+	public float AutoCooldownRatio => this.AutoCooldown > 0f
+		? Mathf.Clamp01(this.autoTimer / this.AutoCooldown)
+		: 0f;
+
+	public float ManualCooldownRemaining => Mathf.Max(0f, this.manualTimer);
+	public float ManualCooldownRatio => this.ManualCooldown > 0f
+		? Mathf.Clamp01(this.manualTimer / this.ManualCooldown)
+		: 0f;
+
 	protected virtual void Awake()
 	{
 		this.ball = GetComponent<Ball>();
