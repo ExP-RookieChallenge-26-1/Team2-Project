@@ -646,6 +646,13 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
+    "to_type": "WaitUntil",
+    "relation_type": "creates",
+    "strength": 2
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
     "to_type": "MonoBehaviour",
     "relation_type": "inherits",
     "strength": 4
@@ -696,6 +703,13 @@
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
     "to_type": "CheckBallState",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "Collections",
     "relation_type": "uses",
     "strength": 1
   },
@@ -954,6 +968,13 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
+    "to_type": "ShowGameOverPanelWhenBallsGone",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
     "to_type": "Spawn",
     "relation_type": "uses",
     "strength": 1
@@ -968,7 +989,28 @@
   {
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
+    "to_type": "StartCoroutine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "StartGameOverFall",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
     "to_type": "State",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "System",
     "relation_type": "uses",
     "strength": 1
   },
@@ -1032,6 +1074,13 @@
     "from_file": "Assets/_Global/GameManager.cs",
     "from_class": "GameManager",
     "to_type": "ViewportToWorldPoint",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/_Global/GameManager.cs",
+    "from_class": "GameManager",
+    "to_type": "WaitUntil",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2109,6 +2158,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
+    "to_type": "Rotate",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
     "to_type": "Rotation",
     "relation_type": "uses",
     "strength": 1
@@ -2130,7 +2186,21 @@
   {
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
+    "to_type": "SetGameOver",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
     "to_type": "SetManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "SetRespawning",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2270,6 +2340,13 @@
   {
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
+    "to_type": "StartGameOverFall",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
     "to_type": "Stats",
     "relation_type": "uses",
     "strength": 1
@@ -2278,6 +2355,13 @@
     "from_file": "Assets/Gameplay/Ball/Ball.cs",
     "from_class": "Ball",
     "to_type": "Tick",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/Ball.cs",
+    "from_class": "Ball",
+    "to_type": "TickGameOverFall",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2396,7 +2480,21 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
     "from_class": "BallAnimation",
+    "to_type": "IsGameOver",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
     "to_type": "IsMovingUp",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "IsRespawning",
     "relation_type": "uses",
     "strength": 1
   },
@@ -2418,6 +2516,20 @@
     "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
     "from_class": "BallAnimation",
     "to_type": "SetBool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "SetGameOver",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallAnimation.cs",
+    "from_class": "BallAnimation",
+    "to_type": "SetRespawning",
     "relation_type": "uses",
     "strength": 1
   },
@@ -12504,20 +12616,6 @@
   {
     "from_file": "Assets/UI/HUD/EXPBarUI.cs",
     "from_class": "EXPBarUI",
-    "to_type": "SpriteRenderer",
-    "relation_type": "component-access",
-    "strength": 3
-  },
-  {
-    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
-    "from_class": "EXPBarUI",
-    "to_type": "Vector3",
-    "relation_type": "creates",
-    "strength": 2
-  },
-  {
-    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
-    "from_class": "EXPBarUI",
     "to_type": "MonoBehaviour",
     "relation_type": "inherits",
     "strength": 4
@@ -12528,13 +12626,6 @@
     "to_type": "GameManager",
     "relation_type": "singleton-access",
     "strength": 4
-  },
-  {
-    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
-    "from_class": "EXPBarUI",
-    "to_type": "Awake",
-    "relation_type": "uses",
-    "strength": 1
   },
   {
     "from_file": "Assets/UI/HUD/EXPBarUI.cs",
@@ -12553,13 +12644,6 @@
   {
     "from_file": "Assets/UI/HUD/EXPBarUI.cs",
     "from_class": "EXPBarUI",
-    "to_type": "float",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
-    "from_class": "EXPBarUI",
     "to_type": "GameManager",
     "relation_type": "uses",
     "strength": 1
@@ -12567,7 +12651,7 @@
   {
     "from_file": "Assets/UI/HUD/EXPBarUI.cs",
     "from_class": "EXPBarUI",
-    "to_type": "GetComponent",
+    "to_type": "Image",
     "relation_type": "uses",
     "strength": 1
   },
@@ -12616,14 +12700,14 @@
   {
     "from_file": "Assets/UI/HUD/EXPBarUI.cs",
     "from_class": "EXPBarUI",
-    "to_type": "SpriteRenderer",
+    "to_type": "Start",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "Assets/UI/HUD/EXPBarUI.cs",
     "from_class": "EXPBarUI",
-    "to_type": "Start",
+    "to_type": "UI",
     "relation_type": "uses",
     "strength": 1
   },
@@ -12642,27 +12726,6 @@
     "strength": 1
   },
   {
-    "from_file": "Assets/UI/HUD/EXPBarUI.cs",
-    "from_class": "EXPBarUI",
-    "to_type": "Vector3",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/UI/HUD/HPBarUI.cs",
-    "from_class": "HPBarUI",
-    "to_type": "SpriteRenderer",
-    "relation_type": "component-access",
-    "strength": 3
-  },
-  {
-    "from_file": "Assets/UI/HUD/HPBarUI.cs",
-    "from_class": "HPBarUI",
-    "to_type": "Vector3",
-    "relation_type": "creates",
-    "strength": 2
-  },
-  {
     "from_file": "Assets/UI/HUD/HPBarUI.cs",
     "from_class": "HPBarUI",
     "to_type": "MonoBehaviour",
@@ -12675,13 +12738,6 @@
     "to_type": "GameManager",
     "relation_type": "singleton-access",
     "strength": 4
-  },
-  {
-    "from_file": "Assets/UI/HUD/HPBarUI.cs",
-    "from_class": "HPBarUI",
-    "to_type": "Awake",
-    "relation_type": "uses",
-    "strength": 1
   },
   {
     "from_file": "Assets/UI/HUD/HPBarUI.cs",
@@ -12700,13 +12756,6 @@
   {
     "from_file": "Assets/UI/HUD/HPBarUI.cs",
     "from_class": "HPBarUI",
-    "to_type": "float",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/UI/HUD/HPBarUI.cs",
-    "from_class": "HPBarUI",
     "to_type": "GameManager",
     "relation_type": "uses",
     "strength": 1
@@ -12714,14 +12763,14 @@
   {
     "from_file": "Assets/UI/HUD/HPBarUI.cs",
     "from_class": "HPBarUI",
-    "to_type": "GetComponent",
+    "to_type": "Health",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "Assets/UI/HUD/HPBarUI.cs",
     "from_class": "HPBarUI",
-    "to_type": "Health",
+    "to_type": "Image",
     "relation_type": "uses",
     "strength": 1
   },
@@ -12763,14 +12812,14 @@
   {
     "from_file": "Assets/UI/HUD/HPBarUI.cs",
     "from_class": "HPBarUI",
-    "to_type": "SpriteRenderer",
+    "to_type": "Start",
     "relation_type": "uses",
     "strength": 1
   },
   {
     "from_file": "Assets/UI/HUD/HPBarUI.cs",
     "from_class": "HPBarUI",
-    "to_type": "Start",
+    "to_type": "UI",
     "relation_type": "uses",
     "strength": 1
   },
@@ -12785,13 +12834,6 @@
     "from_file": "Assets/UI/HUD/HPBarUI.cs",
     "from_class": "HPBarUI",
     "to_type": "User",
-    "relation_type": "uses",
-    "strength": 1
-  },
-  {
-    "from_file": "Assets/UI/HUD/HPBarUI.cs",
-    "from_class": "HPBarUI",
-    "to_type": "Vector3",
     "relation_type": "uses",
     "strength": 1
   },
