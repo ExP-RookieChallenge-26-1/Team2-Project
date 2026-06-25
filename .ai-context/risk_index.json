@@ -75,6 +75,31 @@
     "risk_score": 93
   },
   {
+    "file_id": "Assets/Gameplay/Ball/Ball.cs",
+    "class_name": "Ball",
+    "risk_flags": [
+      "update-heavy",
+      "high-coupling",
+      "getcomponent-heavy",
+      "magic-number-heavy",
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "Unity 업데이트 루프 사용",
+      "참조 타입 또는 관계 수가 많음",
+      "GetComponent/TryGetComponent 호출이 많음",
+      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 88
+  },
+  {
     "file_id": "Assets/_Global/AudioManager.cs",
     "class_name": "AudioManager",
     "risk_flags": [
@@ -94,29 +119,6 @@
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
     "risk_score": 78
-  },
-  {
-    "file_id": "Assets/Gameplay/Ball/Ball.cs",
-    "class_name": "Ball",
-    "risk_flags": [
-      "update-heavy",
-      "high-coupling",
-      "getcomponent-heavy",
-      "magic-number-heavy",
-      "init-order-sensitive",
-      "ui-runtime-mixed",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "Unity 업데이트 루프 사용",
-      "참조 타입 또는 관계 수가 많음",
-      "GetComponent/TryGetComponent 호출이 많음",
-      "숫자 리터럴이 많아 의미 파악이 어려울 수 있음",
-      "초기화 순서에 민감할 가능성",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 76
   },
   {
     "file_id": "Assets/_Global/GameManager.cs",
@@ -474,40 +476,6 @@
     "risk_score": 46
   },
   {
-    "file_id": "Assets/UI/HUD/EXPBarUI.cs",
-    "class_name": "EXPBarUI",
-    "risk_flags": [
-      "high-coupling",
-      "init-order-sensitive",
-      "ui-runtime-mixed",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "참조 타입 또는 관계 수가 많음",
-      "초기화 순서에 민감할 가능성",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 46
-  },
-  {
-    "file_id": "Assets/UI/HUD/HPBarUI.cs",
-    "class_name": "HPBarUI",
-    "risk_flags": [
-      "high-coupling",
-      "init-order-sensitive",
-      "ui-runtime-mixed",
-      "state-owner"
-    ],
-    "risk_reasons": [
-      "참조 타입 또는 관계 수가 많음",
-      "초기화 순서에 민감할 가능성",
-      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
-      "상태 중심 또는 관리 중심 클래스일 가능성"
-    ],
-    "risk_score": 46
-  },
-  {
     "file_id": "Assets/UI/Title/SettingPanel.cs",
     "class_name": "SettingPanel",
     "risk_flags": [
@@ -571,6 +539,40 @@
       "Unity 업데이트 루프 사용",
       "초기화 순서에 민감할 가능성",
       "저장/불러오기 관련 로직 포함",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 40
+  },
+  {
+    "file_id": "Assets/UI/HUD/EXPBarUI.cs",
+    "class_name": "EXPBarUI",
+    "risk_flags": [
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
+      "상태 중심 또는 관리 중심 클래스일 가능성"
+    ],
+    "risk_score": 40
+  },
+  {
+    "file_id": "Assets/UI/HUD/HPBarUI.cs",
+    "class_name": "HPBarUI",
+    "risk_flags": [
+      "init-order-sensitive",
+      "save-load-sensitive",
+      "ui-runtime-mixed",
+      "state-owner"
+    ],
+    "risk_reasons": [
+      "초기화 순서에 민감할 가능성",
+      "저장/불러오기 관련 로직 포함",
+      "UI와 런타임 책임이 한 파일에 섞였을 가능성",
       "상태 중심 또는 관리 중심 클래스일 가능성"
     ],
     "risk_score": 40
