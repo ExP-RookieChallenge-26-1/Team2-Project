@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -74,11 +75,10 @@ public class GameManager : MonoBehaviour
 				Time.timeScale = 0.2f;
 				break;
             case GameStateMachine.State.GameOver:
+                foreach (var ball in FindObjectsByType<Ball>(FindObjectsSortMode.None))
+                    ball.StartGameOverFall();
                 Time.timeScale = 0f;
-
-                if (gameOverPanel != null)
-                    gameOverPanel.SetActive(true);
-
+                StartCoroutine(ShowGameOverPanelWhenBallsGone());
                 break;
         }
 	}
@@ -113,6 +113,13 @@ public class GameManager : MonoBehaviour
 
         if (playSound && AudioManager.Instance != null)
             AudioManager.Instance.PlayRespawnSound();
+    }
+
+    private IEnumerator ShowGameOverPanelWhenBallsGone()
+    {
+        yield return new WaitUntil(() => FindObjectsByType<Ball>(FindObjectsSortMode.None).Length == 0);
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(true);
     }
 
     public void OnBossDefeated()

@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: f6f28b3ba1f6ba444a6972558c6c892d
+guid: dafaa257518888a418a25bd1ddb6f9b9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6369165959004018831
-    second: IMG_9437_0
-  - first:
-      213: -1865698269845045215
-    second: IMG_9437_1
+      213: 8837226367828881929
+    second: Respawn 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 631
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_9437_0
+      name: Respawn 2_0
       rect:
         serializedVersion: 2
-        x: 91
-        y: 96
-        width: 279
-        height: 30
+        x: 463
+        y: 475
+        width: 610
+        height: 550
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f88d1f5c1b2d36850800000000000000
-      internalID: 6369165959004018831
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IMG_9437_1
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 72
-        width: 216
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 12043d7fe45bb16e0800000000000000
-      internalID: -1865698269845045215
+      spriteID: 902f7265f8224aa70800000000000000
+      internalID: 8837226367828881929
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_9437_0: 6369165959004018831
-      IMG_9437_1: -1865698269845045215
+      Respawn 2_0: 8837226367828881929
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

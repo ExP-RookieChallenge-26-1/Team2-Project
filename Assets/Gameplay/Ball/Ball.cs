@@ -16,6 +16,10 @@ public class Ball : MonoBehaviour
 	private float spawnTimer = 0f;
 	private const float SpawnDelay = 3f;
 
+	private bool isGameOverFalling = false;
+	[SerializeField] private float gameOverFallSpeed = 5f;
+	[SerializeField] private float gameOverSpinSpeed = 360f;
+
 	private void Awake()
 	{
 		this.Collision = GetComponent<BallCollision>();
@@ -42,6 +46,12 @@ public class Ball : MonoBehaviour
 
 	private void Update()
 	{
+		if (this.isGameOverFalling)
+		{
+			TickGameOverFall();
+			return;
+		}
+
 		if (this.isSpawning)
 		{
 			TickSpawn();
@@ -65,6 +75,15 @@ public class Ball : MonoBehaviour
 		this.spawnTimer = 0f;
 		this.Physics.SetVelocity(Vector2.zero);
 		this.Rotation.IsEnabled = true;
+		this.Animation.SetRespawning(true);
+	}
+
+	public void StartGameOverFall()
+	{
+		this.isGameOverFalling = true;
+		this.Physics.SetVelocity(Vector2.zero);
+		this.Rotation.IsEnabled = false;
+		this.Animation.SetGameOver();
 	}
 
 	public void SetSkillTriggerSettings(
@@ -137,12 +156,22 @@ public class Ball : MonoBehaviour
 
 	private void Launch()
 	{
+		this.Animation.SetRespawning(false);
 		// 아래 방향(270°) 기준 ±30° → 240°~300°
 		float angleDeg = Random.Range(240f, 300f);
 		float angleRad = angleDeg * Mathf.Deg2Rad;
 		this.Physics.SetVelocity(
 			new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad)) * this.Stats.Speed
 		);
+	}
+
+	private void TickGameOverFall()
+	{
+		float dt = Time.unscaledDeltaTime;
+		transform.position += Vector3.down * this.gameOverFallSpeed * dt;
+		transform.Rotate(0f, 0f, this.gameOverSpinSpeed * dt);
+		if (transform.position.y < -10f)
+			Destroy(gameObject);
 	}
 
 	private void UpdateScale()
