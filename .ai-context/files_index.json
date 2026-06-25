@@ -2405,9 +2405,9 @@
     "file_id": "Assets/Gameplay/Ball/BallSkill.cs",
     "path": "Assets/Gameplay/Ball/BallSkill.cs",
     "file_name": "BallSkill.cs",
-    "content_hash": "d05082d844ebf59b01503a4ed6efd8075a035b39",
-    "size": 3396,
-    "line_count": 168,
+    "content_hash": "da2e6ce04b5695581d3712a9369befe0164a04db",
+    "size": 3790,
+    "line_count": 178,
     "namespace": "",
     "using_list": [
       "UnityEngine"
@@ -2545,6 +2545,12 @@
       "AutoCooldown",
       "IsActive",
       "IsManualReady",
+      "AutoCooldownRemaining",
+      "Max",
+      "AutoCooldownRatio",
+      "Clamp01",
+      "ManualCooldownRemaining",
+      "ManualCooldownRatio",
       "Awake",
       "GetComponent",
       "Start",
@@ -2558,7 +2564,6 @@
       "OnDeactivate",
       "Activate",
       "SetManualCooldown",
-      "Max",
       "Min",
       "SetAutoCooldown",
       "SetTriggerSettings",
@@ -9443,6 +9448,152 @@
     "summary_signals": [
       "런타임 컴포넌트",
       "UI 관련 로직 포함",
+      "저장/불러오기 관련 로직 포함"
+    ]
+  },
+  {
+    "file_id": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "path": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "file_name": "SkillCooldownUI.cs",
+    "content_hash": "15c18fda3eff11656edef9e4b9c5b8b276dc0656",
+    "size": 1564,
+    "line_count": 55,
+    "namespace": "",
+    "using_list": [
+      "TMPro",
+      "UnityEngine",
+      "UnityEngine.UI"
+    ],
+    "classes": [
+      {
+        "name": "SkillCooldownUI",
+        "kind": "class",
+        "access": "public",
+        "base_types": [
+          "MonoBehaviour"
+        ],
+        "interfaces": [],
+        "attributes": [],
+        "is_partial": false,
+        "is_generic": false
+      }
+    ],
+    "main_class_name": "SkillCooldownUI",
+    "unity_type": "MonoBehaviour",
+    "methods": [
+      "Update",
+      "GetTargetSkill"
+    ],
+    "fields": [
+      {
+        "name": "cachedBall",
+        "type": "Ball",
+        "access": "private",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "maxCooldown",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "ratio",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "remaining",
+        "type": "float",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      },
+      {
+        "name": "onCooldown",
+        "type": "bool",
+        "access": "internal",
+        "serialized": false,
+        "is_static": false
+      }
+    ],
+    "properties": [],
+    "events": [],
+    "unity_messages": [
+      "Update"
+    ],
+    "has_update": true,
+    "has_fixed_update": false,
+    "has_late_update": false,
+    "has_awake": false,
+    "has_start": false,
+    "has_on_enable": false,
+    "has_on_disable": false,
+    "serialize_field_count": 0,
+    "public_field_count": 0,
+    "get_component_count": 0,
+    "find_call_count": 0,
+    "new_keyword_count": 0,
+    "coroutine_count": 0,
+    "singleton_candidate": false,
+    "dont_destroy_on_load": false,
+    "referenced_types": [
+      "Ball",
+      "float",
+      "bool",
+      "TMPro",
+      "UnityEngine",
+      "UI",
+      "SkillSlot",
+      "Skill1",
+      "Skill2",
+      "CooldownType",
+      "Auto",
+      "Manual",
+      "Image",
+      "TextMeshProUGUI",
+      "Update",
+      "BallSkill",
+      "GetTargetSkill",
+      "AutoCooldown",
+      "ManualCooldown",
+      "SetActive",
+      "AutoCooldownRatio",
+      "ManualCooldownRatio",
+      "AutoCooldownRemaining",
+      "ManualCooldownRemaining",
+      "ToString",
+      "F1",
+      "FindFirstObjectByType",
+      "GiantSkill",
+      "CloneSkill"
+    ],
+    "component_access_types": [],
+    "created_types": [],
+    "singleton_access_types": [],
+    "string_literals": [
+      "F1"
+    ],
+    "numeric_literals": [
+      0
+    ],
+    "guessed_roles": [
+      "ui",
+      "runtime",
+      "inventory",
+      "combat",
+      "save-load"
+    ],
+    "summary_signals": [
+      "런타임 컴포넌트",
+      "Update 기반 처리 존재",
+      "UI 관련 로직 포함",
+      "인벤토리 계열 로직 포함",
+      "전투 계열 로직 포함",
       "저장/불러오기 관련 로직 포함"
     ]
   },

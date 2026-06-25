@@ -3530,6 +3530,20 @@
   {
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
+    "to_type": "AutoCooldownRatio",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "AutoCooldownRemaining",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
     "to_type": "Awake",
     "relation_type": "uses",
     "strength": 1
@@ -3559,6 +3573,13 @@
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
     "to_type": "BuffBadgeManager",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "Clamp01",
     "relation_type": "uses",
     "strength": 1
   },
@@ -3629,6 +3650,20 @@
     "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
     "from_class": "BallSkill",
     "to_type": "ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "ManualCooldownRatio",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/Gameplay/Ball/BallSkill.cs",
+    "from_class": "BallSkill",
+    "to_type": "ManualCooldownRemaining",
     "relation_type": "uses",
     "strength": 1
   },
@@ -12939,6 +12974,216 @@
     "from_file": "Assets/UI/HUD/HUD.cs",
     "from_class": "HUD",
     "to_type": "VisualScripting",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "MonoBehaviour",
+    "relation_type": "inherits",
+    "strength": 4
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "Auto",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "AutoCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "AutoCooldownRatio",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "AutoCooldownRemaining",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "Ball",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "BallSkill",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "bool",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "CloneSkill",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "CooldownType",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "F1",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "FindFirstObjectByType",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "float",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "GetTargetSkill",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "GiantSkill",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "Image",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "Manual",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "ManualCooldown",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "ManualCooldownRatio",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "ManualCooldownRemaining",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "SetActive",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "Skill1",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "Skill2",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "SkillSlot",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "TextMeshProUGUI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "TMPro",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "ToString",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "UI",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "UnityEngine",
+    "relation_type": "uses",
+    "strength": 1
+  },
+  {
+    "from_file": "Assets/UI/HUD/SkillCooldownUI.cs",
+    "from_class": "SkillCooldownUI",
+    "to_type": "Update",
     "relation_type": "uses",
     "strength": 1
   },
