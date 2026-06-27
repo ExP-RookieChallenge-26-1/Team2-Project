@@ -23,7 +23,7 @@ public class UserHealth : MonoBehaviour
 	public void TakeDamage(int damage)
 	{
 		this.CurrentHp -= damage;
-		DamageTextSpawner.Instance.Spawn(GameManager.Instance.Paddle.transform.position, damage, Color.red);
+		GameManager.Instance.Paddle.PlayDamaged();
 		if (this.CurrentHp <= 0)
 			this.CurrentHp = 0;
 
@@ -31,8 +31,6 @@ public class UserHealth : MonoBehaviour
 
 		if (this.CurrentHp <= 0)
 		{
-			if (AudioManager.Instance != null)
-				AudioManager.Instance.PlayGameOverSound();
 			GameManager.Instance.State.Change(GameStateMachine.State.GameOver);
 		}
 	}

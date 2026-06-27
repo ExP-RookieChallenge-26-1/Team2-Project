@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cbb54ee2c57d6744835f81931ef7e04, type: 3}
+  m_Name: Skill_Clone_Instant
+  m_EditorClassIdentifier: Assembly-CSharp::StatUpgradeCardData
+  <Id>k__BackingField: 4204
+  <CardName>k__BackingField: 분신술 즉발
+  <Icon>k__BackingField: {fileID: -3566389113352485792, guid: 73d65eeb025484c179e258f6671b547a, type: 3}
+  <Description>k__BackingField: 손오공이 즉시 분신술을 사용합니다.
+  <BadgeData>k__BackingField: {fileID: 11400000, guid: 25f5b193f2f28a44dac3af4241c53470, type: 2}
+  <BadgeDuration>k__BackingField: 0
+  <AttackPower>k__BackingField: 0
+  <CriticalChance>k__BackingField: 0
+  <CriticalDamage>k__BackingField: 0
+  <Speed>k__BackingField: 0
+  <BallSize>k__BackingField: 0
+  <PaddleSizeLevel>k__BackingField: 0
+  <Skill1ManualCooldownReduction>k__BackingField: 0
+  <Skill1AutoCooldownReduction>k__BackingField: 0
+  <Skill2ManualCooldownReduction>k__BackingField: 0
+  <Skill2AutoCooldownReduction>k__BackingField: 0
+  <UnlockSkill1ManualTrigger>k__BackingField: 0
+  <UnlockSkill1AutoTrigger>k__BackingField: 0
+  <UnlockSkill2ManualTrigger>k__BackingField: 0
+  <UnlockSkill2AutoTrigger>k__BackingField: 0
+  <SkillUnlockFallbackCooldownReduction>k__BackingField: 1
+  <ActivateSkill1Immediately>k__BackingField: 0
+  <ActivateSkill2Immediately>k__BackingField: 1
+  <Skill1SizeLevelIncrease>k__BackingField: 0
+  <Skill2CloneLevelIncrease>k__BackingField: 0

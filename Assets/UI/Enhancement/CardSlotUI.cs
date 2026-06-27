@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class CardSlotUI : MonoBehaviour
 {
+	private const float DescriptionFontSizeMin = 18f;
+	private const float DescriptionFontSizeMax = 38f;
+
 	[SerializeField] private Image icon;
 	[SerializeField] private TMP_Text titleText;
 	[SerializeField] private TMP_Text descriptionText;
@@ -22,12 +25,19 @@ public class CardSlotUI : MonoBehaviour
 
 	public void Setup(CardData card, EnhanceUI ui, int index)
 	{
+		Setup(card, ui, index, CardUseContext.None);
+	}
+
+	public void Setup(CardData card, EnhanceUI ui, int index, CardUseContext context)
+	{
 		this.currentCard = card;
 		this.parentUI = ui;
 		this.slotIndex = index;
 
-		this.titleText.text = card.CardName;
-		this.descriptionText.text = card.Description;
+		if (this.titleText != null)
+			this.titleText.gameObject.SetActive(false);
+		this.descriptionText.text = card.GetDescription(context);
+		ConfigureDescriptionText();
 		this.icon.sprite = card.Icon;
 		this.icon.enabled = card.Icon != null;
 
@@ -53,5 +63,17 @@ public class CardSlotUI : MonoBehaviour
 	public CardData GetCard()
 	{
 		return this.currentCard;
+	}
+
+	private void ConfigureDescriptionText()
+	{
+		if (this.descriptionText == null)
+			return;
+
+		this.descriptionText.enableAutoSizing = true;
+		this.descriptionText.fontSizeMin = DescriptionFontSizeMin;
+		this.descriptionText.fontSizeMax = DescriptionFontSizeMax;
+		this.descriptionText.overflowMode = TextOverflowModes.Truncate;
+		this.descriptionText.ForceMeshUpdate(true, true);
 	}
 }

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f545ce5f6b54e2785d28ff6a18d98ac, type: 3}
   m_Name: EnemySpawnData_2
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnData
-  <MaxHp>k__BackingField: 20
-  <ExpReward>k__BackingField: 2
+  <MaxHp>k__BackingField: 10
+  <ExpReward>k__BackingField: 10
   <MoveSpeed>k__BackingField: 0.5
   <StateChangeRate>k__BackingField: 0.4
   <IdleDecisionInterval>k__BackingField: 0.2

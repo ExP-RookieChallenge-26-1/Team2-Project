@@ -1,0 +1,617 @@
+{
+  "tileSize": 240,
+  "columns": 8,
+  "sprites": [
+    {
+      "index": 0,
+      "label": "NONE",
+      "mask": []
+    },
+    {
+      "index": 1,
+      "label": "E",
+      "mask": [
+        "E"
+      ]
+    },
+    {
+      "index": 2,
+      "label": "N",
+      "mask": [
+        "N"
+      ]
+    },
+    {
+      "index": 3,
+      "label": "S",
+      "mask": [
+        "S"
+      ]
+    },
+    {
+      "index": 4,
+      "label": "W",
+      "mask": [
+        "W"
+      ]
+    },
+    {
+      "index": 5,
+      "label": "ES",
+      "mask": [
+        "E",
+        "S"
+      ]
+    },
+    {
+      "index": 6,
+      "label": "ES {SE}",
+      "mask": [
+        "E",
+        "S",
+        "SE"
+      ]
+    },
+    {
+      "index": 7,
+      "label": "EW",
+      "mask": [
+        "E",
+        "W"
+      ]
+    },
+    {
+      "index": 8,
+      "label": "NE",
+      "mask": [
+        "N",
+        "E"
+      ]
+    },
+    {
+      "index": 9,
+      "label": "NE {NE}",
+      "mask": [
+        "N",
+        "E",
+        "NE"
+      ]
+    },
+    {
+      "index": 10,
+      "label": "NS",
+      "mask": [
+        "N",
+        "S"
+      ]
+    },
+    {
+      "index": 11,
+      "label": "NW",
+      "mask": [
+        "N",
+        "W"
+      ]
+    },
+    {
+      "index": 12,
+      "label": "NW {NW}",
+      "mask": [
+        "N",
+        "W",
+        "NW"
+      ]
+    },
+    {
+      "index": 13,
+      "label": "SW",
+      "mask": [
+        "S",
+        "W"
+      ]
+    },
+    {
+      "index": 14,
+      "label": "SW {SW}",
+      "mask": [
+        "S",
+        "W",
+        "SW"
+      ]
+    },
+    {
+      "index": 15,
+      "label": "ESW",
+      "mask": [
+        "E",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "index": 16,
+      "label": "ESW {SE}",
+      "mask": [
+        "E",
+        "S",
+        "W",
+        "SE"
+      ]
+    },
+    {
+      "index": 17,
+      "label": "ESW {SW}",
+      "mask": [
+        "E",
+        "S",
+        "W",
+        "SW"
+      ]
+    },
+    {
+      "index": 18,
+      "label": "ESW {SE,SW}",
+      "mask": [
+        "E",
+        "S",
+        "W",
+        "SE",
+        "SW"
+      ]
+    },
+    {
+      "index": 19,
+      "label": "NES",
+      "mask": [
+        "N",
+        "E",
+        "S"
+      ]
+    },
+    {
+      "index": 20,
+      "label": "NES {NE}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "NE"
+      ]
+    },
+    {
+      "index": 21,
+      "label": "NES {SE}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "SE"
+      ]
+    },
+    {
+      "index": 22,
+      "label": "NES {NE,SE}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "NE",
+        "SE"
+      ]
+    },
+    {
+      "index": 23,
+      "label": "NEW",
+      "mask": [
+        "N",
+        "E",
+        "W"
+      ]
+    },
+    {
+      "index": 24,
+      "label": "NEW {NE}",
+      "mask": [
+        "N",
+        "E",
+        "W",
+        "NE"
+      ]
+    },
+    {
+      "index": 25,
+      "label": "NEW {NW}",
+      "mask": [
+        "N",
+        "E",
+        "W",
+        "NW"
+      ]
+    },
+    {
+      "index": 26,
+      "label": "NEW {NE,NW}",
+      "mask": [
+        "N",
+        "E",
+        "W",
+        "NE",
+        "NW"
+      ]
+    },
+    {
+      "index": 27,
+      "label": "NSW",
+      "mask": [
+        "N",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "index": 28,
+      "label": "NSW {NW}",
+      "mask": [
+        "N",
+        "S",
+        "W",
+        "NW"
+      ]
+    },
+    {
+      "index": 29,
+      "label": "NSW {SW}",
+      "mask": [
+        "N",
+        "S",
+        "W",
+        "SW"
+      ]
+    },
+    {
+      "index": 30,
+      "label": "NSW {SW,NW}",
+      "mask": [
+        "N",
+        "S",
+        "W",
+        "SW",
+        "NW"
+      ]
+    },
+    {
+      "index": 31,
+      "label": "NESW",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "W"
+      ]
+    },
+    {
+      "index": 32,
+      "label": "NESW {NE}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "NE"
+      ]
+    },
+    {
+      "index": 33,
+      "label": "NESW {NW}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "NW"
+      ]
+    },
+    {
+      "index": 34,
+      "label": "NESW {SE}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "SE"
+      ]
+    },
+    {
+      "index": 35,
+      "label": "NESW {SW}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "SW"
+      ]
+    },
+    {
+      "index": 36,
+      "label": "NESW {NE,NW}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "NE",
+        "NW"
+      ]
+    },
+    {
+      "index": 37,
+      "label": "NESW {NE,SE}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "NE",
+        "SE"
+      ]
+    },
+    {
+      "index": 38,
+      "label": "NESW {NE,SW}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "NE",
+        "SW"
+      ]
+    },
+    {
+      "index": 39,
+      "label": "NESW {SE,NW}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "SE",
+        "NW"
+      ]
+    },
+    {
+      "index": 40,
+      "label": "NESW {SE,SW}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "SE",
+        "SW"
+      ]
+    },
+    {
+      "index": 41,
+      "label": "NESW {SW,NW}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "SW",
+        "NW"
+      ]
+    },
+    {
+      "index": 42,
+      "label": "NESW {NE,SE,NW}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "NE",
+        "SE",
+        "NW"
+      ]
+    },
+    {
+      "index": 43,
+      "label": "NESW {NE,SE,SW}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "NE",
+        "SE",
+        "SW"
+      ]
+    },
+    {
+      "index": 44,
+      "label": "NESW {NE,SW,NW}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "NE",
+        "SW",
+        "NW"
+      ]
+    },
+    {
+      "index": 45,
+      "label": "NESW {SE,SW,NW}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "SE",
+        "SW",
+        "NW"
+      ]
+    },
+    {
+      "index": 46,
+      "label": "NESW {NE,SE,SW,NW}",
+      "mask": [
+        "N",
+        "E",
+        "S",
+        "W",
+        "NE",
+        "SE",
+        "SW",
+        "NW"
+      ]
+    }
+  ],
+  "quadrantSources": {
+    "NW:(0, 0, 0)": {
+      "source": "single.png",
+      "cell": [
+        0,
+        0
+      ]
+    },
+    "NE:(0, 0, 0)": {
+      "source": "single.png",
+      "cell": [
+        0,
+        0
+      ]
+    },
+    "SW:(0, 0, 0)": {
+      "source": "single.png",
+      "cell": [
+        0,
+        0
+      ]
+    },
+    "SE:(0, 0, 0)": {
+      "source": "single.png",
+      "cell": [
+        0,
+        0
+      ]
+    },
+    "NE:(0, 1, 0)": {
+      "source": "long lline.png",
+      "cell": [
+        0,
+        0
+      ]
+    },
+    "SE:(0, 1, 0)": {
+      "source": "long lline.png",
+      "cell": [
+        0,
+        0
+      ]
+    },
+    "NW:(0, 1, 0)": {
+      "source": "long lline.png",
+      "cell": [
+        0,
+        1
+      ]
+    },
+    "SW:(0, 1, 0)": {
+      "source": "long lline.png",
+      "cell": [
+        0,
+        1
+      ]
+    },
+    "SW:(1, 0, 0)": {
+      "source": "l.png",
+      "cell": [
+        0,
+        0
+      ]
+    },
+    "SE:(1, 0, 0)": {
+      "source": "l.png",
+      "cell": [
+        0,
+        0
+      ]
+    },
+    "NW:(1, 0, 0)": {
+      "source": "l.png",
+      "cell": [
+        1,
+        0
+      ]
+    },
+    "NE:(1, 0, 0)": {
+      "source": "l.png",
+      "cell": [
+        1,
+        0
+      ]
+    },
+    "SE:(1, 1, 1)": {
+      "source": "bigone.png",
+      "cell": [
+        0,
+        0
+      ]
+    },
+    "SW:(1, 1, 1)": {
+      "source": "bigone.png",
+      "cell": [
+        0,
+        1
+      ]
+    },
+    "NE:(1, 1, 1)": {
+      "source": "bigone.png",
+      "cell": [
+        1,
+        0
+      ]
+    },
+    "NW:(1, 1, 1)": {
+      "source": "bigone.png",
+      "cell": [
+        1,
+        1
+      ]
+    },
+    "SE:(1, 1, 0)": {
+      "source": "carve1.png",
+      "cell": [
+        0,
+        0
+      ]
+    },
+    "NW:(1, 1, 0)": {
+      "source": "carve2.png",
+      "cell": [
+        1,
+        1
+      ]
+    },
+    "SW:(1, 1, 0)": {
+      "source": "carve3.png",
+      "cell": [
+        0,
+        1
+      ]
+    },
+    "NE:(1, 1, 0)": {
+      "source": "carve4.png",
+      "cell": [
+        1,
+        0
+      ]
+    }
+  }
+}

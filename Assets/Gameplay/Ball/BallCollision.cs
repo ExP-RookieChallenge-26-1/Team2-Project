@@ -29,32 +29,54 @@ public class BallCollision : MonoBehaviour
             this.damageable = damageable;
             this.damageableCollider = damageableCollider;
         }
-    }
+	}
+
+	private const bool DefaultAllowLowTerrainPassThrough = true;
+	public const float DefaultLowTerrainPassThroughMaxY = -3f;
+	private static readonly Vector3Int[] ConnectedTileOffsets =
+	{
+		Vector3Int.left,
+		Vector3Int.right,
+		Vector3Int.up,
+		Vector3Int.down
+	};
 
 	private Ball ball;
 	[SerializeField] private Paddle paddle;
+	[SerializeField] private bool allowLowTerrainPassThrough = DefaultAllowLowTerrainPassThrough;
+	[SerializeField] private float lowTerrainPassThroughMaxY = DefaultLowTerrainPassThroughMaxY;
 	private static readonly List<Collider2D> overlapBuffer = new List<Collider2D>();
 
-    private IDamageable lastHitDamageable;
-    private Collider2D lastHitDamageableCollider;
+	public bool AllowLowTerrainPassThrough => this.allowLowTerrainPassThrough;
+	public float LowTerrainPassThroughMaxY => this.lowTerrainPassThroughMaxY;
 
-    private void Awake()
+	private IDamageable lastHitDamageable;
+	private Collider2D lastHitDamageableCollider;
+
+	private void Awake()
 	{
 		this.ball = GetComponent<Ball>();
 	}
-    private IEnumerator PlayAttackVoiceNextFrame()
-    {
-        yield return null;
 
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.PlayAttackVoiceSound();
-    }
-    public void Tick()
+	private IEnumerator PlayAttackVoiceNextFrame()
+	{
+		yield return null;
+
+		if (AudioManager.Instance != null)
+			AudioManager.Instance.PlayAttackVoiceSound();
+	}
+
+	public void Tick()
 	{
 		Collision closest;
 
 		UpdateEnemyHitState();
-		closest = DetectClosestCollision(this.ball.transform.position, this.ball.Stats.Radius, this.ball.Physics.Velocity);
+		closest = DetectClosestCollision(
+			this.ball.transform.position,
+			this.ball.Stats.Radius,
+			this.ball.Physics.Velocity,
+			this.allowLowTerrainPassThrough,
+			this.lowTerrainPassThroughMaxY);
 		ApplyCollision(closest);
 	}
 
@@ -103,8 +125,7 @@ public class BallCollision : MonoBehaviour
                     Vector2 velocity = this.ball.Physics.Velocity;
                     AttackEffectSpawner.Instance?.Spawn(
                         this.ball.transform.position,
-                        isMovingUp: velocity.y >= 0f,
-                        flipX: velocity.x < 0f);
+                        isMovingUp: velocity.y >= 0f);
                     this.lastHitDamageable = collision.damageable;
                     this.lastHitDamageableCollider = collision.damageableCollider;
                 }
@@ -174,6 +195,21 @@ public class BallCollision : MonoBehaviour
 
 	public static Collision DetectClosestCollision(Vector2 pos, float radius, Vector2 velocity)
 	{
+		return DetectClosestCollision(
+			pos,
+			radius,
+			velocity,
+			DefaultAllowLowTerrainPassThrough,
+			DefaultLowTerrainPassThroughMaxY);
+	}
+
+	public static Collision DetectClosestCollision(
+		Vector2 pos,
+		float radius,
+		Vector2 velocity,
+		bool allowLowTerrainPassThrough,
+		float lowTerrainPassThroughMaxY)
+	{
 		RaycastHit2D[] hits;
 		Collision closest;
 		float closestOverlap;
@@ -209,6 +245,27 @@ public class BallCollision : MonoBehaviour
 				if (tileBounds.size == Vector3.zero)
 					continue;
 
+				if (ShouldIgnoreLowTerrainCollision(
+					tileBounds,
+					tileBounds,
+					pos,
+					radius,
+					velocity,
+					allowLowTerrainPassThrough,
+					lowTerrainPassThroughMaxY))
+				{
+					Bounds connectedTerrainBounds = DetectConnectedTerrainBounds(tilemap, tileBounds);
+					if (ShouldIgnoreLowTerrainCollision(
+						tileBounds,
+						connectedTerrainBounds,
+						pos,
+						radius,
+						velocity,
+						allowLowTerrainPassThrough,
+						lowTerrainPassThroughMaxY))
+						continue;
+				}
+
 				collision = new Collision(Collision.Type.Terrain, tileBounds);
 			}
             else if (hit.collider.CompareTag("Enemy"))
@@ -233,6 +290,30 @@ public class BallCollision : MonoBehaviour
 		return closest;
 	}
 
+	public static bool ShouldIgnoreLowTerrainCollision(
+		Bounds hitTileBounds,
+		Bounds connectedTerrainBounds,
+		Vector2 pos,
+		float radius,
+		Vector2 velocity,
+		bool isEnabled,
+		float passThroughMaxY)
+	{
+		if (!isEnabled)
+			return false;
+
+		if (velocity.y <= 0f)
+			return false;
+
+		if (connectedTerrainBounds.size == Vector3.zero)
+			connectedTerrainBounds = hitTileBounds;
+
+		if (connectedTerrainBounds.min.y > passThroughMaxY)
+			return false;
+
+		return IsBottomFaceCollision(hitTileBounds, pos, radius, velocity);
+	}
+
 	public static Bounds DetectClosestTileBounds(Tilemap tilemap, Vector2 pos, float radius)
 	{
 		int checkRange;
@@ -250,7 +331,6 @@ public class BallCollision : MonoBehaviour
 			for (int y = -checkRange; y <= checkRange; ++y)
 			{
 				Vector3Int cellPos;
-				Vector3 worldPos;
 				Bounds tileBounds;
 				float overlap;
 
@@ -259,8 +339,7 @@ public class BallCollision : MonoBehaviour
 				if (!tilemap.HasTile(cellPos))
 					continue;
 
-				worldPos = tilemap.CellToWorld(cellPos) + tilemap.cellSize / 2f;
-				tileBounds = new Bounds(worldPos, tilemap.cellSize);
+				tileBounds = GetTileBounds(tilemap, cellPos);
 
 				if (!IsTouching(tileBounds, pos, radius))
 					continue;
@@ -276,6 +355,85 @@ public class BallCollision : MonoBehaviour
 		}
 
 		return closest;
+	}
+
+	private static Bounds DetectConnectedTerrainBounds(Tilemap tilemap, Bounds startTileBounds)
+	{
+		Vector3Int startCell;
+		Queue<Vector3Int> open;
+		HashSet<Vector3Int> visited;
+		Bounds connectedBounds;
+		bool hasBounds;
+
+		startCell = tilemap.WorldToCell(startTileBounds.center);
+		if (!tilemap.HasTile(startCell))
+			return startTileBounds;
+
+		open = new Queue<Vector3Int>();
+		visited = new HashSet<Vector3Int>();
+		connectedBounds = default;
+		hasBounds = false;
+
+		open.Enqueue(startCell);
+		visited.Add(startCell);
+
+		while (open.Count > 0)
+		{
+			Vector3Int cell;
+			Bounds tileBounds;
+
+			cell = open.Dequeue();
+			tileBounds = GetTileBounds(tilemap, cell);
+			if (!hasBounds)
+			{
+				connectedBounds = tileBounds;
+				hasBounds = true;
+			}
+			else
+			{
+				connectedBounds.Encapsulate(tileBounds);
+			}
+
+			for (int i = 0; i < ConnectedTileOffsets.Length; ++i)
+			{
+				Vector3Int neighbor = cell + ConnectedTileOffsets[i];
+				if (visited.Contains(neighbor) || !tilemap.HasTile(neighbor))
+					continue;
+
+				visited.Add(neighbor);
+				open.Enqueue(neighbor);
+			}
+		}
+
+		return hasBounds ? connectedBounds : startTileBounds;
+	}
+
+	private static Bounds GetTileBounds(Tilemap tilemap, Vector3Int cellPos)
+	{
+		Vector3 worldPos = tilemap.CellToWorld(cellPos) + tilemap.cellSize / 2f;
+		return new Bounds(worldPos, tilemap.cellSize);
+	}
+
+	private static bool IsBottomFaceCollision(Bounds bounds, Vector2 pos, float radius, Vector2 velocity)
+	{
+		float overlapLeft;
+		float overlapRight;
+		float overlapBottom;
+		float overlapTop;
+		float minOverlap;
+		float epsilon;
+
+		if (velocity.y <= 0f)
+			return false;
+
+		overlapLeft = (pos.x + radius) - bounds.min.x;
+		overlapRight = bounds.max.x - (pos.x - radius);
+		overlapBottom = (pos.y + radius) - bounds.min.y;
+		overlapTop = bounds.max.y - (pos.y - radius);
+		minOverlap = Mathf.Min(overlapLeft, overlapRight, overlapBottom, overlapTop);
+		epsilon = 0.001f;
+
+		return Mathf.Abs(minOverlap - overlapBottom) <= epsilon;
 	}
 
 	public static float GetMinOverlap(Bounds bounds, Vector2 pos, float radius)

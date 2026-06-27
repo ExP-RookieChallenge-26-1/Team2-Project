@@ -2,7 +2,7 @@
 
 ## Goal
 
-Add a scrolling parallax background to `Assets/Scenes/GameScene.unity` using the seven layered PNG files from `drive-download-20260625T102414Z-3-001.zip`. The background should create depth by moving distant layers slowly and near layers faster while the current gameplay world continues scrolling downward.
+Add a one-shot parallax background to `Assets/Scenes/GameScene.unity` using the layered PNG files from `drive-download-20260625T102414Z-3-001.zip`. The background should create depth by moving distant layers slightly and near layers more noticeably over the full stage duration, without looping.
 
 ## Scope
 
@@ -22,7 +22,7 @@ Add a scrolling parallax background to `Assets/Scenes/GameScene.unity` using the
 
 `GameScene` uses an orthographic camera with size `5`, so the visible vertical world height is `10` units. The gameplay world is controlled by `World`, `WorldSpawner`, and `WorldScroller`. `WorldScroller` moves map chunks downward using `GameManager.Instance.WorldStats.ScrollSpeed`.
 
-The new parallax background should follow the same visual movement direction as the world, but with different layer speed multipliers.
+The new parallax background follows the same visual movement direction as the world, but it is not tied directly to chunk scroll speed. Each layer completes one very slow downward movement over the configured stage duration.
 
 ## Architecture
 
@@ -36,63 +36,67 @@ Create a render-only background system:
 Each configured layer contains:
 
 - A sprite reference.
-- A `speedMultiplier`.
+- A total downward `travelDistance` in world units, shown in the inspector as `Move Amount (Speed)`.
 - A `sortingOrder`.
-- A runtime pair of sprite instances used for vertical wraparound.
+- A single runtime sprite instance.
 
-The component reads the base scroll speed from `GameManager.Instance.WorldStats.ScrollSpeed` when available. If the game manager is unavailable in edit/test context, it falls back to a serialized `fallbackScrollSpeed`.
+The component tracks elapsed stage time locally and maps it to a clamped `0..1` progress value using `stageDurationSeconds`.
 
 ## Layering
 
 Render order should follow visual depth:
 
-1. `1.png`: sky, moon, clouds. Slowest movement.
-2. `4_.png` and `3_.png`: distant rocks. Slow movement.
-3. `5_.png`: main midground rock tower. Medium movement.
-4. `2_.png`: mid-to-near ground path. Faster movement.
-5. `6_.png` and `7_.png`: foreground rocks. Fastest movement.
+1. `1.png`: lowest layer in the source stack. Static sky/background plate.
+2. `2_.png`
+3. `3_.png`
+4. `4_.png`
+5. `5_.png`
+6. `6_.png`
+7. `7_.png`: highest layer in the source stack. Largest movement.
 
 All layers render behind terrain and gameplay objects by using the existing `Background` sorting layer. Sorting orders increase from far to near.
 
 ## Scrolling Behavior
 
-The background scrolls downward. For each layer:
+The background moves downward once. For each layer:
 
 ```text
-layerSpeed = baseWorldScrollSpeed * speedMultiplier
-layerPosition += Vector3.down * layerSpeed * deltaTime
+progress = clamp01(elapsedSeconds / stageDurationSeconds)
+layerOffset = Vector3.down * travelDistance * progress
+layerPosition = layerStartPosition + layerOffset
 ```
-
-Each layer uses two sprite copies stacked vertically. When one copy moves below the lower wrap threshold, it is repositioned above the other copy. This keeps the background continuous without spawning or destroying objects during play.
 
 The sprite should be scaled to fill the camera height. The provided PNGs are `1080x1920`, matching a 9:16 portrait ratio. With the current camera height of `10` units, the sprite width becomes `5.625` units, which fits the scene width.
 
-## Proposed Speed Multipliers
+`1.png` stays static with `Move Amount (Speed) = 0`, so the sky does not scroll.
 
-- `1.png`: `0.05`
-- `4_.png`: `0.12`
-- `3_.png`: `0.18`
-- `5_.png`: `0.45`
-- `2_.png`: `0.75`
-- `6_.png`: `0.95`
-- `7_.png`: `1.10`
+All rock layers use the original provided images. They move downward once and can leave the bottom of the screen naturally.
 
-These values keep the far sky nearly static, make midground rocks drift more noticeably, and let the foreground sell the motion.
+## Proposed Travel Distances
+
+- `1.png`: `0.00`
+- `2_.png`: `0.40`
+- `3_.png`: `0.65`
+- `4_.png`: `0.90`
+- `5_.png`: `1.15`
+- `6_.png`: `1.35`
+- `7_.png`: `1.65`
+
+With `stageDurationSeconds` set to `180`, these values keep the movement very slow while keeping the sky fixed. Designers can adjust these numbers directly in the `ParallaxBackground` inspector.
 
 ## Error Handling
 
 - Missing layer sprites are skipped with a warning.
 - Empty layer configuration disables runtime setup without throwing.
 - Missing camera uses the configured world height fallback.
-- Missing `GameManager` uses `fallbackScrollSpeed`.
 
 ## Testing
 
 Add focused edit-mode tests for `ParallaxBackground`:
 
 - Layers keep far-to-near sorting order.
-- Speed calculation uses the base scroll speed and multiplier.
-- Wraparound moves a sprite copy back above the active visible span.
+- Offset calculation clamps stage progress and uses each layer's total travel distance.
+- Ticking past the configured duration leaves layers at their final position instead of looping.
 
 Run Unity edit-mode tests or at least compile through Unity batchmode when available.
 
@@ -100,6 +104,6 @@ Run Unity edit-mode tests or at least compile through Unity batchmode when avail
 
 - `GameScene` shows the supplied layered artwork behind the current gameplay map.
 - Far, middle, and near layers scroll at visibly different speeds.
-- Background layers loop continuously without visible gaps during normal play.
+- Background layers move downward once over the stage and do not loop.
 - Existing map chunk scrolling, collisions, paddle, ball, enemies, and UI keep their existing behavior.
 - The implementation is configurable in the inspector without code changes.

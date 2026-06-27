@@ -1,0 +1,124 @@
+{"kind":"deck","id":"pr/i4ay3r","name":"Deck"}
+{"kind":"layout","layoutId":"3a4865a7-d65f-400f-8b5f-5c9967f2b6db","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"aec24bb0-eef4-47da-8c92-bcb86fa79027","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/jt5m99","slide":1,"title":"벽돌깨기 모티브","textShapes":2}
+{"kind":"shape","id":"sh/ra5gbq1o","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":1,"text":"벽돌깨기 모티브","textPreview":"벽돌깨기 모티브","textChars":8,"textLines":1,"bbox":[72,52,900,58]}
+{"kind":"shape","id":"sh/kjm1cfa9","slide":1,"bbox":[72,126,118,5]}
+{"kind":"textbox","id":"sh/r2p8nqxs","slide":1,"text":"벽돌깨기가 벽돌이 아니라 몬스터를 잡으면 어떨까?\n몬스터? rpg!","textPreview":"벽돌깨기가 벽돌이 아니라 몬스터를 잡으면 어떨까? | 몬스터? rpg!","textChars":37,"textLines":2,"bbox":[84,190,620,430]}
+{"kind":"image","id":"im/p8nqxs72","slide":1,"name":"","alt":"background","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/72x4nap4","slide":1,"name":"","alt":"손오공 제목","bbox":[770,56,290,470]}
+{"kind":"notes","id":"nt/jt5m99","slide":1,"text":""}
+{"kind":"slide","id":"sl/tos4e9","slide":2,"title":"컨셉","textShapes":2}
+{"kind":"shape","id":"sh/1gvy90je","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":2,"text":"컨셉","textPreview":"컨셉","textChars":2,"textLines":1,"bbox":[72,52,900,58]}
+{"kind":"shape","id":"sh/fmlkjm1c","slide":2,"bbox":[72,126,118,5]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":2,"text":"공->손오공\n패들->근두운","textPreview":"공->손오공 | 패들->근두운","textChars":14,"textLines":2,"bbox":[84,220,620,430]}
+{"kind":"image","id":"im/vixczed8","slide":2,"name":"","alt":"background","bbox":[0,0,1280,720]}
+{"kind":"notes","id":"nt/tos4e9","slide":2,"text":""}
+{"kind":"slide","id":"sl/whoqyw","slide":3,"title":"과제1","textShapes":3}
+{"kind":"shape","id":"sh/4fu18jqh","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":3,"text":"과제1","textPreview":"과제1","textChars":3,"textLines":1,"bbox":[72,52,900,58]}
+{"kind":"shape","id":"sh/qxs72x4n","slide":3,"bbox":[72,126,118,5]}
+{"kind":"textbox","id":"sh/fil0rqd4","slide":3,"text":"몬스터를 잡는 주인공이 공이 되어야 함\n→커비","textPreview":"몬스터를 잡는 주인공이 공이 되어야 함 | →커비","textChars":25,"textLines":2,"bbox":[84,182,590,430]}
+{"kind":"shape","id":"sh/83itgfml","slide":3,"bbox":[820,176,300,360]}
+{"kind":"textbox","id":"sh/xobm58z2","slide":3,"text":"[별의 커비]","textPreview":"[별의 커비]","textChars":7,"textLines":1,"bbox":[838,192,264,32]}
+{"kind":"image","id":"im/2hwfyxob","slide":3,"name":"","alt":"background","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/re1w7mp0","slide":3,"name":"","alt":"별의 커비","bbox":[842,234,256,278]}
+{"kind":"notes","id":"nt/whoqyw","slide":3,"text":""}
+{"kind":"slide","id":"sl/dmb1zd","slide":4,"title":"과제2","textShapes":2}
+{"kind":"shape","id":"sh/p8nqxs72","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":4,"text":"과제2","textPreview":"과제2","textChars":3,"textLines":1,"bbox":[72,52,900,58]}
+{"kind":"shape","id":"sh/7ed8bat4","slide":4,"bbox":[72,126,118,5]}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":4,"text":"공의. 궤적을 출력허고 샆다\n유니티의 물리는 비결정론적\n->커스텀 물리","textPreview":"공의. 궤적을 출력허고 샆다 | 유니티의 물리는 비결정론적 | ->커스텀 물리","textChars":39,"textLines":3,"bbox":[84,182,760,430]}
+{"kind":"image","id":"im/jqh0fepk","slide":4,"name":"","alt":"background","bbox":[0,0,1280,720]}
+{"kind":"notes","id":"nt/dmb1zd","slide":4,"text":""}
+{"kind":"slide","id":"sl/q0x9el","slide":5,"title":"과제1 결과","textShapes":7}
+{"kind":"shape","id":"sh/8bat47y1","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":5,"text":"과제1 결과","textPreview":"과제1 결과","textChars":6,"textLines":1,"bbox":[72,52,900,58]}
+{"kind":"shape","id":"sh/qh0fepkz","slide":5,"bbox":[72,126,118,5]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":5,"text":"귀엽게 잘 나옴","textPreview":"귀엽게 잘 나옴","textChars":8,"textLines":1,"bbox":[84,160,500,430]}
+{"kind":"shape","id":"sh/8nqxs72x","slide":5,"bbox":[54,252,218,330]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":5,"text":"[별의 커비]","textPreview":"[별의 커비]","textChars":7,"textLines":1,"bbox":[68,266,190,28]}
+{"kind":"shape","id":"sh/j6tovaho","slide":5,"bbox":[292,252,218,330]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":5,"text":"[ball idle up]","textPreview":"[ball idle up]","textChars":14,"textLines":1,"bbox":[306,266,190,28]}
+{"kind":"shape","id":"sh/18jqh0fe","slide":5,"bbox":[530,252,218,330]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":5,"text":"[ball idle down]","textPreview":"[ball idle down]","textChars":16,"textLines":1,"bbox":[544,266,190,28]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":5,"bbox":[768,252,218,330]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":5,"text":"[ball attack up]","textPreview":"[ball attack up]","textChars":16,"textLines":1,"bbox":[782,266,190,28]}
+{"kind":"shape","id":"sh/ji5snelo","slide":5,"bbox":[1006,252,218,330]}
+{"kind":"textbox","id":"sh/uxc3ylc7","slide":5,"text":"[ball attack down]","textPreview":"[ball attack down]","textChars":18,"textLines":1,"bbox":[1020,266,190,28]}
+{"kind":"image","id":"im/epkzupwb","slide":5,"name":"","alt":"background","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/7u54zido","slide":5,"name":"","alt":"별의 커비","bbox":[72,300,182,266]}
+{"kind":"image","id":"im/d8v6psfi","slide":5,"name":"","alt":"ball idle up","bbox":[310,300,182,266]}
+{"kind":"image","id":"im/ovahoza1","slide":5,"name":"","alt":"ball idle down","bbox":[548,300,182,266]}
+{"kind":"image","id":"im/vahoza1g","slide":5,"name":"","alt":"ball attack up","bbox":[786,300,182,266]}
+{"kind":"image","id":"im/hk3q5o7q","slide":5,"name":"","alt":"ball attack down","bbox":[1024,300,182,266]}
+{"kind":"notes","id":"nt/q0x9el","slide":5,"text":""}
+{"kind":"slide","id":"sl/wii75t","slide":6,"title":"과제2 결과","textShapes":2}
+{"kind":"shape","id":"sh/25kb6xkf","slide":6,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/rqd4vmtw","slide":6,"text":"과제2 결과","textPreview":"과제2 결과","textChars":6,"textLines":1,"bbox":[72,52,900,58]}
+{"kind":"shape","id":"sh/kzupwb2h","slide":6,"bbox":[72,126,118,5]}
+{"kind":"textbox","id":"sh/9knih4by","slide":6,"text":"궤적이 나옴\n공 반사 구현됌","textPreview":"궤적이 나옴 | 공 반사 구현됌","textChars":15,"textLines":2,"bbox":[84,210,700,430]}
+{"kind":"image","id":"im/oj2t83it","slide":6,"name":"","alt":"background","bbox":[0,0,1280,720]}
+{"kind":"notes","id":"nt/wii75t","slide":6,"text":""}
+{"kind":"slide","id":"sl/iwhgnx","slide":7,"title":"아트웍","textShapes":10}
+{"kind":"shape","id":"sh/sfil0rqd","slide":7,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":7,"text":"아트웍","textPreview":"아트웍","textChars":3,"textLines":1,"bbox":[72,52,900,58]}
+{"kind":"shape","id":"sh/al87ed8b","slide":7,"bbox":[72,126,118,5]}
+{"kind":"shape","id":"sh/z61032ls","slide":7,"bbox":[52,158,755,476]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":7,"text":"[컨셉아트]","textPreview":"[컨셉아트]","textChars":6,"textLines":1,"bbox":[74,176,230,32]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":7,"bbox":[78,220,210,180]}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":7,"text":"손오공 컬러","textPreview":"손오공 컬러","textChars":6,"textLines":1,"bbox":[86,376,194,18]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":7,"bbox":[306,220,210,180]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":7,"text":"손오공 시트","textPreview":"손오공 시트","textChars":6,"textLines":1,"bbox":[314,376,194,18]}
+{"kind":"shape","id":"sh/gn29gr2p","slide":7,"bbox":[534,220,210,180]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":7,"text":"우마왕 정","textPreview":"우마왕 정","textChars":5,"textLines":1,"bbox":[542,376,194,18]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":7,"bbox":[78,420,210,180]}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":7,"text":"우마왕 측","textPreview":"우마왕 측","textChars":5,"textLines":1,"bbox":[86,576,194,18]}
+{"kind":"shape","id":"sh/u54zidon","slide":7,"bbox":[306,420,210,180]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":7,"text":"우마왕 후","textPreview":"우마왕 후","textChars":5,"textLines":1,"bbox":[314,576,194,18]}
+{"kind":"shape","id":"sh/kf6dcbul","slide":7,"bbox":[534,420,210,180]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":7,"text":"배경/몬스터","textPreview":"배경/몬스터","textChars":6,"textLines":1,"bbox":[542,576,194,18]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":7,"text":"|","textPreview":"|","textChars":1,"textLines":1,"bbox":[820,348,38,50]}
+{"kind":"shape","id":"sh/knih4byh","slide":7,"bbox":[875,158,340,476]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":7,"text":"[스프라이트]","textPreview":"[스프라이트]","textChars":7,"textLines":1,"bbox":[893,174,304,32]}
+{"kind":"image","id":"im/mp0bi9s3","slide":7,"name":"","alt":"background","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/bq1oryts","slide":7,"name":"","alt":"손오공 컬러","bbox":[86,228,194,146]}
+{"kind":"image","id":"im/dsji5sne","slide":7,"name":"","alt":"손오공 시트","bbox":[314,228,194,146]}
+{"kind":"image","id":"im/oj2t83it","slide":7,"name":"","alt":"우마왕 정","bbox":[542,228,194,146]}
+{"kind":"image","id":"im/vy90je9c","slide":7,"name":"","alt":"우마왕 측","bbox":[86,428,194,146]}
+{"kind":"image","id":"im/1cfa9w3m","slide":7,"name":"","alt":"우마왕 후","bbox":[314,428,194,146]}
+{"kind":"image","id":"im/ulwval87","slide":7,"name":"","alt":"배경/몬스터","bbox":[542,428,194,146]}
+{"kind":"image","id":"im/1w7mp0bi","slide":7,"name":"","alt":"ball sprite","bbox":[909,234,130,130]}
+{"kind":"image","id":"im/8bat47y1","slide":7,"name":"","alt":"nimbus sprite","bbox":[993,343,190,70]}
+{"kind":"image","id":"im/m58z25kb","slide":7,"name":"","alt":"enemy sprite","bbox":[971,444,145,145]}
+{"kind":"notes","id":"nt/iwhgnx","slide":7,"text":""}
+{"kind":"slide","id":"sl/9lu0qx","slide":8,"title":"사운드","textShapes":3}
+{"kind":"shape","id":"sh/mhk3q5o7","slide":8,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":8,"text":"사운드","textPreview":"사운드","textChars":3,"textLines":1,"bbox":[72,52,900,58]}
+{"kind":"shape","id":"sh/4byhgn29","slide":8,"bbox":[72,126,118,5]}
+{"kind":"shape","id":"sh/twra5gbq","slide":8,"bbox":[82,158,650,470]}
+{"kind":"textbox","id":"sh/m58z25kb","slide":8,"text":"[사운드 기획서 사진]","textPreview":"[사운드 기획서 사진]","textChars":12,"textLines":1,"bbox":[100,174,614,32]}
+{"kind":"textbox","id":"sh/47y1kre1","slide":8,"text":"뭔가 대단하다","textPreview":"뭔가 대단하다","textChars":7,"textLines":1,"bbox":[790,330,360,60]}
+{"kind":"image","id":"im/wfyxobm5","slide":8,"name":"","alt":"background","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/eloj2t83","slide":8,"name":"","alt":"사운드 기획서 사진","bbox":[104,216,606,388]}
+{"kind":"notes","id":"nt/9lu0qx","slide":8,"text":""}
+{"kind":"slide","id":"sl/rpdke5","slide":9,"title":"레벨디자인","textShapes":2}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":9,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":9,"text":"레벨디자인","textPreview":"레벨디자인","textChars":5,"textLines":1,"bbox":[72,52,900,58]}
+{"kind":"shape","id":"sh/ovahoza1","slide":9,"bbox":[72,126,118,5]}
+{"kind":"shape","id":"sh/dg7adsji","slide":9,"bbox":[118,155,860,500]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":9,"text":"[전투력 그래프]","textPreview":"[전투력 그래프]","textChars":9,"textLines":1,"bbox":[136,171,824,32]}
+{"kind":"image","id":"im/4vmtwra5","slide":9,"name":"","alt":"background","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/m1cfa9w3","slide":9,"name":"","alt":"전투력 그래프","bbox":[140,213,816,418]}
+{"kind":"notes","id":"nt/rpdke5","slide":9,"text":""}
+{"kind":"slide","id":"sl/4leka8","slide":10,"title":"크래딧","textShapes":3}
+{"kind":"shape","id":"sh/ih4byhgn","slide":10,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/72x4nap4","slide":10,"text":"크래딧","textPreview":"크래딧","textChars":3,"textLines":1,"bbox":[72,52,900,58]}
+{"kind":"shape","id":"sh/0z61032l","slide":10,"bbox":[72,126,118,5]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":10,"text":"2조","textPreview":"2조","textChars":2,"textLines":1,"bbox":[92,175,220,58]}
+{"kind":"shape","id":"sh/itgfmlkj","slide":10,"bbox":[92,250,760,330]}
+{"kind":"textbox","id":"sh/7ed8bat4","slide":10,"text":"메인 기획   김태윤\n서브 기획   신은성\n플머        안정윤 / 최재문\n그래픽      최지우 / 조윤지 / 김서진\n사운드      박재석","textPreview":"메인 기획   김태윤 | 서브 기획   신은성 | 플머        안정윤 / 최재문 | 그래픽      최지우 / 조윤지 / 김서진 | 사운드      박재석","textChars":81,"textLines":5,"bbox":[142,292,660,230]}
+{"kind":"image","id":"im/s72x4nap","slide":10,"name":"","alt":"background","bbox":[0,0,1280,720]}
+{"kind":"notes","id":"nt/4leka8","slide":10,"text":""}

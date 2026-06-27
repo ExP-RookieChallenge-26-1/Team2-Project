@@ -1,0 +1,78 @@
+{"kind":"deck","id":"pr/pab1z1","name":"Deck"}
+{"kind":"layout","layoutId":"a3c6af5d-0a9b-4154-a07b-9451e0fdfe68","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"7d757d3e-4904-4931-8ecf-579051186ac6","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/c89bhk","slide":1,"title":"Slide 1","textShapes":0}
+{"kind":"image","id":"im/wra5gbq1","slide":1,"name":"","alt":"source slide","bbox":[0,0,1280,720]}
+{"kind":"notes","id":"nt/c89bhk","slide":1,"text":""}
+{"kind":"slide","id":"sl/id8jfg","slide":2,"title":"Slide 2","textShapes":0}
+{"kind":"image","id":"im/b2hwfyxo","slide":2,"name":"","alt":"source slide","bbox":[0,0,1280,720]}
+{"kind":"notes","id":"nt/id8jfg","slide":2,"text":""}
+{"kind":"slide","id":"sl/a49td3","slide":3,"title":"01","textShapes":3}
+{"kind":"shape","id":"sh/epkzupwb","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":3,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1158,34,40,24]}
+{"kind":"shape","id":"sh/w7mp0bi9","slide":3,"bbox":[68,148,104,6]}
+{"kind":"textbox","id":"sh/psfil0rq","slide":3,"text":"주제","textPreview":"주제","textChars":2,"textLines":1,"bbox":[430,84,420,64]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":3,"text":"• 벽돌깨기\n• 벽돌 대신 몬스터를 잡으면 어떻냐는 아이디어\n  ◦ → RPG 요소로 발전시킴\n  ◦ 경험치, 스탯 강화 등의 성장요소","textPreview":"• 벽돌깨기 | • 벽돌 대신 몬스터를 잡으면 어떻냐는 아이디어 |   ◦ → RPG 요소로 발전시킴 |   ◦ 경험치, 스탯 강화 등의 성장요소","textChars":75,"textLines":4,"bbox":[248,214,620,380]}
+{"kind":"image","id":"im/g7adsji5","slide":3,"name":"","alt":"background","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/yd0z6103","slide":3,"name":"","alt":"monster","bbox":[850,260,130,130]}
+{"kind":"image","id":"im/9cvixcze","slide":3,"name":"","alt":"ball","bbox":[760,390,110,110]}
+{"kind":"image","id":"im/gr2p8nqx","slide":3,"name":"","alt":"title mark","bbox":[930,180,150,300]}
+{"kind":"notes","id":"nt/a49td3","slide":3,"text":""}
+{"kind":"slide","id":"sl/zvuuvb","slide":4,"title":"02","textShapes":4}
+{"kind":"shape","id":"sh/f6dcbulw","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":4,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1158,34,40,24]}
+{"kind":"shape","id":"sh/xkf6dcbu","slide":4,"bbox":[68,148,104,6]}
+{"kind":"textbox","id":"sh/4zidonyd","slide":4,"text":"기획 구체화","textPreview":"기획 구체화","textChars":6,"textLines":1,"bbox":[430,84,420,64]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":4,"text":"• 지형지물과 그 위의 몬스터가 스크롤 되어\n  화면 밑으로 내려옴.\n• 공은 지형지물에 반사되며, 몬스터 접촉 시 공격함.\n• 처치되지 못한 몬스터는 패들에 접촉 시\n  유저의 체력을 깎음.","textPreview":"• 지형지물과 그 위의 몬스터가 스크롤 되어 |   화면 밑으로 내려옴. | • 공은 지형지물에 반사되며, 몬스터 접촉 시 공격함. | • 처치되지 못한 몬스터는 패들에 접촉 시 |   유저의 체력을 깎음.","textChars":107,"textLines":5,"bbox":[135,215,520,380]}
+{"kind":"shape","id":"sh/mtwra5gb","slide":4,"bbox":[684,86,420,556]}
+{"kind":"textbox","id":"sh/xobm58z2","slide":4,"text":"구조","textPreview":"구조","textChars":2,"textLines":1,"bbox":[710,108,368,30]}
+{"kind":"shape","id":"sh/gbq1oryt","slide":4,"bbox":[820,262,180,-5]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":4,"bbox":[1000,257,-145,235]}
+{"kind":"image","id":"im/5gbq1ory","slide":4,"name":"","alt":"background","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/1032lszq","slide":4,"name":"","alt":"ball","bbox":[760,190,82,82]}
+{"kind":"image","id":"im/xs72x4na","slide":4,"name":"","alt":"enemy","bbox":[910,220,96,96]}
+{"kind":"image","id":"im/87ed8bat","slide":4,"name":"","alt":"paddle","bbox":[780,496,260,80]}
+{"kind":"notes","id":"nt/zvuuvb","slide":4,"text":""}
+{"kind":"slide","id":"sl/cjbcsu","slide":5,"title":"03","textShapes":3}
+{"kind":"shape","id":"sh/fyxobm58","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":5,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1158,34,40,24]}
+{"kind":"shape","id":"sh/xczed8v6","slide":5,"bbox":[68,148,104,6]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":5,"text":"컨셉","textPreview":"컨셉","textChars":2,"textLines":1,"bbox":[430,84,420,64]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":5,"text":"• 지형지물, 몬스터의 스크롤 다운 → 유저가 상승한다.\n• 손오공이 근두운을 타고 상승한다로 발전시킴\n• 손오공: 공\n  ◦ 커비, 샐리의 법칙처럼 동그랗게 디자인\n• 근두운: 패들\n• 화염산 에피소드 차용\n  ◦ 손오공이 화염산을 올라 우마왕을 처치\n  ◦ 산을 “오른다”는 점과 게임 구조가 일치\n  ◦ 보스가 명확","textPreview":"• 지형지물, 몬스터의 스크롤 다운 → 유저가 상승한다. | • 손오공이 근두운을 타고 상승한다로 발전시킴 | • 손오공: 공 |   ◦ 커비, 샐리의 법칙처럼 동그랗게 디자인 | • 근두운: 패들 | • 화염산 에피소드 차용 |   ◦ 손오공이...","textChars":179,"textLines":9,"bbox":[100,190,690,380]}
+{"kind":"image","id":"im/p0bi9s36","slide":5,"name":"","alt":"background","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/bi9s36hc","slide":5,"name":"","alt":"kirby","bbox":[820,185,160,160]}
+{"kind":"image","id":"im/0rqd4vmt","slide":5,"name":"","alt":"goku ball","bbox":[990,200,110,110]}
+{"kind":"image","id":"im/tcj6tova","slide":5,"name":"","alt":"cow king","bbox":[850,405,220,220]}
+{"kind":"notes","id":"nt/cjbcsu","slide":5,"text":""}
+{"kind":"slide","id":"sl/4fieir","slide":6,"title":"04","textShapes":5}
+{"kind":"shape","id":"sh/8nqxs72x","slide":6,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":6,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1158,34,40,24]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":6,"bbox":[68,148,104,6]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":6,"text":"RPG","textPreview":"RPG","textChars":3,"textLines":1,"bbox":[430,84,420,64]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":6,"text":"• 정석적인 RPG 구조\n  ◦ 쫄을 잡으며 성장 → 보스와의 배틀 → Clear\n• 단일 스테이지 구성\n  ◦ 리소스 절약\n  ◦ 유저의 학습에 용이\n  ◦ 세이브 포인트를 없애 밸런스를 잡음\n• 로그라이크처럼 폭발적인 성장 제공\n• 인플레이션을 염두에 둔 밸런싱으로\n  유저의 성장 유인 제공, 성장요소 강조","textPreview":"• 정석적인 RPG 구조 |   ◦ 쫄을 잡으며 성장 → 보스와의 배틀 → Clear | • 단일 스테이지 구성 |   ◦ 리소스 절약 |   ◦ 유저의 학습에 용이 |   ◦ 세이브 포인트를 없애 밸런스를 잡음 | • 로그라이크처럼 폭발적인 성...","textChars":174,"textLines":9,"bbox":[112,190,650,380]}
+{"kind":"shape","id":"sh/1w7mp0bi","slide":6,"bbox":[805,172,315,360]}
+{"kind":"textbox","id":"sh/uxc3ylc7","slide":6,"text":"성장 루프","textPreview":"성장 루프","textChars":5,"textLines":1,"bbox":[831,194,263,30]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":6,"text":"쫄 처치\n↓\n성장\n↓\n보스전\n↓\nClear","textPreview":"쫄 처치 | ↓ | 성장 | ↓ | 보스전 | ↓ | Clear","textChars":23,"textLines":7,"bbox":[882,230,160,250]}
+{"kind":"image","id":"im/adsji5sn","slide":6,"name":"","alt":"background","bbox":[0,0,1280,720]}
+{"kind":"notes","id":"nt/4fieir","slide":6,"text":""}
+{"kind":"slide","id":"sl/4p58yg","slide":7,"title":"05","textShapes":5}
+{"kind":"shape","id":"sh/a5gbq1or","slide":7,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":7,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1158,34,40,24]}
+{"kind":"shape","id":"sh/sji5snel","slide":7,"bbox":[68,148,104,6]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":7,"text":"레퍼런스","textPreview":"레퍼런스","textChars":4,"textLines":1,"bbox":[430,84,420,64]}
+{"kind":"textbox","id":"sh/adsji5sn","slide":7,"text":"• 알카노이드\n  ◦ 아이템, 스킬 등 변주 요소가 있는 고전 벽돌깨기\n  ◦ 공이 공중에 떠 있는 동안 조작 요소가 부족함\n  ◦ 스킬을 통해 유저 조작 개입 요소를 늘림\n• 스와이프 벽돌깨기\n  ◦ 속도감과 쾌감\n  ◦ 폭발적인 성장을 달성했을 때\n    벽돌깨기가 줄 수 있는 경험","textPreview":"• 알카노이드 |   ◦ 아이템, 스킬 등 변주 요소가 있는 고전 벽돌깨기 |   ◦ 공이 공중에 떠 있는 동안 조작 요소가 부족함 |   ◦ 스킬을 통해 유저 조작 개입 요소를 늘림 | • 스와이프 벽돌깨기 |   ◦ 속도감과 쾌감 |   ◦ ...","textChars":160,"textLines":8,"bbox":[112,190,690,380]}
+{"kind":"shape","id":"sh/3ylc7u54","slide":7,"bbox":[830,175,300,360]}
+{"kind":"textbox","id":"sh/svu9knih","slide":7,"text":"핵심 경험","textPreview":"핵심 경험","textChars":5,"textLines":1,"bbox":[856,197,248,30]}
+{"kind":"textbox","id":"sh/hgn29gr2","slide":7,"text":"속도감\n+\n스킬 개입\n+\n폭발 성장","textPreview":"속도감 | + | 스킬 개입 | + | 폭발 성장","textChars":19,"textLines":5,"bbox":[880,260,200,150]}
+{"kind":"image","id":"im/kf6dcbul","slide":7,"name":"","alt":"background","bbox":[0,0,1280,720]}
+{"kind":"notes","id":"nt/4p58yg","slide":7,"text":""}
+{"kind":"slide","id":"sl/bkjek8","slide":8,"title":"06","textShapes":3}
+{"kind":"shape","id":"sh/2t83itgf","slide":8,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/re1w7mp0","slide":8,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1158,34,40,24]}
+{"kind":"shape","id":"sh/kb6xkf6d","slide":8,"bbox":[68,148,104,6]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":8,"text":"기획 통합","textPreview":"기획 통합","textChars":5,"textLines":1,"bbox":[430,84,420,64]}
+{"kind":"textbox","id":"sh/25kb6xkf","slide":8,"text":"• 벽돌깨기의 기본 규칙은 유지\n• 화면 의미는 RPG 전투로 전환\n• 손오공 / 근두운 / 화염산 / 우마왕으로 컨셉 고정\n• 성장 곡선은 레벨디자인 그래프로 관리","textPreview":"• 벽돌깨기의 기본 규칙은 유지 | • 화면 의미는 RPG 전투로 전환 | • 손오공 / 근두운 / 화염산 / 우마왕으로 컨셉 고정 | • 성장 곡선은 레벨디자인 그래프로 관리","textChars":92,"textLines":4,"bbox":[120,205,590,380]}
+{"kind":"image","id":"im/4byhgn29","slide":8,"name":"","alt":"background","bbox":[0,0,1280,720]}
+{"kind":"image","id":"im/mhk3q5o7","slide":8,"name":"","alt":"combat graph","bbox":[750,180,390,315]}
+{"kind":"image","id":"im/tgfmlkjm","slide":8,"name":"","alt":"concept","bbox":[850,510,210,145]}
+{"kind":"notes","id":"nt/bkjek8","slide":8,"text":""}

@@ -4,33 +4,32 @@ public class TrackState : EnemyBaseState
 {
 	public override void Enter(Enemy enemy)
 	{
-		OnEncounterAnimation(enemy);
+		enemy.SetMoveAnimation(true);
+	}
+
+	public override void Exit(Enemy enemy)
+	{
+		enemy.SetMoveAnimation(false);
 	}
 
 	public override void Tick(Enemy enemy)
 	{
-		float paddleX = GameManager.Instance.Paddle.transform.position.x;
-		bool isLeft = paddleX < enemy.transform.position.x;
+		if (!enemy.TryGetPaddleDirection(out bool isLeft))
+			return;
+
+		enemy.SetHeading(isLeft ? Enemy.Heading.Left : Enemy.Heading.Right);
 
 		bool canMove = isLeft
 			? EnemyMovementValidator.CanMoveLeft(enemy)
 			: EnemyMovementValidator.CanMoveRight(enemy);
 
 		if (canMove)
-		{
 			Move(enemy, isLeft);
-			OnMoveAnimation(enemy);
-		}
-		else
-		{
-			OnIdleAnimation(enemy);
-		}
 	}
 
 	private void Move(Enemy enemy, bool isLeft)
 	{
 		float dir = isLeft ? -1f : 1f;
-		enemy.SetHeading(isLeft ? Enemy.Heading.Left : Enemy.Heading.Right);
 		Vector3 pos = enemy.transform.position;
 		pos.x = Mathf.Clamp(
 			pos.x + dir * enemy.Stats.TrackSpeed * Time.deltaTime,
@@ -39,8 +38,4 @@ public class TrackState : EnemyBaseState
 		);
 		enemy.transform.position = pos;
 	}
-
-	private void OnEncounterAnimation(Enemy enemy) { }
-	private void OnMoveAnimation(Enemy enemy) { }
-	private void OnIdleAnimation(Enemy enemy) { }
 }

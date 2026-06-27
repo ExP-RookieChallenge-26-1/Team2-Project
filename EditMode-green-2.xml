@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="49" result="Failed(Child)" total="49" passed="48" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:29Z" duration="2.9629618">
+  <test-suite type="TestSuite" id="1000" name="ExpDemo2" fullname="ExpDemo2" runstate="Runnable" testcasecount="49" result="Failed" site="Child" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:29Z" duration="2.962962" total="49" passed="48" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1061" name="Assembly-CSharp-Editor.dll" fullname="/private/tmp/team2-maptest-green-K88mDy/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" runstate="Runnable" testcasecount="49" result="Failed" site="Child" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:29Z" duration="2.958241" total="49" passed="48" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="53088" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1001" name="BallLowTerrainPassThroughTests" fullname="BallLowTerrainPassThroughTests" classname="BallLowTerrainPassThroughTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:26Z" duration="0.016890" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1005" name="ShouldIgnoreLowTerrainCollisionReturnsFalseForDownwardTopHit" fullname="BallLowTerrainPassThroughTests.ShouldIgnoreLowTerrainCollisionReturnsFalseForDownwardTopHit" methodname="ShouldIgnoreLowTerrainCollisionReturnsFalseForDownwardTopHit" classname="BallLowTerrainPassThroughTests" runstate="Runnable" seed="1613501934" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:26Z" duration="0.006692" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1004" name="ShouldIgnoreLowTerrainCollisionReturnsFalseWhenConnectedTerrainBottomIsAbovePassThroughY" fullname="BallLowTerrainPassThroughTests.ShouldIgnoreLowTerrainCollisionReturnsFalseWhenConnectedTerrainBottomIsAbovePassThroughY" methodname="ShouldIgnoreLowTerrainCollisionReturnsFalseWhenConnectedTerrainBottomIsAbovePassThroughY" classname="BallLowTerrainPassThroughTests" runstate="Runnable" seed="1410050617" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:26Z" duration="0.000257" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1006" name="ShouldIgnoreLowTerrainCollisionReturnsFalseWhenFeatureIsDisabled" fullname="BallLowTerrainPassThroughTests.ShouldIgnoreLowTerrainCollisionReturnsFalseWhenFeatureIsDisabled" methodname="ShouldIgnoreLowTerrainCollisionReturnsFalseWhenFeatureIsDisabled" classname="BallLowTerrainPassThroughTests" runstate="Runnable" seed="817154798" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:26Z" duration="0.000125" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1002" name="ShouldIgnoreLowTerrainCollisionReturnsTrueForUpwardUndersideHitWhenConnectedTerrainIsBelowPassThroughY" fullname="BallLowTerrainPassThroughTests.ShouldIgnoreLowTerrainCollisionReturnsTrueForUpwardUndersideHitWhenConnectedTerrainIsBelowPassThroughY" methodname="ShouldIgnoreLowTerrainCollisionReturnsTrueForUpwardUndersideHitWhenConnectedTerrainIsBelowPassThroughY" classname="BallLowTerrainPassThroughTests" runstate="Runnable" seed="647415975" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:26Z" duration="0.000627" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1003" name="ShouldIgnoreLowTerrainCollisionReturnsTrueWhenConnectedTerrainBottomIsBelowPassThroughY" fullname="BallLowTerrainPassThroughTests.ShouldIgnoreLowTerrainCollisionReturnsTrueWhenConnectedTerrainBottomIsBelowPassThroughY" methodname="ShouldIgnoreLowTerrainCollisionReturnsTrueWhenConnectedTerrainBottomIsBelowPassThroughY" classname="BallLowTerrainPassThroughTests" runstate="Runnable" seed="1666455778" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:26Z" duration="0.000219" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1007" name="BallSkillCooldownTests" fullname="BallSkillCooldownTests" classname="BallSkillCooldownTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:26Z" duration="0.006037" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1009" name="AutoCooldownConsumesActivationFrame" fullname="BallSkillCooldownTests.AutoCooldownConsumesActivationFrame" methodname="AutoCooldownConsumesActivationFrame" classname="BallSkillCooldownTests" runstate="Runnable" seed="2008170543" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:26Z" duration="0.004362" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1010" name="ManualCooldownStartsWhenManualTriggerIsAcquired" fullname="BallSkillCooldownTests.ManualCooldownStartsWhenManualTriggerIsAcquired" methodname="ManualCooldownStartsWhenManualTriggerIsAcquired" classname="BallSkillCooldownTests" runstate="Runnable" seed="556615141" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:26Z" duration="0.000278" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1008" name="ManualCooldownTicksWhileSkillIsActive" fullname="BallSkillCooldownTests.ManualCooldownTicksWhileSkillIsActive" methodname="ManualCooldownTicksWhileSkillIsActive" classname="BallSkillCooldownTests" runstate="Runnable" seed="836391867" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:26Z" duration="0.000270" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1011" name="EnemyAttackColliderTests" fullname="EnemyAttackColliderTests" classname="EnemyAttackColliderTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:26Z" duration="0.015431" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1015" name="AttackStateChecksPaddleOverlapBeforeDamageAtAttackAnimationEnd" fullname="EnemyAttackColliderTests.AttackStateChecksPaddleOverlapBeforeDamageAtAttackAnimationEnd" methodname="AttackStateChecksPaddleOverlapBeforeDamageAtAttackAnimationEnd" classname="EnemyAttackColliderTests" runstate="Runnable" seed="280146185" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:26Z" duration="0.001639" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1013" name="EnemyAttackAnimationInvokesDamageCallbackAtClipEnd" fullname="EnemyAttackColliderTests.EnemyAttackAnimationInvokesDamageCallbackAtClipEnd" methodname="EnemyAttackAnimationInvokesDamageCallbackAtClipEnd" classname="EnemyAttackColliderTests" runstate="Runnable" seed="1274565164" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:26Z" duration="0.004070" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1014" name="EnemyAttackSpritesUseConsistentPixelsPerUnit" fullname="EnemyAttackColliderTests.EnemyAttackSpritesUseConsistentPixelsPerUnit" methodname="EnemyAttackSpritesUseConsistentPixelsPerUnit" classname="EnemyAttackColliderTests" runstate="Runnable" seed="1051504188" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:26Z" duration="0.006005" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1012" name="EnemyAttackTriggerColliderKeepsWidthAndExtendsDownwardOnly" fullname="EnemyAttackColliderTests.EnemyAttackTriggerColliderKeepsWidthAndExtendsDownwardOnly" methodname="EnemyAttackTriggerColliderKeepsWidthAndExtendsDownwardOnly" classname="EnemyAttackColliderTests" runstate="Runnable" seed="1295503168" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:26Z" duration="0.002183" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1016" name="GameSceneCameraAspectTests" fullname="GameSceneCameraAspectTests" classname="GameSceneCameraAspectTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:28Z" duration="1.205281" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1017" name="MainCameraKeepsFullWorldHeightForPaddleAndOverlayUi" fullname="GameSceneCameraAspectTests.MainCameraKeepsFullWorldHeightForPaddleAndOverlayUi" methodname="MainCameraKeepsFullWorldHeightForPaddleAndOverlayUi" classname="GameSceneCameraAspectTests" runstate="Runnable" seed="250622151" result="Passed" start-time="2026-06-26 01:02:26Z" end-time="2026-06-26 01:02:28Z" duration="1.204403" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[
+IgnoreFailingMessages:true
+
+IgnoreFailingMessages:false
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1018" name="ParallaxBackgroundTests" fullname="ParallaxBackgroundTests" classname="ParallaxBackgroundTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.057245" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1023" name="CalculateLayerOffset_ClampsProgressAndUsesTravelDistance" fullname="ParallaxBackgroundTests.CalculateLayerOffset_ClampsProgressAndUsesTravelDistance" methodname="CalculateLayerOffset_ClampsProgressAndUsesTravelDistance" classname="ParallaxBackgroundTests" runstate="Runnable" seed="80759494" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.001568" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1020" name="CustomEditor_ExistsForLayerMoveAmounts" fullname="ParallaxBackgroundTests.CustomEditor_ExistsForLayerMoveAmounts" methodname="CustomEditor_ExistsForLayerMoveAmounts" classname="ParallaxBackgroundTests" runstate="Runnable" seed="541501052" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.000232" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1019" name="LayerMoveAmount_IsEditableInInspectorWithGuidance" fullname="ParallaxBackgroundTests.LayerMoveAmount_IsEditableInInspectorWithGuidance" methodname="LayerMoveAmount_IsEditableInInspectorWithGuidance" classname="ParallaxBackgroundTests" runstate="Runnable" seed="1308773473" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.000231" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1025" name="Rebuild_CreatesSingleSpritePerLayerWithIncreasingSortingOrders" fullname="ParallaxBackgroundTests.Rebuild_CreatesSingleSpritePerLayerWithIncreasingSortingOrders" methodname="Rebuild_CreatesSingleSpritePerLayerWithIncreasingSortingOrders" classname="ParallaxBackgroundTests" runstate="Runnable" seed="1825195721" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.003854" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1026" name="Rebuild_ScalesLayerToCoverCameraWidthWhenAspectIsWiderThanSprite" fullname="ParallaxBackgroundTests.Rebuild_ScalesLayerToCoverCameraWidthWhenAspectIsWiderThanSprite" methodname="Rebuild_ScalesLayerToCoverCameraWidthWhenAspectIsWiderThanSprite" classname="ParallaxBackgroundTests" runstate="Runnable" seed="2143732319" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.000994" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1022" name="SceneSetup_KeepsSkyStaticAndUsesOriginalTopRock" fullname="ParallaxBackgroundTests.SceneSetup_KeepsSkyStaticAndUsesOriginalTopRock" methodname="SceneSetup_KeepsSkyStaticAndUsesOriginalTopRock" classname="ParallaxBackgroundTests" runstate="Runnable" seed="1207917426" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.000340" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1021" name="SceneSetup_UsesBottomToTopLayerOrder" fullname="ParallaxBackgroundTests.SceneSetup_UsesBottomToTopLayerOrder" methodname="SceneSetup_UsesBottomToTopLayerOrder" classname="ParallaxBackgroundTests" runstate="Runnable" seed="1732285807" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.000178" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1024" name="Tick_MovesLayerOnceAcrossStageDuration" fullname="ParallaxBackgroundTests.Tick_MovesLayerOnceAcrossStageDuration" methodname="Tick_MovesLayerOnceAcrossStageDuration" classname="ParallaxBackgroundTests" runstate="Runnable" seed="925601809" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.000538" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1027" name="RuntimeResourceCleanupTests" fullname="RuntimeResourceCleanupTests" classname="RuntimeResourceCleanupTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.002262" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1028" name="BallTrajectoryDestroysRuntimeMaterialAndTexture" fullname="RuntimeResourceCleanupTests.BallTrajectoryDestroysRuntimeMaterialAndTexture" methodname="BallTrajectoryDestroysRuntimeMaterialAndTexture" classname="RuntimeResourceCleanupTests" runstate="Runnable" seed="1650484728" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.000510" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1029" name="EnemyDestroysInstantiatedStats" fullname="RuntimeResourceCleanupTests.EnemyDestroysInstantiatedStats" methodname="EnemyDestroysInstantiatedStats" classname="RuntimeResourceCleanupTests" runstate="Runnable" seed="1188606584" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.000162" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1030" name="GameManagerDestroysInstantiatedRuntimeStats" fullname="RuntimeResourceCleanupTests.GameManagerDestroysInstantiatedRuntimeStats" methodname="GameManagerDestroysInstantiatedRuntimeStats" classname="RuntimeResourceCleanupTests" runstate="Runnable" seed="571918504" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.000342" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1031" name="TitleUIDestroysGeneratedSprites" fullname="RuntimeResourceCleanupTests.TitleUIDestroysGeneratedSprites" methodname="TitleUIDestroysGeneratedSprites" classname="RuntimeResourceCleanupTests" runstate="Runnable" seed="583159413" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.000293" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1032" name="ScreenEdgeWallsTests" fullname="ScreenEdgeWallsTests" classname="ScreenEdgeWallsTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.005688" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1035" name="ApplyLayout_MovesPhysicalWallCollidersToCameraEdges" fullname="ScreenEdgeWallsTests.ApplyLayout_MovesPhysicalWallCollidersToCameraEdges" methodname="ApplyLayout_MovesPhysicalWallCollidersToCameraEdges" classname="ScreenEdgeWallsTests" runstate="Runnable" seed="317681116" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.002609" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1034" name="ApplyLayout_TracksCameraAspectChanges" fullname="ScreenEdgeWallsTests.ApplyLayout_TracksCameraAspectChanges" methodname="ApplyLayout_TracksCameraAspectChanges" classname="ScreenEdgeWallsTests" runstate="Runnable" seed="629737121" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.001346" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1033" name="Rebuild_CropsSideWallsHalfOutsideCameraAndBleedsCeiling" fullname="ScreenEdgeWallsTests.Rebuild_CropsSideWallsHalfOutsideCameraAndBleedsCeiling" methodname="Rebuild_CropsSideWallsHalfOutsideCameraAndBleedsCeiling" classname="ScreenEdgeWallsTests" runstate="Runnable" seed="1022450732" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.000902" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1036" name="TilemapAspectCropperTests" fullname="TilemapAspectCropperTests" classname="TilemapAspectCropperTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.001953" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1037" name="ApplyCrop_ScalesOnlyTilemapForWiderAspect" fullname="TilemapAspectCropperTests.ApplyCrop_ScalesOnlyTilemapForWiderAspect" methodname="ApplyCrop_ScalesOnlyTilemapForWiderAspect" classname="TilemapAspectCropperTests" runstate="Runnable" seed="869316655" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.001139" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1038" name="CalculateTilemapCoverScale_OnlyExpandsForWiderAspects" fullname="TilemapAspectCropperTests.CalculateTilemapCoverScale_OnlyExpandsForWiderAspects" methodname="CalculateTilemapCoverScale_OnlyExpandsForWiderAspects" classname="TilemapAspectCropperTests" runstate="Runnable" seed="1139447869" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.000091" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1039" name="TitleSceneArtworkTests" fullname="TitleSceneArtworkTests" classname="TitleSceneArtworkTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.233118" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-case id="1040" name="TitleSceneUsesProvidedBackgroundAndTopLeftLogo" fullname="TitleSceneArtworkTests.TitleSceneUsesProvidedBackgroundAndTopLeftLogo" methodname="TitleSceneUsesProvidedBackgroundAndTopLeftLogo" classname="TitleSceneArtworkTests" runstate="Runnable" seed="1699715376" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.232486" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="1041" name="UISequenceTests" fullname="UISequenceTests" classname="UISequenceTests" runstate="Runnable" testcasecount="18" result="Failed" site="Child" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:29Z" duration="1.412589" total="18" passed="17" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1047" name="CreditPanelKeepsAuthoredTextPositionWhenScrollIsDisabled" fullname="UISequenceTests.CreditPanelKeepsAuthoredTextPositionWhenScrollIsDisabled" methodname="CreditPanelKeepsAuthoredTextPositionWhenScrollIsDisabled" classname="UISequenceTests" runstate="Runnable" seed="1536252568" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.001382" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1046" name="CreditPanelSkipReturnsToCallingSettingPanel" fullname="UISequenceTests.CreditPanelSkipReturnsToCallingSettingPanel" methodname="CreditPanelSkipReturnsToCallingSettingPanel" classname="UISequenceTests" runstate="Runnable" seed="824531049" result="Failed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.003383" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Expected: False
+  But was:  True
+]]></message>
+            <stack-trace><![CDATA[at UISequenceTests.CreditPanelSkipReturnsToCallingSettingPanel () [0x0008a] in /private/tmp/team2-maptest-green-K88mDy/Assets/Tests/EditMode/Editor/UISequenceTests.cs:93
+]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1060" name="EnhancementTimeScaleCurveClampsToMinimumScale" fullname="UISequenceTests.EnhancementTimeScaleCurveClampsToMinimumScale" methodname="EnhancementTimeScaleCurveClampsToMinimumScale" classname="UISequenceTests" runstate="Runnable" seed="859425687" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.000179" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1059" name="EnhancementTimeScaleCurveSlowsDownOverElapsedTime" fullname="UISequenceTests.EnhancementTimeScaleCurveSlowsDownOverElapsedTime" methodname="EnhancementTimeScaleCurveSlowsDownOverElapsedTime" classname="UISequenceTests" runstate="Runnable" seed="660362433" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.000119" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1058" name="EnhancementTimeScaleCurveStartsAtInitialScale" fullname="UISequenceTests.EnhancementTimeScaleCurveStartsAtInitialScale" methodname="EnhancementTimeScaleCurveStartsAtInitialScale" classname="UISequenceTests" runstate="Runnable" seed="64697969" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:28Z" duration="0.000049" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1050" name="GameSceneHasVisibleSettingButtonOnCanvas" fullname="UISequenceTests.GameSceneHasVisibleSettingButtonOnCanvas" methodname="GameSceneHasVisibleSettingButtonOnCanvas" classname="UISequenceTests" runstate="Runnable" seed="1930551153" result="Passed" start-time="2026-06-26 01:02:28Z" end-time="2026-06-26 01:02:29Z" duration="0.951623" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1057" name="GameSettingsButtonCalculatesResumeScaleFromGameState" fullname="UISequenceTests.GameSettingsButtonCalculatesResumeScaleFromGameState" methodname="GameSettingsButtonCalculatesResumeScaleFromGameState" classname="UISequenceTests" runstate="Runnable" seed="1373766345" result="Passed" start-time="2026-06-26 01:02:29Z" end-time="2026-06-26 01:02:29Z" duration="0.000169" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1051" name="GameSettingsButtonOpensSettingPanelAndPausesTime" fullname="UISequenceTests.GameSettingsButtonOpensSettingPanelAndPausesTime" methodname="GameSettingsButtonOpensSettingPanelAndPausesTime" classname="UISequenceTests" runstate="Runnable" seed="240850361" result="Passed" start-time="2026-06-26 01:02:29Z" end-time="2026-06-26 01:02:29Z" duration="0.000380" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-suite type="ParameterizedMethod" id="1044" name="ResultPanelExitButtonHasRuntimeTitleReturnHandler" fullname="UISequenceTests.ResultPanelExitButtonHasRuntimeTitleReturnHandler" classname="UISequenceTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-06-26 01:02:29Z" end-time="2026-06-26 01:02:29Z" duration="0.015748" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-case id="1042" name="ResultPanelExitButtonHasRuntimeTitleReturnHandler(&quot;Assets/UI/GameOverPanel.prefab&quot;)" fullname="UISequenceTests.ResultPanelExitButtonHasRuntimeTitleReturnHandler(&quot;Assets/UI/GameOverPanel.prefab&quot;)" methodname="ResultPanelExitButtonHasRuntimeTitleReturnHandler" classname="UISequenceTests" runstate="Runnable" seed="1133767995" result="Passed" start-time="2026-06-26 01:02:29Z" end-time="2026-06-26 01:02:29Z" duration="0.000787" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+          <test-case id="1043" name="ResultPanelExitButtonHasRuntimeTitleReturnHandler(&quot;Assets/UI/GameClearPanel.prefab&quot;)" fullname="UISequenceTests.ResultPanelExitButtonHasRuntimeTitleReturnHandler(&quot;Assets/UI/GameClearPanel.prefab&quot;)" methodname="ResultPanelExitButtonHasRuntimeTitleReturnHandler" classname="UISequenceTests" runstate="Runnable" seed="26966129" result="Passed" start-time="2026-06-26 01:02:29Z" end-time="2026-06-26 01:02:29Z" duration="0.000110" asserts="0">
+            <properties>
+              <property name="retryIteration" value="0" />
+              <property name="repeatIteration" value="0" />
+            </properties>
+          </test-case>
+        </test-suite>
+        <test-case id="1056" name="SettingPanelBackButtonDoesNotOverwriteTimeScaleChangedWhileOpen" fullname="UISequenceTests.SettingPanelBackButtonDoesNotOverwriteTimeScaleChangedWhileOpen" methodname="SettingPanelBackButtonDoesNotOverwriteTimeScaleChangedWhileOpen" classname="UISequenceTests" runstate="Runnable" seed="104673245" result="Passed" start-time="2026-06-26 01:02:29Z" end-time="2026-06-26 01:02:29Z" duration="0.000494" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1055" name="SettingPanelBackButtonResumesPausedGame" fullname="UISequenceTests.SettingPanelBackButtonResumesPausedGame" methodname="SettingPanelBackButtonResumesPausedGame" classname="UISequenceTests" runstate="Runnable" seed="730812117" result="Passed" start-time="2026-06-26 01:02:29Z" end-time="2026-06-26 01:02:29Z" duration="0.000184" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1045" name="SettingPanelCreditButtonOpensCreditPanelAndHidesSettings" fullname="UISequenceTests.SettingPanelCreditButtonOpensCreditPanelAndHidesSettings" methodname="SettingPanelCreditButtonOpensCreditPanelAndHidesSettings" classname="UISequenceTests" runstate="Runnable" seed="1793751388" result="Passed" start-time="2026-06-26 01:02:29Z" end-time="2026-06-26 01:02:29Z" duration="0.000341" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1053" name="SettingPanelPrefabKeepsBackgroundSpriteAspectRatio" fullname="UISequenceTests.SettingPanelPrefabKeepsBackgroundSpriteAspectRatio" methodname="SettingPanelPrefabKeepsBackgroundSpriteAspectRatio" classname="UISequenceTests" runstate="Runnable" seed="14882891" result="Passed" start-time="2026-06-26 01:02:29Z" end-time="2026-06-26 01:02:29Z" duration="0.000238" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1054" name="SettingPanelPrefabUsesAuthoredHorizontalScrollLayout" fullname="UISequenceTests.SettingPanelPrefabUsesAuthoredHorizontalScrollLayout" methodname="SettingPanelPrefabUsesAuthoredHorizontalScrollLayout" classname="UISequenceTests" runstate="Runnable" seed="1613571878" result="Passed" start-time="2026-06-26 01:02:29Z" end-time="2026-06-26 01:02:29Z" duration="0.001657" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1052" name="SettingPanelPreservesPrefabAuthoredLayoutWhenEnabled" fullname="UISequenceTests.SettingPanelPreservesPrefabAuthoredLayoutWhenEnabled" methodname="SettingPanelPreservesPrefabAuthoredLayoutWhenEnabled" classname="UISequenceTests" runstate="Runnable" seed="2058349035" result="Passed" start-time="2026-06-26 01:02:29Z" end-time="2026-06-26 01:02:29Z" duration="0.001987" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1049" name="TitleSceneCreditPanelUsesVerticalScrollAndTeamTwoCredits" fullname="UISequenceTests.TitleSceneCreditPanelUsesVerticalScrollAndTeamTwoCredits" methodname="TitleSceneCreditPanelUsesVerticalScrollAndTeamTwoCredits" classname="UISequenceTests" runstate="Runnable" seed="551750937" result="Passed" start-time="2026-06-26 01:02:29Z" end-time="2026-06-26 01:02:29Z" duration="0.211107" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+        </test-case>
+        <test-case id="1048" name="TitleSceneMatchesRequestedTitleLayout" fullname="UISequenceTests.TitleSceneMatchesRequestedTitleLayout" methodname="TitleSceneMatchesRequestedTitleLayout" classname="UISequenceTests" runstate="Runnable" seed="526987567" result="Passed" start-time="2026-06-26 01:02:29Z" end-time="2026-06-26 01:02:29Z" duration="0.216074" asserts="0">
+          <properties>
+            <property name="retryIteration" value="0" />
+            <property name="repeatIteration" value="0" />
+          </properties>
+          <output><![CDATA[Saving results to: /Users/taeyunkim/Library/Application Support/DefaultCompany/ExpDemo2/TestResults.xml
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

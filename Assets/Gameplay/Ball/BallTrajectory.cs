@@ -8,6 +8,8 @@ public class BallTrajectory : MonoBehaviour
 	private Ball ball;
 	private LineRenderer lineRenderer;
 	private Vector3[] trajectoryPoints;
+	private Material trajectoryMaterial;
+	private Texture2D dashTexture;
 	[SerializeField] private Paddle paddle;
 	[SerializeField] private int steps = 40;
 	[SerializeField] private float deltaTime = 0.05f;
@@ -18,6 +20,14 @@ public class BallTrajectory : MonoBehaviour
 		this.lineRenderer = GetComponent<LineRenderer>();
 		this.trajectoryPoints = new Vector3[this.steps];
 		InitializeLineRenderer();
+	}
+
+	private void OnDestroy()
+	{
+		DestroyRuntimeObject(this.trajectoryMaterial);
+		DestroyRuntimeObject(this.dashTexture);
+		this.trajectoryMaterial = null;
+		this.dashTexture = null;
 	}
 
 	public void Tick()
@@ -35,12 +45,17 @@ public class BallTrajectory : MonoBehaviour
 		velocity = this.ball.Physics.Velocity;
 		trajectoryCount = this.steps;
 
-		for  (int i = 0; i < this.steps; ++i)
+		for (int i = 0; i < this.steps; ++i)
 		{
 			BallCollision.Collision collision;
 
 			position += velocity * this.deltaTime;
-			collision = BallCollision.DetectClosestCollision(position, this.ball.Stats.Radius, this.ball.Physics.Velocity);
+			collision = BallCollision.DetectClosestCollision(
+				position,
+				this.ball.Stats.Radius,
+				velocity,
+				this.ball.Collision.AllowLowTerrainPassThrough,
+				this.ball.Collision.LowTerrainPassThroughMaxY);
 
 			switch (collision.type)
 			{
@@ -72,10 +87,12 @@ public class BallTrajectory : MonoBehaviour
 		GradientColorKey[] colorKeys;
 		GradientAlphaKey[] alphaKeys;
 
-		this.lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
-		this.lineRenderer.material.mainTexture = GenerateDashTexture();
+		this.trajectoryMaterial = new Material(Shader.Find("Sprites/Default"));
+		this.dashTexture = GenerateDashTexture();
+		this.trajectoryMaterial.mainTexture = this.dashTexture;
+		this.lineRenderer.sharedMaterial = this.trajectoryMaterial;
 		this.lineRenderer.textureMode = LineTextureMode.Tile;
-		this.lineRenderer.material.mainTextureScale = new Vector2(8f, 1f);
+		this.trajectoryMaterial.mainTextureScale = new Vector2(8f, 1f);
 		this.lineRenderer.widthCurve = new AnimationCurve(
 			new Keyframe(0f, 0.05f),
 			new Keyframe(1f, 0.01f)
@@ -121,5 +138,16 @@ public class BallTrajectory : MonoBehaviour
 
 		texture.Apply();
 		return texture;
+	}
+
+	private static void DestroyRuntimeObject(Object target)
+	{
+		if (target == null)
+			return;
+
+		if (Application.isPlaying)
+			Destroy(target);
+		else
+			DestroyImmediate(target);
 	}
 }

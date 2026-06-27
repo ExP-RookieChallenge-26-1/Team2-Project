@@ -1,8 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
 	public static AudioManager Instance { get; private set; }
+
+	private const float BgmOutputHeadroom = 0.5f;
+	private const float SfxOutputHeadroom = 0.25f;
+	private const int MaxSfxVoices = 4;
+	private const float BallHitSfxCooldownSeconds = 0.12f;
 
 	[SerializeField] private AudioClip ballHitClip;
     [SerializeField] private AudioClip bossDieClip;
@@ -27,11 +34,14 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip gameOverClip;
     [SerializeField] private AudioClip bossBgmClip;
     [SerializeField] private AudioSource bgmSource;
-    [SerializeField] private AudioClip[] gameBgmClips;
-    [SerializeField] private AudioClip giantSkillClip;
+    [SerializeField] private AudioClip gameBgmClip;
     [SerializeField] private AudioClip cloneSkillClip;
 
     private AudioSource audioSource;
+    private AudioSource bossAttackSource;
+    private Coroutine bossAttackLoopRoutine;
+    private readonly List<AudioSource> sfxSources = new List<AudioSource>();
+    private readonly System.Collections.Generic.Dictionary<AudioClip, float> lastSfxPlayTimes = new System.Collections.Generic.Dictionary<AudioClip, float>();
 
 	private float masterVolume = 1f;
 	private float bgmVolume = 1f;
@@ -52,21 +62,23 @@ public class AudioManager : MonoBehaviour
 		{
 			this.audioSource = gameObject.AddComponent<AudioSource>();
 		}
+		this.audioSource.playOnAwake = false;
+		this.audioSource.spatialBlend = 0f;
+		this.audioSource.volume = 1f;
+		this.audioSource.loop = false;
 
-        if (bgmSource == null)
-        {
-            bgmSource = gameObject.AddComponent<AudioSource>();
-            bgmSource.loop = true;
-            bgmSource.playOnAwake = false;
-            bgmSource.spatialBlend = 0f;
-        }
+        this.sfxSources.Add(this.audioSource);
+        EnsureSfxSourcePool();
 
-        LoadVolumeSettings();
+		EnsureBgmSource();
+		EnsureBossAttackSource();
+
+		LoadVolumeSettings();
 	}
 
     public void PlayBallHitSound()
     {
-        PlaySfx(ballHitClip);
+        PlaySfx(ballHitClip, BallHitSfxCooldownSeconds);
     }
 
 
@@ -145,21 +157,18 @@ public class AudioManager : MonoBehaviour
 
     public void PlayBossAttackReadySound()
     {
-        PlaySfx(bossAttackReadyClip);
+        PlayManagedBossAttackClip(bossAttackReadyClip, false);
     }
 
     public void PlayBossAttackOutloopSound()
     {
-        PlaySfx(bossAttackOutloopClip);
+        PlayManagedBossAttackClip(bossAttackOutloopClip, false);
     }
 
     public void PlayBossAttackLoopSound()
     {
-        PlaySfx(bossAttackLoopClip);
-    }
-    public void PlayGiantSkillSound()
-    {
-        PlaySfx(giantSkillClip);
+        StopBossAttackLoopRoutine();
+        bossAttackLoopRoutine = StartCoroutine(PlayBossAttackLoopRoutine());
     }
 
     public void PlayCloneSkillSound()
@@ -168,38 +177,23 @@ public class AudioManager : MonoBehaviour
     }
     public void PlayBossAttackInloopSound()
     {
-        PlaySfx(bossAttackInloopClip);
+        PlayManagedBossAttackClip(bossAttackInloopClip, false);
     }
     public void PlayGameOverSound()
     {
         PlaySfx(gameOverClip);
     }
-    public void PlayRandomGameBgm()
+    public void PlayGameBgm()
     {
-        if (gameBgmClips == null || gameBgmClips.Length == 0)
+        if (gameBgmClip == null)
         {
-            Debug.LogWarning("Game BGM Clips가 비어 있습니다.");
+            Debug.LogWarning("Game BGM Clip이 연결되지 않았습니다.");
             return;
         }
 
-        if (bgmSource == null)
-        {
-            bgmSource = gameObject.AddComponent<AudioSource>();
-            bgmSource.loop = true;
-            bgmSource.playOnAwake = false;
-            bgmSource.spatialBlend = 0f;
-        }
-
-        int index = Random.Range(0, gameBgmClips.Length);
-
-        bgmSource.Stop();
-        bgmSource.clip = gameBgmClips[index];
-        bgmSource.volume = masterVolume * bgmVolume;
-        bgmSource.loop = true;
-        bgmSource.Play();
-
-        Debug.Log($"게임 BGM 재생: {bgmSource.clip.name}");
+        PlayBgm(gameBgmClip, $"게임 BGM 재생: {gameBgmClip.name}");
     }
+
     public void PlayBossBgm()
     {
         if (bossBgmClip == null)
@@ -208,38 +202,32 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        if (bgmSource == null)
-            bgmSource = gameObject.AddComponent<AudioSource>();
-
-        bgmSource.clip = bossBgmClip;
-        bgmSource.loop = true;
-        bgmSource.playOnAwake = false;
-        bgmSource.spatialBlend = 0f;
-        bgmSource.volume = bgmVolume * masterVolume;
-        bgmSource.Play();
-
-        Debug.Log("우마왕 BGM 재생");
+        PlayBgm(bossBgmClip, "우마왕 BGM 재생");
     }
     public void StopBgm()
     {
         if (bgmSource != null)
             bgmSource.Stop();
     }
-    public void SetMasterVolume(float volume)
+	public void SetMasterVolume(float volume)
 	{
 		masterVolume = Mathf.Clamp01(volume);
+		UpdateBgmVolume();
+		UpdateSfxVolume();
 		SaveVolumeSettings();
 	}
 
 	public void SetBGMVolume(float volume)
 	{
 		bgmVolume = Mathf.Clamp01(volume);
+		UpdateBgmVolume();
 		SaveVolumeSettings();
 	}
 
 	public void SetSFXVolume(float volume)
 	{
 		sfxVolume = Mathf.Clamp01(volume);
+		UpdateSfxVolume();
 		SaveVolumeSettings();
 	}
 
@@ -256,13 +244,182 @@ public class AudioManager : MonoBehaviour
 	}
     private void PlaySfx(AudioClip clip)
     {
-        if (clip == null || this.audioSource == null)
+        PlaySfx(clip, 0f);
+    }
+
+    private void PlaySfx(AudioClip clip, float cooldownSeconds)
+    {
+        if (clip == null || !CanPlaySfx(clip, cooldownSeconds))
             return;
 
-        this.audioSource.volume = masterVolume * sfxVolume;
-        this.audioSource.PlayOneShot(clip);
+        AudioSource source = GetAvailableSfxSource();
+        if (source == null)
+            return;
+
+        lastSfxPlayTimes[clip] = Time.unscaledTime;
+        ConfigureSfxSource(source);
+        source.clip = clip;
+        source.volume = GetSfxVolumeScale();
+        source.Play();
     }
-    private void LoadVolumeSettings()
+
+    private void PlayBgm(AudioClip clip, string logMessage)
+    {
+        AudioSource source = EnsureBgmSource();
+
+        if (source.clip == clip && source.isPlaying)
+        {
+            UpdateBgmVolume();
+            return;
+        }
+
+        source.Stop();
+        source.clip = clip;
+        source.volume = GetBgmVolumeScale();
+        source.Play();
+
+        Debug.Log(logMessage);
+    }
+
+    private AudioSource EnsureBgmSource()
+    {
+        if (bgmSource == null)
+            bgmSource = gameObject.AddComponent<AudioSource>();
+
+        bgmSource.loop = true;
+        bgmSource.playOnAwake = false;
+        bgmSource.spatialBlend = 0f;
+        return bgmSource;
+    }
+
+    private AudioSource EnsureBossAttackSource()
+    {
+        if (bossAttackSource == null)
+            bossAttackSource = gameObject.AddComponent<AudioSource>();
+
+        bossAttackSource.playOnAwake = false;
+        bossAttackSource.spatialBlend = 0f;
+        bossAttackSource.volume = GetSfxVolumeScale();
+        return bossAttackSource;
+    }
+
+    private void EnsureSfxSourcePool()
+    {
+        while (sfxSources.Count < MaxSfxVoices)
+        {
+            AudioSource source = gameObject.AddComponent<AudioSource>();
+            ConfigureSfxSource(source);
+            sfxSources.Add(source);
+        }
+    }
+
+    private void ConfigureSfxSource(AudioSource source)
+    {
+        source.playOnAwake = false;
+        source.spatialBlend = 0f;
+        source.loop = false;
+    }
+
+    private AudioSource GetAvailableSfxSource()
+    {
+        EnsureSfxSourcePool();
+
+        for (int i = 0; i < sfxSources.Count; i++)
+        {
+            if (!sfxSources[i].isPlaying)
+                return sfxSources[i];
+        }
+
+        return null;
+    }
+
+    private bool CanPlaySfx(AudioClip clip, float cooldownSeconds)
+    {
+        if (cooldownSeconds <= 0f)
+            return true;
+
+        if (!lastSfxPlayTimes.TryGetValue(clip, out float lastPlayTime))
+            return true;
+
+        return Time.unscaledTime - lastPlayTime >= cooldownSeconds;
+    }
+
+    private IEnumerator PlayBossAttackLoopRoutine()
+    {
+        AudioSource source = EnsureBossAttackSource();
+        source.Stop();
+
+        if (bossAttackInloopClip != null)
+        {
+            ConfigureManagedBossAttackSource(source, bossAttackInloopClip, false);
+            source.Play();
+            yield return new WaitForSecondsRealtime(bossAttackInloopClip.length);
+        }
+
+        if (bossAttackLoopClip != null)
+        {
+            ConfigureManagedBossAttackSource(source, bossAttackLoopClip, true);
+            source.Play();
+        }
+
+        bossAttackLoopRoutine = null;
+    }
+
+    private void PlayManagedBossAttackClip(AudioClip clip, bool loop)
+    {
+        if (clip == null)
+            return;
+
+        StopBossAttackLoopRoutine();
+
+        AudioSource source = EnsureBossAttackSource();
+        source.Stop();
+        ConfigureManagedBossAttackSource(source, clip, loop);
+        source.Play();
+    }
+
+    private void ConfigureManagedBossAttackSource(AudioSource source, AudioClip clip, bool loop)
+    {
+        source.clip = clip;
+        source.loop = loop;
+        source.volume = GetSfxVolumeScale();
+    }
+
+    private void StopBossAttackLoopRoutine()
+    {
+        if (bossAttackLoopRoutine == null)
+            return;
+
+        StopCoroutine(bossAttackLoopRoutine);
+        bossAttackLoopRoutine = null;
+    }
+
+    private void UpdateBgmVolume()
+    {
+        if (bgmSource != null)
+            bgmSource.volume = GetBgmVolumeScale();
+    }
+
+    private void UpdateSfxVolume()
+    {
+        foreach (AudioSource source in sfxSources)
+            source.volume = GetSfxVolumeScale();
+
+        if (bossAttackSource != null)
+            bossAttackSource.volume = GetSfxVolumeScale();
+    }
+
+    private float GetBgmVolumeScale()
+    {
+        return Mathf.Clamp01(masterVolume * bgmVolume * BgmOutputHeadroom);
+    }
+
+    private float GetSfxVolumeScale()
+    {
+        return Mathf.Clamp01(masterVolume * sfxVolume * SfxOutputHeadroom);
+    }
+
+	private void LoadVolumeSettings()
 	{
 		masterVolume = PlayerPrefs.GetFloat("MasterVolume", 1f);
 		bgmVolume = PlayerPrefs.GetFloat("BGMVolume", 1f);

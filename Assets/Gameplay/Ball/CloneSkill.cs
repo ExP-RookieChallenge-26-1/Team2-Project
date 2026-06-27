@@ -33,7 +33,12 @@ public class CloneSkill : BallSkill
 
 	public void IncreaseCloneLevel(int amount)
 	{
-		this.CloneLevel = Math.Clamp(this.CloneLevel + amount, 0, this.MaxCloneLevel);
+		SetCloneLevel(this.CloneLevel + amount);
+	}
+
+	public void SetCloneLevel(int level)
+	{
+		this.CloneLevel = Math.Clamp(level, 0, this.MaxCloneLevel);
 	}
 
 	private void SpawnClones()

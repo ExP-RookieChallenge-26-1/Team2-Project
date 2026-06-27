@@ -11,10 +11,10 @@ public class Ball : MonoBehaviour
 	public CloneSkill CloneSkill { get; private set; }
 
 	public BallAnimation Animation { get; private set; }
-	public BallRotation Rotation { get; private set; }
 	private bool isSpawning = false;
 	private float spawnTimer = 0f;
 	private const float SpawnDelay = 3f;
+	public bool IsRespawning => this.isSpawning;
 
 	private bool isGameOverFalling = false;
 	[SerializeField] private float gameOverFallSpeed = 5f;
@@ -30,7 +30,6 @@ public class Ball : MonoBehaviour
 		this.Stats = GameManager.Instance.BallStats;
 
 		this.Animation = new BallAnimation(this);
-		this.Rotation = new BallRotation(this);
 		SetSkillStats(
 			this.Stats.Skill1HasManualTrigger,
 			this.Stats.Skill1HasAutoTrigger,
@@ -41,7 +40,9 @@ public class Ball : MonoBehaviour
 			this.Stats.Skill2ManualCooldown,
 			this.Stats.Skill2AutoCooldown,
 			this.Stats.Skill1Duration,
-			this.Stats.Skill2Duration);
+			this.Stats.Skill2Duration,
+			this.Stats.Skill1SizeLevel,
+			this.Stats.Skill2CloneLevel);
 	}
 
 	private void Update()
@@ -62,7 +63,6 @@ public class Ball : MonoBehaviour
 		this.Trajectory.Tick();
 		this.Physics.Tick();
 		this.Animation.Tick();
-		this.Rotation.Tick();
 		this.GiantSkill.Tick();
 		this.CloneSkill.Tick();
 		UpdateScale();
@@ -74,15 +74,21 @@ public class Ball : MonoBehaviour
 		this.isSpawning = true;
 		this.spawnTimer = 0f;
 		this.Physics.SetVelocity(Vector2.zero);
-		this.Rotation.IsEnabled = true;
 		this.Animation.SetRespawning(true);
+	}
+
+	public void LaunchImmediately()
+	{
+		this.isSpawning = false;
+		this.spawnTimer = 0f;
+		this.Animation.SetRespawning(false);
+		Launch();
 	}
 
 	public void StartGameOverFall()
 	{
 		this.isGameOverFalling = true;
 		this.Physics.SetVelocity(Vector2.zero);
-		this.Rotation.IsEnabled = false;
 		this.Animation.SetGameOver();
 	}
 
@@ -124,24 +130,32 @@ public class Ball : MonoBehaviour
 		float skill2ManualCooldown,
 		float skill2AutoCooldown,
 		float skill1Duration,
-		float skill2Duration)
+		float skill2Duration,
+		int skill1SizeLevel,
+		int skill2CloneLevel)
 	{
-		SetSkillTriggerSettings(
-			skill1HasManualTrigger,
-			skill1HasAutoTrigger,
-			skill2HasManualTrigger,
-			skill2HasAutoTrigger);
 		SetSkillCooldowns(
 			skill1ManualCooldown,
 			skill1AutoCooldown,
 			skill2ManualCooldown,
 			skill2AutoCooldown);
+		SetSkillTriggerSettings(
+			skill1HasManualTrigger,
+			skill1HasAutoTrigger,
+			skill2HasManualTrigger,
+			skill2HasAutoTrigger);
 
 		if (this.GiantSkill != null)
+		{
 			this.GiantSkill.SetDuration(skill1Duration);
+			this.GiantSkill.SetSizeLevel(skill1SizeLevel);
+		}
 
 		if (this.CloneSkill != null)
+		{
 			this.CloneSkill.SetDuration(skill2Duration);
+			this.CloneSkill.SetCloneLevel(skill2CloneLevel);
+		}
 	}
 
 	private void TickSpawn()

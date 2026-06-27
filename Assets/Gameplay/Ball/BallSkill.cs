@@ -7,20 +7,19 @@ public abstract class BallSkill : MonoBehaviour
 	[field: SerializeField] public float Duration { get; private set; }
 	[SerializeField] private float durationTimer;
 
-	[SerializeField] private BuffBadgeData badgeData;
-	[SerializeField] private float badgeDuration = 0f;
-	private static int lastBadgeFrame = -1;
-
 	public bool HasManualTrigger { get; private set; }
 	[field: SerializeField] public float ManualCooldown { get; private set; }
 	[SerializeField] private float manualTimer;
+	private bool manualCooldownInitialized;
 
 	public bool HasAutoTrigger { get; private set; }
 	[field: SerializeField] public float AutoCooldown { get; private set; }
 	[SerializeField] private float autoTimer;
+	private bool isSubscribed;
 
 	public bool IsActive { get; private set; }
-	public bool IsManualReady => !this.IsActive && this.manualTimer <= 0f;
+	private bool IsRespawning => this.ball != null && this.ball.IsRespawning;
+	public bool IsManualReady => !this.IsRespawning && !this.IsActive && this.manualTimer <= 0f;
 
 	public float AutoCooldownRemaining => Mathf.Max(0f, this.autoTimer);
 	public float AutoCooldownRatio => this.AutoCooldown > 0f
@@ -39,25 +38,24 @@ public abstract class BallSkill : MonoBehaviour
 
 	protected virtual void Start()
 	{
-		if (this.skillEventChannel == null)
-			return;
-		
-		if (this.HasManualTrigger)
-			Subscribe();
+		SyncSubscription();
 	}
 
 	protected virtual void OnDestroy()
 	{
-		if (this.skillEventChannel == null)
-			return;
-
-		if (this.HasManualTrigger)	
+		if (this.isSubscribed)
+		{
 			Unsubscribe();
+			this.isSubscribed = false;
+		}
 	}
 
 	public void Tick()
 	{
 		if (Time.deltaTime <= 0f)
+			return;
+
+		if (this.IsRespawning)
 			return;
 
 		TickDuration();
@@ -85,9 +83,6 @@ public abstract class BallSkill : MonoBehaviour
 
 	private void TickManual()
 	{
-		if (this.IsActive)
-			return;
-
 		if (this.manualTimer <= 0f)
 			return;
 
@@ -107,7 +102,7 @@ public abstract class BallSkill : MonoBehaviour
 
 		if (this.autoTimer <= 0f)
 		{
-			this.autoTimer = cooldown;
+			this.autoTimer = Mathf.Max(0f, cooldown + this.autoTimer);
 			Activate();
 		}
 	}
@@ -115,6 +110,14 @@ public abstract class BallSkill : MonoBehaviour
 	public void SetManualCooldown(float cooldown)
 	{
 		this.ManualCooldown = Mathf.Max(0f, cooldown);
+
+		if (!this.manualCooldownInitialized)
+		{
+			this.manualTimer = 0f;
+			this.manualCooldownInitialized = true;
+			return;
+		}
+
 		this.manualTimer = Mathf.Min(this.manualTimer, this.ManualCooldown);
 	}
 
@@ -126,8 +129,19 @@ public abstract class BallSkill : MonoBehaviour
 
 	public void SetTriggerSettings(bool hasManualTrigger, bool hasAutoTrigger)
 	{
+		bool manualTriggerWasAcquired = !this.HasManualTrigger && hasManualTrigger;
+		bool autoTriggerWasAcquired = !this.HasAutoTrigger && hasAutoTrigger;
+
 		this.HasManualTrigger = hasManualTrigger;
 		this.HasAutoTrigger = hasAutoTrigger;
+
+		if (manualTriggerWasAcquired && this.ManualCooldown > 0f && this.manualTimer <= 0f)
+			this.manualTimer = this.ManualCooldown;
+
+		if (autoTriggerWasAcquired && this.AutoCooldown > 0f && this.autoTimer <= 0f)
+			this.autoTimer = this.AutoCooldown;
+
+		SyncSubscription();
 	}
 
 	public void SetDuration(float duration)
@@ -144,23 +158,28 @@ public abstract class BallSkill : MonoBehaviour
 			this.durationTimer = this.Duration;
 		}
 
-		if (badgeData != null && lastBadgeFrame != Time.frameCount)
-		{
-			lastBadgeFrame = Time.frameCount;
-			float attachDuration = badgeDuration > 0f ? badgeDuration : this.Duration;
-			BuffBadgeManager.Instance?.Attach(badgeData, attachDuration);
-		}
-
 		OnActivate();
 	}
+
+	public void ActivateImmediately()
+	{
+		if (this.IsRespawning)
+			return;
+
+		Activate();
+	}
+
 	public void TryManualActivate()
 	{
 		if (!this.HasManualTrigger)
 			return;
-		
+
+		if (this.IsRespawning)
+			return;
+
 		if (!this.IsManualReady)
 			return;
-		
+
 		this.manualTimer = this.ManualCooldown;
 		Activate();
 	}
@@ -170,6 +189,23 @@ public abstract class BallSkill : MonoBehaviour
 	}
 	protected virtual void Unsubscribe()
 	{
+	}
+
+	private void SyncSubscription()
+	{
+		if (this.skillEventChannel == null)
+			return;
+
+		if (this.HasManualTrigger && !this.isSubscribed)
+		{
+			Subscribe();
+			this.isSubscribed = true;
+		}
+		else if (!this.HasManualTrigger && this.isSubscribed)
+		{
+			Unsubscribe();
+			this.isSubscribed = false;
+		}
 	}
 
 	protected abstract void OnActivate();

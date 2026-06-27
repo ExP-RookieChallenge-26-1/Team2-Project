@@ -15,11 +15,8 @@ MonoBehaviour:
   <ItemName>k__BackingField: EnhancementTicketItemData
   <Icon>k__BackingField: {fileID: 0}
   <Description>k__BackingField: 
-  upgradeIds: 010000000200000003000000040000000500000006000000
+  upgradeIds: ed030000c20b0000da070000
   upgradeWeights:
-  - 30
-  - 25
-  - 20
-  - 15
-  - 10
-  - 20
+  - 1
+  - 1
+  - 1

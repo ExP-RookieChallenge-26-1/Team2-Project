@@ -8,4 +8,12 @@ public class ItemCardPool
 
     public int[] CardIds => this.cardIds;
     public float[] CardWeights => this.cardWeights;
+
+    public ItemCardPool() { }
+
+    public ItemCardPool(int[] cardIds, float[] cardWeights)
+    {
+        this.cardIds = cardIds;
+        this.cardWeights = cardWeights;
+    }
 }

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StatUpgradeCardData
   <Id>k__BackingField: 5
   <CardName>k__BackingField: Critical Chance
-  <Icon>k__BackingField: {fileID: 0}
+  <Icon>k__BackingField: {fileID: 3020642013582744590, guid: 3b7d333ba4e5e468f88a88d9b82cd948, type: 3}
   <Description>k__BackingField: Critical Chance
-  <BadgeData>k__BackingField: {fileID: 11400000, guid: e0f644e5f9f38fb499e86747f133b723, type: 2}
+  <BadgeData>k__BackingField: {fileID: 11400000, guid: 97855911baa34d6881323809ff01d590, type: 2}
   <BadgeDuration>k__BackingField: 0
   <AttackPower>k__BackingField: 0
   <CriticalChance>k__BackingField: 10

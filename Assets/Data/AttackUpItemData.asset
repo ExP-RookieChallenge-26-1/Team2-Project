@@ -15,7 +15,7 @@ MonoBehaviour:
   <ItemName>k__BackingField: AttackUpItemData
   <Icon>k__BackingField: {fileID: 0}
   <Description>k__BackingField: 
-  <AttackPower>k__BackingField: 5
+  <AttackPower>k__BackingField: 3
   <CriticalChance>k__BackingField: 0
   <CriticalDamage>k__BackingField: 0
   <Speed>k__BackingField: 0

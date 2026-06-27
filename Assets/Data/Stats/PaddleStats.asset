@@ -14,5 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PaddleStats
   <MaxPaddleSpeed>k__BackingField: 10
   <MoveRange>k__BackingField: 3
-  <PaddleWidth>k__BackingField: 3
   <ReflectionWeight>k__BackingField: 0.5
+  <PaddleSizeLevel>k__BackingField: 0
+  <MaxPaddleSizeLevel>k__BackingField: 1
+  <PaddleSizeMultiplierPerLevel>k__BackingField:
+  - 1
+  - 1.4
+  <BaseColliderSize>k__BackingField: {x: 1.5, y: 0.45}

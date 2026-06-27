@@ -40,26 +40,36 @@ public class CowKing : MonoBehaviour, IDamageable
 
     private int currentHp;
     private CowKingState currentState;
-
     private float stateTimer;
     private float currentBreathDuration;
-    private float breathTimer = 0f;
-
+    private float breathTimer;
     private Vector3 targetPosition;
     private GameObject currentBreath;
-
-    private bool isDead = false;
-    private bool isActivated = false;
-    private bool isBreathing = false;
-    private bool canTakeDamage = false;
+    private bool isDead;
+    private bool isActivated;
+    private bool isBreathing;
+    private bool canTakeDamage;
     private Animator animator;
+    private MonsterHealthBar healthBar;
+    private MobDamageOverlay damageOverlay;
+
+    public int AttackPower => attackPower;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
-    }
-    private void Start()
-    {
         currentHp = maxHp;
+
+        healthBar = GetComponent<MonsterHealthBar>();
+        if (healthBar == null)
+            healthBar = gameObject.AddComponent<MonsterHealthBar>();
+
+        damageOverlay = GetComponent<MobDamageOverlay>();
+        if (damageOverlay == null)
+            damageOverlay = gameObject.AddComponent<MobDamageOverlay>();
+
+        healthBar.Configure(new Vector2(2.6f, 0.45f), 0.05f, MonsterHealthBar.VerticalAnchor.Bottom);
+        healthBar.Hide();
     }
 
     private void Update()
@@ -72,18 +82,13 @@ public class CowKing : MonoBehaviour, IDamageable
             case CowKingState.Idle:
                 UpdateIdle();
                 break;
-
             case CowKingState.Move:
                 UpdateMove();
                 break;
-
             case CowKingState.Attack:
                 UpdateAttack();
                 break;
-
             case CowKingState.Damaged:
-                break;
-
             case CowKingState.Die:
                 break;
         }
@@ -91,13 +96,16 @@ public class CowKing : MonoBehaviour, IDamageable
 
     public void ActivateBoss()
     {
-        if (isActivated)
+        if (isActivated || isDead)
             return;
 
         isActivated = true;
         canTakeDamage = true;
+        healthBar.SetHealth(currentHp, maxHp);
+
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayBossBgm();
+
         ChangeState(CowKingState.Idle);
     }
 
@@ -111,13 +119,16 @@ public class CowKing : MonoBehaviour, IDamageable
 
     private void UpdateMove()
     {
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(
+            transform.position,
+            targetPosition,
+            moveSpeed * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, targetPosition) < 0.05f)
-        {
-            SetMoveAnimation(false);
-            ChangeState(CowKingState.Idle);
-        }
+        if (Vector3.Distance(transform.position, targetPosition) >= 0.05f)
+            return;
+
+        SetMoveAnimation(false);
+        ChangeState(CowKingState.Idle);
     }
 
     private void UpdateAttack()
@@ -128,24 +139,26 @@ public class CowKing : MonoBehaviour, IDamageable
 
             if (stateTimer >= attackReadyTime)
                 SpawnBreath();
-        }
-        else
-        {
-            breathTimer += Time.deltaTime;
 
-            if (breathTimer >= currentBreathDuration)
-            {
-                EndBreath();
-                ChangeState(CowKingState.Idle);
-            }
+            return;
         }
+
+        breathTimer += Time.deltaTime;
+
+        if (breathTimer < currentBreathDuration)
+            return;
+
+        EndBreath();
+        ChangeState(CowKingState.Idle);
     }
 
     private void DecideNextState()
     {
-        float rand = Random.value;
+        float moveWeight = Mathf.Max(0f, stateRateMove);
+        float attackWeight = Mathf.Max(0f, stateRateAttack);
+        float totalWeight = moveWeight + attackWeight;
 
-        if (rand < stateRateMove)
+        if (totalWeight <= 0f || Random.value < moveWeight / totalWeight)
             StartMove();
         else
             StartAttack();
@@ -153,13 +166,14 @@ public class CowKing : MonoBehaviour, IDamageable
 
     private void StartMove()
     {
-        float randomX = Random.Range(minX, maxX);
-        float randomY = Random.Range(minY, maxY);
-
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayBossVoiceSound();
 
-        targetPosition = new Vector3(randomX, randomY, transform.position.z);
+        targetPosition = new Vector3(
+            Random.Range(minX, maxX),
+            Random.Range(minY, maxY),
+            transform.position.z);
+
         SetMoveAnimation(true);
         ChangeState(CowKingState.Move);
     }
@@ -167,19 +181,16 @@ public class CowKing : MonoBehaviour, IDamageable
     private void StartAttack()
     {
         currentBreathDuration = Random.Range(breathDurationMin, breathDurationMax);
+        isBreathing = false;
+        breathTimer = 0f;
 
         SetMoveAnimation(false);
+        SetBreathAnimation(false);
         PlayAttackReadyAnimation();
-
-        if (animator != null)
-            animator.SetTrigger("AttackReady");
 
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayBossAttackReadySound();
 
-        isBreathing = false;
-        breathTimer = 0f;
-  
         ChangeState(CowKingState.Attack);
     }
 
@@ -194,19 +205,19 @@ public class CowKing : MonoBehaviour, IDamageable
             return;
         }
 
-        if (animator != null)
-            animator.SetTrigger("Attack");
-
         if (currentBreath != null)
             EndBreath();
 
+        SetBreathAnimation(true);
+        PlayAttackAnimation();
+
         currentBreath = Instantiate(breathPrefab, breathSpawnPoint.position, Quaternion.identity);
+        CowKingBreath breath = currentBreath.GetComponent<CowKingBreath>();
+        if (breath != null)
+            breath.AttachToSpawnPoint(breathSpawnPoint);
 
         if (AudioManager.Instance != null)
-        {
-            AudioManager.Instance.PlayBossAttackInloopSound();
             AudioManager.Instance.PlayBossAttackLoopSound();
-        }
 
         isBreathing = true;
         breathTimer = 0f;
@@ -219,9 +230,7 @@ public class CowKing : MonoBehaviour, IDamageable
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayBossAttackOutloopSound();
 
-            CowKingBreathAnimation breathAnimation =
-                currentBreath.GetComponent<CowKingBreathAnimation>();
-
+            CowKingBreathAnimation breathAnimation = currentBreath.GetComponent<CowKingBreathAnimation>();
             if (breathAnimation != null)
                 breathAnimation.PlayEndAndDestroy();
             else
@@ -231,6 +240,7 @@ public class CowKing : MonoBehaviour, IDamageable
         }
 
         isBreathing = false;
+        SetBreathAnimation(false);
         breathTimer = 0f;
     }
 
@@ -254,9 +264,15 @@ public class CowKing : MonoBehaviour, IDamageable
             return;
 
         damage = Mathf.Max(1, damage);
-        currentHp -= damage;
+        int previousHp = currentHp;
+        currentHp = Mathf.Max(0, currentHp - damage);
+        ScoreManager.AddDamageScoreToSession(previousHp, currentHp, maxHp);
+        healthBar.SetHealth(currentHp, maxHp);
 
         Debug.Log($"우마왕 피격, 남은 체력: {currentHp}");
+        Color color = isCrit ? Color.yellow : Color.white;
+        DamageTextSpawner.Instance?.Spawn(transform.position, damage, color);
+        damageOverlay?.Play();
 
         if (currentHp <= 0)
         {
@@ -264,10 +280,9 @@ public class CowKing : MonoBehaviour, IDamageable
             return;
         }
 
-        PlayDamagedAnimation();
-
         if (currentState != CowKingState.Attack)
         {
+            PlayDamagedAnimation();
             ChangeState(CowKingState.Damaged);
             StartCoroutine(DamagedRoutine());
         }
@@ -287,13 +302,12 @@ public class CowKing : MonoBehaviour, IDamageable
             AudioManager.Instance.StopBgm();
         }
 
-           
         EndBreath();
         ChangeState(CowKingState.Die);
 
-        Collider2D col = GetComponent<Collider2D>();
-        if (col != null)
-            col.enabled = false;
+        Collider2D bossCollider = GetComponent<Collider2D>();
+        if (bossCollider != null)
+            bossCollider.enabled = false;
 
         PlayDieAnimation();
         StartCoroutine(DieSequence());
@@ -301,15 +315,14 @@ public class CowKing : MonoBehaviour, IDamageable
 
     private System.Collections.IEnumerator DieSequence()
     {
-
         yield return new WaitForSeconds(1f);
 
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayBossFallSound();
 
-        float fallSpeed = 2.5f;
-        float rotateSpeed = 360f;
-        float bottomY = -7f;
+        const float fallSpeed = 2.5f;
+        const float rotateSpeed = 360f;
+        const float bottomY = -7f;
 
         while (transform.position.y > bottomY)
         {
@@ -323,6 +336,7 @@ public class CowKing : MonoBehaviour, IDamageable
 
         Destroy(gameObject);
     }
+
     public void PlayBossEntrySfx()
     {
         AudioManager.Instance?.PlayBossEntrySound();
@@ -334,10 +348,26 @@ public class CowKing : MonoBehaviour, IDamageable
             animator.SetBool("IsMoving", isMoving);
     }
 
-    private void PlayAttackAnimation()
+    private void SetBreathAnimation(bool breathing)
     {
         if (animator != null)
-            animator.SetTrigger("Attack");
+            animator.SetBool("IsBreathing", breathing);
+    }
+
+    private void PlayAttackAnimation()
+    {
+        if (animator == null)
+            return;
+
+        animator.ResetTrigger("AttackReady");
+        animator.SetTrigger("Attack");
+        animator.Update(0f);
+    }
+
+    private void PlayAttackReadyAnimation()
+    {
+        if (animator != null)
+            animator.SetTrigger("AttackReady");
     }
 
     private void PlayDamagedAnimation()
@@ -346,16 +376,12 @@ public class CowKing : MonoBehaviour, IDamageable
             animator.SetTrigger("Damaged");
     }
 
-    private void PlayAttackReadyAnimation()
-    {
-        if (animator != null)
-            animator.SetTrigger("AttackReady");
-    }
     private void PlayDieAnimation()
     {
         if (animator != null)
             animator.SetTrigger("Die");
     }
+
     private void OnDestroy()
     {
         EndBreath();

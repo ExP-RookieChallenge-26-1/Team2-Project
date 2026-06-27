@@ -8,11 +8,19 @@ public class WorldItemSpawner : MonoBehaviour
     [SerializeField] private ItemCardPool[] itemCardPools;
     [SerializeField] private int minSpawnCount = 1;
     [SerializeField] private int maxSpawnCount = 1;
+    [SerializeField] private int mapIndex = -1;
 
     public void Configure(GameObject[] configuredItemPrefabs)
     {
+        Configure(configuredItemPrefabs, this.mapIndex);
+    }
+
+    public void Configure(GameObject[] configuredItemPrefabs, int configuredMapIndex)
+    {
         if (configuredItemPrefabs != null && configuredItemPrefabs.Length > 0)
             this.itemPrefabs = configuredItemPrefabs;
+
+        this.mapIndex = configuredMapIndex;
     }
 
     private void Awake()
@@ -67,10 +75,16 @@ public class WorldItemSpawner : MonoBehaviour
         ItemPickup itemPickup = item.GetComponent<ItemPickup>();
         ItemCardPool cardPool = GetItemCardPool(spawnPointIndex);
 
-        if (itemPickup == null || cardPool == null)
+        if (itemPickup == null)
             return;
 
-        itemPickup.SetCardPool(cardPool.CardIds, cardPool.CardWeights);
+        CardUseContext context = new CardUseContext(CardOfferSource.Item, this.mapIndex);
+        itemPickup.SetCardContext(context);
+
+        if (cardPool == null)
+            return;
+
+        itemPickup.SetCardPool(cardPool.CardIds, cardPool.CardWeights, context);
     }
 
     private ItemCardPool GetItemCardPool(int index)

@@ -16,14 +16,52 @@ public class CreditPanel : MonoBehaviour
 
     private RectTransform rectTransform;
     private Coroutine scrollCoroutine;
+    private GameObject returnPanel;
 
-    private void Start()
+    private void Awake()
     {
-        rectTransform = creditText.GetComponent<RectTransform>();
-        skipButton.onClick.AddListener(OnSkipClicked);
+        ResolveOptionalReferences();
+    }
+
+    private void OnEnable()
+    {
+        ResolveOptionalReferences();
+
+        if (skipButton != null)
+        {
+            skipButton.onClick.RemoveListener(OnSkipClicked);
+            skipButton.onClick.AddListener(OnSkipClicked);
+        }
+
+        if (rectTransform == null)
+            return;
+
+        if (scrollCoroutine != null)
+            StopCoroutine(scrollCoroutine);
+
+        if (scrollSpeed <= 0f)
+            return;
 
         rectTransform.anchoredPosition = new Vector2(0, -800f);
         scrollCoroutine = StartCoroutine(ScrollCredits());
+    }
+
+    private void OnDisable()
+    {
+        if (scrollCoroutine != null)
+        {
+            StopCoroutine(scrollCoroutine);
+            scrollCoroutine = null;
+        }
+
+        if (skipButton != null)
+            skipButton.onClick.RemoveListener(OnSkipClicked);
+    }
+
+    public void ShowFrom(GameObject panelToReturnTo)
+    {
+        returnPanel = panelToReturnTo;
+        gameObject.SetActive(true);
     }
 
     private IEnumerator ScrollCredits()
@@ -50,11 +88,31 @@ public class CreditPanel : MonoBehaviour
     private void CloseCreditPanel()
     {
         gameObject.SetActive(false);
-        titleUI.ShowTitleUI();
+
+        if (returnPanel != null)
+        {
+            returnPanel.SetActive(true);
+            returnPanel = null;
+            return;
+        }
+
+        if (titleUI != null)
+            titleUI.ShowTitleUI();
     }
 
-    private void OnDestroy()
+    private void ResolveOptionalReferences()
     {
-        skipButton.onClick.RemoveListener(OnSkipClicked);
+        if (creditText == null)
+            creditText = GetComponentInChildren<TextMeshProUGUI>(true);
+
+        if (creditText != null)
+            rectTransform = creditText.GetComponent<RectTransform>();
+
+        if (skipButton == null)
+        {
+            Transform skipTransform = transform.Find("SkipButton");
+            if (skipTransform != null)
+                skipButton = skipTransform.GetComponent<Button>();
+        }
     }
 }

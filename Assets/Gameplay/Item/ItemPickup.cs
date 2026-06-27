@@ -20,6 +20,7 @@ public class ItemPickup : MonoBehaviour
     private bool isConsumed;
     private int[] overrideCardIds;
     private float[] overrideCardWeights;
+    private CardUseContext overrideCardContext = CardUseContext.None;
 
     private void Awake()
     {
@@ -87,27 +88,45 @@ public class ItemPickup : MonoBehaviour
 
     public void SetCardPool(int[] cardIds, float[] cardWeights)
     {
+        SetCardPool(cardIds, cardWeights, CardUseContext.None);
+    }
+
+    public void SetCardContext(CardUseContext context)
+    {
+        this.overrideCardContext = context;
+    }
+
+    public void SetCardPool(int[] cardIds, float[] cardWeights, CardUseContext context)
+    {
         this.overrideCardIds = cardIds;
         this.overrideCardWeights = cardWeights;
+        this.overrideCardContext = context;
     }
 
     private void Collect()
     {
         this.isConsumed = true;
         Debug.Log($"아이템 획득: {this.itemData.name}");
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.PlayGetItemSound();
+		if (AudioManager.Instance != null)
+			AudioManager.Instance.PlayGetItemSound();
 
-        ApplyItem();
-        Destroy(gameObject);
-    }
+		ApplyItem();
+		this.cachedPaddle?.PlayGetItem();
+		Destroy(gameObject);
+	}
 
     private void ApplyItem()
     {
         EnhancementTriggerItemData enhancementItemData = this.itemData as EnhancementTriggerItemData;
         if (enhancementItemData != null && HasOverrideCardPool())
         {
-            enhancementItemData.Apply(this.overrideCardIds, this.overrideCardWeights);
+            enhancementItemData.Apply(this.overrideCardIds, this.overrideCardWeights, this.overrideCardContext);
+            return;
+        }
+
+        if (enhancementItemData != null)
+        {
+            enhancementItemData.Apply(this.overrideCardContext);
             return;
         }
 

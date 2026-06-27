@@ -42,7 +42,22 @@ public class BuffBadgeManager : MonoBehaviour
             return;
         }
 
-        ActiveBuffBadge badge = new ActiveBuffBadge(data, duration);
+        Attach(new ActiveBuffBadge(data, duration));
+    }
+
+    public void Attach(Sprite icon, string badgeName, float duration = 0f)
+    {
+        if (icon == null)
+        {
+            Debug.LogWarning("Buff badge icon is null.");
+            return;
+        }
+
+        Attach(new ActiveBuffBadge(icon, badgeName, duration));
+    }
+
+    private void Attach(ActiveBuffBadge badge)
+    {
         activeBadges.Add(badge);
         OnBadgeAttached?.Invoke(badge);
     }

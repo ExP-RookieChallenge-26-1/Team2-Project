@@ -8,6 +8,7 @@ public class CardDatabase : ScriptableObject
 
 	private Dictionary<int, CardData> idMap;
 	private Dictionary<string, CardData> nameMap;
+	private Dictionary<int, CardData> generatedScoreCards;
 
 	private void BuildMap()
 	{
@@ -39,8 +40,13 @@ public class CardDatabase : ScriptableObject
 		if (idMap == null)
 			BuildMap();
 
-		idMap.TryGetValue(id, out CardData card);
-		return card;
+		if (idMap.TryGetValue(id, out CardData card))
+			return card;
+
+		if (CardIds.IsScoreBonus(id))
+			return GetOrCreateScoreBonusCard(id);
+
+		return null;
 	}
 
 	public CardData GetByName(string cardName)
@@ -50,5 +56,18 @@ public class CardDatabase : ScriptableObject
 		
 		nameMap.TryGetValue(cardName, out CardData card);
 		return card;
+	}
+
+	private CardData GetOrCreateScoreBonusCard(int id)
+	{
+		this.generatedScoreCards ??= new Dictionary<int, CardData>();
+
+		if (this.generatedScoreCards.TryGetValue(id, out CardData card) && card != null)
+			return card;
+
+		ScoreBonusCardData scoreCard = CreateInstance<ScoreBonusCardData>();
+		scoreCard.InitializeForRuntime(CardIds.GetScoreBonusAmount(id));
+		this.generatedScoreCards[id] = scoreCard;
+		return scoreCard;
 	}
 }

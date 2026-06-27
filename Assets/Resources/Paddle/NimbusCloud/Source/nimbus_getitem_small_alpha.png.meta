@@ -1,0 +1,351 @@
+fileFormatVersion: 2
+guid: 87eb78de3b30446febeb67aa8b9d35c9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4841267930727273071
+    second: nimbus_getitem_small_alpha_0
+  - first:
+      213: 1582485452989518895
+    second: nimbus_getitem_small_alpha_1
+  - first:
+      213: -956684120194296979
+    second: nimbus_getitem_small_alpha_2
+  - first:
+      213: -5456380695851962074
+    second: nimbus_getitem_small_alpha_3
+  - first:
+      213: 3237023301217416185
+    second: nimbus_getitem_small_alpha_4
+  - first:
+      213: -6880943267155790968
+    second: nimbus_getitem_small_alpha_5
+  - first:
+      213: 8262197004692156783
+    second: nimbus_getitem_small_alpha_6
+  - first:
+      213: 2870024263022230735
+    second: nimbus_getitem_small_alpha_7
+  - first:
+      213: 1286658408673380863
+    second: nimbus_getitem_small_alpha_8
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nimbus_getitem_small_alpha_0
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 234
+        width: 1276
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19da286977c50dcb0800000000000000
+      internalID: -4841267930727273071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nimbus_getitem_small_alpha_1
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 730
+        width: 61
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f24d9a7922e16f510800000000000000
+      internalID: 1582485452989518895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nimbus_getitem_small_alpha_2
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 663
+        width: 104
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d63df858cdc29b2f0800000000000000
+      internalID: -956684120194296979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nimbus_getitem_small_alpha_3
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 774
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 621f1709aaa0744b0800000000000000
+      internalID: -5456380695851962074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nimbus_getitem_small_alpha_4
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 481
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f3f9beba873cec20800000000000000
+      internalID: 3237023301217416185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nimbus_getitem_small_alpha_5
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 454
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88330992e8af180a0800000000000000
+      internalID: -6880943267155790968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nimbus_getitem_small_alpha_6
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 392
+        width: 65
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f61f8f8966839a270800000000000000
+      internalID: 8262197004692156783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nimbus_getitem_small_alpha_7
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 220
+        width: 66
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc31367cdf54d720800000000000000
+      internalID: 2870024263022230735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nimbus_getitem_small_alpha_8
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 207
+        width: 67
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff90f3471012bd110800000000000000
+      internalID: 1286658408673380863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      nimbus_getitem_small_alpha_0: -4841267930727273071
+      nimbus_getitem_small_alpha_1: 1582485452989518895
+      nimbus_getitem_small_alpha_2: -956684120194296979
+      nimbus_getitem_small_alpha_3: -5456380695851962074
+      nimbus_getitem_small_alpha_4: 3237023301217416185
+      nimbus_getitem_small_alpha_5: -6880943267155790968
+      nimbus_getitem_small_alpha_6: 8262197004692156783
+      nimbus_getitem_small_alpha_7: 2870024263022230735
+      nimbus_getitem_small_alpha_8: 1286658408673380863
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

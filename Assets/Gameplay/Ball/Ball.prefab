@@ -86,7 +86,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 619487801
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: de0b7bc6ce9e9114fa5406476f8647eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -110,6 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eef67b0769281d4ea1f9c68818dfbc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball
+  gameOverFallSpeed: 5
+  gameOverSpinSpeed: 360
 --- !u!114 &8020790064521448634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallCollision
   paddle: {fileID: 6919992829103857774, guid: 5ea2f844292f92942bb6039ecd0a231a, type: 3}
+  allowLowTerrainPassThrough: 1
+  lowTerrainPassThroughMaxY: -3
 --- !u!114 &5357760083820707525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +157,8 @@ MonoBehaviour:
   skillEventChannel: {fileID: 11400000, guid: 60ac33b9a461bce44a3f3e9d1f6182e0, type: 2}
   <Duration>k__BackingField: 5
   durationTimer: 0
+  badgeData: {fileID: 11400000, guid: bcd2a369cf20bad44b1eaa6dbd23be98, type: 2}
+  badgeDuration: 0
   <ManualCooldown>k__BackingField: 10
   manualTimer: 10
   <AutoCooldown>k__BackingField: 0
@@ -161,7 +167,6 @@ MonoBehaviour:
   - 1.5
   - 2
   <SizeLevel>k__BackingField: 0
-  badgeData: {fileID: 11400000, guid: bcd2a369cf20bad44b1eaa6dbd23be98, type: 2}
 --- !u!114 &-1598220075549925114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +182,8 @@ MonoBehaviour:
   skillEventChannel: {fileID: 11400000, guid: 60ac33b9a461bce44a3f3e9d1f6182e0, type: 2}
   <Duration>k__BackingField: 0
   durationTimer: 0
+  badgeData: {fileID: 11400000, guid: 25f5b193f2f28a44dac3af4241c53470, type: 2}
+  badgeDuration: 3
   <ManualCooldown>k__BackingField: 10
   manualTimer: 10
   <AutoCooldown>k__BackingField: 0
@@ -185,8 +192,6 @@ MonoBehaviour:
   cloneCountPerLevel: 020000000300000004000000
   blockedHorizontalAngle: 20
   maxBallCount: 128
-  badgeData: {fileID: 11400000, guid: 25f5b193f2f28a44dac3af4241c53470, type: 2}
-  badgeDuration: 3
 --- !u!120 &2092348428466411585
 LineRenderer:
   serializedVersion: 3

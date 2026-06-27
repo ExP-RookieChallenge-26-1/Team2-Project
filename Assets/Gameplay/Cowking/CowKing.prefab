@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -14.7349, y: 14.4581, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.5333333, y: 0.5333333, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2522864450381838763}
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 619487801
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6184050716912831369, guid: 5fab8f59975b5d2429678a34abd8dd1b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -107,10 +107,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d2ec7b62ae66b459cc9ad953bc2d0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CowKing
-  maxHp: 500
+  maxHp: 432
   attackPower: 1
-  stateRateMove: 0.5
-  stateRateAttack: 0.5
+  stateRateMove: 0.7
+  stateRateAttack: 0.3
   decisionInterval: 1
   moveSpeed: 2
   attackReadyTime: 2
@@ -431,7 +431,7 @@ Transform:
   m_GameObject: {fileID: 6353455047075025486}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.2, z: 0}
+  m_LocalPosition: {x: 0, y: -7.8475, z: 0}
   m_LocalScale: {x: 0.5, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

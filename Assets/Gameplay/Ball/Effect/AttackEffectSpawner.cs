@@ -13,7 +13,7 @@ public class AttackEffectSpawner : MonoBehaviour
         Instance = this;
     }
 
-    public void Spawn(Vector2 position, bool isMovingUp, bool flipX)
+    public void Spawn(Vector2 position, bool isMovingUp)
     {
         GameObject prefab = isMovingUp ? this.attackUpEffectPrefab : this.attackDownEffectPrefab;
         if (prefab == null)
@@ -27,9 +27,5 @@ public class AttackEffectSpawner : MonoBehaviour
             effect.ScrollSpeed = GameManager.Instance.WorldStats.ScrollSpeed;
             effect.DestroyDelay = this.destroyDelay;
         }
-
-        SpriteRenderer sr = obj.GetComponent<SpriteRenderer>();
-        if (sr != null)
-            sr.flipX = flipX;
     }
 }

@@ -8,9 +8,6 @@ public class BallAnimation
 
 	private int isMovingUpHash;
 	private int attackHash;
-	private int cloneHash;
-	private int upsizingHash;
-	private int downsizingHash;
 	private int isRespawningHash;
 	private int isGameOverHash;
 
@@ -21,9 +18,6 @@ public class BallAnimation
 		this.spriteRenderer = ball.GetComponent<SpriteRenderer>();
 		this.isMovingUpHash = Animator.StringToHash("IsMovingUp");
 		this.attackHash = Animator.StringToHash("Attack");
-		this.cloneHash = Animator.StringToHash("Clone");
-		this.upsizingHash = Animator.StringToHash("Upsizing");
-		this.downsizingHash = Animator.StringToHash("Downsizing");
 		this.isRespawningHash = Animator.StringToHash("IsRespawning");
 		this.isGameOverHash = Animator.StringToHash("IsGameOver");
 
@@ -47,17 +41,17 @@ public class BallAnimation
 
 	public void TriggerUpsizing()
 	{
-		this.animator.SetTrigger(this.upsizingHash);
+		// Giant visual clips were removed; GiantSkill still handles size changes.
 	}
 
 	public void TriggerDownsizing()
 	{
-		this.animator.SetTrigger(this.downsizingHash);
+		// Giant visual clips were removed; GiantSkill still handles size reset.
 	}
 
 	public void TriggerClone()
 	{
-		this.animator.SetTrigger(this.cloneHash);
+		// Clone visual clips were removed; CloneSkill still handles spawning.
 	}
 
 	public void TriggerAttack()
@@ -77,7 +71,7 @@ public class BallAnimation
 
 	private void UpdateFlipState()
 	{
-		if (this.ball.Physics.Velocity.x == 0f)
+		if (this.spriteRenderer == null || this.ball.Physics.Velocity.x == 0f)
 			return;
 
 		this.spriteRenderer.flipX = this.ball.Physics.Velocity.x < 0f;

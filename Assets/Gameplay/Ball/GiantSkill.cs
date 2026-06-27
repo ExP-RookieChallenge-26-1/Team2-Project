@@ -24,8 +24,6 @@ public class GiantSkill : BallSkill
 
 	protected override void OnActivate()
 	{
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.PlayGiantSkillSound();
         this.ball.Animation.TriggerUpsizing();
 		StartCoroutine(UpsizingReadyRoutine());
 	}
@@ -50,11 +48,19 @@ public class GiantSkill : BallSkill
 
 	public void IncreaseSizeLevel(int amount)
 	{
-		this.SizeLevel = System.Math.Clamp(this.SizeLevel + amount, 0, this.MaxSizeLevel);
+		SetSizeLevel(this.SizeLevel + amount);
+	}
+
+	public void SetSizeLevel(int level)
+	{
+		this.SizeLevel = System.Math.Clamp(level, 0, this.MaxSizeLevel);
 	}
 
 	public float GetCurrentMultiplier()
 	{
+		if (this.ball != null && this.ball.Stats != null)
+			return Mathf.Max(1f, this.ball.Stats.GiantSize);
+
 		if (this.RadiusMultiplierPerLevel == null || this.RadiusMultiplierPerLevel.Length == 0)
 			return 1f;
 		

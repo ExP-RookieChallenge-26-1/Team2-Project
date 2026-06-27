@@ -3,6 +3,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BallStats", menuName = "Stats/BallStats")]
 public class BallStats : ScriptableObject
 {
+	private const float DefaultSkill1Cooldown = 15f;
+	private const float DefaultSkill2Cooldown = 20f;
+
 	[field: SerializeField] public float Speed { get; private set; }
 	[field: SerializeField] public float BaseRadius { get; private set; }
 	[field: SerializeField] public float GiantSize { get; private set; }
@@ -19,6 +22,8 @@ public class BallStats : ScriptableObject
 	[field: SerializeField] public float Skill2AutoCooldown { get; private set; }
 	[field: SerializeField] public float Skill1Duration { get; private set; }
 	[field: SerializeField] public float Skill2Duration { get; private set; }
+	[field: SerializeField] public int Skill1SizeLevel { get; private set; }
+	[field: SerializeField] public int Skill2CloneLevel { get; private set; }
 
 	public float Radius => this.BaseRadius * this.RadiusMultiplier;
 	public float RadiusMultiplier { get; private set; } = 1f;
@@ -53,6 +58,18 @@ public class BallStats : ScriptableObject
 		Debug.Log($"Critical Damage: {this.CriticalDamage}");
 	}
 
+	public void IncreaseGiantSize(float amount)
+	{
+		this.GiantSize = Mathf.Max(1f, this.GiantSize + amount);
+		Debug.Log($"Giant Size: {this.GiantSize}");
+	}
+
+	public void IncreaseSkill1Duration(float amount)
+	{
+		this.Skill1Duration = Mathf.Max(0f, this.Skill1Duration + amount);
+		Debug.Log($"Skill1 Duration: {this.Skill1Duration}");
+	}
+
 	public void ReduceSkill1ManualCooldown(float amount)
 	{
 		this.Skill1ManualCooldown = ReduceCooldown(this.Skill1ManualCooldown, amount);
@@ -75,6 +92,46 @@ public class BallStats : ScriptableObject
 	{
 		this.Skill2AutoCooldown = ReduceCooldown(this.Skill2AutoCooldown, amount);
 		Debug.Log($"Skill2 Auto Cooldown: {this.Skill2AutoCooldown}");
+	}
+
+	public void UnlockSkill1ManualTrigger()
+	{
+		this.Skill1HasManualTrigger = true;
+		this.Skill1ManualCooldown = DefaultSkill1Cooldown;
+		Debug.Log("Skill1 Manual Trigger unlocked.");
+	}
+
+	public void UnlockSkill1AutoTrigger()
+	{
+		this.Skill1HasAutoTrigger = true;
+		this.Skill1AutoCooldown = DefaultSkill1Cooldown;
+		Debug.Log("Skill1 Auto Trigger unlocked.");
+	}
+
+	public void UnlockSkill2ManualTrigger()
+	{
+		this.Skill2HasManualTrigger = true;
+		this.Skill2ManualCooldown = DefaultSkill2Cooldown;
+		Debug.Log("Skill2 Manual Trigger unlocked.");
+	}
+
+	public void UnlockSkill2AutoTrigger()
+	{
+		this.Skill2HasAutoTrigger = true;
+		this.Skill2AutoCooldown = DefaultSkill2Cooldown;
+		Debug.Log("Skill2 Auto Trigger unlocked.");
+	}
+
+	public void IncreaseSkill1SizeLevel(int amount)
+	{
+		this.Skill1SizeLevel = Mathf.Max(0, this.Skill1SizeLevel + amount);
+		Debug.Log($"Skill1 Size Level: {this.Skill1SizeLevel}");
+	}
+
+	public void IncreaseSkill2CloneLevel(int amount)
+	{
+		this.Skill2CloneLevel = Mathf.Max(0, this.Skill2CloneLevel + amount);
+		Debug.Log($"Skill2 Clone Level: {this.Skill2CloneLevel}");
 	}
 
 	private static float ReduceCooldown(float cooldown, float amount)

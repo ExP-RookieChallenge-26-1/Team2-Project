@@ -39,8 +39,10 @@ public class WorldSpawner
             return null;
         }
 
-        GameObject chunk = GameObject.Instantiate(this.chunkPrefabs[this.nextChunkIndex], position, Quaternion.identity);
-        ConfigureChunk(chunk);
+        GameObject chunkPrefab = this.chunkPrefabs[this.nextChunkIndex];
+        int mapIndex = GetChunkMapIndex(chunkPrefab, this.nextChunkIndex);
+        GameObject chunk = GameObject.Instantiate(chunkPrefab, position, Quaternion.identity);
+        ConfigureChunk(chunk, mapIndex);
 
         this.nextChunkIndex++;
 
@@ -50,15 +52,35 @@ public class WorldSpawner
         return chunk;
     }
 
-    private void ConfigureChunk(GameObject chunk)
+    private void ConfigureChunk(GameObject chunk, int mapIndex)
     {
         if (chunk == null)
             return;
 
-        EnsureWorldItemSpawner(chunk);
+        EnsureTilemapAspectCropper(chunk);
+        EnsureWorldItemSpawner(chunk, mapIndex);
+        ScheduleFallingItems(chunk, mapIndex);
     }
 
-    private void EnsureWorldItemSpawner(GameObject chunk)
+    private static void EnsureTilemapAspectCropper(GameObject chunk)
+    {
+        TilemapAspectCropper cropper = chunk.GetComponent<TilemapAspectCropper>();
+        if (cropper == null)
+            cropper = chunk.AddComponent<TilemapAspectCropper>();
+
+        cropper.Configure(Camera.main);
+    }
+
+    private void ScheduleFallingItems(GameObject chunk, int mapIndex)
+    {
+        FallingItemSpawner fallingItemSpawner = Object.FindFirstObjectByType<FallingItemSpawner>();
+        if (fallingItemSpawner == null)
+            return;
+
+        fallingItemSpawner.ScheduleMapDrops(mapIndex, chunk.transform);
+    }
+
+    private void EnsureWorldItemSpawner(GameObject chunk, int mapIndex)
     {
         Transform itemSpawnRoot;
         WorldItemSpawner itemSpawner;
@@ -76,6 +98,29 @@ public class WorldSpawner
         if (itemSpawner == null)
             itemSpawner = chunk.AddComponent<WorldItemSpawner>();
 
-        itemSpawner.Configure(itemPrefabs);
+        itemSpawner.Configure(itemPrefabs, mapIndex);
+    }
+
+    private static int GetChunkMapIndex(GameObject chunkPrefab, int fallbackIndex)
+    {
+        if (chunkPrefab == null || string.IsNullOrEmpty(chunkPrefab.name))
+            return fallbackIndex;
+
+        string name = chunkPrefab.name;
+        int end = name.Length - 1;
+        while (end >= 0 && !char.IsDigit(name[end]))
+            end--;
+
+        if (end < 0)
+            return fallbackIndex;
+
+        int start = end;
+        while (start >= 0 && char.IsDigit(name[start]))
+            start--;
+
+        if (int.TryParse(name.Substring(start + 1, end - start), out int mapIndex))
+            return mapIndex;
+
+        return fallbackIndex;
     }
 }

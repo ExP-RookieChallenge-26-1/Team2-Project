@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: AttackBadge
   m_EditorClassIdentifier: Assembly-CSharp::BuffBadgeData
   <BadgeName>k__BackingField: AttackUp
-  <Icon>k__BackingField: {fileID: -2057077983754142787, guid: 893c43c8a57698d48a8d3cfaa7162c6c, type: 3}
+  <Icon>k__BackingField: {fileID: -1438951635349019070, guid: 8782d2b083526b04585a45adebeec599, type: 3}
